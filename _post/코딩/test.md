@@ -1,4 +1,5 @@
 ---
 tags:
   - test
+category: cate
 ---
