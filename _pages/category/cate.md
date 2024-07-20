@@ -1,5 +1,0 @@
----
-title: cate
-layout: category
----
-
