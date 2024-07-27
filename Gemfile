@@ -1,5 +1,6 @@
 source "https://rubygems.org"
-
+gem 'base64'
+gem 'bigdecimal'
 gem "github-pages", group: :jekyll_plugins
 
 gem "tzinfo-data"
@@ -16,3 +17,6 @@ group :jekyll_plugins do
   gem "jekyll-algolia"
 end
 gem "webrick", "~> 1.7"
+gem 'tzinfo', '~> 1.2'
+
+
