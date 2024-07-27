@@ -1,0 +1,217 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="ko-KR" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>자바의 정석 강의 - 자바 시작하기 전 - 테스트중</title>
+<meta name="description" content="자바 : 프로그래밍 언어. 컴퓨터 프로그램(애플리케이션)을 만드는데 사용   실행환경(JRE) + 개발도구(JDK) + 라이브러리(API)                     라이브러리 : 프로그램을 만드는데 필요한 기능들을 미리 만들어놓은 것.          ⇒ 쉽고 빠른 개발 가능              pc애플리케이션, 웹 애플리케이션, 모바일 애플리케이션(안드로이드), 빅 데이터, 게임(ex.마크), 과학, 소형기기 등 에 활용 가능       모던 프로그래밍 언어(객체지향 + 함수형)       특징                    배우기쉬운 객체지향언어(프로그래밍언어+객체지향개념[c++,java,python])           자동 메모리 관리           멀티 쓰레드 지원 - 하나의 프로그램에서 동시에 여러작업 가능.           풍부한 라이브러리로 쉽게 개발가능.           운영체제에 독립적 - 수정없이 여러 운영체제에서 사용가능                            자바 가상 머신(JVM) : 자바 프로그램이 실행되는 가상 컴퓨터(VM). 한번 작성하면, 어디서든(어떤 운영체제에서도) 실행 가능.                                                        java API문서 : java API가 제공하는 기능에 대한 상세한 정보를 제공(html)      https://docs.oracle.com/javase/7/docs/api/index.html           단축키             ctrl + shift + L : 단축키 전체 목록       alt + shift + A : 멀티컬럼 편집 - 커서가 +모양으로 바뀌는데 바꾸고 싶은 부분을 드래그해서 한번에 바꿈       ctrl + i : 자동들여쓰기       ctrl + shift + o : import java.util.~~; 자동추가">
+
+
+  <meta name="author" content="Jinny">
+  
+  <meta property="article:author" content="Jinny">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="테스트중">
+<meta property="og:title" content="자바의 정석 강의 - 자바 시작하기 전">
+<meta property="og:url" content="http://localhost:4000/%EC%9E%90%EB%B0%94-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84/">
+
+
+  <meta property="og:description" content="자바 : 프로그래밍 언어. 컴퓨터 프로그램(애플리케이션)을 만드는데 사용   실행환경(JRE) + 개발도구(JDK) + 라이브러리(API)                     라이브러리 : 프로그램을 만드는데 필요한 기능들을 미리 만들어놓은 것.          ⇒ 쉽고 빠른 개발 가능              pc애플리케이션, 웹 애플리케이션, 모바일 애플리케이션(안드로이드), 빅 데이터, 게임(ex.마크), 과학, 소형기기 등 에 활용 가능       모던 프로그래밍 언어(객체지향 + 함수형)       특징                    배우기쉬운 객체지향언어(프로그래밍언어+객체지향개념[c++,java,python])           자동 메모리 관리           멀티 쓰레드 지원 - 하나의 프로그램에서 동시에 여러작업 가능.           풍부한 라이브러리로 쉽게 개발가능.           운영체제에 독립적 - 수정없이 여러 운영체제에서 사용가능                            자바 가상 머신(JVM) : 자바 프로그램이 실행되는 가상 컴퓨터(VM). 한번 작성하면, 어디서든(어떤 운영체제에서도) 실행 가능.                                                        java API문서 : java API가 제공하는 기능에 대한 상세한 정보를 제공(html)      https://docs.oracle.com/javase/7/docs/api/index.html           단축키             ctrl + shift + L : 단축키 전체 목록       alt + shift + A : 멀티컬럼 편집 - 커서가 +모양으로 바뀌는데 바꾸고 싶은 부분을 드래그해서 한번에 바꿈       ctrl + i : 자동들여쓰기       ctrl + shift + o : import java.util.~~; 자동추가">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-07-28T21:27:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-08-17T06:52:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/%EC%9E%90%EB%B0%94-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="테스트중 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--post" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          테스트중
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <ul>
+  <li>자바 : 프로그래밍 언어. 컴퓨터 프로그램(애플리케이션)을 만드는데 사용<br />
+  실행환경(JRE) + 개발도구(JDK) + 라이브러리(API)
+    <ul>
+      <li>
+        <p>라이브러리 : 프로그램을 만드는데 필요한 기능들을 미리 만들어놓은 것.</p>
+
+        <p>⇒ 쉽고 빠른 개발 가능</p>
+      </li>
+      <li>pc애플리케이션, 웹 애플리케이션, 모바일 애플리케이션(안드로이드), 빅 데이터, 게임(ex.마크), 과학, 소형기기 등 에 활용 가능</li>
+      <li>모던 프로그래밍 언어(객체지향 + 함수형)</li>
+      <li>특징
+        <ul>
+          <li>배우기쉬운 객체지향언어(프로그래밍언어+객체지향개념[c++,java,python])</li>
+          <li>자동 메모리 관리</li>
+          <li>멀티 쓰레드 지원 - 하나의 프로그램에서 동시에 여러작업 가능.</li>
+          <li>풍부한 라이브러리로 쉽게 개발가능.</li>
+          <li>운영체제에 독립적 - 수정없이 여러 운영체제에서 사용가능
+            <ul>
+              <li>자바 가상 머신(JVM) : 자바 프로그램이 실행되는 가상 컴퓨터(VM). 한번 작성하면, 어디서든(어떤 운영체제에서도) 실행 가능.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>java API문서 : java API가 제공하는 기능에 대한 상세한 정보를 제공(html)</p>
+
+    <p><a href="https://docs.oracle.com/javase/7/docs/api/index.html">https://docs.oracle.com/javase/7/docs/api/index.html</a></p>
+  </li>
+  <li>
+    <p>단축키</p>
+
+    <ul>
+      <li>ctrl + shift + L : 단축키 전체 목록</li>
+      <li>alt + shift + A : 멀티컬럼 편집 - 커서가 +모양으로 바뀌는데 바꾸고 싶은 부분을 드래그해서 한번에 바꿈</li>
+      <li>ctrl + i : 자동들여쓰기</li>
+      <li>ctrl + shift + o : import java.util.~~; 자동추가</li>
+    </ul>
+  </li>
+</ul>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://github.com/nunnunnu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">테스트중</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

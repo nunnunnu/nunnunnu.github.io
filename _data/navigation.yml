@@ -1,9 +1,5 @@
-#sidebar-category:
-#  - title: "카테고리"
-#    children:
-#      - title: "블로그"
-#        url: "/cate"
-#      - title: "카테고리B"
-#        url:  "/CategoryB"
-#      - title: "카테고리C"
-#        url:  "/CategoryC"
+sidebar-category:
+  - title: "개발"
+    children:
+      - title: "JAVA"
+        url: "/blog/java"

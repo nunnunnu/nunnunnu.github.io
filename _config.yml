@@ -142,7 +142,7 @@ footer:
 include:
   - .htaccess
   - _pages
-  - _post
+  - _posts/blog
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -302,6 +302,6 @@ defaults:
       share: true
       related: true
       sidebar:
-  #      nav: "sidebar-category"
+        nav: "sidebar-category"
 
 
