@@ -19,6 +19,8 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
+
+  <!-- 사이드바 포함 -->
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
@@ -35,7 +37,6 @@ layout: default
             <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
           </h1>
           {%- endif %}
-          {% include page__meta.html %}
         </header>
       {% endunless %}
 
@@ -78,3 +79,4 @@ layout: default
     {% include page__related.html posts=site.posts %}
   {% endif %}
 </div>
+
