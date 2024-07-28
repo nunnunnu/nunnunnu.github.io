@@ -1,0 +1,8 @@
+--- 
+layout: default 
+---
+{% assign category = page.category | default: page.title %} 
+	{% for post in site.categories[category] %}
+{{ post.title }}
+ {{ post.date | date_to_string }}
+{% endfor %}

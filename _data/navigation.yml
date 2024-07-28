@@ -2,4 +2,4 @@ sidebar-category:
   - title: "개발"
     children:
       - title: "JAVA"
-        url: "/blog/java"
+        url: "/categories/java"
