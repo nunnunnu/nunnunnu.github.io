@@ -303,5 +303,14 @@ defaults:
       related: true
       sidebar:
         nav: "sidebar-category"
+  # 카테고리 페이지
+  - scope:
+      path: "categories"
+      type: pages
+    values:
+      layout: category
+      sidebar:
+        nav: "sidebar-category"
 
 
+github: [metadata]
