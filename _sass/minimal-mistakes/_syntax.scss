@@ -3,20 +3,15 @@
    ========================================================================== */
 
 div.highlighter-rouge,
-figure.highlight {
-  position: relative;
-  margin-bottom: 1em;
-  background: $base00;
-  color: $base05;
-  font-family: $monospace;
-  font-size: $type-size-6;
-  line-height: 1.8;
-  border-radius: $border-radius;
-
-  [dir=rtl] & {
-    direction: ltr;
-    text-align: start;
-  }
+  figure.highlight {
+    position: relative;
+    margin-bottom: 1em;
+    background: black;
+    color: black;
+    font-family: $monospace;
+    font-size: $type-size-6;
+    line-height: 1.8;
+    border-radius: $border-radius;
 
   > pre,
   pre.highlight {
@@ -59,10 +54,13 @@ figure.highlight {
 
 .highlight pre {
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.8) !important; // 배경색과 투명도 설정
+  color: #ffffff !important;            // 텍스트 색상 설정
+
 }
 
 .highlight .hll {
-  background-color: $base06;
+  background-color: #000;
 }
 .highlight {
   .c {
@@ -326,4 +324,67 @@ figure.highlight {
   th, td {
     border-bottom: 0;
   }
+}
+
+.hltr-blue {
+  background-color: #5c85e3; 
+  color: black; /* 텍스트 색상 */
+  padding: 0.1em 0.3em; /* 하이라이트의 여백을 조정 */
+  border-radius: 0.2em; /* 모서리를 둥글게 */
+}
+
+.hltr-red {
+  background-color: #ed8979; 
+  color: black; /* 텍스트 색상 */
+  padding: 0.1em 0.3em; /* 하이라이트의 여백을 조정 */
+  border-radius: 0.2em; /* 모서리를 둥글게 */
+}
+
+.hltr-pink {
+  background-color: #e6adda; 
+  color: black; /* 텍스트 색상 */
+  padding: 0.1em 0.3em; /* 하이라이트의 여백을 조정 */
+  border-radius: 0.2em; /* 모서리를 둥글게 */
+}
+
+.hltr-orange {
+  background-color: #e6bc7c; 
+  color: black; /* 텍스트 색상 */
+  padding: 0.1em 0.3em; /* 하이라이트의 여백을 조정 */
+  border-radius: 0.2em; /* 모서리를 둥글게 */
+}
+
+.hltr-yellow {
+  background-color: #eeec7c; 
+  color: black; /* 텍스트 색상 */
+  padding: 0.1em 0.3em; /* 하이라이트의 여백을 조정 */
+  border-radius: 0.2em; /* 모서리를 둥글게 */
+}
+
+.hltr-green {
+  background-color: #b6e6ad; 
+  color: black; /* 텍스트 색상 */
+  padding: 0.1em 0.3em; /* 하이라이트의 여백을 조정 */
+  border-radius: 0.2em; /* 모서리를 둥글게 */
+}
+
+.hltr-cyan {
+  background-color: #afe4f8; 
+  color: black; /* 텍스트 색상 */
+  padding: 0.1em 0.3em; /* 하이라이트의 여백을 조정 */
+  border-radius: 0.2em; /* 모서리를 둥글게 */
+}
+
+.hltr-purple {
+  background-color: #b89cd2; 
+  color: black; /* 텍스트 색상 */
+  padding: 0.1em 0.3em; /* 하이라이트의 여백을 조정 */
+  border-radius: 0.2em; /* 모서리를 둥글게 */
+}
+
+.hltr-gray {
+  background-color: #727272; 
+  color: black; /* 텍스트 색상 */
+  padding: 0.1em 0.3em; /* 하이라이트의 여백을 조정 */
+  border-radius: 0.2em; /* 모서리를 둥글게 */
 }
