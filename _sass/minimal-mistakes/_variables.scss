@@ -171,3 +171,9 @@ $navicon-width: 1.5rem !default;
 $navicon-height: 0.25rem !default;
 $global-transition: all 0.2s ease-in-out !default;
 $intro-transition: intro 0.3s both !default;
+
+#giscus {
+   max-width: 900px; /* Giscus 댓글창의 최대 너비를 설정 */
+   margin: 0 auto; /* 중앙 정렬 */
+   padding: 20px; /* 여백 추가 */
+}
