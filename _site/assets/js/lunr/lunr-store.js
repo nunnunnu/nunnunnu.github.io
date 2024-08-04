@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "자바의 정석 강의 - 변수(Variable)",
-        "excerpt":"system.out.println(); 에서 print==ln==이 \\n이거라서 따로 \\n안해줘도 지금까지 줄바꿈이 됐던거임..! 충격! pintf도 있다..! public class Ex2_1 { public static void main(String[] args) { System.out.printf(\"hello\"); System.out.printf(\"hello\"); System.out.printf(\"hello\"); } } 이거는 줄바꿈 안되고 hellohellohello로 실행됨. print로 바꿔도 마찬가지 변수(variable) : 하나의 값을 저장할 수 있는 메모리 공간(RAM). 변경가능 — 변수 선언 이유 :...","categories": ["java"],
+        "excerpt":"system.out.println(); 에서 print==ln==이 \\n이거라서 따로 \\n안해줘도 지금까지 줄바꿈이 됐던거임..! 충격! pintf도 있다..! public class Ex2_1 { public static void main(String[] args) { System.out.printf(\"hello\"); System.out.printf(\"hello\"); System.out.printf(\"hello\"); } } 이거는 줄바꿈 안되고 hellohellohello로 실행됨. print로 바꿔도 마찬가지 변수(variable) : 하나의 값을 저장할 수 있는 메모리 공간(RAM). 변경가능 — 변수 선언 이유 :...","categories": ["JAVA"],
         "tags": ["java","backend","자바의정석"],
         "url": "/java/%EB%B3%80%EC%88%98(Variable)/",
         "teaser": null

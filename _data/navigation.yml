@@ -6,4 +6,4 @@ sidebar-category:
   - title: "언어"
     children:
       - title: "JAVA"
-        url: "/categories/java"
+        url: "/categories/JAVA"

@@ -319,7 +319,7 @@ defaults:
       path: "categories"
       type: pages
     values:
-      layout: category
+      layout: category, archive
       sidebar:
         nav: "sidebar-category"
 
