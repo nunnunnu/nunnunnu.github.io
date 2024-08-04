@@ -1,7 +1,10 @@
 ---
 layout: archive
 ---
-
+<div class="list-group my-3">
+  <a class="list-group-item active disabled text-white">Table of Contents</a>
+  {% include toc.html html=content %}
+</div>
 {{ content }}
 
 <ul class="taxonomy__index">
