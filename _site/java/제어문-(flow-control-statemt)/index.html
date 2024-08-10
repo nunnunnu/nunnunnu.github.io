@@ -1,0 +1,1040 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <style> 
+      ::-webkit-scrollbar{ 
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        width: 0px;
+        background-color: rgba(224, 224, 224, 0.2);
+        /* border-radius: 5px; */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        width: 0px;
+        background-color: rgba(220, 219, 218, 0.6);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        width: 10px;
+        height: 20px;
+        /* background-color: rgba(190, 190, 190, 0.2); */
+        background-color: rgba(193, 192, 191, 0.7);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-track:hover {
+        width: 10px;
+        /* background-color: rgba(150, 150, 150, 0.1); */
+        background-color: rgba(224, 224, 224, 0.5);
+        border-radius: 5px;
+        /* background: transparent; */
+        /* border-radius: 10px; */
+      }
+
+      ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+          width:0px;
+          height: 0px;
+          /* background-color: rgb(14, 221, 24); */
+          /* border-radius: 50%; */
+      }
+    </style>
+    
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>제어문 (flow control statemt) - Jinny</title>
+<meta name="description" content="조건문            if문        switch : 처리해야하는 경우의 수가 많을 때 씀(if-else if문보다 효율적)           switch (조건식) {   	case 값1 :    			//...   			break;   	case 값2 :    			//...   			break;   	//...   	default :   		//....조건식의 결과와 일치하는 case문이 없을떄   		//....   }">
+
+
+  <meta name="author" content="Jinny">
+  
+  <meta property="article:author" content="Jinny">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="테스트중">
+<meta property="og:title" content="제어문 (flow control statemt)">
+<meta property="og:url" content="http://localhost:4000/java/%EC%A0%9C%EC%96%B4%EB%AC%B8-(flow-control-statemt)/">
+
+
+  <meta property="og:description" content="조건문            if문        switch : 처리해야하는 경우의 수가 많을 때 씀(if-else if문보다 효율적)           switch (조건식) {   	case 값1 :    			//...   			break;   	case 값2 :    			//...   			break;   	//...   	default :   		//....조건식의 결과와 일치하는 case문이 없을떄   		//....   }">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-07-30T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-07-30T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/java/%EC%A0%9C%EC%96%B4%EB%AC%B8-(flow-control-statemt)/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Jinny",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="테스트중 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://github-account.github.io/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://github-account.github.io/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://github-account.github.io/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://github-account.github.io/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://github-account.github.io/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          테스트중
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/search">Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/portfolio.jpeg" alt="Jinny" itemprop="image">
+      
+    </div>
+  
+
+  <!-- 2022.02.17 author content hidden -->
+  <!-- <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Jinny</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Backend Developer</p>
+
+      </div>
+    
+  </div> -->
+
+  <div class="author__urls-wrapper">
+    <!-- <button class="btn btn--inverse">팔로우</button> -->
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://github.com/nunnunnu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:nod15277@gmail.com">
+            <meta itemprop="email" content="nod15277@gmail.com">
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">토글 메뉴</label>
+  <li> 전체 글 수 (4)개 </li>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">언어</span>
+        
+
+        
+          <ul>
+            
+              
+              
+
+              <li><a href="/categories/JAVA">JAVA (4)</a></li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="제어문 (flow control statemt)">
+    <meta itemprop="description" content="  조건문          if문      switch : 처리해야하는 경우의 수가 많을 때 씀(if-else if문보다 효율적)          switch (조건식) {  	case 값1 :   			//...  			break;  	case 값2 :   			//...  			break;  	//...  	default :  		//....조건식의 결과와 일치하는 case문이 없을떄  		//....  }                    ">
+    <meta itemprop="datePublished" content="2022-07-30T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-07-30T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">제어문 (flow control statemt)
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+      <div class="page__comments">
+  
+  
+</div>
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Contents</h4></header>
+              
+            </nav>
+          </aside>
+        
+        <ul>
+  <li>조건문
+    <ul>
+      <li>if문
+<img src="blog/java/flow_controll/Untitled_104.Png" alt="image">
+</li>
+      <li>switch : 처리해야하는 경우의 수가 많을 때 씀(if-else if문보다 효율적)
+        <div class="language-java highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="k">switch</span> <span class="o">(</span><span class="n">조건식</span><span class="o">)</span> <span class="o">{</span>
+  	<span class="k">case</span> <span class="n">값1</span> <span class="o">:</span> 
+  			<span class="c1">//...</span>
+  			<span class="k">break</span><span class="o">;</span>
+  	<span class="k">case</span> <span class="n">값2</span> <span class="o">:</span> 
+  			<span class="c1">//...</span>
+  			<span class="k">break</span><span class="o">;</span>
+  	<span class="c1">//...</span>
+  	<span class="k">default</span> <span class="o">:</span>
+  		<span class="c1">//....조건식의 결과와 일치하는 case문이 없을떄</span>
+  		<span class="c1">//....</span>
+  <span class="o">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>제약조건	
+      - 조건식 결과가 정수 또는 문자열이여야함.
+      - case문의 값은 정수 상수(문자포함), 문자열만 가능, 중복 금지</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+        <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ScanfEx1</span> <span class="o">{</span>
+        
+        	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        	
+        	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"현재 월을 입력하세요"</span><span class="o">);</span>
+        	
+        	<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+        	<span class="kt">int</span> <span class="n">month</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+        	
+        	<span class="k">switch</span> <span class="o">(</span><span class="n">month</span><span class="o">)</span> <span class="o">{</span>
+        		<span class="k">case</span> <span class="mi">3</span><span class="o">:</span> <span class="k">case</span> <span class="mi">4</span><span class="o">:</span> <span class="k">case</span> <span class="mi">5</span><span class="o">:</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"현재 계절은 봄입니다."</span><span class="o">);</span>
+        			<span class="k">break</span><span class="o">;</span> 
+        		<span class="k">case</span> <span class="mi">6</span><span class="o">:</span> <span class="k">case</span> <span class="mi">7</span><span class="o">:</span><span class="k">case</span> <span class="mi">8</span><span class="o">:</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"현재 계절은 여름입니다."</span><span class="o">);</span>
+        			<span class="k">break</span><span class="o">;</span>
+        		<span class="k">case</span> <span class="mi">9</span><span class="o">:</span> <span class="k">case</span> <span class="mi">10</span><span class="o">:</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"현재 계절은 가을입니다."</span><span class="o">);</span>
+        			<span class="k">break</span><span class="o">;</span>
+        		<span class="k">case</span> <span class="mi">11</span><span class="o">:</span> <span class="k">case</span> <span class="mi">12</span><span class="o">:</span> <span class="k">case</span> <span class="mi">1</span><span class="o">:</span> <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"현재 계절은 겨울입니다."</span><span class="o">);</span>
+        			<span class="k">break</span><span class="o">;</span>
+        		<span class="k">default</span> <span class="o">:</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"잘못 입력했습니다."</span><span class="o">);</span>
+        		<span class="o">}</span>
+        	<span class="o">}</span>
+        <span class="o">}</span>
+</code></pre></div></div>
+
+<p>— Math.random() : 0.0과 1.0사이의 임의의 double값을 반환</p>
+
+<p>0.0 * 3 ≤ Math.random() &lt; 1.0*3</p>
+
+<ul>
+  <li>ex)원하는 값 1~3</li>
+</ul>
+
+<ol>
+  <li>
+    <p>각변에 3을 곱한다</p>
+
+    <p>0.0 * 3 ≤ Math.random() * 3 &lt; 1.0 * 3</p>
+  </li>
+  <li>
+    <p>각 변을 int형으로 변환한다</p>
+
+    <p>(int)0.0 * 3 ≤ (int)(Math.random() * 3) &lt; (int)1.0 * 3</p>
+
+    <p>0 ≤ Math.random() * 3 &lt; 3</p>
+  </li>
+  <li>
+    <p>각 변에 1을 더한다</p>
+
+    <p>0 + 1 ≤ (Math.random() * 3) +1 &lt; 3 + 1</p>
+
+    <p>1 ≤ (Math.random() * 3) +1 &lt; 4</p>
+  </li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_7</span> <span class="o">{</span>
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">num</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+    		<span class="c1">//1~10사이의 난수를 20개 출력할 것.</span>
+    		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">20</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">((</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">10</span><span class="o">)+</span><span class="mi">1</span><span class="o">);</span>
+    		<span class="o">}</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"==============="</span><span class="o">);</span>
+    
+    			<span class="c1">//-5~5사이의 난수를 20개 출력할 것.</span>
+    		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="mi">20</span><span class="o">;</span><span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">((</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">11</span><span class="o">)-</span><span class="mi">5</span><span class="o">);</span> <span class="c1">//0도 포함이라 값이 11개임</span>
+    		<span class="o">}</span>
+    	<span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>반복문
+    <ul>
+      <li>for</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_8</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">,</span> <span class="n">j</span><span class="o">=</span><span class="mi">10</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="o">;</span><span class="n">i</span><span class="o">++,</span><span class="n">j</span><span class="o">--)</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"i="</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="s">", j="</span><span class="o">+</span><span class="n">j</span><span class="o">);</span>
+    	<span class="o">}</span>
+    	
+    	<span class="c1">//구구단</span>
+    	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="mi">9</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">j</span><span class="o">+</span><span class="s">"단 시작!!!"</span><span class="o">);</span>
+    		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span><span class="n">k</span><span class="o">&lt;=</span><span class="mi">9</span><span class="o">;</span><span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">j</span><span class="o">+</span><span class="s">" * "</span> <span class="o">+</span><span class="n">k</span><span class="o">+</span><span class="s">" = "</span><span class="o">+</span><span class="n">j</span><span class="o">*</span><span class="n">k</span><span class="o">);</span>
+    			<span class="k">if</span><span class="o">(</span><span class="n">k</span><span class="o">==</span><span class="mi">9</span><span class="o">)</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"===="</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="s">"단 종료====\n"</span><span class="o">);</span>
+    		<span class="o">}</span>
+    	<span class="o">}</span>
+    	<span class="c1">//별 찍기</span>
+    		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">10</span><span class="o">;</span><span class="n">n</span><span class="o">++)</span> <span class="o">{</span>
+    			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span><span class="n">x</span><span class="o">&lt;</span><span class="n">n</span><span class="o">;</span><span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+    				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"★"</span><span class="o">);</span>
+    			<span class="o">}</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+    		<span class="o">}</span>
+     	<span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>while - 조건식을 만족시키는 동안 블럭을 반복. do while문을 사용.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_13</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+    		<span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+    		
+    		<span class="k">while</span> <span class="o">(</span><span class="n">sum</span><span class="o">&lt;=</span><span class="mi">100</span><span class="o">)</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%d : %d%n"</span><span class="o">,</span><span class="n">i</span><span class="o">,</span><span class="n">sum</span><span class="o">);</span>
+    			<span class="n">sum</span> <span class="o">+=</span> <span class="o">++</span><span class="n">i</span><span class="o">;</span>
+    		<span class="o">}</span>
+    	<span class="o">}</span>
+    
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ex4_14</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">num</span><span class="o">=</span><span class="mi">0</span><span class="o">,</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"숫자를 입력하세요."</span><span class="o">);</span>
+    		
+    		<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+    		<span class="nc">String</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+    		<span class="n">num</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tmp</span><span class="o">);</span>
+    		
+    		<span class="k">while</span> <span class="o">(</span><span class="n">num</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    			<span class="n">sum</span> <span class="o">+=</span> <span class="n">num</span><span class="o">%</span><span class="mi">10</span><span class="o">;</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"sum = %d num = %d%n"</span><span class="o">,</span><span class="n">sum</span><span class="o">,</span><span class="n">num</span><span class="o">);</span>
+    			
+    			<span class="n">num</span> <span class="o">/=</span> <span class="mi">10</span><span class="o">;</span>
+    		<span class="o">}</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"각 자리수의 합 : "</span><span class="o">+</span><span class="n">sum</span><span class="o">);</span>
+    		
+    		<span class="kt">int</span> <span class="n">sum2</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    		<span class="k">for</span><span class="o">(</span><span class="n">num</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tmp</span><span class="o">);</span><span class="n">num</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">;</span><span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">/</span> <span class="mi">10</span><span class="o">)</span>
+    		<span class="o">{</span>
+    			<span class="n">sum2</span> <span class="o">+=</span> <span class="n">num</span><span class="o">%</span><span class="mi">10</span><span class="o">;</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"sum = %d num = %d%n"</span><span class="o">,</span><span class="n">sum2</span><span class="o">,</span><span class="n">num</span><span class="o">);</span>
+    		<span class="o">}</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"각 자리수의 합 : "</span><span class="o">+</span><span class="n">sum2</span><span class="o">);</span>
+    	<span class="o">}</span>
+    
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>do while : 반복횟수를 알거나 코드가 중복이면 do while문을 사용<br>
+  do{조건식이 참일 때 수행 될 문장. 처음 한번든 무조건 실행}<br>
+  while(조건식);</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_15</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">input</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">,</span> <span class="n">answer</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    		
+    		<span class="n">answer</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">100</span><span class="o">)+</span><span class="mi">1</span><span class="o">;</span>
+    		<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+    		
+    		<span class="k">do</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"1과 100사이의 정수를 입력하세요.&gt;&gt;"</span><span class="o">);</span>
+    			<span class="n">input</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+    			
+    			<span class="k">if</span> <span class="o">(</span><span class="n">input</span> <span class="o">&gt;</span> <span class="n">answer</span><span class="o">)</span> <span class="o">{</span>
+    				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"더 작은 수로 다시 시도하세요."</span><span class="o">);</span>
+    			<span class="o">}</span>
+    			<span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">input</span> <span class="o">&lt;</span> <span class="n">answer</span><span class="o">)</span> <span class="o">{</span>
+    				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"더 큰 수로 다시 시도하세요."</span><span class="o">);</span>
+    			<span class="o">}</span>
+    		<span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">input</span> <span class="o">!=</span> <span class="n">answer</span><span class="o">);</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"정답입니다!"</span><span class="o">);</span>
+    		<span class="o">}</span>
+    	<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_16</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    		
+    		<span class="k">do</span> <span class="o">{</span>
+    			<span class="o">++</span><span class="n">i</span><span class="o">;</span>
+    			<span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span><span class="o">;</span>
+    		<span class="o">}</span> <span class="k">while</span><span class="o">(</span><span class="n">sum</span><span class="o">&lt;</span><span class="mi">100</span><span class="o">);</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"i="</span><span class="o">+</span><span class="n">i</span><span class="o">);</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"sum="</span><span class="o">+</span><span class="n">sum</span><span class="o">);</span>
+    	<span class="o">}</span>
+    
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_16</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    		
+    		<span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+    			<span class="k">if</span><span class="o">(</span><span class="n">sum</span><span class="o">&gt;</span><span class="mi">100</span><span class="o">)</span>
+    				<span class="k">break</span><span class="o">;</span>
+    			<span class="o">++</span><span class="n">i</span><span class="o">;</span>
+    			<span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span><span class="o">;</span>
+    		<span class="o">}</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"i="</span><span class="o">+</span><span class="n">i</span><span class="o">);</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"sum="</span><span class="o">+</span><span class="n">sum</span><span class="o">);</span>
+    	<span class="o">}</span>
+    
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>continue : 조건이 충족된다면 블록의 끝으로 이동, 다시 반복문 수행.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_17</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span>
+				<span class="k">continue</span><span class="o">;</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>이름붙은 반복문 : 반복문에 이름을 붙여서 break앞에 적어주면 하나이상의 반복문을 벗어날 수 있다</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Loop1</span> <span class="o">:</span> <span class="k">for</span><span class="o">(</span> <span class="o">......</span>
+	<span class="k">for</span><span class="o">(</span> <span class="o">...........</span>
+				<span class="k">break</span> <span class="nc">Loop1</span><span class="o">;</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_18</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">menu</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		
+		<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+		
+		<span class="n">outer</span> <span class="o">:</span> <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"(1) square"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"(2) square root"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"(3) log"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"원하는 메뉴를 입력하세요. (종료 : 0)"</span><span class="o">);</span>
+			
+			<span class="nc">String</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+			<span class="n">menu</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tmp</span><span class="o">);</span>
+			
+			<span class="k">if</span><span class="o">(</span><span class="n">menu</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"프로그램을 종료합니다."</span><span class="o">);</span>
+				<span class="k">break</span><span class="o">;</span>
+			<span class="o">}</span>
+			<span class="k">else</span> <span class="nf">if</span> <span class="o">(!(</span><span class="n">menu</span><span class="o">&gt;=</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">menu</span><span class="o">&lt;=</span><span class="mi">3</span><span class="o">))</span> <span class="o">{</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"메뉴를 잘못 선택하셨습니다. (종료는 0)"</span><span class="o">);</span>
+				<span class="k">continue</span><span class="o">;</span>
+			<span class="o">}</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"선택하신 메뉴는 "</span><span class="o">+</span><span class="n">menu</span><span class="o">+</span><span class="s">"번입니다."</span><span class="o">);</span>
+			
+			<span class="k">for</span><span class="o">(;;)</span> <span class="o">{</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"계산할 값을 입력하세요.(계산종료 : 0, 전체종료 : 99)&gt;&gt;"</span><span class="o">);</span>
+				<span class="n">tmp</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+				<span class="n">num</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tmp</span><span class="o">);</span>
+				
+				<span class="k">if</span><span class="o">(</span><span class="n">num</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span>
+					<span class="k">break</span><span class="o">;</span>
+				<span class="k">if</span><span class="o">(</span><span class="n">num</span><span class="o">==</span><span class="mi">99</span><span class="o">)</span>
+					<span class="k">break</span> <span class="n">outer</span><span class="o">;</span>
+				
+				<span class="k">switch</span><span class="o">(</span><span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
+					<span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+						<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"result="</span><span class="o">+</span><span class="n">num</span><span class="o">*</span><span class="n">num</span><span class="o">);</span>
+						<span class="k">break</span><span class="o">;</span>
+					<span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+						<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"result="</span><span class="o">+</span><span class="nc">Math</span><span class="o">.</span><span class="na">sqrt</span><span class="o">(</span><span class="n">num</span><span class="o">));</span> <span class="c1">//제곱근</span>
+						<span class="k">break</span><span class="o">;</span>
+					<span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+						<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"result="</span><span class="o">+</span><span class="nc">Math</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">num</span><span class="o">));</span> <span class="c1">//로그</span>
+						<span class="k">break</span><span class="o">;</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#java" class="page__taxonomy-item" rel="tag">java</a><span class="sep">, </span>
+    
+      <a href="/tags/#%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D" class="page__taxonomy-item" rel="tag">자바의정석</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/java" class="page__taxonomy-item p-category" rel="tag">JAVA</a>
+    
+    </span>
+  </p>
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2022-07-30">July 30, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EC%A0%9C%EC%96%B4%EB%AC%B8+%28flow+control+statemt%29%20http%3A%2F%2Flocalhost%3A4000%2Fjava%2F%25EC%25A0%259C%25EC%2596%25B4%25EB%25AC%25B8-%28flow-control-statemt%29%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjava%2F%25EC%25A0%259C%25EC%2596%25B4%25EB%25AC%25B8-%28flow-control-statemt%29%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2Fjava%2F%25EC%25A0%259C%25EC%2596%25B4%25EB%25AC%25B8-%28flow-control-statemt%29%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/java/%EC%97%B0%EC%82%B0%EC%9E%90(Operator)/" class="pagination--pager" title="연산자(Operator)
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+  <div id="giscus">
+    <script src="https://giscus.app/client.js" data-repo="nunnunnu/nunnunnu.github.io" data-repo-id="R_kgDOMWEGow" data-category="Comments" data-category-id="DIC_kwDOMWEGo84ChY2C" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="noborder_light" data-lang="ko" crossorigin="anonymous" async>
+    </script>
+</div>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/%EC%97%B0%EC%82%B0%EC%9E%90(Operator)/" rel="permalink">연산자(Operator)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">연산자 : 연산을 수행하는 기호 (+,-,*,/)
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/%EB%B3%80%EC%88%98(Variable)/" rel="permalink">자바의 정석 강의 - 변수(Variable)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  system.out.println(); 에서 print==ln==이 \n이거라서 따로 \n안해줘도 지금까지 줄바꿈이 됐던거임..! 충격! pintf도 있다..!
+      public class Ex2_1 {
+    
+  	public static void main(Strin...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/%EC%9E%90%EB%B0%94-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84/" rel="permalink">자바의 정석 강의 - 자바 시작하기 전
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  자바 : 프로그래밍 언어. 컴퓨터 프로그램(애플리케이션)을 만드는데 사용
+  실행환경(JRE) + 개발도구(JDK) + 라이브러리(API)
+    
+      
+        라이브러리 : 프로그램을 만드는데 필요한 기능들을 미리 만들어놓은 것.
+
+        ⇒ 쉽고 빠른...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <a href="https://hits.seeyoufarm.com">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnunnunnu%2Fgithub.io&amp;count_bg=%23AFD5ED&amp;title_bg=%23AFD5ED&amp;icon=googlecloud.svg&amp;icon_color=%23E7E7E7&amp;title=hits&amp;edge_flat=true">
+    <style>
+      .hits {
+        width: auto; height: auto;
+        max-width: 10px;
+        max-height: 2px;
+      }
+    </style>
+  </a>
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://github.com/nunnunnu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2024 Jinny. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
