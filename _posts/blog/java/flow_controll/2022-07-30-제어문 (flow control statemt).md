@@ -9,7 +9,8 @@ tags:
 ---
 - 조건문
     - if문
-![image](blog/java/flow_controll/Untitled_104.Png)
+    
+![image](/assets/images/Untitled_104.Png)
     - switch : 처리해야하는 경우의 수가 많을 때 씀(if-else if문보다 효율적) 
 ```java
     switch (조건식) {
