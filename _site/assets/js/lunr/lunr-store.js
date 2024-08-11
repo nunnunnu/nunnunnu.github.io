@@ -22,4 +22,10 @@ var store = [{
         "tags": ["java","자바의정석"],
         "url": "/java/%EC%A0%9C%EC%96%B4%EB%AC%B8-(flow-control-statemt)/",
         "teaser": null
+      },{
+        "title": "배열",
+        "excerpt":"배열 : 같은 타입의 변수를 하나의 묶음으로 다루는 것. 선언 : 배열을 다루기 위한 참조변수의 선언 int[] score; / String[] name; - 자바스타일 int score[]; / String name[]; - c언어 스타일 둘다 가능은 함. 편한걸로 쓸것. int[] score; score = new int [5]; 배열은 한번 생성하면 실행하는 동안 그 길이를...","categories": ["JAVA"],
+        "tags": ["java","자바의정석"],
+        "url": "/java/%EB%B0%B0%EC%97%B4/",
+        "teaser": null
       }]
