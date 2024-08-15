@@ -28,4 +28,10 @@ var store = [{
         "tags": ["java","자바의정석"],
         "url": "/java/%EB%B0%B0%EC%97%B4/",
         "teaser": null
+      },{
+        "title": "예외처리",
+        "excerpt":"프로그램 오류 system.out.println(args[0]); //컴파일 에러 System.out.println(args[0]); //런타임 에러 : 실행중 발생하는 에러. 매개변수로 받은 값이 없는데 실행해서 생김 논리적에러(logical error) : 작성 의도와 다르게 동작 컴파일러에러(compile-time error) : 컴파일 할 때 발생하는 에러번호 컴파일러 구문체크 번역 최적화 (ex. int i = 3+5를 8로 변경) 런타임에러(runtime error) : 실행할 때 발생하는...","categories": ["JAVA"],
+        "tags": ["java","자바의정석"],
+        "url": "/java/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/",
+        "teaser": null
       }]

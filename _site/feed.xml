@@ -1,18 +1,1275 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-28T15:55:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">테스트중</title><subtitle>An amazing website</subtitle><author><name>Jinny</name><email>nod15277@gmail.com</email></author><entry><title type="html">자바의 정석 강의 - 변수(Variable)</title><link href="http://localhost:4000/java/%EB%B3%80%EC%88%98(Variable)/" rel="alternate" type="text/html" title="자바의 정석 강의 - 변수(Variable)" /><published>2022-07-29T06:27:00+09:00</published><updated>2024-07-29T00:49:00+09:00</updated><id>http://localhost:4000/java/%EB%B3%80%EC%88%98(Variable)</id><content type="html" xml:base="http://localhost:4000/java/%EB%B3%80%EC%88%98(Variable)/"><![CDATA[<ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-15T21:15:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">테스트중</title><subtitle>An amazing website</subtitle><author><name>Jinny</name><email>nod15277@gmail.com</email></author><entry><title type="html">예외처리</title><link href="http://localhost:4000/java/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" rel="alternate" type="text/html" title="예외처리" /><published>2022-08-14T00:00:00+09:00</published><updated>2022-08-14T00:00:00+09:00</updated><id>http://localhost:4000/java/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/java/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/"><![CDATA[<h3 id="프로그램-오류">프로그램 오류</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">system</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span> <span class="c1">//컴파일 에러</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span> <span class="c1">//런타임 에러 : 실행중 발생하는 에러. 매개변수로 받은 값이 없는데 실행해서 생김</span>
+</code></pre></div></div>
+
+<ul>
+  <li>논리적에러(logical error) : 작성 의도와 다르게 동작</li>
+  <li>컴파일러에러(compile-time error) : 컴파일 할 때 발생하는 에러번호
+    <ul>
+      <li>컴파일러
+        <ol>
+          <li>구문체크</li>
+          <li>번역</li>
+          <li>최적화 (ex. int i = 3+5를 8로 변경)</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>런타임에러(runtime error) : 실행할 때 발생하는 에러. 프로그램종료
+    <ul>
+      <li>
+        <p>에러 (error) : 프로그램코드에 의해 수습될 수 없는 심각한 오류<br />
+  ex)Out Of Memory Error - OOME : 메모리부족으로 일어나는 오류</p>
+      </li>
+      <li>
+        <p>예외 (exception) : 프로그램코드에 의해 수습될 수 있는 다소 미약한 오류<br />
+  ex)RuntimeException, IOException</p>
+
+        <ul>
+          <li>
+            <p>Excepton클래스들 : 사용자의 실수와 같은 외적인 요인에 의해 발생하는 예외</p>
+
+            <p>— checked예외 : 컴파일러가 예외처리 여부를 체크(예외처리 필수)</p>
+          </li>
+          <li>
+            <p>RuntimeException 클래스들 : 프로그래머의 실수로 발생하는 예외</p>
+
+            <p>— unchecked예외 : 컴파일러가 예외처리 여부를 체크 안함.(예외처리 선택)</p>
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">throw</span> <span class="k">new</span> <span class="nc">Exception</span><span class="o">(</span><span class="s">"고의로 발생"</span><span class="o">);</span>  <span class="c1">//try-catch문이 없어 컴파일 조차 안됨</span>
+  		<span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"고의로 발생"</span><span class="o">);</span>  <span class="c1">//try-catch가 없어도 컴파일은 됐으나 실행중 에러. 비정상 종료</span>
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p>예외처리(exception handling) : 프로그램 실행시 발생할 수 있는 예외의 발생에 대비한 코드를 작성.<br />
+  프로그램의 비정상 종료를 막고 정상적인 실행상태를 유지<br />
+  — try - catch문 사용 - {}생략불가.</p>
+
+            <p>try { /<em>예외가 발생할 가능성이 있는 문장을 넣는다</em>/<br />
+  } catch (Exception1 e1) { /* Exception1이 발생했을 경우, 이를 처리하기 위한 문장을 넣음<em>/<br />
+  } catch (Exception2 e2) { /</em> Exception2이 발생했을 경우, 이를 처리하기 위한 문장을 넣음<em>/<br />
+  catch (ExceptionN eN) { /</em> ExceptionN이 발생했을 경우, 이를 처리하기 위한 문장을 넣음*/</p>
+
+            <ul>
+              <li>try블럭에서 예외가 발생한 경우
+                <ol>
+                  <li>발생한 예외와 일치하는 catch블럭이 있는지 확인</li>
+                  <li>일치하는 catch블럭을 찾게 되면, 그 catch블럭 내의 문장들을 수행하고 전체 try-catch문을 빠져나가서 그 다음문장을 계속해서 수행한다. 만일 일치하는 catch블럭을 찾지 못하면, 예외는 처리되지 못한다.</li>
+                </ol>
+              </li>
+              <li>
+                <p>try블럭 내에서 예외가 발생하지 않은 경우</p>
+
+                <ol>
+                  <li>catch블럭을 거치지 않고 전체 try-catch문을 빠져나가 수행을 계속한다.</li>
+                </ol>
+
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+  		<span class="k">try</span> <span class="o">{</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+  		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span> <span class="c1">//예외가 발생하지 않아서 출력안됨. </span>
+  		<span class="o">}</span><span class="c1">//try-catch문의 끝</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>  <span class="c1">//1 2 3 5 출력됨</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"============="</span><span class="o">);</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+  		<span class="k">try</span> <span class="o">{</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">);</span> <span class="c1">//예외 발생 0으로 나누기 금지</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+  		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">ArithmeticException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+  		<span class="o">}</span><span class="c1">//try-catch문의 끝</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span>  <span class="c1">//1 3 4 출력됨</span>
+  	<span class="o">}</span><span class="c1">//main 메소드의 끝</span>
+  <span class="o">}</span>
+</code></pre></div>                </div>
+              </li>
+            </ul>
+          </li>
+          <li>printStackTrace() : 예외발생 당시의 호출스택(Call strack)에 있었던 메소드의 정보와 예외 메시지를 화면에 출력한다.</li>
+          <li>
+            <p>getMessage() : 발생한 예외클래스의 인스턴스에 저장된 메세지를 얻을 수 있다.</p>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+  		<span class="k">try</span> <span class="o">{</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">);</span> <span class="c1">//ArithmeticException예외 발생 0으로 나누기 금지</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span> <span class="c1">//실행안됨</span>
+  		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">ArithmeticException</span> <span class="n">ae</span><span class="o">)</span> <span class="o">{</span>
+  			<span class="n">ae</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"예외 메세지 : "</span><span class="o">+</span><span class="n">ae</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span> 
+  		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>  <span class="c1">//Exception : 모든 예외의 최고조상, 모든 예외를 처리함(맨 마지막에 와야함)</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Exception"</span><span class="o">);</span> <span class="c1">//실행안됨</span>
+  		<span class="o">}</span><span class="c1">//try-catch문의 끝</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">6</span><span class="o">);</span>  
+  		<span class="c1">//1 2 3   java.lang.ArithmeticException: / by   zero 예외 메세지 : / by zero   6 출력됨</span>
+  	<span class="o">}</span><span class="c1">//main 메소드의 끝</span>
+  <span class="o">}</span>
+</code></pre></div>            </div>
+          </li>
+          <li>예외 발생시키기
+            <ol>
+              <li>
+                <p>연산자 new를 이용해 발생시키려는 예외 클래스의 객체를 만든다<br />
+ Exception e = new Exception(”고의로 발생시켰음”);</p>
+              </li>
+              <li>
+                <p>키워드 throw를 이용해 예외 발생<br />
+ throw e;</p>
+              </li>
+            </ol>
+          </li>
+          <li>예외 처리방법
+            <ul>
+              <li>
+                <p>멀티 catch블럭(try - catch문) : 내용이 같은 catch블럭을 하나로 합친 것 (JDK1.7부터)<br />
+  try { /<em>…</em>/ } catch (ExceptionA | ExceptionB) { e.printStackTrace (); }</p>
+
+                <p>멀티catch블록에 쓰는 두 클래스가 부모자식관계면 에러. 부모만써도 같은 의미라서 에러표시됨</p>
+
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+  		<span class="k">try</span> <span class="o">{</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">);</span> <span class="c1">//ArithmeticException예외 발생 0으로 나누기 금지</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span> <span class="c1">//실행안됨</span>
+  		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">ExceptionA</span> <span class="o">|</span> <span class="nc">ExceptionB</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>  <span class="c1">//Exception : 모든 예외의 최고조상, 모든 예외를 처리함(맨 마지막에 와야함)</span>
+  <span class="c1">//			e.methodA(); //에러, e에 ExceptionA가 들어올지 ExceptionB가 들어올지 알수 없음. methodA는 ExceptionA의 멤버라서 에러</span>
+  			<span class="c1">//ExceptionA,ExceptionB의 공통멤버는 사용 가능</span>
+  			<span class="k">if</span><span class="o">(</span><span class="n">e</span> <span class="k">instanceof</span> <span class="nc">ExceptionA</span><span class="o">)</span> <span class="o">{</span>
+  				<span class="nc">ExceptionA</span> <span class="n">e1</span> <span class="o">=</span> <span class="o">(</span><span class="nc">ExceptionA</span><span class="o">)</span><span class="n">e</span><span class="o">;</span>
+  				<span class="n">e1</span><span class="o">.</span><span class="na">methodA</span><span class="o">();</span>
+  			<span class="o">}</span>
+  			<span class="k">else</span> <span class="o">{</span>
+  				<span class="nc">ExceptionB</span> <span class="n">e2</span> <span class="o">=</span> <span class="o">(</span><span class="nc">ExceptionB</span><span class="o">)</span><span class="n">e</span><span class="o">;</span>
+  				<span class="n">e2</span><span class="o">.</span><span class="na">methodB</span><span class="o">();</span>
+  			<span class="o">}</span>
+  		<span class="o">}</span><span class="c1">//try-catch문의 끝</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">6</span><span class="o">);</span>  
+  	<span class="o">}</span><span class="c1">//main 메소드의 끝</span>
+  <span class="o">}</span>
+</code></pre></div>                </div>
+              </li>
+              <li>
+                <p>메소드에 예외 선언하기 : 빈catch블럭을 사용함</p>
+
+                <p>❗예외를 발생시키는 키워드 throw와 메소드에 선언할 때 쓰이는 throws를 잘 구분 할 것.</p>
+
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">static</span> <span class="kt">void</span> <span class="nf">startInstall</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">SpaceException</span><span class="o">,</span> <span class="nc">MemoryException</span><span class="o">{</span>
+  	<span class="k">if</span><span class="o">(!</span><span class="n">enoughSpace</span><span class="o">())</span> <span class="c1">//설치공간이 부족하다면</span>
+  		<span class="k">throw</span> <span class="k">new</span> <span class="nf">SpaceException</span><span class="o">(</span><span class="s">"설치공간 부족"</span><span class="o">);</span>
+  	<span class="k">if</span><span class="o">(!</span><span class="n">enoughMemory</span><span class="o">())</span> <span class="c1">//메모리가 부족하다면</span>
+  		<span class="k">throw</span> <span class="k">new</span> <span class="nf">MemoryException</span><span class="o">(</span><span class="s">"메모리 부족"</span><span class="o">);</span>
+  <span class="o">}</span> <span class="c1">//내가 처리할 수 없는 것들. 사용자에게 해결하고 오라고 떠넘김</span>
+</code></pre></div>                </div>
+
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">{</span>
+  	<span class="n">method1</span><span class="o">();</span> <span class="c1">//같은 클래스 내의 static멤버이므로 객체생성없이 직접 호출 가능</span>
+  	<span class="o">}</span>
+  	<span class="kd">static</span> <span class="kt">void</span> <span class="nf">method1</span><span class="o">()</span><span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+  		<span class="n">method2</span><span class="o">();</span>
+  	<span class="o">}</span>
+  	<span class="kd">static</span> <span class="kt">void</span> <span class="nf">method2</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">{</span>
+  		<span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">();</span>
+  	<span class="o">}</span>
+  <span class="o">}</span> <span class="c1">//method2에서 발생한 Exception이 try-catch문을 만나지 못해 method1-main까지 올라갔다가 JVM까지 올라감 -&gt; 비정상종료</span>
+  <span class="c1">//try-catch문이 하나는 있어야 해결이됨.</span>
+</code></pre></div>                </div>
+
+                <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+                
+  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  			<span class="nc">File</span> <span class="n">f</span> <span class="o">=</span> <span class="n">createFile</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="na">getName</span><span class="o">()+</span><span class="s">" 파일이 성공적으로 생성되었습니다"</span><span class="o">);</span>
+  		<span class="o">}</span>
+                
+   <span class="kd">static</span> <span class="nc">File</span> <span class="nf">createFile</span><span class="o">(</span><span class="nc">String</span> <span class="n">fileName</span><span class="o">){</span>
+  	<span class="k">try</span> <span class="o">{</span>
+  		<span class="k">if</span><span class="o">(</span><span class="n">fileName</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">fileName</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">))</span>
+  	 <span class="o">{</span>
+  		 <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"파일 이름이 유효하지 않습니다."</span><span class="o">);</span>
+  	 <span class="o">}</span>
+  	<span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  		 <span class="n">fileName</span> <span class="o">=</span> <span class="s">"제목없음.txt"</span><span class="o">;</span>
+  	 <span class="o">}</span>
+  	 <span class="nc">File</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">fileName</span><span class="o">);</span> <span class="c1">//File클래스의 객체 생성</span>
+  	 <span class="k">try</span> <span class="o">{</span>
+  		<span class="n">f</span><span class="o">.</span><span class="na">createNewFile</span><span class="o">();</span>
+  	<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+  	<span class="o">}</span><span class="k">finally</span><span class="o">{</span>
+  		<span class="c1">//예외 발생 여부와 상관없이 무조건 실행해야함. 코드 중복 박기 위해</span>
+  	<span class="o">}</span>
+  	 <span class="k">return</span> <span class="n">f</span><span class="o">;</span>
+  	<span class="o">}</span>
+   <span class="o">}</span>
+</code></pre></div>                </div>
+              </li>
+              <li>
+                <p>finally블럭 : 예외 발생 여부와 관계없이 수행되어야 하는 코드</p>
+
+                <p>⚠️ try블럭안에 return문이 있어서 try블럭을 벗어나갈 때도 finally블럭이 실행 됨</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>사용자정의 예외 만들기</p>
+
+            <p>: 우리가 직접 예외 클래스를 정의할 수 있다.</p>
+
+            <p>조상은 Exception과 RuntimeException중에 선택 (웬만하면 RuntimeException으로 할것. try-catch문 꼭 안써줘도 됨)</p>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">class</span> <span class="nc">MyException</span> <span class="kd">extends</span> <span class="nc">Exception</span><span class="o">{</span>
+  	<span class="nc">MyException</span><span class="o">(</span><span class="nc">String</span> <span class="n">msg</span><span class="o">){</span> <span class="c1">//문자열을 매개변수로 받는 생성자</span>
+  		<span class="kd">super</span><span class="o">(</span><span class="n">msg</span><span class="o">);</span> <span class="c1">//조상인 Exception의 생성자를 호출</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>            </div>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">class</span> <span class="nc">MyException</span> <span class="kd">extends</span> <span class="nc">Exception</span><span class="o">{</span>
+  	<span class="c1">//에러코드 값을 저장하기 위한 필드 추가</span>
+  	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">ERR_CODE</span><span class="o">;</span>
+  	 <span class="nc">MyException</span><span class="o">(</span><span class="nc">String</span> <span class="n">msg</span><span class="o">,</span> <span class="kt">int</span> <span class="n">errCode</span><span class="o">){</span> <span class="c1">//생성자</span>
+  		 <span class="kd">super</span><span class="o">(</span><span class="n">msg</span><span class="o">);</span>
+  		 <span class="no">ERR_CODE</span> <span class="o">=</span> <span class="n">errCode</span><span class="o">;</span>
+  	 <span class="o">}</span>
+  	 <span class="nc">MyException</span><span class="o">(</span><span class="nc">String</span> <span class="n">msg</span><span class="o">){</span> <span class="c1">//생성자</span>
+  		 <span class="k">this</span><span class="o">(</span><span class="n">msg</span><span class="o">,</span> <span class="mi">100</span><span class="o">);</span> <span class="c1">//ERR_CODE를 100(기본값)으로 초기화</span>
+  	 <span class="o">}</span>
+  	 <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getErrCode</span><span class="o">()</span> <span class="o">{</span> <span class="c1">//에러코드를 얻을 수 있는 메소드도 추가</span>
+  		 <span class="k">return</span> <span class="no">ERR_CODE</span><span class="o">;</span> <span class="c1">//주로 getMessage()와 함께 사용될 것.</span>
+  	 <span class="o">}</span>
+  	<span class="o">}</span>
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p>예외 되던지기(exception re-throwing)</p>
+
+            <p>: 예외를 처리한 후에 다시 예외를 발생시킴</p>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="k">try</span> <span class="o">{</span>
+  			<span class="n">method1</span><span class="o">();</span>
+  		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"main메소드에서 예외처리 되었습니다"</span><span class="o">);</span>
+  		<span class="o">}</span> <span class="c1">//예외 2번처리 = 예외 되던지기 = 예외 양쪽에서 처리</span>
+  	<span class="o">}</span>
+  <span class="kd">static</span> <span class="kt">void</span> <span class="nf">method1</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">{</span>
+  		<span class="k">try</span> <span class="o">{</span>
+  			<span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">();</span>
+  		<span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"method1에서 예외가 처리되었습니다"</span><span class="o">);</span>
+  			<span class="k">throw</span> <span class="n">e</span><span class="o">;</span>
+  		<span class="o">}</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p>연결된 예외(chained exception)</p>
+
+            <p>: 한 예외가 다른 예외를 발생시킬 수 있다.</p>
+
+            <p>예외 A가 예외 B를 발생시키면 A는 B의 원인예외(cause exception)</p>
+
+            <p>Throwable initCause(Throwable cause) : 지정된 예외를 원인 예외로 등록</p>
+
+            <p>Throwable getCause() : 원인 예외를 반환</p>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Throwable</span> <span class="kd">implements</span> <span class="nc">Serializable</span><span class="o">{</span>
+  	<span class="c1">//...</span>
+  	<span class="kd">private</span> <span class="nc">Throwable</span> <span class="n">cause</span> <span class="o">=</span> <span class="k">this</span><span class="o">;</span> <span class="c1">//객체 자신(this)을 원인 예외로 등록</span>
+  	<span class="c1">//...</span>
+  	<span class="kd">public</span> <span class="kd">synchronized</span> <span class="nc">Throwable</span> <span class="nf">initCause</span><span class="o">(</span><span class="nc">Throwable</span> <span class="n">cause</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="c1">//...</span>
+  		<span class="k">this</span><span class="o">.</span><span class="na">cause</span> <span class="o">=</span> <span class="n">cause</span><span class="o">;</span> <span class="c1">//cause를 원인 예외로 등록</span>
+  		<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>            </div>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">void</span> <span class="nf">install</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">InstallException</span><span class="o">{</span> <span class="c1">//실제로는 SpaceException이 발생했으나 InstallException안에 포함시켜서 예외 처리됨</span>
+  	<span class="k">try</span> <span class="o">{</span>
+  		<span class="n">startInstall</span><span class="o">();</span> <span class="c1">//SpaceException 발생, 저장공간 부족</span>
+  		<span class="n">copyFiles</span><span class="o">();</span>
+  	<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SpaceException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="nc">InstallException</span> <span class="n">ie</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">InstallException</span><span class="o">(</span><span class="s">"설치 중 예외 발행"</span><span class="o">);</span>
+  		<span class="n">ie</span><span class="o">.</span><span class="na">initCause</span><span class="o">(</span><span class="n">e</span><span class="o">);</span> <span class="c1">//ie(InstallException)의 원인 예외를 e(SpaceException)으로 지정</span>
+  		<span class="k">throw</span> <span class="n">ie</span><span class="o">;</span> <span class="c1">//InstallException 발생</span>
+  	<span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="nc">MemoryException</span> <span class="n">me</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="c1">//......</span>
+  	<span class="o">}</span> 
+  <span class="o">}</span>
+</code></pre></div>            </div>
+
+            <p>— 이유 1 : 여러 예외를 하나로 묶어서 다루기 위해</p>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">void</span> <span class="nf">install</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">InstallException</span><span class="o">{</span> <span class="c1">//실제로는 SpaceException이 발생했으나 InstallException안에 포함시켜서 예외 처리됨</span>
+  	<span class="k">try</span> <span class="o">{</span>
+  		<span class="n">startInstall</span><span class="o">();</span> <span class="c1">//SpaceException 발생, 저장공간 부족</span>
+  		<span class="n">copyFiles</span><span class="o">();</span>
+  	<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SpaceException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="nc">InstallException</span> <span class="n">ie</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">InstallException</span><span class="o">(</span><span class="s">"설치 중 예외 발행"</span><span class="o">);</span>
+  		<span class="n">ie</span><span class="o">.</span><span class="na">initCause</span><span class="o">(</span><span class="n">e</span><span class="o">);</span> <span class="c1">//ie(InstallException)의 원인 예외를 e(SpaceException)으로 지정</span>
+  		<span class="k">throw</span> <span class="n">ie</span><span class="o">;</span> <span class="c1">//InstallException 발생</span>
+  	<span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="nc">MemoryException</span> <span class="n">me</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="c1">//......</span>
+  	<span class="o">}</span> 
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+            
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">//		try {</span>
+  <span class="c1">//			install();</span>
+  <span class="c1">//		} catch (SpaceException e) {</span>
+  <span class="c1">//			e.printStackTrace();</span>
+  <span class="c1">//		} catch (MemoryException e) {</span>
+  <span class="c1">//			e.printStackTrace();</span>
+  <span class="c1">//		} catch (Exception e) {</span>
+  <span class="c1">//			e.printStackTrace();</span>
+  		<span class="k">try</span> <span class="o">{</span>
+  			<span class="n">install</span><span class="o">();</span>
+  		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">InstallException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  			<span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+  		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  			<span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+  		<span class="o">}</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>            </div>
+
+            <p>— 이유 2 : checked예외를 unchecked예외로 변경할때</p>
+
+            <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">static</span> <span class="kt">void</span> <span class="nf">startInstall</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">SpaceException</span><span class="o">,</span> <span class="nc">MemoryException</span><span class="o">{</span>
+  	<span class="k">if</span><span class="o">(!</span><span class="n">enoughSpace</span><span class="o">())</span>
+  		<span class="k">throw</span> <span class="k">new</span> <span class="nf">SpaceException</span><span class="o">(</span><span class="s">"설치할 공간이 부족합니다."</span><span class="o">);</span>
+  	<span class="k">if</span><span class="o">(!</span><span class="n">enoughMemory</span><span class="o">())</span>
+  		<span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="k">new</span> <span class="nc">MemoryException</span><span class="o">(</span><span class="s">"메모리가 부족합니다."</span><span class="o">));</span>		
+  <span class="o">}</span><span class="c1">//MemoryException을 RuntimeException으로 위장해 try-catch문은 사용하지않아도됨</span>
+  <span class="c1">//class SpaceException extends Exception{</span>
+  <span class="c1">//	SpaceException(String msg){</span>
+  <span class="c1">//		super(msg);</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>Jinny</name><email>nod15277@gmail.com</email></author><category term="JAVA" /><category term="java" /><category term="자바의정석" /><summary type="html"><![CDATA[프로그램 오류]]></summary></entry><entry><title type="html">배열</title><link href="http://localhost:4000/java/%EB%B0%B0%EC%97%B4/" rel="alternate" type="text/html" title="배열" /><published>2022-07-31T00:00:00+09:00</published><updated>2022-07-31T00:00:00+09:00</updated><id>http://localhost:4000/java/%EB%B0%B0%EC%97%B4</id><content type="html" xml:base="http://localhost:4000/java/%EB%B0%B0%EC%97%B4/"><![CDATA[<p>배열 : 같은 타입의 변수를 하나의 묶음으로 다루는 것.</p>
+
+<ul>
   <li>
-    <p>system.out.println(); 에서 print==ln==이 \n이거라서 따로 \n안해줘도 지금까지 줄바꿈이 됐던거임..! 충격! pintf도 있다..!</p>
+    <p>선언 : 배열을 다루기 위한 참조변수의 선언</p>
 
-    <pre><code class="language-Java">  public class Ex2_1 {
-    
-  	public static void main(String[] args) {
-  		System.out.printf("hello");
-  		System.out.printf("hello");
-  		System.out.printf("hello");
-  	}
-    
-  }
-</code></pre>
+    <p>int[] score; / String[] name; - 자바스타일</p>
 
+    <p>int score[]; / String name[]; - c언어 스타일</p>
+
+    <p>둘다 가능은 함. 편한걸로 쓸것.</p>
+
+    <p>int[] score; score = new int [5];</p>
+  </li>
+  <li>배열은 한번 생성하면 실행하는 동안 그 길이를 바꿀 수 없다. 배열의 길이 - int형 상수</li>
+  <li>
+    <p>char배열인 경우에만</p>
+
+    <p>char charr[] = {’a’,’b’,’c’,’d’}</p>
+
+    <p>system.out.println(charr)</p>
+
+    <p>으로 출력이 가능함. 다른 경우는 for문 또는 Arrays.toString(배열)을 써야 전체출력할 수 있음.</p>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		
+		<span class="kt">int</span> <span class="n">iarr1</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
+		<span class="kt">int</span> <span class="n">iarr2</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
+		<span class="kt">int</span> <span class="n">iarr3</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">100</span><span class="o">,</span><span class="mi">95</span><span class="o">,</span><span class="mi">80</span><span class="o">,</span><span class="mi">70</span><span class="o">,</span><span class="mi">60</span><span class="o">};</span>
+		<span class="kt">char</span> <span class="n">charr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="sc">'a'</span><span class="o">,</span><span class="sc">'b'</span><span class="o">,</span><span class="sc">'c'</span><span class="o">,</span><span class="sc">'d'</span><span class="o">};</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">iarr1</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">iarr1</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>
+		<span class="o">}</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">iarr2</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">iarr2</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">10</span><span class="o">)+</span><span class="mi">1</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">iarr1</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">iarr2</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">iarr3</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">charr</span><span class="o">);</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="kt">float</span> <span class="n">avg</span> <span class="o">=</span> <span class="mi">0</span><span class="n">f</span><span class="o">;</span>
+		
+		<span class="kt">int</span> <span class="n">score</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">100</span><span class="o">,</span><span class="mi">88</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">90</span><span class="o">};</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">score</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">sum</span> <span class="o">+=</span> <span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+		<span class="o">}</span>
+		
+		<span class="n">avg</span> <span class="o">=</span> <span class="o">(</span><span class="kt">float</span><span class="o">)</span><span class="n">sum</span> <span class="o">/</span> <span class="n">score</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+		
+<span class="c1">//		System.out.printf("총점 : %d%n", sum);</span>
+<span class="c1">//		System.out.printf("평균 : %.1f%n", avg);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"총점 : "</span><span class="o">+</span><span class="n">sum</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"평균 : "</span><span class="o">+</span><span class="n">avg</span><span class="o">);</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">score</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">79</span><span class="o">,</span><span class="mi">88</span><span class="o">,</span><span class="mi">91</span><span class="o">,</span><span class="mi">33</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">55</span><span class="o">,</span><span class="mi">95</span><span class="o">};</span>
+		
+		<span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">score</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+		<span class="kt">int</span> <span class="n">min</span> <span class="o">=</span> <span class="n">score</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">score</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">]&gt;</span><span class="n">max</span><span class="o">)</span>
+				<span class="n">max</span><span class="o">=</span><span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+			<span class="k">else</span> <span class="nf">if</span><span class="o">(</span><span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">]&lt;</span><span class="n">min</span><span class="o">)</span>
+				<span class="n">min</span><span class="o">=</span><span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+		<span class="o">}</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"최대값 : "</span><span class="o">+</span><span class="n">max</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"최소값 : "</span><span class="o">+</span><span class="n">min</span><span class="o">);</span>
+			
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>배열 섞기</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">//배열 섞기</span>
+		<span class="kt">int</span> <span class="n">numarr</span><span class="o">[]=</span> <span class="o">{</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">,</span><span class="mi">6</span><span class="o">,</span><span class="mi">7</span><span class="o">,</span><span class="mi">8</span><span class="o">,</span><span class="mi">9</span><span class="o">};</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">numarr</span><span class="o">));</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">numarr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">10</span><span class="o">);</span> <span class="c1">//이건 [i]값을 랜덤으로 받는거고 실질적으로 배열값만 섞으니까 중복이 안나옴</span>
+			<span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">numarr</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+			<span class="n">numarr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">numarr</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+			<span class="n">numarr</span><span class="o">[</span><span class="n">n</span><span class="o">]=</span><span class="n">tmp</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">numarr</span><span class="o">));</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+	
+		<span class="kt">int</span> <span class="n">numarr</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">45</span><span class="o">];</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">numarr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">numarr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>
+		<span class="o">}</span>
+		
+		<span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">numarr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">n</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">45</span><span class="o">);</span> <span class="c1">//그냥 랜덤으로 numarr[n]을 구하면 중복값이 나옴</span>
+			<span class="n">tmp</span> <span class="o">=</span> <span class="n">numarr</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+			<span class="n">numarr</span><span class="o">[</span><span class="mi">0</span><span class="o">]=</span><span class="n">numarr</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+			<span class="n">numarr</span><span class="o">[</span><span class="n">n</span><span class="o">]=</span><span class="n">tmp</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><span class="n">k</span><span class="o">&lt;</span><span class="mi">6</span><span class="o">;</span><span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">numarr</span><span class="o">[</span><span class="n">k</span><span class="o">]);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>String 배열</p>
+
+    <ul>
+      <li>
+        <p>선언<br />
+  String[] name = new String[3];</p>
+
+        <p>String name[] = {”aa”,”bb”,”cc”}</p>
+      </li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+    
+  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+    
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    	
+  		<span class="nc">String</span> <span class="n">strarr</span><span class="o">[]=</span> <span class="o">{</span><span class="s">"가위"</span><span class="o">,</span><span class="s">"바위"</span><span class="o">,</span><span class="s">"보"</span><span class="o">};</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">strarr</span><span class="o">));</span>
+    		
+    		
+  		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+  		<span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">3</span><span class="o">);</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">strarr</span><span class="o">[</span><span class="n">tmp</span><span class="o">]);</span>
+  		<span class="o">}</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>커맨드라인을 통해 입력받기</p>
+
+    <p>args[]를 통해 입력받기임. cmd통해 입력받기 가능</p>
+  </li>
+  <li>
+    <p>n차원 배열 : n-1차원 배열이 여러개 모인것 보통 3차원부터는 잘 안쓰임, 표현하기 위해서 n중for문 필요함.</p>
+    <ul>
+      <li>
+        <p>2차원배열</p>
+
+        <p>int score [] [] = new int [4] [3]; = 4행 3열</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th> </th>
+              <th>score[0][0]</th>
+              <th>score[0][1]</th>
+              <th>score[0][2]</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>score[0]</td>
+              <td>score[0][0]</td>
+              <td>score[0][1]</td>
+              <td>score[0][2]</td>
+            </tr>
+            <tr>
+              <td>score[1]</td>
+              <td>score[1][0]</td>
+              <td>score[1][1]</td>
+              <td>score[1][2]</td>
+            </tr>
+            <tr>
+              <td>score[2]</td>
+              <td>score[2][0]</td>
+              <td>score[2][1]</td>
+              <td>score[2][2]</td>
+            </tr>
+            <tr>
+              <td>score[3]</td>
+              <td>score[3][0]</td>
+              <td>score[3][1]</td>
+              <td>score[3][2]</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>int arr[] [] ={ {1,2,3}, {4,5,6}}</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+        
+        	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        	
+        		<span class="kt">int</span> <span class="n">score</span><span class="o">[][]</span> <span class="o">=</span> <span class="o">{</span>
+        				<span class="o">{</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">},</span>
+        				<span class="o">{</span><span class="mi">20</span><span class="o">,</span><span class="mi">20</span><span class="o">,</span><span class="mi">20</span><span class="o">,</span><span class="mi">20</span><span class="o">,</span><span class="mi">20</span><span class="o">},</span>
+        				<span class="o">{</span><span class="mi">30</span><span class="o">,</span><span class="mi">30</span><span class="o">,</span><span class="mi">30</span><span class="o">},</span>
+        				<span class="o">{</span><span class="mi">40</span><span class="o">,</span><span class="mi">40</span><span class="o">}</span>
+        		<span class="o">};</span>
+        		<span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        		
+        		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">score</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">length</span><span class="o">;</span><span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"score[%d][%d] = %d%n"</span><span class="o">,</span><span class="n">i</span><span class="o">,</span><span class="n">j</span><span class="o">,</span><span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]);</span>
+        				
+        				<span class="n">sum</span> <span class="o">+=</span><span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
+        			<span class="o">}</span>
+        		<span class="o">}</span>
+        		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"sum = "</span><span class="o">+</span><span class="n">sum</span><span class="o">);</span>
+        	<span class="o">}</span>
+        <span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+        
+        	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        	
+        		<span class="kt">int</span> <span class="n">score</span><span class="o">[][]</span> <span class="o">=</span> <span class="o">{</span>
+        				<span class="o">{</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">,</span><span class="mi">100</span><span class="o">},</span>
+        				<span class="o">{</span><span class="mi">20</span><span class="o">,</span><span class="mi">20</span><span class="o">,</span><span class="mi">20</span><span class="o">},</span>
+        				<span class="o">{</span><span class="mi">30</span><span class="o">,</span><span class="mi">30</span><span class="o">,</span><span class="mi">30</span><span class="o">},</span>
+        				<span class="o">{</span><span class="mi">40</span><span class="o">,</span><span class="mi">40</span><span class="o">,</span><span class="mi">40</span><span class="o">},</span>
+        				<span class="o">{</span><span class="mi">50</span><span class="o">,</span><span class="mi">50</span><span class="o">,</span><span class="mi">50</span><span class="o">}</span>
+        		<span class="o">};</span>
+        		<span class="kt">int</span> <span class="n">kortotal</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">engtotal</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">mathtotal</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        		
+        		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"번호  국어   영어   수학   총점  평균"</span><span class="o">);</span>
+        		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"============================="</span><span class="o">);</span>
+        		
+        		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">score</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        			<span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        			<span class="kt">float</span> <span class="n">avg</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="o">;</span>
+        			
+        			<span class="n">kortotal</span> <span class="o">+=</span> <span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">];</span>
+        			<span class="n">engtotal</span> <span class="o">+=</span> <span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">1</span><span class="o">];</span>
+        			<span class="n">mathtotal</span> <span class="o">+=</span> <span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">2</span><span class="o">];</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%3d"</span><span class="o">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span>
+        			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">length</span><span class="o">;</span><span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        				<span class="n">sum</span> <span class="o">+=</span> <span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
+        				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%5d"</span><span class="o">,</span><span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]);</span>
+        			<span class="o">}</span>
+        			<span class="n">avg</span> <span class="o">=</span> <span class="n">sum</span><span class="o">/</span> <span class="o">(</span><span class="kt">float</span><span class="o">)</span><span class="n">score</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">length</span><span class="o">;</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"   %d %2.1f%n"</span><span class="o">,</span><span class="n">sum</span><span class="o">,</span><span class="n">avg</span><span class="o">);</span>
+        			<span class="o">}</span>
+        		<span class="o">}</span>
+        	<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+        
+        <span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+        
+        	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        	
+        		<span class="nc">String</span><span class="o">[][]</span> <span class="n">words</span> <span class="o">=</span> <span class="o">{</span>
+        			<span class="o">{</span><span class="s">"chair"</span><span class="o">,</span> <span class="s">"의자"</span><span class="o">},</span>
+        			<span class="o">{</span><span class="s">"computer"</span><span class="o">,</span><span class="s">"컴퓨터"</span><span class="o">},</span>
+        			<span class="o">{</span><span class="s">"integer"</span><span class="o">,</span><span class="s">"정수"</span><span class="o">}</span>
+        		<span class="o">};</span>
+        		
+        		<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+        		
+        		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">words</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"Q%d. %s의 뜻은??"</span><span class="o">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">words</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">]);</span>
+        			
+        			<span class="nc">String</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+        			
+        			<span class="k">if</span><span class="o">(</span><span class="n">tmp</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">words</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">0</span><span class="o">]))</span> <span class="o">{</span>
+        				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"정답입니다!!%n%n"</span><span class="o">);</span>
+        			<span class="o">}</span>
+        			<span class="k">else</span> <span class="o">{</span>
+        				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"틀렸습니다! 정답은 "</span><span class="o">+</span><span class="n">words</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="mi">1</span><span class="o">]+</span><span class="s">"입니다."</span><span class="o">);</span>
+        			<span class="o">}</span>
+        		<span class="o">}</span>
+        	<span class="o">}</span>
+        <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>String class = char[] + method : 내용을 변경할 수 없다.(read only)<br />
+  String a =”a”; String b = “b”; a=a+b; 하면 String a와 a값이 따로 저장됨. 덮어쓰기안됨. 연결은 a랑만 돼서 String a는 못씀<br />
+  <img src="/assets/images/java/Untitled_101.png" alt="image" /></li>
+  <li>charAt - 원하는 위치의 문자를 가져옴.</li>
+  <li>substring - 원하는 부분의 문자열을 가져옴(마지막글자 안들고오니까 조심)</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+	
+		<span class="nc">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">"abcdefg"</span><span class="o">;</span>
+		<span class="kt">char</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">str</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ch</span><span class="o">);</span> <span class="c1">//c</span>
+		<span class="nc">String</span> <span class="n">str2</span> <span class="o">=</span> <span class="n">str</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">4</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span> <span class="c1">//bcd</span>
+		<span class="nc">String</span> <span class="n">str3</span> <span class="o">=</span> <span class="n">str</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str3</span><span class="o">);</span> <span class="c1">//bcdefg</span>
+		
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>arrays(class)로 배열 다루기</p>
+
+    <ul>
+      <li>equals() : 같은 값 비교</li>
+      <li>toString()</li>
+      <li>deepToString : 2차원 이상의 다차원 배열의 출력</li>
+      <li>
+        <p>deepEquals : 2차원 이상의 배열들끼리 값이 같은지 비교<br />
+  Arrays.deepEquals(배열1,배열2)</p>
+      </li>
+      <li>
+        <p>copyOf() : 배열 복사<br />
+  Arrays.copyOf(배열,복사할 개수) - 전체복사</p>
+      </li>
+      <li>copyRange : 배열 원하는부분(from~to)까지 복사. 마지막값(to)복사안됨</li>
+      <li>sort(배열) : 배열 정렬. 숫자 오름차순 정렬.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">array</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    	
+    		<span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">};</span>
+    		<span class="kt">int</span> <span class="n">arr2d</span><span class="o">[][]</span> <span class="o">=</span> <span class="o">{</span> <span class="o">{</span><span class="mi">11</span><span class="o">,</span><span class="mi">22</span><span class="o">},</span> <span class="o">{</span><span class="mi">21</span><span class="o">,</span><span class="mi">22</span><span class="o">}</span> <span class="o">};</span>
+    		
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">arr</span><span class="o">));</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">deepToString</span><span class="o">(</span><span class="n">arr2d</span><span class="o">));</span>
+    		
+    		<span class="nc">String</span> <span class="n">str2d</span><span class="o">[][]</span> <span class="o">=</span> <span class="o">{</span> <span class="o">{</span><span class="s">"aaa"</span><span class="o">,</span><span class="s">"bbb"</span><span class="o">},{</span><span class="s">"AAA"</span><span class="o">,</span><span class="s">"BBB"</span><span class="o">}</span> <span class="o">};</span>
+    		<span class="nc">String</span> <span class="n">str2d2</span><span class="o">[][]</span> <span class="o">=</span> <span class="o">{</span> <span class="o">{</span><span class="s">"aaa"</span><span class="o">,</span><span class="s">"bbb"</span><span class="o">},{</span><span class="s">"AAA"</span><span class="o">,</span><span class="s">"BBB"</span><span class="o">}</span> <span class="o">};</span>
+    		
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">deepEquals</span><span class="o">(</span><span class="n">str2d</span><span class="o">,</span> <span class="n">str2d2</span><span class="o">));</span>
+    		
+    		<span class="kt">int</span> <span class="n">arr2</span><span class="o">[]</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">copyOf</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">arr2</span><span class="o">));</span>
+    		<span class="kt">int</span> <span class="n">arr3</span><span class="o">[]</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">copyOfRange</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span><span class="mi">4</span><span class="o">);</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">arr3</span><span class="o">));</span>
+    		
+    		<span class="kt">int</span> <span class="n">arr4</span><span class="o">[]</span> <span class="o">=</span> <span class="o">{</span><span class="mi">0</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">3</span><span class="o">};</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">arr4</span><span class="o">));</span>
+    		<span class="nc">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">arr4</span><span class="o">);</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">arr4</span><span class="o">));</span>
+    	<span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>]]></content><author><name>Jinny</name><email>nod15277@gmail.com</email></author><category term="JAVA" /><category term="java" /><category term="자바의정석" /><summary type="html"><![CDATA[배열 : 같은 타입의 변수를 하나의 묶음으로 다루는 것.]]></summary></entry><entry><title type="html">연산자(Operator)</title><link href="http://localhost:4000/java/%EC%97%B0%EC%82%B0%EC%9E%90(Operator)/" rel="alternate" type="text/html" title="연산자(Operator)" /><published>2022-07-30T00:00:00+09:00</published><updated>2022-07-30T00:00:00+09:00</updated><id>http://localhost:4000/java/%EC%97%B0%EC%82%B0%EC%9E%90(Operator)</id><content type="html" xml:base="http://localhost:4000/java/%EC%97%B0%EC%82%B0%EC%9E%90(Operator)/"><![CDATA[<p>연산자 : 연산을 수행하는 기호 (+,-,*,/)</p>
+
+<p>피연산자 : 연산자의 수행 대상(x+3에서 x와 3)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>종류</td>
+      <td>연산자</td>
+      <td>설명</td>
+    </tr>
+    <tr>
+      <td>산술 연산자</td>
+      <td>+ - * / % ==« »==</td>
+      <td>사칙연산과 나머지 연산</td>
+    </tr>
+    <tr>
+      <td>비교 연산자</td>
+      <td>&lt; &gt; ≥ ≤ == !=</td>
+      <td>크고 작음과 같고 다름을 비교</td>
+    </tr>
+    <tr>
+      <td>논리 연산자</td>
+      <td>&amp;&amp; | !(not)</td>
+      <td>and와 or으로 조건을 연결</td>
+    </tr>
+    <tr>
+      <td>대입 연산자</td>
+      <td>=</td>
+      <td>우변의 값을 좌변에 저장</td>
+    </tr>
+    <tr>
+      <td>기타</td>
+      <td>(type) ?: instanceof</td>
+      <td>형변환 연산자, 삼항 연산자, instanceof 연산자</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>증감 연산자
+    <ul>
+      <li>j = ++i : 값이 참조 되기 전에 증가시 = 일단 i+1하고 i값으로 할거 함</li>
+      <li>j = i++ : 값이 참조 된 후에 증가시킴 = i값으로 할거 다하고 +1</li>
+      <li>i++, ++i처럼 독립적으로 쓰였을때는 차이가 없음</li>
+    </ul>
+  </li>
+  <li>
+    <p>형변환 : 변수 또는 상수의 타입을 다른 타입으로 변환하는 것.</p>
+
+    <p>double d= 85.5; int score = (int)d; //85</p>
+
+    <p>❗반올림 안됨! 그냥 버림!!실수→정수는 모두 그럼</p>
+
+    <ul>
+      <li>자동 형변환 : 서로 다른 두 타입을 일치시킬깨 형변환을 생략하면 대부분 컴파일러가 알아서 형변환을 자동적으로 한다.
+        <ul>
+          <li>생략 가능
+            <ul>
+              <li>float f = 1234; == float f = (float)1234; //컴파일러가 자동으로 형변환. 두개가 같은거임.</li>
+              <li>byte - int는 int값이 byte타입의 범위 -128~127사이의 값이라면 값 손실이 없기 때문에 예외적으로 가능.<br />
+  int i = 100; byte b = i ; 는 에러남. 변수값이라 값손실이 없음을 확신할 수 없기 때문.</li>
+            </ul>
+          </li>
+          <li>생략 불가능
+            <ul>
+              <li>
+                <p>int i = 3.14f; //에러남. float가 int보다 크기때문에 값손실이 발생됨.<br />
+  int i = (int)3.14f로 써줘야함.</p>
+              </li>
+              <li>
+                <p>short - char끼리 자동 형변환 불가능. short가 부호있는 연산자라서. chat - int변환은 가능</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>산술 변환 : 연산 전에 피연산자의 자동으로 타입을 일치시키는 것.</p>
+
+    <ul>
+      <li>두 피연산자의 타입을 큰 타입으로 일치시킴</li>
+      <li>
+        <p>int보다 작은 타입이면 int로 변환된다.<br />
+  byte + short = int / char + short = int</p>
+
+        <p>‘2’ - ‘0’ = 2 (문자 2의 코드가 50이고 문자 0의 코드가 48이라서. 문자코드가 순서대로 1씩 증가해서 문자끼리 식은 일반 식과 결과값이 같음 )</p>
+      </li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ScanfEx1</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1_000_000</span><span class="o">;</span>
+  		<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2_000_000</span><span class="o">;</span>
+    		
+  		<span class="kt">long</span> <span class="n">c</span> <span class="o">=</span> <span class="o">(</span><span class="kt">long</span><span class="o">)</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">;</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>반올림 - Math.round - 실수를 소수 첫째 자리에서 반올림<br />
+  Math.round(4.52) = 5<br />
+  —n의 자리까지 반올림을 해주려면?</p>
+
+    <p>Math.round(Math.PI*1000.0)/1000.0); → 3.142 이렇게 10의 n제곱을 곱하고 나눠줌</p>
+  </li>
+  <li>equals();</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">str1</span> <span class="o">=</span> <span class="s">"abc"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">str2</span> <span class="o">=</span> <span class="s">"abc"</span><span class="o">;</span>
+
+<span class="n">system</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str1</span><span class="o">==</span><span class="n">str삼2</span><span class="o">);</span> <span class="c1">//값의 위치가 같음</span>
+
+<span class="nc">String</span> <span class="n">str3</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">"abc"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">str4</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">"abc"</span><span class="o">);</span>
+<span class="n">system</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str3</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">str4</span><span class="o">);</span> <span class="c1">//인스턴스라서 값을 복제해와서 값의 위치가 다름!!</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>조건 연산자 ? : 조건식의 결과에 따라 연산결과를 달리한다.</p>
+
+    <p>조건식 ? 식1 : 식2 //조건식이 참이면 식1 거짓이면 식2</p>
+
+    <p>result = (x&gt;y) ? x : y ; //괄호 생략가능</p>
+
+    <p>if문을 간단하게 쓸 수 있는 장점이 있음!!</p>
+  </li>
+  <li>
+    <p>대입 연산자</p>
+
+    <ul>
+      <li>lvalue : 왼쪽 피연산자, 저장공간 3, i+3같은 값이 오거나 final을 붙여 상수가 되면 에러남</li>
+      <li>rvalue : 오른쪽 피연산자</li>
+    </ul>
+  </li>
+</ul>
+
+<p>!(not)은 가독성에 안좋으니 가급적 쓰지말것 쓸거면 처음부터 쓰기. 중간부터 쓰면 알아보기 힘들어짐</p>]]></content><author><name>Jinny</name><email>nod15277@gmail.com</email></author><category term="JAVA" /><category term="java" /><category term="자바의정석" /><summary type="html"><![CDATA[연산자 : 연산을 수행하는 기호 (+,-,*,/)]]></summary></entry><entry><title type="html">제어문 (flow control statemt)</title><link href="http://localhost:4000/java/%EC%A0%9C%EC%96%B4%EB%AC%B8-(flow-control-statemt)/" rel="alternate" type="text/html" title="제어문 (flow control statemt)" /><published>2022-07-30T00:00:00+09:00</published><updated>2022-07-30T00:00:00+09:00</updated><id>http://localhost:4000/java/%EC%A0%9C%EC%96%B4%EB%AC%B8%20(flow%20control%20statemt)</id><content type="html" xml:base="http://localhost:4000/java/%EC%A0%9C%EC%96%B4%EB%AC%B8-(flow-control-statemt)/"><![CDATA[<ul>
+  <li>조건문
+    <ul>
+      <li>if문</li>
+    </ul>
+
+    <p><img src="/assets/images/java/Untitled_104.png" alt="image" /></p>
+
+    <ul>
+      <li>switch : 처리해야하는 경우의 수가 많을 때 씀(if-else if문보다 효율적)
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">switch</span> <span class="o">(</span><span class="n">조건식</span><span class="o">)</span> <span class="o">{</span>
+  	<span class="k">case</span> <span class="n">값1</span> <span class="o">:</span> 
+  			<span class="c1">//...</span>
+  			<span class="k">break</span><span class="o">;</span>
+  	<span class="k">case</span> <span class="n">값2</span> <span class="o">:</span> 
+  			<span class="c1">//...</span>
+  			<span class="k">break</span><span class="o">;</span>
+  	<span class="c1">//...</span>
+  	<span class="k">default</span> <span class="o">:</span>
+  		<span class="c1">//....조건식의 결과와 일치하는 case문이 없을떄</span>
+  		<span class="c1">//....</span>
+  <span class="o">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>제약조건	
+      - 조건식 결과가 정수 또는 문자열이여야함.
+      - case문의 값은 정수 상수(문자포함), 문자열만 가능, 중복 금지</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+        <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ScanfEx1</span> <span class="o">{</span>
+        
+        	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        	
+        	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"현재 월을 입력하세요"</span><span class="o">);</span>
+        	
+        	<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+        	<span class="kt">int</span> <span class="n">month</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+        	
+        	<span class="k">switch</span> <span class="o">(</span><span class="n">month</span><span class="o">)</span> <span class="o">{</span>
+        		<span class="k">case</span> <span class="mi">3</span><span class="o">:</span> <span class="k">case</span> <span class="mi">4</span><span class="o">:</span> <span class="k">case</span> <span class="mi">5</span><span class="o">:</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"현재 계절은 봄입니다."</span><span class="o">);</span>
+        			<span class="k">break</span><span class="o">;</span> 
+        		<span class="k">case</span> <span class="mi">6</span><span class="o">:</span> <span class="k">case</span> <span class="mi">7</span><span class="o">:</span><span class="k">case</span> <span class="mi">8</span><span class="o">:</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"현재 계절은 여름입니다."</span><span class="o">);</span>
+        			<span class="k">break</span><span class="o">;</span>
+        		<span class="k">case</span> <span class="mi">9</span><span class="o">:</span> <span class="k">case</span> <span class="mi">10</span><span class="o">:</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"현재 계절은 가을입니다."</span><span class="o">);</span>
+        			<span class="k">break</span><span class="o">;</span>
+        		<span class="k">case</span> <span class="mi">11</span><span class="o">:</span> <span class="k">case</span> <span class="mi">12</span><span class="o">:</span> <span class="k">case</span> <span class="mi">1</span><span class="o">:</span> <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"현재 계절은 겨울입니다."</span><span class="o">);</span>
+        			<span class="k">break</span><span class="o">;</span>
+        		<span class="k">default</span> <span class="o">:</span>
+        			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"잘못 입력했습니다."</span><span class="o">);</span>
+        		<span class="o">}</span>
+        	<span class="o">}</span>
+        <span class="o">}</span>
+</code></pre></div></div>
+
+<p>— Math.random() : 0.0과 1.0사이의 임의의 double값을 반환</p>
+
+<p>0.0 * 3 ≤ Math.random() &lt; 1.0*3</p>
+
+<ul>
+  <li>ex)원하는 값 1~3</li>
+</ul>
+
+<ol>
+  <li>
+    <p>각변에 3을 곱한다</p>
+
+    <p>0.0 * 3 ≤ Math.random() * 3 &lt; 1.0 * 3</p>
+  </li>
+  <li>
+    <p>각 변을 int형으로 변환한다</p>
+
+    <p>(int)0.0 * 3 ≤ (int)(Math.random() * 3) &lt; (int)1.0 * 3</p>
+
+    <p>0 ≤ Math.random() * 3 &lt; 3</p>
+  </li>
+  <li>
+    <p>각 변에 1을 더한다</p>
+
+    <p>0 + 1 ≤ (Math.random() * 3) +1 &lt; 3 + 1</p>
+
+    <p>1 ≤ (Math.random() * 3) +1 &lt; 4</p>
+  </li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_7</span> <span class="o">{</span>
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">num</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+    		<span class="c1">//1~10사이의 난수를 20개 출력할 것.</span>
+    		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">20</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">((</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">10</span><span class="o">)+</span><span class="mi">1</span><span class="o">);</span>
+    		<span class="o">}</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"==============="</span><span class="o">);</span>
+    
+    			<span class="c1">//-5~5사이의 난수를 20개 출력할 것.</span>
+    		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="mi">20</span><span class="o">;</span><span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">((</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">11</span><span class="o">)-</span><span class="mi">5</span><span class="o">);</span> <span class="c1">//0도 포함이라 값이 11개임</span>
+    		<span class="o">}</span>
+    	<span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>반복문
+    <ul>
+      <li>for</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_8</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">,</span> <span class="n">j</span><span class="o">=</span><span class="mi">10</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="o">;</span><span class="n">i</span><span class="o">++,</span><span class="n">j</span><span class="o">--)</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"i="</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="s">", j="</span><span class="o">+</span><span class="n">j</span><span class="o">);</span>
+    	<span class="o">}</span>
+    	
+    	<span class="c1">//구구단</span>
+    	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="mi">9</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">j</span><span class="o">+</span><span class="s">"단 시작!!!"</span><span class="o">);</span>
+    		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span><span class="n">k</span><span class="o">&lt;=</span><span class="mi">9</span><span class="o">;</span><span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">j</span><span class="o">+</span><span class="s">" * "</span> <span class="o">+</span><span class="n">k</span><span class="o">+</span><span class="s">" = "</span><span class="o">+</span><span class="n">j</span><span class="o">*</span><span class="n">k</span><span class="o">);</span>
+    			<span class="k">if</span><span class="o">(</span><span class="n">k</span><span class="o">==</span><span class="mi">9</span><span class="o">)</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"===="</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="s">"단 종료====\n"</span><span class="o">);</span>
+    		<span class="o">}</span>
+    	<span class="o">}</span>
+    	<span class="c1">//별 찍기</span>
+    		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">10</span><span class="o">;</span><span class="n">n</span><span class="o">++)</span> <span class="o">{</span>
+    			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span><span class="n">x</span><span class="o">&lt;</span><span class="n">n</span><span class="o">;</span><span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+    				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"★"</span><span class="o">);</span>
+    			<span class="o">}</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+    		<span class="o">}</span>
+     	<span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>while - 조건식을 만족시키는 동안 블럭을 반복. do while문을 사용.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_13</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+    		<span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+    		
+    		<span class="k">while</span> <span class="o">(</span><span class="n">sum</span><span class="o">&lt;=</span><span class="mi">100</span><span class="o">)</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%d : %d%n"</span><span class="o">,</span><span class="n">i</span><span class="o">,</span><span class="n">sum</span><span class="o">);</span>
+    			<span class="n">sum</span> <span class="o">+=</span> <span class="o">++</span><span class="n">i</span><span class="o">;</span>
+    		<span class="o">}</span>
+    	<span class="o">}</span>
+    
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ex4_14</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">num</span><span class="o">=</span><span class="mi">0</span><span class="o">,</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"숫자를 입력하세요."</span><span class="o">);</span>
+    		
+    		<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+    		<span class="nc">String</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+    		<span class="n">num</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tmp</span><span class="o">);</span>
+    		
+    		<span class="k">while</span> <span class="o">(</span><span class="n">num</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    			<span class="n">sum</span> <span class="o">+=</span> <span class="n">num</span><span class="o">%</span><span class="mi">10</span><span class="o">;</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"sum = %d num = %d%n"</span><span class="o">,</span><span class="n">sum</span><span class="o">,</span><span class="n">num</span><span class="o">);</span>
+    			
+    			<span class="n">num</span> <span class="o">/=</span> <span class="mi">10</span><span class="o">;</span>
+    		<span class="o">}</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"각 자리수의 합 : "</span><span class="o">+</span><span class="n">sum</span><span class="o">);</span>
+    		
+    		<span class="kt">int</span> <span class="n">sum2</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    		<span class="k">for</span><span class="o">(</span><span class="n">num</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tmp</span><span class="o">);</span><span class="n">num</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">;</span><span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">/</span> <span class="mi">10</span><span class="o">)</span>
+    		<span class="o">{</span>
+    			<span class="n">sum2</span> <span class="o">+=</span> <span class="n">num</span><span class="o">%</span><span class="mi">10</span><span class="o">;</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"sum = %d num = %d%n"</span><span class="o">,</span><span class="n">sum2</span><span class="o">,</span><span class="n">num</span><span class="o">);</span>
+    		<span class="o">}</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"각 자리수의 합 : "</span><span class="o">+</span><span class="n">sum2</span><span class="o">);</span>
+    	<span class="o">}</span>
+    
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>do while : 반복횟수를 알거나 코드가 중복이면 do while문을 사용<br />
+  do{조건식이 참일 때 수행 될 문장. 처음 한번든 무조건 실행}<br />
+  while(조건식);</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_15</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">input</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">,</span> <span class="n">answer</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    		
+    		<span class="n">answer</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">100</span><span class="o">)+</span><span class="mi">1</span><span class="o">;</span>
+    		<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+    		
+    		<span class="k">do</span> <span class="o">{</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"1과 100사이의 정수를 입력하세요.&gt;&gt;"</span><span class="o">);</span>
+    			<span class="n">input</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+    			
+    			<span class="k">if</span> <span class="o">(</span><span class="n">input</span> <span class="o">&gt;</span> <span class="n">answer</span><span class="o">)</span> <span class="o">{</span>
+    				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"더 작은 수로 다시 시도하세요."</span><span class="o">);</span>
+    			<span class="o">}</span>
+    			<span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">input</span> <span class="o">&lt;</span> <span class="n">answer</span><span class="o">)</span> <span class="o">{</span>
+    				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"더 큰 수로 다시 시도하세요."</span><span class="o">);</span>
+    			<span class="o">}</span>
+    		<span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">input</span> <span class="o">!=</span> <span class="n">answer</span><span class="o">);</span>
+    			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"정답입니다!"</span><span class="o">);</span>
+    		<span class="o">}</span>
+    	<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_16</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    		
+    		<span class="k">do</span> <span class="o">{</span>
+    			<span class="o">++</span><span class="n">i</span><span class="o">;</span>
+    			<span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span><span class="o">;</span>
+    		<span class="o">}</span> <span class="k">while</span><span class="o">(</span><span class="n">sum</span><span class="o">&lt;</span><span class="mi">100</span><span class="o">);</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"i="</span><span class="o">+</span><span class="n">i</span><span class="o">);</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"sum="</span><span class="o">+</span><span class="n">sum</span><span class="o">);</span>
+    	<span class="o">}</span>
+    
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_16</span> <span class="o">{</span>
+    
+    	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    		<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">,</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    		
+    		<span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+    			<span class="k">if</span><span class="o">(</span><span class="n">sum</span><span class="o">&gt;</span><span class="mi">100</span><span class="o">)</span>
+    				<span class="k">break</span><span class="o">;</span>
+    			<span class="o">++</span><span class="n">i</span><span class="o">;</span>
+    			<span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span><span class="o">;</span>
+    		<span class="o">}</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"i="</span><span class="o">+</span><span class="n">i</span><span class="o">);</span>
+    		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"sum="</span><span class="o">+</span><span class="n">sum</span><span class="o">);</span>
+    	<span class="o">}</span>
+    
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>continue : 조건이 충족된다면 블록의 끝으로 이동, 다시 반복문 수행.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_17</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span>
+				<span class="k">continue</span><span class="o">;</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>이름붙은 반복문 : 반복문에 이름을 붙여서 break앞에 적어주면 하나이상의 반복문을 벗어날 수 있다</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Loop1</span> <span class="o">:</span> <span class="k">for</span><span class="o">(</span> <span class="o">......</span>
+	<span class="k">for</span><span class="o">(</span> <span class="o">...........</span>
+				<span class="k">break</span> <span class="nc">Loop1</span><span class="o">;</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ex4_18</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">menu</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		
+		<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+		
+		<span class="n">outer</span> <span class="o">:</span> <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"(1) square"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"(2) square root"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"(3) log"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"원하는 메뉴를 입력하세요. (종료 : 0)"</span><span class="o">);</span>
+			
+			<span class="nc">String</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+			<span class="n">menu</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tmp</span><span class="o">);</span>
+			
+			<span class="k">if</span><span class="o">(</span><span class="n">menu</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"프로그램을 종료합니다."</span><span class="o">);</span>
+				<span class="k">break</span><span class="o">;</span>
+			<span class="o">}</span>
+			<span class="k">else</span> <span class="nf">if</span> <span class="o">(!(</span><span class="n">menu</span><span class="o">&gt;=</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">menu</span><span class="o">&lt;=</span><span class="mi">3</span><span class="o">))</span> <span class="o">{</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"메뉴를 잘못 선택하셨습니다. (종료는 0)"</span><span class="o">);</span>
+				<span class="k">continue</span><span class="o">;</span>
+			<span class="o">}</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"선택하신 메뉴는 "</span><span class="o">+</span><span class="n">menu</span><span class="o">+</span><span class="s">"번입니다."</span><span class="o">);</span>
+			
+			<span class="k">for</span><span class="o">(;;)</span> <span class="o">{</span>
+				<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"계산할 값을 입력하세요.(계산종료 : 0, 전체종료 : 99)&gt;&gt;"</span><span class="o">);</span>
+				<span class="n">tmp</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+				<span class="n">num</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tmp</span><span class="o">);</span>
+				
+				<span class="k">if</span><span class="o">(</span><span class="n">num</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span>
+					<span class="k">break</span><span class="o">;</span>
+				<span class="k">if</span><span class="o">(</span><span class="n">num</span><span class="o">==</span><span class="mi">99</span><span class="o">)</span>
+					<span class="k">break</span> <span class="n">outer</span><span class="o">;</span>
+				
+				<span class="k">switch</span><span class="o">(</span><span class="n">menu</span><span class="o">)</span> <span class="o">{</span>
+					<span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+						<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"result="</span><span class="o">+</span><span class="n">num</span><span class="o">*</span><span class="n">num</span><span class="o">);</span>
+						<span class="k">break</span><span class="o">;</span>
+					<span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+						<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"result="</span><span class="o">+</span><span class="nc">Math</span><span class="o">.</span><span class="na">sqrt</span><span class="o">(</span><span class="n">num</span><span class="o">));</span> <span class="c1">//제곱근</span>
+						<span class="k">break</span><span class="o">;</span>
+					<span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+						<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"result="</span><span class="o">+</span><span class="nc">Math</span><span class="o">.</span><span class="na">log</span><span class="o">(</span><span class="n">num</span><span class="o">));</span> <span class="c1">//로그</span>
+						<span class="k">break</span><span class="o">;</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>]]></content><author><name>Jinny</name><email>nod15277@gmail.com</email></author><category term="JAVA" /><category term="java" /><category term="자바의정석" /><summary type="html"><![CDATA[조건문 if문]]></summary></entry><entry><title type="html">자바의 정석 강의 - 변수(Variable)</title><link href="http://localhost:4000/java/%EB%B3%80%EC%88%98(Variable)/" rel="alternate" type="text/html" title="자바의 정석 강의 - 변수(Variable)" /><published>2022-07-29T06:27:00+09:00</published><updated>2024-07-29T00:49:00+09:00</updated><id>http://localhost:4000/java/%EB%B3%80%EC%88%98(Variable)</id><content type="html" xml:base="http://localhost:4000/java/%EB%B3%80%EC%88%98(Variable)/"><![CDATA[<ul>
+  <li>system.out.println(); 에서 print==ln==이 \n이거라서 따로 \n안해줘도 지금까지 줄바꿈이 됐던거임..! 충격! pintf도 있다..!
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ex2_1</span> <span class="o">{</span>
+    
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"hello"</span><span class="o">);</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"hello"</span><span class="o">);</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"hello"</span><span class="o">);</span>
+  	<span class="o">}</span>
+    
+  <span class="o">}</span>
+</code></pre></div>    </div>
     <p>이거는 줄바꿈 안되고 hellohellohello로 실행됨. print로 바꿔도 마찬가지</p>
   </li>
 </ul>
@@ -24,13 +1281,12 @@
   — 변수 선언 이유 : 값(data)를 저장할 수 있는 공간을 마련하기 위해.
       변수타입 변수이름; ex)int age;
     <ul>
-      <li>=는 등호가 아니라 대입. 그래서 if문에서는 ==를 썼구나</li>
       <li>
-        <p>변수의 초기화 : 변수에 처음으로 값을 저장하는 것.
+        <p>=는 등호가 아니라 대입. 그래서 if문에서는 == 를 썼구나
   int x=0; 변수 x를 선언 후 0으로 초기화
   int y=5; 변수 y를 선언 후 5로 초기화</p>
 
-        <p>❗ ==지역변수는 읽기전에 꼭 초기화를 해주어야 함==</p>
+        <p><mark class="hltr-cyan">❗지역변수는 읽기전에 꼭 초기화를 해주어야 함</mark></p>
       </li>
       <li>변수 타입
         <ul>
@@ -91,7 +1347,7 @@
                   <td>정수형</td>
                   <td>byte</td>
                   <td>short</td>
-                  <td>==int==</td>
+                  <td><mark class="hltr-cyan">int</mark></td>
                   <td>long</td>
                 </tr>
                 <tr>
@@ -99,7 +1355,7 @@
                   <td> </td>
                   <td> </td>
                   <td>float</td>
-                  <td>==double==</td>
+                  <td><mark class="hltr-cyan">double</mark></td>
                 </tr>
               </tbody>
             </table>
@@ -117,12 +1373,6 @@
                     <p>byte = -2의 7제곱~ 2의 7제곱 -1 =</p>
 
                     <table>
-                      <thead>
-                        <tr>
-                          <th> </th>
-                          <th> </th>
-                        </tr>
-                      </thead>
                       <tbody>
                         <tr>
                           <td>0</td>
@@ -134,12 +1384,6 @@
                     <p>부호비트가 0이니까 양수</p>
 
                     <table>
-                      <thead>
-                        <tr>
-                          <th> </th>
-                          <th> </th>
-                        </tr>
-                      </thead>
                       <tbody>
                         <tr>
                           <td>1</td>
@@ -154,12 +1398,6 @@
                     <p>short = -2의 15제곱~ 2의 15제곱 -1 =</p>
 
                     <table>
-                      <thead>
-                        <tr>
-                          <th> </th>
-                          <th> </th>
-                        </tr>
-                      </thead>
                       <tbody>
                         <tr>
                           <td>s</td>
@@ -172,26 +1410,9 @@
                     <p>char = 0~2의 16제곱 -1 (2진수로 변환)</p>
 
                     <table>
-                      <thead>
-                        <tr>
-                          <th> </th>
-                        </tr>
-                      </thead>
                       <tbody>
                         <tr>
                           <td>16bit</td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-                    <table>
-                      <thead>
-                        <tr>
-                          <th> </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
                           <td>160000000001000001</td>
                         </tr>
                       </tbody>
@@ -201,12 +1422,6 @@
                     <p>int = -2의 31제곱~ 2의 31제곱 -1 = -20억~20억</p>
 
                     <table>
-                      <thead>
-                        <tr>
-                          <th> </th>
-                          <th> </th>
-                        </tr>
-                      </thead>
                       <tbody>
                         <tr>
                           <td>s</td>
@@ -219,12 +1434,6 @@
                     <p>int = -2의 63제곱~ 2의 63제곱 -1 = -800경 ~ 800경</p>
 
                     <table>
-                      <thead>
-                        <tr>
-                          <th> </th>
-                          <th> </th>
-                        </tr>
-                      </thead>
                       <tbody>
                         <tr>
                           <td>s</td>
@@ -239,13 +1448,6 @@
                     <p>float = 1+8+23 = 32bit = 4byte = -1.4<em>10의 -45제곱~1.4</em>10의 -45제곱</p>
 
                     <table>
-                      <thead>
-                        <tr>
-                          <th> </th>
-                          <th> </th>
-                          <th> </th>
-                        </tr>
-                      </thead>
                       <tbody>
                         <tr>
                           <td>S</td>
@@ -261,13 +1463,6 @@
                     <p>double = 1+11+52 = 64bit = 8byte = -3.4<em>10의 38제곱~3.4</em>10의 38제곱</p>
 
                     <table>
-                      <thead>
-                        <tr>
-                          <th> </th>
-                          <th> </th>
-                          <th> </th>
-                        </tr>
-                      </thead>
                       <tbody>
                         <tr>
                           <td>S</td>
@@ -297,50 +1492,81 @@
       <li>리터럴 (literal) : 그 자체로 값을 의미. 기존의 상수.
         <ul>
           <li>
-            <p>리터럴 타입과 접미사
-  |종류|리터럴|접미사|
-  |—|—|—|
-  |논리형|false, true|없음|
-  |정수형|int - 123, Ob0101, 077, 0xFF,  <br />Long - 100L|==L==|
-  |실수형|3.14, 3.0e8, 1.4f, 0x1.0p-1|==f(float)==,  <br />d(double, 생략가능)|
-  |문자형|’A’, ‘1’, ’\n’|없음|
-  |문자열|“ABC”, “123”, “A”, “true”|없음|</p>
+            <p>리터럴 타입과 접미사</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>종류</th>
+                  <th>리터럴</th>
+                  <th>접미사</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>논리형</td>
+                  <td>false, true</td>
+                  <td>없음</td>
+                </tr>
+                <tr>
+                  <td>정수형</td>
+                  <td>int - 123, Ob0101, 077, 0xFF,  <br />Long - 100L</td>
+                  <td><mark class="hltr-cyan">L</mark></td>
+                </tr>
+                <tr>
+                  <td>실수형</td>
+                  <td>3.14, 3.0e8, 1.4f, 0x1.0p-1</td>
+                  <td><mark class="hltr-cyan">f(float)</mark>,  <br />d(double, 생략가능)</td>
+                </tr>
+                <tr>
+                  <td>문자형</td>
+                  <td>‘A’, ‘1’, ’\n’</td>
+                  <td>없음</td>
+                </tr>
+                <tr>
+                  <td>문자열</td>
+                  <td>“ABC”, “123”, “A”, “true”</td>
+                  <td>없음</td>
+                </tr>
+              </tbody>
+            </table>
 
             <p>정수형, 실수형은 접미사로 구분함.</p>
-
-            <pre><code class="language-Java">  int oct = 010;
-  		int hex = 0x10;
-            		
-  		System.out.println(oct);
-  		System.out.println(hex);
-  // println을 쓰면 8진수와 16진수를 표현못해서 8과 16이 나옴.
-  // printf를 쓰면 가능
-</code></pre>
-
-            <ul>
-              <li>10진수 : int i = 100;</li>
-              <li>8진수 : int i = 0100;</li>
-              <li>16진수 : int i = 0x100;</li>
-              <li>long i = 10_000_000_000L ⇒ 100억. int가 20억까지 가능함. 꼭 L붙일것.</li>
-              <li>1e3 = 여기서 e가 10의 n제곱임. = 1000.0 (접미사 없으니 double형)</li>
-              <li>int i = ‘A’; ⇒ A의 문자열코드인 65가 출력됨</li>
-            </ul>
           </li>
         </ul>
       </li>
-      <li>상수(constant) : 한 번만 값을 저장 가능한 변수. 변경 불가능. 앞에 final을 붙이면 됨. (아래 파란형광펜)<br />
-  ex) final int MAX = 100;<br />
-  ==MAX = 200;(에러남)==
-        <pre><code class="language-Java">  int score = 100;
-  score = 200;
-  final int MAX = 100;
-  char ch = 'a';
-  String str = "abc";
-</code></pre>
-        <p>— 변수와 리터럴 타입 불일치</p>
-      </li>
     </ul>
   </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            <span class="kt">int</span> <span class="n">oct</span> <span class="o">=</span> <span class="mo">010</span><span class="o">;</span>
+            		<span class="kt">int</span> <span class="n">hex</span> <span class="o">=</span> <span class="mh">0x10</span><span class="o">;</span>
+            		
+            		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">oct</span><span class="o">);</span>
+            		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">hex</span><span class="o">);</span>
+            <span class="c1">// println을 쓰면 8진수와 16진수를 표현못해서 8과 16이 나옴.</span>
+            <span class="c1">// printf를 쓰면 가능</span>
+</code></pre></div></div>
+<ul>
+  <li>10진수 : int i = 100;</li>
+  <li>8진수 : int i = 0100;</li>
+  <li>16진수 : int i = 0x100;</li>
+  <li>long i = 10_000_000_000L ⇒ 100억. int가 20억까지 가능함. 꼭 L붙일것.</li>
+  <li>1e3 = 여기서 e가 10의 n제곱임. = 1000.0 (접미사 없으니 double형)</li>
+  <li>int i = ‘A’; ⇒ A의 문자열코드인 65가 출력됨</li>
+  <li>상수(constant) : 한 번만 값을 저장 가능한 변수. 변경 불가능. 앞에 final을 붙이면 됨.
+<br />ex) final int MAX = 100;<br />
+MAX = 200;(에러남)&lt;/mark&gt;</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+	<span class="n">score</span> <span class="o">=</span> <span class="mi">200</span><span class="o">;</span>
+	<span class="kd">final</span> <span class="kt">int</span> <span class="no">MAX</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+	<span class="kt">char</span> <span class="n">ch</span> <span class="o">=</span> <span class="sc">'a'</span><span class="o">;</span>
+	<span class="nc">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">"abc"</span><span class="o">;</span>
+</code></pre></div></div>
+<p>— 변수와 리터럴 타입 불일치</p>
+<ul>
   <li>범위가 변수&gt;리터럴 인 경우 가능함
     <ul>
       <li>int &gt; char / long &gt; int / double &gt; float</li>
@@ -359,15 +1585,15 @@
 <hr />
 
 <ul>
-  <li>두 변수 값 교환하는 법</li>
+  <li>두 변수 값 교환하는 법
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
+  <span class="kt">int</span> <span class="n">tmp</span><span class="o">;</span><span class="c1">//빈공간</span>
+  <span class="n">x</span><span class="o">=</span><span class="n">tmp</span><span class="o">;</span>
+  <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="o">;</span>
+  <span class="n">y</span><span class="o">=</span><span class="n">tmp</span><span class="o">;</span>
+</code></pre></div>    </div>
+  </li>
 </ul>
-
-<pre><code class="language-Java">int x = 10, y = 20;
-int tmp;//빈공간
-x=tmp;
-x=y;
-y=tmp;
-</code></pre>
 
 <hr />
 <p><strong>pritnln 단점</strong></p>
@@ -420,25 +1646,33 @@ y=tmp;
   </tbody>
 </table>
 
-<p>==❗\n, %n 둘다 줄바꿈이나 %n을 자주 사용할 것.==</p>
+<p><mark class="hltr-cyan">❗\n, %n 둘다 줄바꿈이나 %n을 자주 사용할 것.</mark></p>
 
 <ul>
-  <li>지시자
-  system.out.printf(”[%5d]%n”, 10); // [ 10] - 5자리 출력
-  system.out.printf(”[%-5d]%n”, 10); // [10 ] - 5자리 출력, 왼쪽정렬
-  system.out.printf(”[%05d]%n”, 10); // [00010] - 5자리 출력
-  숫자, 문자열 다 됨
-  system.out.printf(”[%5d]%n”, 1234567); // [1234567] - 7자리 출력
-  System.out.printf(“[%14.10f]%n”, 1.23456789); // [ 1.2345678900] 
-  전체자리 14자리에서 소수점 10자리 출력<br />
-—
-화면으로 입력받기부터 - Scanner : 화면으로부터 데이터를 입력받는 class
-    <ol>
-      <li>import문 필수 - import java.util.*;</li>
-      <li>Scanner 객체의 생성
-  Scanner scanner = new Scanner system.in;</li>
-      <li>Scanner 객체의 사용</li>
-    </ol>
+  <li>
+    <p>지시자</p>
+
+    <p>system.out.printf(”[%5d]%n”, 10); // [ 10] - 5자리 출력</p>
+
+    <p>system.out.printf(”[%-5d]%n”, 10); // [10 ] - 5자리 출력, 왼쪽정렬</p>
+
+    <p>system.out.printf(”[%05d]%n”, 10); // [00010] - 5자리 출력(숫자, 문자열 다 됨)</p>
+
+    <p>system.out.printf(”[%5d]%n”, 1234567); // [1234567] - 7자리 출력</p>
+
+    <p>system.out.printf(“[%14.10f]%n”, 1.23456789); // [ 1.2345678900] 
+  (전체자리 14자리에서 소수점 10자리 출력)</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>화면으로 입력받기부터 - Scanner : 화면으로부터 데이터를 입력받는 class</p>
+<ol>
+  <li>import문 필수 - import java.util.*;</li>
+  <li>Scanner 객체의 생성
+ Scanner scanner = new Scanner system.in;</li>
+  <li>Scanner 객체의 사용
     <ul>
       <li>int num = scanner.nextInt(); //화면에서 입력받은 정수를 num에 저장</li>
       <li>String input = scanner.nextLine(); //화면에서 입력받은 내용을 input에 저장<br />
@@ -451,32 +1685,32 @@ y=tmp;
       </li>
     </ul>
   </li>
-</ul>
+</ol>
 
-<pre><code class="language-Java">import java.util.*;
-
-public class ScanfEx1 {
-
-	public static void main(String[] args) {
-
-		//정수
-		Scanner scanner = new Scanner(System.in);
-		int num = scanner.nextInt();
-		System.out.println(num);
-		
-		//문자열
-		Scanner scanner2 = new Scanner(System.in);
-		String input = scanner2.nextLine();
-		System.out.println(input);
-		
-		//문자열 -&gt; 숫자
-		Scanner scanner3 = new Scanner(System.in);
-		String input2 = scanner3.nextLine();
-		int num2 = Integer.parseInt(input2);
-		System.out.println(input2);
-	}
-}
-</code></pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+	
+	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ScanfEx1</span> <span class="o">{</span>
+	
+		<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+	
+			<span class="c1">//정수</span>
+			<span class="nc">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+			<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+			
+			<span class="c1">//문자열</span>
+			<span class="nc">Scanner</span> <span class="n">scanner2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+			<span class="nc">String</span> <span class="n">input</span> <span class="o">=</span> <span class="n">scanner2</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">input</span><span class="o">);</span>
+			
+			<span class="c1">//문자열 -&gt; 숫자</span>
+			<span class="nc">Scanner</span> <span class="n">scanner3</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+			<span class="nc">String</span> <span class="n">input2</span> <span class="o">=</span> <span class="n">scanner3</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+			<span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">input2</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">input2</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+</code></pre></div></div>
 
 <p>❗Scanner밑에 밑줄은 입출력 관련 객체들은 원칙적으로 반드시 닫아주어야함. 하지만 화면입력같은경우에는 자바 버추얼머신에서 기본적으로 관리가 되기때문에 닫아주지 않아도 됨. 오류는 무시할 것.</p>
 
@@ -503,7 +1737,7 @@ public class ScanfEx1 {
 부호 있는 정수 : 양수</p>
 
 <hr />
-<p>==<strong>타입간의 변환 방법</strong>== - 외우지는 못해도 필요할때 찾아볼 수 있는 정도는 돼야함</p>
+<p><mark class="hltr-cyan">타입간의 변환 방법</mark> - 외우지는 못해도 필요할때 찾아볼 수 있는 정도는 돼야함</p>
 
 <ul>
   <li>문자 → 숫자 = 3 - ’0’</li>
@@ -516,22 +1750,23 @@ public class ScanfEx1 {
   = Double.parseDouble(”3.4”)</li>
 </ul>
 
-<pre><code class="language-Java">import java.util.*;
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+	
+	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ScanfEx1</span> <span class="o">{</span>
+	
+		<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+			<span class="nc">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">"3"</span><span class="o">;</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span> <span class="c1">//문자열 -&gt; 문자</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="sc">'3'</span> <span class="o">-</span> <span class="sc">'0'</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span> <span class="c1">//문자-&gt;숫자</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="s">"3"</span><span class="o">)+</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//문자열 -&gt; 숫자</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"3"</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//문자열+숫자 =&gt; 31</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">3</span><span class="o">+</span><span class="sc">'0'</span><span class="o">);</span> <span class="c1">//문자 0은 숫자로 48 =&gt; 51</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">((</span><span class="kt">char</span><span class="o">)(</span><span class="mi">3</span><span class="o">+</span><span class="sc">'0'</span><span class="o">));</span> <span class="c1">// 문자 '3' 출력</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+</code></pre></div></div>
 
-public class ScanfEx1 {
-
-	public static void main(String[] args) {
-		String str = "3";
-		System.out.println(str.charAt(0)); //문자열 -&gt; 문자
-		System.out.println('3' - '0' + 1); //문자-&gt;숫자
-		System.out.println(Integer.parseInt("3")+1); //문자열 -&gt; 숫자
-		System.out.println("3"+1); //문자열+숫자 =&gt; 31
-		System.out.println(3+'0'); //문자 0은 숫자로 48 =&gt; 51
-		System.out.println((char)(3+'0')); // 문자 '3' 출력
-	}
-}
-</code></pre>
-<p>printf사용시 %#x는 접두사 0x가 붙음</p>]]></content><author><name>Jinny</name><email>nod15277@gmail.com</email></author><category term="java" /><category term="java" /><category term="backend" /><category term="자바의정석" /><summary type="html"><![CDATA[system.out.println(); 에서 print==ln==이 \n이거라서 따로 \n안해줘도 지금까지 줄바꿈이 됐던거임..! 충격! pintf도 있다..! public class Ex2_1 { public static void main(String[] args) { System.out.printf("hello"); System.out.printf("hello"); System.out.printf("hello"); } } 이거는 줄바꿈 안되고 hellohellohello로 실행됨. print로 바꿔도 마찬가지]]></summary></entry><entry><title type="html">자바의 정석 강의 - 자바 시작하기 전</title><link href="http://localhost:4000/java/%EC%9E%90%EB%B0%94-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84/" rel="alternate" type="text/html" title="자바의 정석 강의 - 자바 시작하기 전" /><published>2022-07-28T21:27:00+09:00</published><updated>2022-08-17T06:52:00+09:00</updated><id>http://localhost:4000/java/%EC%9E%90%EB%B0%94%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%20%EC%A0%84</id><content type="html" xml:base="http://localhost:4000/java/%EC%9E%90%EB%B0%94-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84/"><![CDATA[<ul>
+<p>printf사용시 %#x는 접두사 0x가 붙음</p>]]></content><author><name>Jinny</name><email>nod15277@gmail.com</email></author><category term="JAVA" /><category term="java" /><category term="자바의정석" /><summary type="html"><![CDATA[system.out.println(); 에서 print==ln==이 \n이거라서 따로 \n안해줘도 지금까지 줄바꿈이 됐던거임..! 충격! pintf도 있다..! public class Ex2_1 { public static void main(String[] args) { System.out.printf("hello"); System.out.printf("hello"); System.out.printf("hello"); } } 이거는 줄바꿈 안되고 hellohellohello로 실행됨. print로 바꿔도 마찬가지]]></summary></entry><entry><title type="html">자바의 정석 강의 - 자바 시작하기 전</title><link href="http://localhost:4000/java/%EC%9E%90%EB%B0%94-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84/" rel="alternate" type="text/html" title="자바의 정석 강의 - 자바 시작하기 전" /><published>2022-07-28T21:27:00+09:00</published><updated>2022-08-17T06:52:00+09:00</updated><id>http://localhost:4000/java/%EC%9E%90%EB%B0%94%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%20%EC%A0%84</id><content type="html" xml:base="http://localhost:4000/java/%EC%9E%90%EB%B0%94-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84/"><![CDATA[<ul>
   <li>자바 : 프로그래밍 언어. 컴퓨터 프로그램(애플리케이션)을 만드는데 사용<br />
   실행환경(JRE) + 개발도구(JDK) + 라이브러리(API)
     <ul>
@@ -569,4 +1804,4 @@ public class ScanfEx1 {
       <li>ctrl + shift + o : import java.util.~; 자동추가</li>
     </ul>
   </li>
-</ul>]]></content><author><name>Jinny</name><email>nod15277@gmail.com</email></author><category term="JAVA" /><category term="java" /><category term="backend" /><category term="자바의정석" /><summary type="html"><![CDATA[자바 : 프로그래밍 언어. 컴퓨터 프로그램(애플리케이션)을 만드는데 사용 실행환경(JRE) + 개발도구(JDK) + 라이브러리(API) 라이브러리 : 프로그램을 만드는데 필요한 기능들을 미리 만들어놓은 것. ⇒ 쉽고 빠른 개발 가능 pc애플리케이션, 웹 애플리케이션, 모바일 애플리케이션(안드로이드), 빅 데이터, 게임(ex.마크), 과학, 소형기기 등 에 활용 가능 모던 프로그래밍 언어(객체지향 + 함수형) 특징 배우기쉬운 객체지향언어(프로그래밍언어+객체지향개념[c++,java,python]) 자동 메모리 관리 멀티 쓰레드 지원 - 하나의 프로그램에서 동시에 여러작업 가능. 풍부한 라이브러리로 쉽게 개발가능. 운영체제에 독립적 - 수정없이 여러 운영체제에서 사용가능 자바 가상 머신(JVM) : 자바 프로그램이 실행되는 가상 컴퓨터(VM). 한번 작성하면, 어디서든(어떤 운영체제에서도) 실행 가능. java API문서 : java API가 제공하는 기능에 대한 상세한 정보를 제공(html) https://docs.oracle.com/javase/7/docs/api/index.html 단축키 ctrl + shift + L : 단축키 전체 목록 alt + shift + A : 멀티컬럼 편집 - 커서가 +모양으로 바뀌는데 바꾸고 싶은 부분을 드래그해서 한번에 바꿈 ctrl + i : 자동들여쓰기 ctrl + shift + o : import java.util.~; 자동추가]]></summary></entry></feed>
+</ul>]]></content><author><name>Jinny</name><email>nod15277@gmail.com</email></author><category term="JAVA" /><category term="java" /><category term="자바의정석" /><summary type="html"><![CDATA[자바 : 프로그래밍 언어. 컴퓨터 프로그램(애플리케이션)을 만드는데 사용 실행환경(JRE) + 개발도구(JDK) + 라이브러리(API) 라이브러리 : 프로그램을 만드는데 필요한 기능들을 미리 만들어놓은 것. ⇒ 쉽고 빠른 개발 가능 pc애플리케이션, 웹 애플리케이션, 모바일 애플리케이션(안드로이드), 빅 데이터, 게임(ex.마크), 과학, 소형기기 등 에 활용 가능 모던 프로그래밍 언어(객체지향 + 함수형) 특징 배우기쉬운 객체지향언어(프로그래밍언어+객체지향개념[c++,java,python]) 자동 메모리 관리 멀티 쓰레드 지원 - 하나의 프로그램에서 동시에 여러작업 가능. 풍부한 라이브러리로 쉽게 개발가능. 운영체제에 독립적 - 수정없이 여러 운영체제에서 사용가능 자바 가상 머신(JVM) : 자바 프로그램이 실행되는 가상 컴퓨터(VM). 한번 작성하면, 어디서든(어떤 운영체제에서도) 실행 가능. java API문서 : java API가 제공하는 기능에 대한 상세한 정보를 제공(html) https://docs.oracle.com/javase/7/docs/api/index.html 단축키 ctrl + shift + L : 단축키 전체 목록 alt + shift + A : 멀티컬럼 편집 - 커서가 +모양으로 바뀌는데 바꾸고 싶은 부분을 드래그해서 한번에 바꿈 ctrl + i : 자동들여쓰기 ctrl + shift + o : import java.util.~; 자동추가]]></summary></entry></feed>
