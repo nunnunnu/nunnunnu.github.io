@@ -4,18 +4,48 @@
     "type": "split",
     "children": [
       {
-        "id": "8060cc156d2023d0",
+        "id": "4a6be4a2548240c0",
         "type": "tabs",
         "children": [
           {
-            "id": "0e7cbd40ff281bce",
+            "id": "05018c266bba2832",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/java/2022-08-14-예외처리.md",
+                "file": "_posts/blog/java/2022-08-04-객체지향(OOP).md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "eca5c9ecfc8b099c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "bf7de2ecfa7886f4",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "ca05ecf6601bd95f",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.md"
               }
             }
           }
@@ -69,7 +99,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 412.5
   },
   "right": {
     "id": "6ee3a94f67d83ffe",
@@ -85,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/java/2022-08-14-예외처리.md",
+                "file": "_posts/blog/java/2022-08-04-객체지향(OOP).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/java/2022-08-14-예외처리.md",
+                "file": "_posts/blog/java/2022-08-04-객체지향(OOP).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/java/2022-08-14-예외처리.md"
+                "file": "_posts/blog/java/2022-08-04-객체지향(OOP).md"
               }
             }
           },
@@ -158,40 +188,52 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "0e7cbd40ff281bce",
+  "active": "05018c266bba2832",
   "lastOpenFiles": [
-    "_posts/blog/java/2022-07-30-제어문 (flow control statemt).md",
+    "assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.md",
+    "_posts/blog/java/2022-08-04-객체지향(OOP).md",
+    "assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw.md",
+    "_site/assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw.png",
+    "assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw.png",
+    "_site/assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw/index.html",
+    "_site/assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw",
+    "_site/assets/images/java/Drawing 2024-08-17 14.55.34.excalidraw/index.html",
+    "_site/assets/images/java/Drawing 2024-08-17 14.55.34.excalidraw",
+    "assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw.md",
+    "_site/assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw.png",
+    "assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw.png",
+    "_site/assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw/index.html",
+    "_site/assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw",
+    "_site/assets/images/java/Drawing 2024-08-17 14.51.13.excalidraw.png",
+    "assets/images/java/Drawing 2024-08-17 14.51.13.excalidraw.png",
+    "_site/assets/images/java/Drawing 2024-08-17 14.51.13.excalidraw/index.html",
+    "_site/assets/images/java/Drawing 2024-08-17 14.51.13.excalidraw",
+    "assets/images/java/Drawing 2024-08-17 14.50.45.excalidraw.md",
+    "_site/assets/images/java/Drawing 2024-08-17 14.50.45.excalidraw/index.html",
+    "_site/assets/images/java/Drawing 2024-08-17 14.50.45.excalidraw",
+    "assets/images/Drawing_2024-08-17_14.43.20.excalidraw.png.md",
+    "_site/assets/images/Drawing_2024-08-17_14.43.20.excalidraw.png.md",
+    "_site/assets/images/Drawing_2024-08-17_14.43.20.excalidraw.png",
+    "assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.png",
+    "asset/images/java/Drawing 2024-08-17 14.43.04.excalidraw.md",
+    "_site/assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.png",
+    "assets/images.md",
+    "_site/asset/images/java/Drawing_2024-08-17_14.43.20.excalidraw.png",
+    "assets/images/java/Drawing_2024-08-17_13.36.47.excalidraw.md",
+    "assets/images/annotated_IMG-20240817143526.md",
+    "assets/images/java.md",
     "_posts/blog/java/2022-07-30-연산자(Operator).md",
+    "_posts/blog/java/2022-07-28-변수(Variable).md",
+    "_site/assets/images/java.md",
+    "_posts/blog/java/2022-07-30-제어문 (flow control statemt).md",
+    "_posts/blog/java/2022-07-31-배열.md",
+    "assets/images/객체지향(OPP)/2022-08-04-객체지향(OPP)/Drawing_2024-08-17_13.36.47.excalidraw.md",
+    "Excalidraw/Drawing.md",
     "_posts/blog/java/2022-08-14-예외처리.md",
     "_posts/blog/java/2022-07-28-자바 시작하기 전.md",
-    "_site/java/예외처리/index.html",
-    "_site/java/예외처리",
-    "_site/assets/images/객체지향(OOP)/객체지향(OOP)/IMG-20240815210134.jpg",
-    "_site/assets/images/객체지향(OOP)/객체지향(OOP)/IMG-20240815210134-3.jpg",
-    "_site/assets/images/객체지향(OOP)/객체지향(OOP)/IMG-20240815210134-2.jpg",
-    "_site/assets/images/객체지향(OOP)/객체지향(OOP)/IMG-20240815210134-1.jpg",
-    "_site/assets/images/객체지향(OOP)/객체지향(OOP)",
-    "_site/assets/images/객체지향(OOP)",
-    "_posts/blog/java/2022-07-31-배열.md",
     "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/강의/상속 (Ingeritance)/상속 (Ingeritance).md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/객체지향(OOP)/객체지향(OOP).md",
     "_posts/BOOK LIST/독서일지/닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법/닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법.md",
-    "assets/images/객체지향(OOP)/객체지향(OOP)",
-    "assets/images/객체지향(OOP)",
-    "assets/images/닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법/닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법/IMG-20240811212846.png",
-    "assets/images/닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법/닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법",
-    "assets/images/닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법",
-    "assets/images/java/Untitled_101.png",
-    "_site/assets/images/java/Untitled_104.png",
-    "_site/assets/images/java/Untitled_101.png",
-    "_site/assets/images/java",
-    "assets/images/portfolio.jpeg",
-    "assets/images/IMG-20240811203015.png",
-    "_site/assets/images/java/2022-07-30-제어문 (flow control statemt)",
     "_site/assets/images.md",
-    "assets/images.md",
-    "_posts/blog/java/2022-07-28-변수(Variable).md",
-    "_posts/blog/java/배열/Untitled.md",
-    "_post/blog/java/배열/Untitled.md"
+    "_posts/blog/java/배열/Untitled.md"
   ]
 }

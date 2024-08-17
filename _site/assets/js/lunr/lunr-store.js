@@ -29,6 +29,12 @@ var store = [{
         "url": "/java/%EB%B0%B0%EC%97%B4/",
         "teaser": null
       },{
+        "title": "객체지향(oop)",
+        "excerpt":"객체지향 언어 = 프로그래밍 언어 + 객체지향개점(규칙) 캡슐화 상속 추상화 다형성 class : 객체를 정의해 놓은 것, 객체를 생성하는데 사용함. (설계도) = 데이터 + 함수(method) (서로 관련있는 것 끼리 묶음. 데이터만 묶으면 구조체) 기본적으로 하나의 소스파일에 하나의 class를 작성하는것이 바람직하나, 여러 class를 작성할수도 있음. public class가 있는 경우, 소스파일의 이름은...","categories": ["JAVA"],
+        "tags": ["java","자바의정석"],
+        "url": "/java/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(OOP)/",
+        "teaser": null
+      },{
         "title": "예외처리",
         "excerpt":"프로그램 오류 system.out.println(args[0]); //컴파일 에러 System.out.println(args[0]); //런타임 에러 : 실행중 발생하는 에러. 매개변수로 받은 값이 없는데 실행해서 생김 논리적에러(logical error) : 작성 의도와 다르게 동작 컴파일러에러(compile-time error) : 컴파일 할 때 발생하는 에러번호 컴파일러 구문체크 번역 최적화 (ex. int i = 3+5를 8로 변경) 런타임에러(runtime error) : 실행할 때 발생하는...","categories": ["JAVA"],
         "tags": ["java","자바의정석"],
