@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-18T22:00:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">테스트중</title><subtitle>An amazing website</subtitle><author><name>Jinny</name><email>nod15277@gmail.com</email></author><entry><title type="html">javalang패키지와 유용한 클래스</title><link href="http://localhost:4000/java/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" rel="alternate" type="text/html" title="javalang패키지와 유용한 클래스" /><published>2022-08-15T00:00:00+09:00</published><updated>2022-08-15T00:00:00+09:00</updated><id>http://localhost:4000/java/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4</id><content type="html" xml:base="http://localhost:4000/java/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/"><![CDATA[<h1 id="object-클래스">Object 클래스</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-18T22:03:19+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">테스트중</title><subtitle>An amazing website</subtitle><author><name>Jinny</name><email>nod15277@gmail.com</email></author><entry><title type="html">javalang패키지와 유용한 클래스</title><link href="http://localhost:4000/java/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" rel="alternate" type="text/html" title="javalang패키지와 유용한 클래스" /><published>2022-08-15T00:00:00+09:00</published><updated>2022-08-15T00:00:00+09:00</updated><id>http://localhost:4000/java/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4</id><content type="html" xml:base="http://localhost:4000/java/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/"><![CDATA[<h1 id="object-클래스">Object 클래스</h1>
 
 <p>: 모든 클래스의 최고 조상. 오직 11개의 메소드만을 가지고 있다.</p>
 
@@ -1896,14 +1896,7 @@ byte, short을 문자열로 변경할 때는 String valueOf(int)를 사용하면
 
         <p>❗fe2=(FireEngine)car;의 경우 사용할 수 있는 멤버의 수가 증가해서 불안정함. 그래서 꼭! 형변환을 써줘야함. 생략불가능</p>
 
-        <table>
-          <tbody>
-            <tr>
-              <td>![image](/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-1.png</td>
-              <td>IMG-20240818213037-1.png)]</td>
-            </tr>
-          </tbody>
-        </table>
+        <p><img src="/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-1.png" alt="image" />]</p>
 
         <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">class</span> <span class="nc">Car</span><span class="o">{</span>
   	<span class="nc">String</span> <span class="nc">Color</span><span class="o">;</span>
@@ -2148,14 +2141,7 @@ byte, short을 문자열로 변경할 때는 String valueOf(int)를 사용하면
   <span class="n">p</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">audio</span><span class="o">();</span>
 </code></pre></div>        </div>
 
-        <table>
-          <tbody>
-            <tr>
-              <td>![image](/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-2.png</td>
-              <td>IMG-20240818213037-2.png)]</td>
-            </tr>
-          </tbody>
-        </table>
+        <p><img src="/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-2.png" alt="image" />]</p>
 
         <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">class</span> <span class="nc">Buyer</span> <span class="o">{</span> <span class="c1">//물건사는사람</span>
   	<span class="kt">int</span> <span class="n">money</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">;</span> <span class="c1">//소지금</span>
