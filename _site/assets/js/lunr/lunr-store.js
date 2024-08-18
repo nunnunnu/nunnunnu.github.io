@@ -35,6 +35,12 @@ var store = [{
         "url": "/java/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(OOP)/",
         "teaser": null
       },{
+        "title": "상속 (ingeritance)",
+        "excerpt":"상속 ~는 ~이다 (is - a) - ex.원(circle)은 점(point)다. (x) class 자식클래스 extends 부모클래스 기존의 클래스로 새로운 클래스를 작성(코드 재사용) 두 클래스를 부모와 자식 관계로 이어줌 자손은 조상의 모든 멤버를 상속받는다 (생성자, 초기화 블럭 제외 (자식클래스에 멤버가 안적혀있어도 있는거임) 자손의 멤버 개수가 조상보다 적을 수는 없음.(같거나 많다.) 자손의 변경은 조상에게...","categories": ["JAVA"],
+        "tags": ["java","자바의정석"],
+        "url": "/java/%EC%83%81%EC%86%8D-(Ingeritance)/",
+        "teaser": null
+      },{
         "title": "예외처리",
         "excerpt":"프로그램 오류 system.out.println(args[0]); //컴파일 에러 System.out.println(args[0]); //런타임 에러 : 실행중 발생하는 에러. 매개변수로 받은 값이 없는데 실행해서 생김 논리적에러(logical error) : 작성 의도와 다르게 동작 컴파일러에러(compile-time error) : 컴파일 할 때 발생하는 에러번호 컴파일러 구문체크 번역 최적화 (ex. int i = 3+5를 8로 변경) 런타임에러(runtime error) : 실행할 때 발생하는...","categories": ["JAVA"],
         "tags": ["java","자바의정석"],

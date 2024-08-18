@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/java/2022-08-04-객체지향(OOP).md",
+                "file": "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 412.5
+    "width": 466.5
   },
   "right": {
     "id": "6ee3a94f67d83ffe",
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/java/2022-08-04-객체지향(OOP).md",
+                "file": "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/java/2022-08-04-객체지향(OOP).md",
+                "file": "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/java/2022-08-04-객체지향(OOP).md"
+                "file": "_posts/blog/java/2022-08-05-상속 (Ingeritance).md"
               }
             }
           },
@@ -190,8 +190,22 @@
   },
   "active": "05018c266bba2832",
   "lastOpenFiles": [
-    "assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.md",
+    "_site/java/상속-(Ingeritance)/index.html",
+    "_site/java/상속-(Ingeritance)",
+    "_site/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-2.png",
+    "_site/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037.png",
+    "_site/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-1.png",
+    "_site/assets/images/java/2022-08-05-상속(Ingeritance)",
+    "assets/images/java/2022-08-05-상속.md",
+    "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
+    "assets/images/java/2022-08-05-상속(Ingeritance)",
     "_posts/blog/java/2022-08-04-객체지향(OOP).md",
+    "_site/assets/images/java/상속 (Ingeritance)/IMG-20240818213013.png",
+    "_site/assets/images/java/상속 (Ingeritance)/IMG-20240818213012.png",
+    "_site/assets/images/java/상속 (Ingeritance)/IMG-20240818213012-1.png",
+    "_site/assets/images/java/상속 (Ingeritance)",
+    "assets/images/java/상속 (Ingeritance)",
+    "assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.md",
     "assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw.md",
     "_site/assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw.png",
     "assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw.png",
@@ -203,22 +217,11 @@
     "_site/assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw.png",
     "assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw.png",
     "_site/assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw/index.html",
-    "_site/assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw",
-    "_site/assets/images/java/Drawing 2024-08-17 14.51.13.excalidraw.png",
-    "assets/images/java/Drawing 2024-08-17 14.51.13.excalidraw.png",
-    "_site/assets/images/java/Drawing 2024-08-17 14.51.13.excalidraw/index.html",
-    "_site/assets/images/java/Drawing 2024-08-17 14.51.13.excalidraw",
     "assets/images/java/Drawing 2024-08-17 14.50.45.excalidraw.md",
-    "_site/assets/images/java/Drawing 2024-08-17 14.50.45.excalidraw/index.html",
-    "_site/assets/images/java/Drawing 2024-08-17 14.50.45.excalidraw",
     "assets/images/Drawing_2024-08-17_14.43.20.excalidraw.png.md",
     "_site/assets/images/Drawing_2024-08-17_14.43.20.excalidraw.png.md",
-    "_site/assets/images/Drawing_2024-08-17_14.43.20.excalidraw.png",
-    "assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.png",
     "asset/images/java/Drawing 2024-08-17 14.43.04.excalidraw.md",
-    "_site/assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.png",
     "assets/images.md",
-    "_site/asset/images/java/Drawing_2024-08-17_14.43.20.excalidraw.png",
     "assets/images/java/Drawing_2024-08-17_13.36.47.excalidraw.md",
     "assets/images/annotated_IMG-20240817143526.md",
     "assets/images/java.md",
@@ -231,9 +234,7 @@
     "Excalidraw/Drawing.md",
     "_posts/blog/java/2022-08-14-예외처리.md",
     "_posts/blog/java/2022-07-28-자바 시작하기 전.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/강의/상속 (Ingeritance)/상속 (Ingeritance).md",
     "_posts/BOOK LIST/독서일지/닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법/닥치는 대로 끌리는 대로 오직 재미있게 이동진 독서법.md",
-    "_site/assets/images.md",
-    "_posts/blog/java/배열/Untitled.md"
+    "_site/assets/images.md"
   ]
 }
