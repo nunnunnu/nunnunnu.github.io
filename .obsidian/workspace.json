@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md",
+                "file": "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
                 "mode": "source",
                 "source": false
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md",
+                "file": "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md",
+                "file": "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md"
+                "file": "_posts/blog/java/2022-08-05-상속 (Ingeritance).md"
               }
             }
           },
@@ -188,8 +188,9 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "a486eb621c47cd0c",
+  "active": "05018c266bba2832",
   "lastOpenFiles": [
+    "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md",
     "_site/assets/images/java/2022-08-15-javalang/IMG-20240818214103.png",
     "_site/assets/images/java/2022-08-15-javalang/IMG-20240818214103-1.png",
     "_site/assets/images/java/2022-08-15-javalang/IMG-20240818214102.png",
@@ -200,10 +201,8 @@
     "_site/assets/images/java/2022-08-15-javalang/IMG-20240818214102-3.png",
     "_site/assets/images/java/2022-08-15-javalang/IMG-20240818214102-5.png",
     "_site/assets/images/java/2022-08-15-javalang/IMG-20240818214102-4.png",
-    "_site/assets/images/java/2022-08-15-javalang/IMG-20240818214102-2.png",
     "_site/assets/images/java/2022-08-15-javalang",
     "_site/assets/images/java/2022-08-15-java.lang",
-    "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md",
     "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
     "_posts/blog/java/2022-08-14-예외처리.md",
     "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md~",

@@ -660,7 +660,7 @@ public class MyParentTest2 {
         
         FireEngine f2 = (FireEngine)c는 f→c→f로 변환되었으니 FireEngine의 모든 멤버를 사용할 수 있음.
         
-        ![image][/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037.png]
+        ![image](/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037.png)
         
         ```java
         class Car{
@@ -699,7 +699,7 @@ public class MyParentTest2 {
         
         ❗fe2=(FireEngine)car;의 경우 사용할 수 있는 멤버의 수가 증가해서 불안정함. 그래서 꼭! 형변환을 써줘야함. 생략불가능
         
-        ![image][/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-1.png|IMG-20240818213037-1.png]]
+        ![image](/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-1.png|IMG-20240818213037-1.png)]
         
         ```java
         class Car{
@@ -937,7 +937,7 @@ public class MyParentTest2 {
         p[2] = new audio();
         ```
         
-        ![image][/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-2.png|IMG-20240818213037-2.png]]
+        ![image](/assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-2.png|IMG-20240818213037-2.png)]
         
         ```java
         class Buyer { //물건사는사람
