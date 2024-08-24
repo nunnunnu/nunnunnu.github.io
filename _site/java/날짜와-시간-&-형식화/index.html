@@ -1,0 +1,1394 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <style> 
+      ::-webkit-scrollbar{ 
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        width: 0px;
+        background-color: rgba(224, 224, 224, 0.2);
+        /* border-radius: 5px; */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        width: 0px;
+        background-color: rgba(220, 219, 218, 0.6);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        width: 10px;
+        height: 20px;
+        /* background-color: rgba(190, 190, 190, 0.2); */
+        background-color: rgba(193, 192, 191, 0.7);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-track:hover {
+        width: 10px;
+        /* background-color: rgba(150, 150, 150, 0.1); */
+        background-color: rgba(224, 224, 224, 0.5);
+        border-radius: 5px;
+        /* background: transparent; */
+        /* border-radius: 10px; */
+      }
+
+      ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+          width:0px;
+          height: 0px;
+          /* background-color: rgb(14, 221, 24); */
+          /* border-radius: 50%; */
+      }
+    </style>
+    
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>날짜와 시간 &amp; 형식화 - Jinny</title>
+<meta name="description" content="날짜와 시간">
+
+
+  <meta name="author" content="Jinny">
+  
+  <meta property="article:author" content="Jinny">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="테스트중">
+<meta property="og:title" content="날짜와 시간 &amp; 형식화">
+<meta property="og:url" content="http://localhost:4000/java/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&-%ED%98%95%EC%8B%9D%ED%99%94/">
+
+
+  <meta property="og:description" content="날짜와 시간">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-08-21T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/java/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&-%ED%98%95%EC%8B%9D%ED%99%94/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Jinny",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="테스트중 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://github-account.github.io/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://github-account.github.io/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://github-account.github.io/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://github-account.github.io/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://github-account.github.io/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          테스트중
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/search">Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/portfolio.jpeg" alt="Jinny" itemprop="image">
+      
+    </div>
+  
+
+  <!-- 2022.02.17 author content hidden -->
+  <!-- <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Jinny</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Backend Developer</p>
+
+      </div>
+    
+  </div> -->
+
+  <div class="author__urls-wrapper">
+    <!-- <button class="btn btn--inverse">팔로우</button> -->
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://github.com/nunnunnu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:nod15277@gmail.com">
+            <meta itemprop="email" content="nod15277@gmail.com">
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">토글 메뉴</label>
+  <li> 전체 글 수 10개 </li>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">언어</span>
+        
+
+        
+          <ul>
+            
+              
+              
+
+              <li><a href="/categories/JAVA">JAVA (10)</a></li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="날짜와 시간 &amp; 형식화">
+    <meta itemprop="description" content="날짜와 시간">
+    <meta itemprop="datePublished" content="2022-08-21T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">날짜와 시간 &amp; 형식화
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+      <div class="page__comments">
+  
+  
+</div>
+
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Contents</h4></header>
+              <ul class="toc__menu">
+<li><a href="#%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84">날짜와 시간</a></li>
+<li><a href="#calender%ED%81%B4%EB%9E%98%EC%8A%A4">Calender클래스</a></li>
+<li><a href="#%ED%98%95%EC%8B%9D%ED%99%94%ED%81%B4%EB%9E%98%EC%8A%A4">형식화클래스</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h3 id="날짜와-시간">날짜와 시간</h3>
+
+<ul>
+  <li>
+    <p><a href="http://java.util.Date">java.util.Date</a> : 날짜와 시간을 다룰 목적으로 만들어진 클래스(JDK1.0)<br>
+  date의 메소드는 거의 사용되지 않지만(deprecated), 여전히 쓰이고 잇다.</p>
+  </li>
+  <li>
+<a href="http://java.util.Date">java.util.</a>Calendar :Date클래스를 개선한 새로운 클래스(JDK1.1), 여전히 단점이 있다 (실무에는 아직 쓰이는 곳이 많음
+    <ul>
+      <li>날짜와 시간을 같이 다루는 것이 단점</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://java.util.Date">java.</a>time 패키지 : Date와 Calendar의 단점을 개선한 새로운 클래스들을 제공(JDK1.8=JDK8)
+    <ul>
+      <li>날짜와 시간의 클래스를 나누어 놓음(LocalDate, LocalTime, LocalDateTime)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="calender클래스">Calender클래스</h3>
+
+<p>추상클래스. getinstace()를 통해 구현된 객체를 얻어야 한다.</p>
+
+<p>Calendar cal = new Calendar.getInstance(); //사용자 시스템에 기반해서 서양력, 불교력, 일본력 중 하나를 가져온다. (달력을 지정하는것 보다 애매하게 쓰는게 나중에 달력변경 시 조금만 수정해도 사용할 수 있음 - 추상화 )</p>
+
+<ul>
+  <li>get()으로 날짜와 시간 가져오기 - int ger(int field)</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Calendar</span> <span class="n">cal</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span> <span class="c1">//현재 시간과 날짜로 세팅</span>
+		<span class="kt">int</span> <span class="n">thisYear</span> <span class="o">=</span> <span class="n">cal</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">YEAR</span><span class="o">);</span> <span class="c1">//현재 몇년도인지</span>
+		<span class="kt">int</span> <span class="n">lastDayOfMonth</span> <span class="o">=</span> <span class="n">cal</span><span class="o">.</span><span class="na">getActualMaximum</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">);</span><span class="c1">//이달의 마지막 날</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">lastDayOfMonth</span><span class="o">);</span>	
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>필드명</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>YEAR</td>
+      <td>년</td>
+    </tr>
+    <tr>
+      <td>MONTH</td>
+      <td>월(0부터 시작)</td>
+    </tr>
+    <tr>
+      <td>WEEK_OF_MONTH</td>
+      <td>그 달의 몇 번째 주</td>
+    </tr>
+    <tr>
+      <td>WEEK_OF_YEAR</td>
+      <td>그 해의 몇 번째 주</td>
+    </tr>
+    <tr>
+      <td>DATE</td>
+      <td>일</td>
+    </tr>
+    <tr>
+      <td>DAY_OF_MONTH</td>
+      <td>그 달의 몇 번째 일</td>
+    </tr>
+    <tr>
+      <td>DAY_OF_YEAR</td>
+      <td>그 해의 몇 번째 일</td>
+    </tr>
+    <tr>
+      <td>DAY_OF_WEEK</td>
+      <td>요일</td>
+    </tr>
+    <tr>
+      <td>DAY_OF_WEEK_IN_MONTH</td>
+      <td>그 달의 몇 번째 요일</td>
+    </tr>
+    <tr>
+      <td>HOUR</td>
+      <td>시간(0~11)</td>
+    </tr>
+    <tr>
+      <td>HOUR_OF_DAY</td>
+      <td>시간(0~23)</td>
+    </tr>
+    <tr>
+      <td>MINUTE</td>
+      <td>분</td>
+    </tr>
+    <tr>
+      <td>SECOND</td>
+      <td>초</td>
+    </tr>
+    <tr>
+      <td>MILLISECOND</td>
+      <td>천분의 1초</td>
+    </tr>
+    <tr>
+      <td>ZONE_OFFSET</td>
+      <td>GMT기준 시차(천분의 1초단위)  <br>(한국은 GMT시간보다 9시간빨라서 9로 표시)</td>
+    </tr>
+    <tr>
+      <td>AM_PM</td>
+      <td>오전/오후</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Calendar</span> <span class="n">cal</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span> <span class="c1">//현재 시간과 날짜로 세팅</span>
+		<span class="kt">int</span> <span class="n">thisYear</span> <span class="o">=</span> <span class="n">cal</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">YEAR</span><span class="o">);</span> <span class="c1">//현재 몇년도인지</span>
+		<span class="kt">int</span> <span class="n">lastDayOfMonth</span> <span class="o">=</span> <span class="n">cal</span><span class="o">.</span><span class="na">getActualMaximum</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">);</span><span class="c1">//이달의 마지막 날</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">lastDayOfMonth</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">cal</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_WEEK_IN_MONTH</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">cal</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MONTH</span><span class="o">));</span> <span class="c1">//0부터시작해서 7나옴 8월임</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">cal</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">WEEK_OF_YEAR</span><span class="o">));</span> <span class="c1">//0부터시작해서 7나옴 8월임</span>
+
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Calendar</span> <span class="n">today</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span> <span class="c1">//현재 시간과 날짜로 세팅</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이 해의 연도 : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">YEAR</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"월(0~11, 0:1월) : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MONTH</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이 해의 몇 째 주 : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">WEEK_OF_YEAR</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이 달의 몇 째 주 : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">WEEK_OF_MONTH</span><span class="o">));</span>
+		
+	<span class="c1">//DATE와 DAY_OF_MONTH는 같다</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이 달의 며칠 : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이 달의 며칠 : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_MONTH</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이 해의 며칠 : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_YEAR</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"요일(1~7, 1은 일요일) : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_WEEK</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이 달의 몇 째 요일 : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_WEEK_IN_MONTH</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"오전/오후(0:오전,1:오후) : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">AM_PM</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"시간(0~11) : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">HOUR</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"시간(0~23) : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">HOUR_OF_DAY</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"분(0~59) : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MINUTE</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"초(0~59) : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">SECOND</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"1000분의 1초(0~999) : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MILLISECOND</span><span class="o">));</span>
+		<span class="c1">//천분의 1초를 시간으로 표시하기 위해 360000으로 나눔(1시간 = 60*60초)</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"TimeZone : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">ZONE_OFFSET</span><span class="o">/(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">/</span><span class="mi">1000</span><span class="o">)));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"이 달의 마지막 날 : "</span><span class="o">+</span><span class="n">today</span><span class="o">.</span><span class="na">getActualMaximum</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">));</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>set()으로 날짜와 시간 지정하기</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">datel</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+<span class="c1">//		datel.set(Calendar.YEAR, 2022);</span>
+<span class="c1">//		datel.set(Calendar.MONTH, 10); //11월</span>
+<span class="c1">//		datel.set(Calendar.DATE, 20);</span>
+		<span class="n">datel</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">2022</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">20</span><span class="o">);</span> <span class="c1">//2022년 11월 20일</span>
+		
+		<span class="nc">Calendar</span> <span class="n">timel</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+<span class="c1">//		datel.set(Calendar.HOUR_OF_DAY, 10); //10시</span>
+<span class="c1">//		datel.set(Calendar.MINUTE, 20); //20분 </span>
+<span class="c1">//		datel.set(Calendar.SECOND, 30); //30초</span>
+		<span class="n">timel</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">20</span><span class="o">,</span><span class="mi">30</span><span class="o">);</span> <span class="c1">//10시</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">//요일 숫자-&gt;문자열로 바꾸어 표시</span>
+		<span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="no">DAY_OF_WEEK</span> <span class="o">=</span> <span class="o">{</span><span class="s">""</span><span class="o">,</span><span class="s">"일"</span><span class="o">,</span><span class="s">"월"</span><span class="o">,</span><span class="s">"화"</span><span class="o">,</span><span class="s">"수"</span><span class="o">,</span><span class="s">"목"</span><span class="o">,</span><span class="s">"금"</span><span class="o">,</span><span class="s">"토"</span><span class="o">,</span><span class="s">"일"</span><span class="o">};</span>
+		<span class="nc">Calendar</span> <span class="n">date1</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+		<span class="nc">Calendar</span> <span class="n">date2</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+		
+		<span class="c1">//month의 경우 0부터 시작하기 때문에 4월인경우 3으로 지정</span>
+		<span class="n">date1</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">2022</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span><span class="mi">29</span><span class="o">);</span><span class="c1">//2022년 4월 29일</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"date1은 "</span> <span class="o">+</span><span class="n">toString</span><span class="o">(</span><span class="n">date1</span><span class="o">)+</span><span class="no">DAY_OF_WEEK</span><span class="o">[</span><span class="n">date1</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_WEEK</span><span class="o">)]+</span><span class="s">"요일이고, "</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"date2는 "</span> <span class="o">+</span><span class="n">toString</span><span class="o">(</span><span class="n">date2</span><span class="o">)+</span><span class="no">DAY_OF_WEEK</span><span class="o">[</span><span class="n">date2</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_WEEK</span><span class="o">)]+</span><span class="s">"요일입니다."</span><span class="o">);</span>
+	
+	<span class="c1">//두 날짜간의 차이를 얻으려면, gerTimeInMillis()-날짜,시간을 초단위로 바꿔줌[/1000해줘야함]- 천분의 일초단위로 변환</span>
+	<span class="kt">long</span> <span class="n">difference</span> <span class="o">=</span> <span class="o">(</span><span class="n">date2</span><span class="o">.</span><span class="na">getTimeInMillis</span><span class="o">()</span> <span class="o">-</span> <span class="n">date1</span><span class="o">.</span><span class="na">getTimeInMillis</span><span class="o">())/</span><span class="mi">1000</span><span class="o">;</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"date1부터 date2까지 "</span><span class="o">+</span><span class="n">difference</span><span class="o">+</span><span class="s">"초가 지났습니다."</span><span class="o">);</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"일(day)로 계산하면 "</span><span class="o">+</span><span class="n">difference</span><span class="o">/(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">)+</span><span class="s">"일입니다"</span><span class="o">);</span>
+	<span class="c1">//1일 = 24*60*60</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">(</span><span class="nc">Calendar</span> <span class="n">date</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">date</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">YEAR</span><span class="o">)+</span><span class="s">"년 "</span><span class="o">+(</span><span class="n">date</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MONTH</span><span class="o">)+</span><span class="mi">1</span><span class="o">)+</span><span class="s">"월 "</span><span class="o">+</span><span class="n">date</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">)+</span><span class="s">"일"</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kd">final</span> <span class="kt">int</span><span class="o">[]</span> <span class="no">TIME_UNIT</span> <span class="o">=</span> <span class="o">{</span><span class="mi">3600</span><span class="o">,</span><span class="mi">60</span><span class="o">,</span><span class="mi">1</span><span class="o">};</span>
+		<span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="no">TIME_UNIT_NAME</span><span class="o">=</span> <span class="o">{</span><span class="s">"시간"</span><span class="o">,</span><span class="s">"분"</span><span class="o">,</span><span class="s">"초"</span><span class="o">};</span>
+		<span class="nc">Calendar</span> <span class="n">time1</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+		<span class="nc">Calendar</span> <span class="n">time2</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+		
+		<span class="n">time1</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">HOUR_OF_DAY</span><span class="o">,</span><span class="mi">10</span><span class="o">);</span>
+		<span class="n">time1</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MINUTE</span><span class="o">,</span><span class="mi">20</span><span class="o">);</span>
+		<span class="n">time1</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">SECOND</span><span class="o">,</span><span class="mi">30</span><span class="o">);</span>
+		<span class="n">time2</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">HOUR_OF_DAY</span><span class="o">,</span><span class="mi">20</span><span class="o">);</span>
+		<span class="n">time2</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MINUTE</span><span class="o">,</span><span class="mi">30</span><span class="o">);</span>
+		<span class="n">time2</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">SECOND</span><span class="o">,</span><span class="mi">10</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"time1 : "</span><span class="o">+</span><span class="n">time1</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">HOUR_OF_DAY</span><span class="o">)+</span><span class="s">"시 "</span><span class="o">+</span><span class="n">time1</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MINUTE</span><span class="o">)+</span><span class="s">"분 "</span><span class="o">+</span><span class="n">time1</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">SECOND</span><span class="o">)+</span><span class="s">"초"</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"time2 : "</span><span class="o">+</span><span class="n">time2</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">HOUR_OF_DAY</span><span class="o">)+</span><span class="s">"시 "</span><span class="o">+</span><span class="n">time2</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MINUTE</span><span class="o">)+</span><span class="s">"분 "</span><span class="o">+</span><span class="n">time2</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">SECOND</span><span class="o">)+</span><span class="s">"초"</span><span class="o">);</span>
+		
+		<span class="c1">//Math.abs:절대값</span>
+		<span class="kt">long</span> <span class="n">different</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">time2</span><span class="o">.</span><span class="na">getTimeInMillis</span><span class="o">()-</span><span class="n">time1</span><span class="o">.</span><span class="na">getTimeInMillis</span><span class="o">())/</span><span class="mi">1000</span><span class="o">;</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"time1과 time2의 차이는 "</span><span class="o">+</span><span class="n">different</span><span class="o">+</span><span class="s">"초 입니다"</span><span class="o">);</span>
+		
+		<span class="nc">String</span> <span class="n">tmp</span><span class="o">=</span><span class="s">""</span><span class="o">;</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="no">TIME_UNIT</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">tmp</span> <span class="o">+=</span> <span class="n">different</span><span class="o">/</span><span class="no">TIME_UNIT</span><span class="o">[</span><span class="n">i</span><span class="o">]+</span><span class="no">TIME_UNIT_NAME</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+			<span class="n">different</span> <span class="o">%=</span> <span class="no">TIME_UNIT</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+		<span class="o">}</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"시분초로 변환하면 "</span><span class="o">+</span><span class="n">tmp</span><span class="o">+</span><span class="s">"입니다."</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>clear()는 Calendar객체의 모든 필드를 초기화 → 1970년 1월 1일 00:00:00으로 초기화</li>
+  <li>clear(int field)는 Calendar객체의 특정 필드를 초기화 → 0초 or 0분 or …</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">getDaydiff</span><span class="o">(</span><span class="s">"20010103"</span><span class="o">,</span><span class="s">"20010101"</span><span class="o">));</span> <span class="c1">//2</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">getDaydiff</span><span class="o">(</span><span class="s">"20010103"</span><span class="o">,</span><span class="s">"20010103"</span><span class="o">));</span> <span class="c1">//0</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">getDaydiff</span><span class="o">(</span><span class="s">"20010103"</span><span class="o">,</span><span class="s">"200103"</span><span class="o">));</span> <span class="c1">//형식안맞음.</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getDaydiff</span><span class="o">(</span><span class="nc">String</span> <span class="n">yyyymmdd1</span><span class="o">,</span> <span class="nc">String</span> <span class="n">yyyymmdd2</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">diff</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+		<span class="k">try</span><span class="o">{</span>
+		<span class="kt">int</span> <span class="n">year1</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">yyyymmdd1</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">4</span><span class="o">));</span>
+		<span class="kt">int</span> <span class="n">month1</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">yyyymmdd1</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="mi">6</span><span class="o">));</span>
+		<span class="kt">int</span> <span class="n">day1</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">yyyymmdd1</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span><span class="mi">8</span><span class="o">));</span>
+		<span class="kt">int</span> <span class="n">year2</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">yyyymmdd2</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">4</span><span class="o">));</span>
+		<span class="kt">int</span> <span class="n">month2</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">yyyymmdd2</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="mi">6</span><span class="o">));</span>
+		<span class="kt">int</span> <span class="n">day2</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">yyyymmdd2</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span><span class="mi">8</span><span class="o">));</span>
+		
+		<span class="nc">Calendar</span> <span class="n">date1</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+		<span class="nc">Calendar</span> <span class="n">date2</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+		<span class="c1">//date1, date2사이의 약간의(0.000...초 정도)차이 발생</span>
+<span class="c1">//		System.out.println("date1 : "+date1);</span>
+<span class="c1">//		System.out.println("date2 : "+date2);</span>
+		<span class="c1">//time세팅을 clear해줘야함</span>
+		<span class="n">date1</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+		<span class="n">date2</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+		<span class="n">date1</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">year1</span><span class="o">,</span> <span class="n">month1</span><span class="o">,</span><span class="n">day1</span><span class="o">);</span>
+		<span class="n">date2</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">year2</span><span class="o">,</span> <span class="n">month2</span><span class="o">,</span><span class="n">day2</span><span class="o">);</span>
+		<span class="n">diff</span><span class="o">=(</span><span class="kt">int</span><span class="o">)((</span><span class="n">date1</span><span class="o">.</span><span class="na">getTimeInMillis</span><span class="o">()-</span><span class="n">date2</span><span class="o">.</span><span class="na">getTimeInMillis</span><span class="o">())/(</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">1000</span><span class="o">));</span>
+		<span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">diff</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><span class="c1">//substring, parseInt에서 예외 발생시</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="n">diff</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <dl>
+      <dt>add()는 특정 필드의 값을 증가 또는 감소(다른 필드에 영향o)</dt>
+      <dd>8월 31일에서 일에 +1하면 월도 +1됨</dd>
+    </dl>
+  </li>
+  <li>
+    <dl>
+      <dt>roll()은 특정 필드의 값을 증가 또는 감소(다른 필드에 영향x)</dt>
+      <dd>8월 31일에서 일에 +1해도 월은 그대로임</dd>
+    </dl>
+  </li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Calendar</span> <span class="n">date</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+		<span class="n">date</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">2022</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span><span class="mi">31</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">toString</span><span class="o">(</span><span class="n">date</span><span class="o">));</span> <span class="c1">//8/31</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"1일 후"</span><span class="o">);</span>
+		<span class="n">date</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">toString</span><span class="o">(</span><span class="n">date</span><span class="o">));</span> <span class="c1">//9/1</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"6달 전"</span><span class="o">);</span>
+		<span class="n">date</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MONTH</span><span class="o">,</span> <span class="o">-</span><span class="mi">6</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">toString</span><span class="o">(</span><span class="n">date</span><span class="o">));</span><span class="c1">//3/1</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"31일 후(roll)"</span><span class="o">);</span> <span class="c1">//다른필드(월)에 영향x</span>
+		<span class="n">date</span><span class="o">.</span><span class="na">roll</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">,</span><span class="mi">31</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">toString</span><span class="o">(</span><span class="n">date</span><span class="o">));</span> <span class="c1">//3/1</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"31일 후(add)"</span><span class="o">);</span>
+		<span class="n">date</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">,</span><span class="mi">31</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">toString</span><span class="o">(</span><span class="n">date</span><span class="o">));</span> <span class="c1">//4/1</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">(</span><span class="nc">Calendar</span> <span class="n">date</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">date</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">YEAR</span><span class="o">)+</span><span class="s">"년 "</span><span class="o">+(</span><span class="n">date</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">MONTH</span><span class="o">)+</span><span class="mi">1</span><span class="o">)+</span><span class="s">"월 "</span><span class="o">+</span><span class="n">date</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">)+</span><span class="s">"일"</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+<span class="c1">//달력찍기</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">length</span> <span class="o">!=</span><span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"usage : java Ex10"</span><span class="o">);</span>
+			<span class="k">return</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="kt">int</span> <span class="n">year</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+		<span class="kt">int</span> <span class="n">month</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+		<span class="kt">int</span> <span class="no">START_DAY_OF_WEEK</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="kt">int</span> <span class="no">END_DAY_OF_WEEK</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		
+		<span class="nc">Calendar</span> <span class="n">sDay</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span><span class="c1">//시작일</span>
+		<span class="nc">Calendar</span> <span class="n">eDay</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span><span class="c1">//끝일</span>
+		
+		<span class="c1">//월의 경우 -1해줘야함 (0~11)</span>
+		<span class="n">sDay</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">year</span><span class="o">,</span><span class="n">month</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span><span class="mi">1</span><span class="o">);</span>
+		<span class="n">eDay</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">year</span><span class="o">,</span><span class="n">month</span><span class="o">,</span><span class="mi">1</span><span class="o">);</span>
+		
+		<span class="c1">//다음 달 첫날에서 하루를 빼면 현재달의 마치막 날이 출력</span>
+		<span class="n">eDay</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+		
+		<span class="c1">//첫번째요일이 무슨 요일인지</span>
+		<span class="no">START_DAY_OF_WEEK</span> <span class="o">=</span> <span class="n">sDay</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DAY_OF_WEEK</span><span class="o">);</span>
+		
+		<span class="c1">//eDay의 지정된 날짜</span>
+		<span class="no">END_DAY_OF_WEEK</span><span class="o">=</span><span class="n">eDay</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">Calendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"       "</span><span class="o">+</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]+</span><span class="s">"년 "</span><span class="o">+</span><span class="n">args</span><span class="o">[</span><span class="mi">1</span><span class="o">]+</span><span class="s">"일"</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">" SU MO TU WE TH FR SA"</span><span class="o">);</span>
+		
+		<span class="c1">//해당 월의 1일이 어느 요일인지에 따라서 공백을 출력(일요일부터 시작)</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="no">START_DAY_OF_WEEK</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"   "</span><span class="o">);</span>
+		<span class="o">}</span>
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">,</span> <span class="n">n</span><span class="o">=</span><span class="no">START_DAY_OF_WEEK</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="no">END_DAY_OF_WEEK</span><span class="o">;</span><span class="n">i</span><span class="o">++,</span><span class="n">n</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">((</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="o">)?</span><span class="s">"  "</span><span class="o">+</span><span class="nl">i:</span><span class="s">" "</span><span class="o">+</span><span class="n">i</span><span class="o">);</span>
+			<span class="k">if</span><span class="o">(</span><span class="n">n</span><span class="o">%</span><span class="mi">7</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Date와 Calendar간의 변환</p>
+
+    <ul>
+      <li>Date의 메소드는 대부분 deprecated되었지만 여전히 사용됨(하위호환성-옛날 기능도 계속 지원해주려고 신경씀)</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="o">;</span>
+    
+  <span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="c1">//Calendar-&gt;Date</span>
+  		<span class="nc">Calendar</span> <span class="n">cal</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+  		<span class="nc">Date</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="n">cal</span><span class="o">.</span><span class="na">getTimeInMillis</span><span class="o">());</span> <span class="c1">//Date(long date)</span>
+    		
+  		<span class="c1">//Date -&gt; Calendar</span>
+  		<span class="nc">Date</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">();</span>
+  		<span class="nc">Calendar</span> <span class="n">cal</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+  		<span class="n">cal</span><span class="o">.</span><span class="na">setTime</span><span class="o">(</span><span class="n">d</span><span class="o">);</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="형식화클래스">형식화클래스</h3>
+
+<p>: java.text 패키지의 DecimalFormat(10진수숫자형식) SimpleDateFormat(날짜형식화)</p>
+
+<ul>
+  <li>숫자와 날짜를 원하는 형식으로 쉽게 출력 가능 (숫자, 날짜 → 형식문자열)</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.text.DecimalFormat</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">double</span> <span class="n">num</span> <span class="o">=</span> <span class="mf">1234567.89</span><span class="o">;</span>
+		<span class="nc">DecimalFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DecimalFormat</span><span class="o">(</span><span class="s">"#.\#E0"</span><span class="o">);</span> <span class="c1">//지수형식 </span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">df</span><span class="o">);</span> <span class="c1">//java.text.DecimalFormat@5c8</span>
+		<span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result</span><span class="o">);</span> <span class="c1">//1.2E6</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>형식 문자열에서 숫자와 날짜를 뽑아내는 기능(형식문자열→숫자, 날짜)</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.text.DecimalFormat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.text.ParseException</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ParseException</span> <span class="o">{</span>
+		<span class="nc">DecimalFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DecimalFormat</span><span class="o">(</span><span class="s">"#,###.##"</span><span class="o">);</span> <span class="c1">//지수형식 </span>
+		<span class="nc">Number</span> <span class="n">num</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"1,234,567.89"</span><span class="o">);</span>
+		<span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="n">num</span><span class="o">.</span><span class="na">doubleValue</span><span class="o">();</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">d</span><span class="o">);</span> <span class="c1">//1234567.89</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>DecimalFormat</p>
+
+    <ul>
+      <li>
+        <p>숫자를 형식화 할때 사용(숫자 → 형식문자열)</p>
+
+        <p><img src="/assets/images/java/IMG-20240824190825.png" alt="image"></p>
+      </li>
+      <li>
+        <p>특정 형식의 문자열을 숫자로 변환할 때도 사용(형식 문자열→숫자)</p>
+
+        <div class="language-java highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">java.text.DecimalFormat</span><span class="o">;</span>
+        
+  <span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="kt">double</span> <span class="n">num</span> <span class="o">=</span> <span class="mf">1234567.89</span><span class="o">;</span>
+  		<span class="nc">String</span><span class="o">[]</span> <span class="n">pattern</span> <span class="o">=</span> <span class="o">{</span>
+  				<span class="s">"0"</span><span class="o">,</span>
+  				<span class="s">"#"</span><span class="o">,</span>
+  				<span class="s">"0.0"</span><span class="o">,</span>
+  				<span class="s">"#.#"</span><span class="o">,</span>
+  				<span class="s">"0000000000.0000"</span><span class="o">,</span>
+  				<span class="s">"##########.####"</span><span class="o">,</span>
+  				<span class="s">"#.\#-"</span><span class="o">,</span>
+  				<span class="s">"-#.#"</span><span class="o">,</span>
+  				<span class="s">"#,###.##"</span><span class="o">,</span>
+  				<span class="s">"#,####.##"</span><span class="o">,</span>
+  				<span class="s">"\#E0"</span><span class="o">,</span>
+  				<span class="s">"0E0"</span><span class="o">,</span>
+  				<span class="s">"#\#E0"</span><span class="o">,</span>
+  				<span class="s">"00E0"</span><span class="o">,</span>
+  				<span class="s">"###\#E0"</span><span class="o">,</span>
+  				<span class="s">"0000E0"</span><span class="o">,</span>
+  				<span class="s">"#.\#E0"</span><span class="o">,</span>
+  				<span class="s">"0.0E0"</span><span class="o">,</span>
+  				<span class="s">"0.000000000E0"</span><span class="o">,</span>
+  				<span class="s">"00.00000000E0"</span><span class="o">,</span>
+  				<span class="s">"000.0000000E0"</span><span class="o">,</span>
+  				<span class="s">"#.########\#E0"</span><span class="o">,</span>
+  				<span class="s">"##.#######\#E0"</span><span class="o">,</span>
+  				<span class="s">"###.######\#E0"</span><span class="o">,</span>
+  				<span class="s">"#,###.##+;\#m###.#\#-"</span><span class="o">,</span>
+  				<span class="s">"#.#%"</span><span class="o">,</span>
+  				<span class="s">"#,#\u2030"</span><span class="o">,</span>
+  				<span class="s">"\u00A4 #,####"</span><span class="o">,</span>
+  				<span class="s">"'#'#,###"</span><span class="o">,</span>
+  				<span class="s">"''#,###"</span><span class="o">,</span>
+  		<span class="o">};</span>
+  		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">pattern</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+  			<span class="nc">DecimalFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DecimalFormat</span><span class="o">(</span><span class="n">pattern</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%19s : %s\n"</span><span class="o">,</span><span class="n">pattern</span><span class="o">[</span><span class="n">i</span><span class="o">],</span><span class="n">df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">num</span><span class="o">));</span>
+  		<span class="o">}</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+  <span class="cm">/*
+  0 : 1234568
+  # : 1234568
+  0.0 : 1234567.9
+  #.# : 1234567.9
+  0000000000.0000 : 0001234567.8900
+  ##########.#### : 1234567.89
+  #.\#- : 1234567.9-
+  -#.# : -1234567.9
+  #,###.## : 1,234,567.89
+  #,####.## : 123,4567.89
+  \#E0 : .1E7
+  0E0 : 1E6
+  #\#E0 : 1.2E6
+  00E0 : 12E5
+  ###\#E0 : 123.5E4
+  0000E0 : 1235E3
+  #.\#E0 : 1.2E6
+  0.0E0 : 1.2E6
+  0.000000000E0 : 1.234567890E6
+  00.00000000E0 : 12.34567890E5
+  000.0000000E0 : 123.4567890E4
+  #.########\#E0 : 1.23456789E6
+  ##.#######\#E0 : 1.23456789E6
+  ###.######\#E0 : 1.23456789E6
+  #,###.##+;\#m###.#\#- : 1,234,567.89+
+  #.#% : 123456789%
+  #,#‰ : 1,2,3,4,5,6,7,8,9,0‰
+  ¤ #,#### : ? 123,4568
+  '#'#,### : \#1,234,568
+  ''#,### : '1,234,568
+  */</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+
+    <p>⚠️ Integer,parseInt는 콤마(,)가 포함된 문자열을 숫자로 변환 못함</p>
+
+    <div class="language-java highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">java.text.DecimalFormat</span><span class="o">;</span>
+    
+  <span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="nc">DecimalFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DecimalFormat</span><span class="o">(</span><span class="s">"#,###.#"</span><span class="o">);</span>
+  		<span class="nc">DecimalFormat</span> <span class="n">df2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DecimalFormat</span><span class="o">(</span><span class="s">"#.##\#E0"</span><span class="o">);</span>
+    		
+  		<span class="k">try</span> <span class="o">{</span>
+  <span class="c1">//			System.out.println(Double.parseDouble("1,234,567.89")); //콤마때매 변환 불가로 에러</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="s">"1234567.89"</span><span class="o">));</span> 
+  			<span class="nc">Number</span> <span class="n">num</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"1,2 34,567.89"</span><span class="o">);</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"1,234,567.89"</span><span class="o">+</span><span class="s">" -&gt; "</span><span class="o">);</span>
+    			
+  			<span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="n">num</span><span class="o">.</span><span class="na">doubleValue</span><span class="o">();</span>
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">d</span><span class="o">+</span><span class="s">" -&gt; "</span><span class="o">);</span> <span class="c1">//1234567.89</span>
+    			
+  			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">df2</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">num</span><span class="o">));</span> <span class="c1">//1.235E6</span>
+  		<span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="o">}</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>SimpleDateFormat</p>
+
+    <ul>
+      <li>날짜와 시간을 다양한 형식으로 출력할 수 있게 해줌</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">java.text.SimpleDateFormat</span><span class="o">;</span>
+  <span class="kn">import</span> <span class="nn">java.util.Date</span><span class="o">;</span>
+    
+  <span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  		<span class="nc">Date</span> <span class="n">today</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">();</span>
+  		<span class="nc">SimpleDateFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy-MM-dd"</span><span class="o">);</span><span class="c1">//소문자 mm은 분이 출력</span>
+    		
+  		<span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">today</span><span class="o">);</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li>특정 형식으로 된 문자열에서 날짜와 시간 뽑아내기</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">java.text.DateFormat</span><span class="o">;</span>
+  <span class="kn">import</span> <span class="nn">java.text.ParseException</span><span class="o">;</span>
+  <span class="kn">import</span> <span class="nn">java.text.SimpleDateFormat</span><span class="o">;</span>
+  <span class="kn">import</span> <span class="nn">java.util.Date</span><span class="o">;</span>
+    
+  <span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+  	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">ParseException</span> <span class="o">{</span>
+  		<span class="nc">DateFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy년 MM월 dd일"</span><span class="o">);</span>
+  		<span class="nc">DateFormat</span> <span class="n">df2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy/MM/dd"</span><span class="o">);</span>
+    		
+  		<span class="nc">Date</span> <span class="n">d</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"2015년 11월 23일"</span><span class="o">);</span> <span class="c1">//문자열에서 날짜 뽑기</span>
+  		<span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">d</span><span class="o">);</span> <span class="c1">//뽑은 날자 문자열로 바꾸기</span>
+  		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result</span><span class="o">);</span> <span class="c1">//2015/11/23</span>
+    		
+  	<span class="o">}</span>
+  <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><img src="/assets/images/java/IMG-20240824190825-1.png" alt="image"></p>
+
+<p>월은 MM으로</p>
+
+<p><img src="/assets/images/java/IMG-20240824190825-2.png" alt="image"></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.text.SimpleDateFormat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Date</span> <span class="n">today</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">();</span>
+		
+		<span class="nc">SimpleDateFormat</span> <span class="n">sdf1</span><span class="o">,</span> <span class="n">sdf2</span><span class="o">,</span><span class="n">sdf3</span><span class="o">,</span><span class="n">sdf4</span><span class="o">;</span>
+		<span class="nc">SimpleDateFormat</span> <span class="n">sdf5</span><span class="o">,</span> <span class="n">sdf6</span><span class="o">,</span><span class="n">sdf7</span><span class="o">,</span><span class="n">sdf8</span><span class="o">,</span><span class="n">sdf9</span><span class="o">;</span>
+		
+		<span class="n">sdf1</span><span class="o">=</span><span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy-MM-dd"</span><span class="o">);</span>
+		<span class="n">sdf2</span><span class="o">=</span><span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"''yy년 MMM dd일 E요일"</span><span class="o">);</span>
+		<span class="n">sdf3</span><span class="o">=</span><span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy-MM-dd HH:mm:ss.SSS"</span><span class="o">);</span>
+		<span class="n">sdf4</span><span class="o">=</span><span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy-MM-dd hh:mm:ss a"</span><span class="o">);</span>
+		
+		<span class="n">sdf5</span><span class="o">=</span><span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"오늘은 올 해의 D번째 날입니다"</span><span class="o">);</span>
+		<span class="n">sdf6</span><span class="o">=</span><span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"오늘은 이 달의 d번째 날입니다"</span><span class="o">);</span>
+		<span class="n">sdf7</span><span class="o">=</span><span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"오늘은 올 해의 w번째 주입니다"</span><span class="o">);</span>
+		<span class="n">sdf8</span><span class="o">=</span><span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"오늘은 이 달의 W번째 날입니다"</span><span class="o">);</span>
+		<span class="n">sdf9</span><span class="o">=</span><span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"오늘은 이 달의 F번째 E요일입니다"</span><span class="o">);</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sdf1</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">today</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sdf2</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">today</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sdf3</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">today</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sdf4</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">today</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sdf5</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">today</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sdf6</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">today</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sdf7</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">today</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sdf8</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">today</span><span class="o">));</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sdf9</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">today</span><span class="o">));</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.text.DateFormat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.text.SimpleDateFormat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Date</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span>  <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">DateFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy년 MM월 dd일"</span><span class="o">);</span>
+		<span class="nc">DateFormat</span> <span class="n">df2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy-MM-dd"</span><span class="o">);</span>
+		
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="nc">Date</span> <span class="n">d</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"2022년 9월 30일"</span><span class="o">);</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">df2</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">d</span><span class="o">));</span>
+		<span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{}</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#java" class="page__taxonomy-item" rel="tag">java</a><span class="sep">, </span>
+    
+      <a href="/tags/#%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D" class="page__taxonomy-item" rel="tag">자바의정석</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/java" class="page__taxonomy-item p-category" rel="tag">JAVA</a>
+    
+    </span>
+  </p>
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2022-08-21T00:00:00+09:00">August 21, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EB%82%A0%EC%A7%9C%EC%99%80+%EC%8B%9C%EA%B0%84+%26+%ED%98%95%EC%8B%9D%ED%99%94%20http%3A%2F%2Flocalhost%3A4000%2Fjava%2F%25EB%2582%25A0%25EC%25A7%259C%25EC%2599%2580-%25EC%258B%259C%25EA%25B0%2584-%26-%25ED%2598%2595%25EC%258B%259D%25ED%2599%2594%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjava%2F%25EB%2582%25A0%25EC%25A7%259C%25EC%2599%2580-%25EC%258B%259C%25EA%25B0%2584-%26-%25ED%2598%2595%25EC%258B%259D%25ED%2599%2594%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2Fjava%2F%25EB%2582%25A0%25EC%25A7%259C%25EC%2599%2580-%25EC%258B%259C%25EA%25B0%2584-%26-%25ED%2598%2595%25EC%258B%259D%25ED%2599%2594%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/java/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" class="pagination--pager" title="java.lang 패키지와 유용한 클래스
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+  <div id="giscus">
+    <script src="https://giscus.app/client.js" data-repo="nunnunnu/nunnunnu.github.io" data-repo-id="R_kgDOMWEGow" data-category="Comments" data-category-id="DIC_kwDOMWEGo84ChY2C" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="noborder_light" data-lang="ko" crossorigin="anonymous" async>
+    </script>
+</div>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" rel="permalink">java.lang 패키지와 유용한 클래스
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          10 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Object 클래스
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" rel="permalink">예외처리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">프로그램 오류
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/%EC%83%81%EC%86%8D-(Ingeritance)/" rel="permalink">상속 (ingeritance)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          25 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">상속
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(OOP)/" rel="permalink">객체지향(oop)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          12 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">객체지향 언어 = 프로그래밍 언어 + 객체지향개점(규칙)
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <a href="https://hits.seeyoufarm.com">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnunnunnu%2Fgithub.io&amp;count_bg=%23AFD5ED&amp;title_bg=%23AFD5ED&amp;icon=googlecloud.svg&amp;icon_color=%23E7E7E7&amp;title=hits&amp;edge_flat=true">
+    <style>
+      .hits {
+        width: auto; height: auto;
+        max-width: 10px;
+        max-height: 2px;
+      }
+    </style>
+  </a>
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://github.com/nunnunnu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2024 Jinny. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

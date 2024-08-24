@@ -47,9 +47,15 @@ var store = [{
         "url": "/java/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/",
         "teaser": null
       },{
-        "title": "javalang패키지와 유용한 클래스",
+        "title": "java.lang 패키지와 유용한 클래스",
         "excerpt":"Object 클래스 : 모든 클래스의 최고 조상. 오직 11개의 메소드만을 가지고 있다. nitity(), wait() 등은 쓰레드(13장)와 관련된 메소드이다 Object클래스의 메소드 설명 protected Object clone() 객체 자신의 복사본을 반환 public boolean equals(Object obj) 객체 자신과 객체 obj가 같은 객체인지 알려준다(같으면 true) protected public void finalize() 객체가 소멸될 때 가비지 컬렉터에 의해...","categories": ["JAVA"],
         "tags": ["java","자바의정석"],
         "url": "/java/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/",
+        "teaser": null
+      },{
+        "title": "날짜와 시간 & 형식화",
+        "excerpt":"날짜와 시간 java.util.Date : 날짜와 시간을 다룰 목적으로 만들어진 클래스(JDK1.0) date의 메소드는 거의 사용되지 않지만(deprecated), 여전히 쓰이고 잇다. java.util.Calendar :Date클래스를 개선한 새로운 클래스(JDK1.1), 여전히 단점이 있다 (실무에는 아직 쓰이는 곳이 많음 날짜와 시간을 같이 다루는 것이 단점 java.time 패키지 : Date와 Calendar의 단점을 개선한 새로운 클래스들을 제공(JDK1.8=JDK8) 날짜와 시간의 클래스를...","categories": ["JAVA"],
+        "tags": ["java","자바의정석"],
+        "url": "/java/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&-%ED%98%95%EC%8B%9D%ED%99%94/",
         "teaser": null
       }]
