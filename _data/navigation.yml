@@ -1,9 +1,0 @@
-main:
-  - title: "Search"
-    url: /search
-
-sidebar-category:
-  - title: "언어"
-    children:
-      - title: "JAVA"
-        url: "/categories/JAVA"

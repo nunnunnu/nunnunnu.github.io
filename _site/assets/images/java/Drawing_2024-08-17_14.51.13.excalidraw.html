@@ -1,0 +1,2065 @@
+<p>==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: ‘Decompress current Excalidraw file’. For more info check in plugin settings under ‘Saving’</p>
+
+<h1 id="excalidraw-data">Excalidraw Data</h1>
+<h2 id="text-elements">Text Elements</h2>
+<p>main ^7JWDQG6p</p>
+
+<p>change(10) ^x9pK5ANw</p>
+
+<p>d ^AdWC1lc1</p>
+
+<p>0X100 ^nPU7FCVZ</p>
+
+<p>int x = 10 -&gt; 1000 ^KHOoNnQz</p>
+
+<p>d ^iBjzxH3b</p>
+
+<p>0X100 ^NbIYJL89</p>
+
+<p>종료 ^R3rKO828</p>
+
+<p>Date 객체 ^JaHhdRG1</p>
+
+<p>d.x=1000 ^tpJ7lRVa</p>
+
+<ol>
+  <li>
+    <p>change(): x=1000 ^TS2G5qux</p>
+  </li>
+  <li>main(): x=10</li>
+  <li>After chage(d)</li>
+  <li>main(): x=1000 ^1CXh7YkW</li>
+</ol>
+
+<p>%%</p>
+<h2 id="drawing">Drawing</h2>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804
+805
+806
+807
+808
+809
+810
+811
+812
+813
+814
+815
+816
+817
+818
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874
+875
+876
+877
+878
+879
+880
+881
+882
+883
+884
+885
+886
+887
+888
+889
+890
+891
+892
+893
+894
+895
+896
+897
+898
+899
+900
+901
+902
+903
+904
+905
+906
+907
+908
+909
+910
+911
+912
+913
+914
+915
+916
+917
+918
+919
+920
+921
+922
+923
+924
+925
+926
+927
+928
+929
+930
+931
+932
+933
+934
+935
+936
+937
+938
+939
+940
+941
+942
+943
+944
+945
+946
+947
+948
+949
+950
+951
+952
+953
+954
+955
+956
+957
+958
+959
+960
+961
+962
+963
+964
+965
+966
+967
+968
+969
+970
+971
+972
+973
+974
+975
+976
+977
+978
+979
+980
+981
+982
+983
+984
+985
+986
+987
+988
+989
+990
+991
+992
+993
+994
+995
+996
+997
+998
+999
+1000
+1001
+1002
+1003
+1004
+1005
+1006
+1007
+1008
+1009
+1010
+1011
+1012
+1013
+1014
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+	</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"excalidraw"</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.3.0"</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rectangle"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">173</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">2135264921</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a0"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s2KVs0EZJL1aGmGXerT2D"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-346.49220899843226</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-340.7188309552721</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">213.52894752024108</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">238.86328125</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">957605463</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873875349</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">346</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1554666361</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a1"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3oS4RfV-5LkJnrGw7TZg6"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-345.5122688996702</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-164.41607848094299</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">208.6984192686966</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.47844134233674407</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">747832183</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873875349</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lastCommittedPoint"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"points"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mi">0</span><span class="p">,</span><span class="w">
+					</span><span class="mi">0</span><span class="w">
+				</span><span class="p">],</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mf">208.6984192686966</span><span class="p">,</span><span class="w">
+					</span><span class="mf">-0.47844134233674407</span><span class="w">
+				</span><span class="p">]</span><span class="w">
+			</span><span class="p">]</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">466</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1055095897</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a2"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zrSFNkq_oPZiW7PMYFJcL"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-342.824844672341</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-232.7710952364854</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">208.6984192686966</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.47844134233674407</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1483832471</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873875349</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lastCommittedPoint"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"points"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mi">0</span><span class="p">,</span><span class="w">
+					</span><span class="mi">0</span><span class="w">
+				</span><span class="p">],</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mf">208.6984192686966</span><span class="p">,</span><span class="w">
+					</span><span class="mf">-0.47844134233674407</span><span class="w">
+				</span><span class="p">]</span><span class="w">
+			</span><span class="p">]</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">119</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1438943545</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a3"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7JWDQG6p"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-334.8136710886332</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-155.63581470584523</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">32.41596692800522</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">811848119</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873875349</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">179</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">179370521</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a4"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"x9pK5ANw"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-338.21603194685065</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-225.45942891939922</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">82.38392639160156</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1032749783</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873875349</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"change(10)"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"change(10)"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"change(10)"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rectangle"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">217</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1318866681</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a5"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GOKUfJyjEugQm_yIvCTaz"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-253.28878443255337</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-150.42252490883243</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.34448691547084</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">23.308829616836647</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1887834103</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873875349</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">671746009</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a6"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AdWC1lc1"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-270.6600400628462</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-145.04345027182126</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">9.808000445365906</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">860813591</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873875349</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">129</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">916641591</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a7"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nPU7FCVZ"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-265.69942581376176</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-124.21825468409213</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">48.5919503569603</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">995999287</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873875349</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0X100"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0X100"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0X100"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rectangle"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">205</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">606008823</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a9"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rsOlY_WRlEZ99FRSl-DmF"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-261.82515893798916</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-76.0245240557806</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">171.73591956422658</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">78.06366751105276</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">374266999</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873938270</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">262</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1238312537</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aA"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jyh7Lif4G0RHKMfocByhL"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-259.56511195535893</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-45.6943054377158</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">170.01782513420798</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.20200487962387115</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">793392535</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873946412</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lastCommittedPoint"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"points"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mi">0</span><span class="p">,</span><span class="w">
+					</span><span class="mi">0</span><span class="w">
+				</span><span class="p">],</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mf">170.01782513420798</span><span class="p">,</span><span class="w">
+					</span><span class="mf">0.20200487962387115</span><span class="w">
+				</span><span class="p">]</span><span class="w">
+			</span><span class="p">]</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">267</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1212158969</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aB"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-XlS0TASehoz8F0OY3tsm"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-261.86864064727024</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-22.46870863279503</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">170.103037241994</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7215361296238711</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">2109565623</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873943853</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lastCommittedPoint"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"points"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mi">0</span><span class="p">,</span><span class="w">
+					</span><span class="mi">0</span><span class="w">
+				</span><span class="p">],</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mf">170.103037241994</span><span class="p">,</span><span class="w">
+					</span><span class="mf">0.7215361296238711</span><span class="w">
+				</span><span class="p">]</span><span class="w">
+			</span><span class="p">]</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">92</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">67073335</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aC"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KHOoNnQz"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-253.43257311000036</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-68.81668445436759</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">155.47186076641083</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1045232599</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873932832</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int x = 10 -&gt; 1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int x = 10 -&gt; 1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"int x = 10 -&gt; 1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">149</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">119139991</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aD"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tyDeLdFRrd4Q6KGWl_reP"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-241.6128676456824</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-109.45764388431911</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.047708004623842726</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">35.09082766766636</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">621635831</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873875349</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lastCommittedPoint"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"points"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mi">0</span><span class="p">,</span><span class="w">
+					</span><span class="mi">0</span><span class="w">
+				</span><span class="p">],</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mf">-0.047708004623842726</span><span class="p">,</span><span class="w">
+					</span><span class="mf">35.09082766766636</span><span class="w">
+				</span><span class="p">]</span><span class="w">
+			</span><span class="p">]</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">149</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">45296217</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aE"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WFSmtlpJVUp6FKzQ4yvQr"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-341.7583304184378</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-166.83129024496742</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#e03131"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">209.96928941687008</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">66.09148907224744</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1870869015</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873875349</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lastCommittedPoint"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"points"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mi">0</span><span class="p">,</span><span class="w">
+					</span><span class="mi">0</span><span class="w">
+				</span><span class="p">],</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mf">209.96928941687008</span><span class="p">,</span><span class="w">
+					</span><span class="mf">-66.09148907224744</span><span class="w">
+				</span><span class="p">]</span><span class="w">
+			</span><span class="p">]</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rectangle"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">336</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">262952247</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aF"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EPlX_DFdG1kGsbBOAjjWK"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-227.15502667272955</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-217.81697886237015</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.34448691547084</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">23.308829616836647</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1284279513</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873889495</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">269</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">939169367</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aG"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iBjzxH3b"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-244.5262823030224</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-212.43790422535898</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">9.808000445365906</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1559726521</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873889495</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">248</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">2065937271</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aH"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NbIYJL89"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-239.56566805393794</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-191.61270863762985</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">48.5919503569603</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">615508633</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873889495</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0X100"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0X100"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0X100"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R3rKO828"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-388.99609375</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-201.95703125</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.59998869895935</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aJ"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">914915767</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">952484857</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873899883</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"종료"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"종료"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"종료"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JaHhdRG1"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-144.05467675078387</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-102.5390625</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">88.5999755859375</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aK"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1629206743</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">104</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">705922041</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873961329</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Date 객체"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Date 객체"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Date 객체"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tpJ7lRVa"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-118.55467675078387</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-204.009765625</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">88.17999756336212</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aL"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">368810425</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">751855191</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873975655</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d.x=1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d.x=1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d.x=1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oGT8nuaC5LLTuXOqISpsS"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-193.2444315396339</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-172.15191456295616</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.004414681353978267</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">96.75877857578593</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aN"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">26199799</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">97</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1809924985</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723873998548</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"points"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mi">0</span><span class="p">,</span><span class="w">
+					</span><span class="mi">0</span><span class="w">
+				</span><span class="p">],</span><span class="w">
+				</span><span class="p">[</span><span class="w">
+					</span><span class="mf">-0.004414681353978267</span><span class="p">,</span><span class="w">
+					</span><span class="mf">96.75877857578593</span><span class="w">
+				</span><span class="p">]</span><span class="w">
+			</span><span class="p">],</span><span class="w">
+			</span><span class="nl">"lastCommittedPoint"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="mf">-0.004414681353978267</span><span class="p">,</span><span class="w">
+				</span><span class="mf">96.75877857578593</span><span class="w">
+			</span><span class="p">],</span><span class="w">
+			</span><span class="nl">"startBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endBinding"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"startArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"endArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TS2G5qux"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">18.133541184975712</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-220.71883002290124</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">208.23999762535095</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aO"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">802283959</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">275413433</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723874019501</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2. change(): x=1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2. change(): x=1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2. change(): x=1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">310274999</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aP"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1CXh7YkW"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">17.420199092855597</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-152.63425560234066</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">186</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1971308633</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723874053943</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1. main(): x=10</span><span class="se">\n</span><span class="s2">3. After chage(d)</span><span class="se">\n</span><span class="s2">4. main(): x=1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1. main(): x=10</span><span class="se">\n</span><span class="s2">3. After chage(d)</span><span class="se">\n</span><span class="s2">4. main(): x=1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1. main(): x=10</span><span class="se">\n</span><span class="s2">3. After chage(d)</span><span class="se">\n</span><span class="s2">4. main(): x=1000"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">61</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">665470489</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aQ"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Z2fd32u2"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-269.9196170558365</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-206.73426531235992</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">77.15997314453125</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">462872407</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723874020543</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"x=1000;"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"x=1000;"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"x=1000;"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"khrtf6wO"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-76.48052440830176</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-156.8749097375193</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aR"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">423763127</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">865567735</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1723874020543</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">}</span><span class="w">
+	</span><span class="p">],</span><span class="w">
+	</span><span class="nl">"appState"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="nl">"theme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"light"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"viewBackgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#ffffff"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemStrokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemBackgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemFillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemStrokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemStrokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemRoughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemFontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemFontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemTextAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemStartArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemEndArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arrow"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"scrollX"</span><span class="p">:</span><span class="w"> </span><span class="mf">405.21449299246297</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"scrollY"</span><span class="p">:</span><span class="w"> </span><span class="mf">596.2767496472277</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"zoom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0383201530152415</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="nl">"currentItemRoundness"</span><span class="p">:</span><span class="w"> </span><span class="s2">"round"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"gridSize"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"gridColor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nl">"Bold"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#C9C9C9"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"Regular"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#EDEDED"</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="nl">"currentStrokeOptions"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"previousGridSize"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"frameRendering"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nl">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"clip"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"outline"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="nl">"objectsSnapModeEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="nl">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+<p>%%</p>
