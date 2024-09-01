@@ -1,1 +1,247 @@
-<feed xmlns="http://www.w3.org/2005/Atom"> <id>/</id><title>Jinny</title><subtitle>-</subtitle> <updated>2024-09-01T17:47:45+09:00</updated> <author> <name>jinny</name> <uri>/</uri> </author><link rel="self" type="application/atom+xml" href="/feed.xml"/><link rel="alternate" type="text/html" hreflang="ko-KR" href="/"/> <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator> <rights> © 2024 jinny </rights> <icon>/assets/img/favicons/favicon.ico</icon> <logo>/assets/img/favicons/favicon-96x96.png</logo> <entry><title>날짜와 시간 &amp; 형식화</title><link href="/posts/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&amp;-%ED%98%95%EC%8B%9D%ED%99%94/" rel="alternate" type="text/html" title="날짜와 시간 &amp;amp; 형식화" /><published>2022-08-21T00:00:00+09:00</published> <updated>2024-09-01T17:42:06+09:00</updated> <id>/posts/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&amp;-%ED%98%95%EC%8B%9D%ED%99%94/</id> <content src="/posts/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&amp;-%ED%98%95%EC%8B%9D%ED%99%94/" /> <author> <name>jinny</name> </author> <category term="JAVA" /> <summary>날짜와 시간 java.util.Date : 날짜와 시간을 다룰 목적으로 만들어진 클래스(JDK1.0) date의 메소드는 거의 사용되지 않지만(deprecated), 여전히 쓰이고 잇다. java.util.Calendar :Date클래스를 개선한 새로운 클래스(JDK1.1), 여전히 단점이 있다 (실무에는 아직 쓰이는 곳이 많음 날짜와 시간을 같이 다루는 것이 단점 java.time 패키지 : Date와 Calendar의 단점을 개선한 새로운 클래스들을 제공(JDK1.8=JDK8) 날짜와 시간의 클래스를 나누어 놓음(LocalDate, LocalTime, LocalDateTime) Calender클래...</summary> </entry> <entry><title>java.lang 패키지와 유용한 클래스</title><link href="/posts/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" rel="alternate" type="text/html" title="java.lang 패키지와 유용한 클래스" /><published>2022-08-15T00:00:00+09:00</published> <updated>2024-08-24T19:14:30+09:00</updated> <id>/posts/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/</id> <content src="/posts/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" /> <author> <name>jinny</name> </author> <category term="JAVA" /> <summary>Object 클래스 : 모든 클래스의 최고 조상. 오직 11개의 메소드만을 가지고 있다. nitity(), wait() 등은 쓰레드(13장)와 관련된 메소드이다 Object클래스의 메소드 설명 protected Object clone() 객체 자신의 복사본을 반환 public boolean equals(Object obj) 객체 자신과 객체 obj가 같은 객체인지 알려준다(같으면 true) protected public void finalize() 객체가 소멸될 때 가비지 컬렉터에 의해 자동적으로 호출. 이 때 수행되어야하는 코드가 ...</summary> </entry> <entry><title>예외처리</title><link href="/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" rel="alternate" type="text/html" title="예외처리" /><published>2022-08-14T00:00:00+09:00</published> <updated>2022-08-14T00:00:00+09:00</updated> <id>/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/</id> <content src="/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" /> <author> <name>jinny</name> </author> <category term="JAVA" /> <summary>프로그램 오류 system.out.println(args[0]); //컴파일 에러 System.out.println(args[0]); //런타임 에러 : 실행중 발생하는 에러. 매개변수로 받은 값이 없는데 실행해서 생김 논리적에러(logical error) : 작성 의도와 다르게 동작 컴파일러에러(compile-time error) : 컴파일 할 때 발생하는 에러번호 컴파일러 구문체크 번역 최적화 (ex. int i = 3+5를 8로 변경) 런타임에러(runtime error) : 실행할 때 발생하는 에러. 프로그램종료 ...</summary> </entry> <entry><title>상속 (ingeritance)</title><link href="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/" rel="alternate" type="text/html" title="상속 (ingeritance)" /><published>2022-08-05T00:00:00+09:00</published> <updated>2024-08-18T22:03:31+09:00</updated> <id>/posts/%EC%83%81%EC%86%8D-(Ingeritance)/</id> <content src="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/" /> <author> <name>jinny</name> </author> <category term="JAVA" /> <summary>상속 ~는 ~이다 (is - a) - ex.원(circle)은 점(point)다. (x) class 자식클래스 extends 부모클래스 기존의 클래스로 새로운 클래스를 작성(코드 재사용) 두 클래스를 부모와 자식 관계로 이어줌 자손은 조상의 모든 멤버를 상속받는다 (생성자, 초기화 블럭 제외 (자식클래스에 멤버가 안적혀있어도 있는거임) 자손의 멤버 개수가 조상보다 적을 수는 없음.(같거나 많다.) 자손의 변경은 조상에게 영향을 미치지 않음. 부모 클래스의 변경은 자식 클래스에 영향을 미침. class point { int x, y; } class point3D extends point { int z; } 상속을 받지않고 중복으로 멤버들을 지정해줘도 결과는 똑...</summary> </entry> <entry><title>객체지향(oop)</title><link href="/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(OOP)/" rel="alternate" type="text/html" title="객체지향(oop)" /><published>2022-08-01T00:00:00+09:00</published> <updated>2022-08-04T00:00:00+09:00</updated> <id>/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(OOP)/</id> <content src="/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(OOP)/" /> <author> <name>jinny</name> </author> <category term="JAVA" /> <summary>객체지향 언어 = 프로그래밍 언어 + 객체지향개점(규칙) 캡슐화 상속 추상화 다형성 class : 객체를 정의해 놓은 것, 객체를 생성하는데 사용함. (설계도) = 데이터 + 함수(method) (서로 관련있는 것 끼리 묶음. 데이터만 묶으면 구조체) 기본적으로 하나의 소스파일에 하나의 class를 작성하는것이 바람직하나, 여러 class를 작성할수도 있음. public class가 있는 경우, 소스파일의 이름은 반드시 public class(한소스파일에서 한번만 사용 가능)의 이름과 일치해야함 public class가 없는 경우, 소스파일의 이름은 class 중 어느 것을 사용해도 무방함. (main method가 있는부분은...</summary> </entry> </feed>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Jinny</title>
+  <subtitle>-</subtitle>
+  <updated>2024-09-01T17:54:01+09:00</updated>
+  <author>
+    <name>jinny</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="ko-KR"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
+  <rights> © 2024 jinny </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>날짜와 시간 &amp; 형식화</title>
+    <link href="http://localhost:4000/posts/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&amp;-%ED%98%95%EC%8B%9D%ED%99%94/" rel="alternate" type="text/html" title="날짜와 시간 &amp;amp; 형식화" />
+    <published>2022-08-21T00:00:00+09:00</published>
+  
+    <updated>2024-09-01T17:51:05+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&amp;-%ED%98%95%EC%8B%9D%ED%99%94/</id>
+    <content src="http://localhost:4000/posts/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&amp;-%ED%98%95%EC%8B%9D%ED%99%94/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>날짜와 시간
+
+
+  
+    java.util.Date : 날짜와 시간을 다룰 목적으로 만들어진 클래스(JDK1.0)
+  date의 메소드는 거의 사용되지 않지만(deprecated), 여전히 쓰이고 잇다.
+  
+  java.util.Calendar :Date클래스를 개선한 새로운 클래스(JDK1.1), 여전히 단점이 있다 (실무에는 아직 쓰이는 곳이 많음
+    
+      날짜와 시간을 같이 다루는 것이 단점
+    
+  
+  java.time 패키지 : Date와 Calendar의 단점을 개선한 새로운 클래스들을 제공(JDK1.8=JDK8)
+    
+      날짜와 시간의 클래스를 나누어 놓음(LocalDate, LocalTime, LocalDateTime)
+    
+  
+
+
+Calender클래...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>java.lang 패키지와 유용한 클래스</title>
+    <link href="http://localhost:4000/posts/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" rel="alternate" type="text/html" title="java.lang 패키지와 유용한 클래스" />
+    <published>2022-08-15T00:00:00+09:00</published>
+  
+    <updated>2024-08-24T19:14:30+09:00</updated>
+  
+    <id>http://localhost:4000/posts/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/</id>
+    <content src="http://localhost:4000/posts/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>Object 클래스
+
+: 모든 클래스의 최고 조상. 오직 11개의 메소드만을 가지고 있다.
+
+nitity(), wait() 등은 쓰레드(13장)와 관련된 메소드이다
+
+
+  
+    
+      Object클래스의 메소드
+      설명
+    
+  
+  
+    
+      protected Object clone()
+      객체 자신의 복사본을 반환
+    
+    
+      public boolean equals(Object obj)
+      객체 자신과 객체 obj가 같은 객체인지 알려준다(같으면 true)
+    
+    
+      protected public void finalize()
+      객체가 소멸될 때 가비지 컬렉터에 의해 자동적으로 호출. 이 때 수행되어야하는 코드가 ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>예외처리</title>
+    <link href="http://localhost:4000/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" rel="alternate" type="text/html" title="예외처리" />
+    <published>2022-08-14T00:00:00+09:00</published>
+  
+    <updated>2022-08-14T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/</id>
+    <content src="http://localhost:4000/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>프로그램 오류
+
+system.out.println(args[0]); //컴파일 에러
+System.out.println(args[0]); //런타임 에러 : 실행중 발생하는 에러. 매개변수로 받은 값이 없는데 실행해서 생김
+
+
+
+  논리적에러(logical error) : 작성 의도와 다르게 동작
+  컴파일러에러(compile-time error) : 컴파일 할 때 발생하는 에러번호
+    
+      컴파일러
+        
+          구문체크
+          번역
+          최적화 (ex. int i = 3+5를 8로 변경)
+        
+      
+    
+  
+  런타임에러(runtime error) : 실행할 때 발생하는 에러. 프로그램종료
+    
+      
+       ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>상속 (ingeritance)</title>
+    <link href="http://localhost:4000/posts/%EC%83%81%EC%86%8D-(Ingeritance)/" rel="alternate" type="text/html" title="상속 (ingeritance)" />
+    <published>2022-08-05T00:00:00+09:00</published>
+  
+    <updated>2024-08-18T22:03:31+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EC%83%81%EC%86%8D-(Ingeritance)/</id>
+    <content src="http://localhost:4000/posts/%EC%83%81%EC%86%8D-(Ingeritance)/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>상속
+
+~는 ~이다 (is - a) - ex.원(circle)은 점(point)다. (x)
+
+class 자식클래스 extends 부모클래스
+
+
+  기존의 클래스로 새로운 클래스를 작성(코드 재사용)
+  두 클래스를 부모와 자식 관계로 이어줌
+  자손은 조상의 모든 멤버를 상속받는다 (생성자, 초기화 블럭 제외 (자식클래스에 멤버가 안적혀있어도 있는거임)
+  자손의 멤버 개수가 조상보다 적을 수는 없음.(같거나 많다.)
+  자손의 변경은 조상에게 영향을 미치지 않음.
+  부모 클래스의 변경은 자식 클래스에 영향을 미침.
+
+
+class point {
+	int x, y;
+}
+class point3D extends point {
+	int z;
+}
+
+
+
+  상속을 받지않고 중복으로 멤버들을 지정해줘도 결과는 똑...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>객체지향(oop)</title>
+    <link href="http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(OOP)/" rel="alternate" type="text/html" title="객체지향(oop)" />
+    <published>2022-08-01T00:00:00+09:00</published>
+  
+    <updated>2022-08-04T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(OOP)/</id>
+    <content src="http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(OOP)/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>객체지향 언어 = 프로그래밍 언어 + 객체지향개점(규칙)
+
+
+  캡슐화
+  상속
+  추상화
+  
+    다형성
+  
+  class : 객체를 정의해 놓은 것, 객체를 생성하는데 사용함. (설계도)
+  = 데이터 + 함수(method) (서로 관련있는 것 끼리 묶음. 데이터만 묶으면
+  구조체)
+  기본적으로 하나의 소스파일에 하나의 class를 작성하는것이 바람직하나, 여러 class를 작성할수도 있음.
+    
+      public class가 있는 경우, 소스파일의 이름은 반드시 public class(한소스파일에서 한번만 사용 가능)의 이름과 일치해야함
+      public class가 없는 경우, 소스파일의 이름은 class 중 어느 것을 사용해도 무방함. (main method가 있는부분은...</summary>
+
+  </entry>
+
+</feed>
+
+
