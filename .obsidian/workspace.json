@@ -198,6 +198,7 @@
   },
   "active": "05018c266bba2832",
   "lastOpenFiles": [
+    "_layouts/footer.html",
     "_site/archives/index.html",
     "_site/archives",
     "_site/tools/test.sh",
@@ -208,7 +209,6 @@
     "_site/rollup.config.js",
     "_site/purgecss.config.js",
     "_site/jekyll-theme-chirpy.gemspec",
-    "_site/assets/js/dist/post.min.js",
     "_site/assets/img/favicons/mstile-150x150.png",
     "_site/assets/img/favicons/favicon-32x32.png",
     "_site/assets/img/favicons/favicon-16x16.png",
