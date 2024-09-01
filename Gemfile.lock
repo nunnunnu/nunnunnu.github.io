@@ -192,7 +192,9 @@ PLATFORMS
   aarch64-linux-musl
   arm-linux
   arm-linux-gnu
+  arm-linux-gnueabihf
   arm-linux-musl
+  arm-linux-musleabihf
   arm64-darwin
   x86-linux
   x86-linux-gnu
@@ -210,4 +212,4 @@ DEPENDENCIES
   wdm (~> 0.1.1)
 
 BUNDLED WITH
-   2.5.16
+   2.5.18
