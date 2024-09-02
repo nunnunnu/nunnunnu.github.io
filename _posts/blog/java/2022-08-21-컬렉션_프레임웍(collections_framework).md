@@ -2,7 +2,7 @@
 날짜: 2022-08-21
 생성 일시: 2022-08-21
 수업: 자바의 정석
-최종 편집 일시: 2022-08-21
+최종 편집 일시: 2022-08-26
 category: JAVA
 tags:
   - java
@@ -225,7 +225,7 @@ Collection인터페이스의 메소드는 제외됨(자손이라 쓸 수 있음)
             - HashSet(int initialCapacity) : 초기용량 지정(보통 2배)
             - HashSet(int initialCapacity, float loadFactor) : 언제 용량을 늘릴건지(보통2배)
         - 추가/삭제
-            - boolean add(Object o) : 추가 - 중복 확인을 위해 저장할 객체의 equals()와 hashCode()를 호출, equals()와 hashCode()가 오버라이딩 되어있어야함
+            - boolean add(Object o) : 추가 - 중복 확인을 위해 저장할 객체의 equals()와 hashCode()를 호출, equals()와 hashCode()가 오버라이딩 되어있어야함(equals()만 해도되나 hashCode()까지 오버라이딩 해주는 것이 정석임)
             - boolean addAll(Collection c) : 추가(합집합)
             - boolean remove(Object o) : 삭제
             - boolean removeAll(Collection c) : 삭제 (교집합)
