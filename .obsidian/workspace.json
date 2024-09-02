@@ -11,31 +11,9 @@
             "id": "05018c266bba2832",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/java/Drawing_2024-08-17_13.36.47.excalidraw.png"
-              }
-            }
-          },
-          {
-            "id": "eca5c9ecfc8b099c",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a939b9f36f06e855",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md",
+                "file": "_posts/blog/java/2022-10-02-4장_조건문_반복문.md",
                 "mode": "source",
                 "source": false
               }
@@ -51,8 +29,34 @@
               }
             }
           }
+        ]
+      },
+      {
+        "id": "98f4c1d7f1a285d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d801a4ee23806bcf",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "eca5c9ecfc8b099c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-15.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -118,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md",
+                "file": "_posts/blog/java/2022-10-02-4장_조건문_반복문.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md",
+                "file": "_posts/blog/java/2022-10-02-4장_조건문_반복문.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md"
+                "file": "_posts/blog/java/2022-10-02-4장_조건문_반복문.md"
               }
             }
           },
@@ -199,53 +203,53 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "a939b9f36f06e855",
+  "active": "a486eb621c47cd0c",
   "lastOpenFiles": [
+    "_site/assets/images/java/IMG-20240902164531.png",
+    "_site/posts/4장_조건문_반복문/index.html",
+    "_site/posts/4장_조건문_반복문",
+    "_site/assets/images/java/2022-10-02-4장_조건문_반복문/IMG-20240902164531.png",
+    "_site/assets/images/java/2022-10-02-4장_조건문_반복문",
+    "assets/images/java/2022-10-02-4장_조건문_반복문",
+    "_site/assets/images/java/20240902163719.png",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-15.md",
+    "_posts/blog/java/2022-10-02-4장_조건문_반복문.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-14.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-13.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-12.md",
+    "assets/images/java/IMG-20240902164531.png",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-11.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-10.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-9.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-8.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-7.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-6.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-5.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-4.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-3.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-2.md",
+    "_posts/blog/java/2022-10-02-2장_변수.md",
+    "_posts/blog/java/2022-10-02-3장_연산자.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/3-10.md",
+    "_site/tags/연산자/index.html",
+    "_site/tags/연산자",
+    "_site/posts/3장_연산자/index.html",
+    "_site/posts/3장_연산자",
+    "_site/posts/2장_변수/index.html",
+    "_site/posts/2장_변수",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/3-9.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/3-8.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/3-7.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/3-6.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/예제 3-5.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/예제 3-4.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/예제 3-3.md",
+    "assets/images/java/Drawing_2024-08-17_13.36.47.excalidraw.png",
     "_site/assets/images/java/IMG-20240902151634.png",
     "_site/assets/images/java/IMG-20240902151634-1.png",
     "_site/assets/images/java/IMG-20240902151633.png",
     "_site/assets/images/java/IMG-20240902151633-3.png",
     "_site/assets/images/java/IMG-20240902151633-2.png",
-    "_site/assets/images/java/IMG-20240902151633-1.png",
-    "assets/images/java/IMG-20240902151633.png",
-    "assets/images/java/IMG-20240824190825-1.png",
-    "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md",
-    "assets/images/java/2022-09-02-람다와 스트림(Lambda&Stream) 1/IMG-20240902151633.png",
-    "assets/images/java/2022-09-02-람다와 스트림(Lambda&Stream) 1/IMG-20240902151634-1.png",
-    "assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw.md",
-    "2024-08-21-컬렉션 프레임웍(collections_framework).md",
-    "_site/posts/람다와-스트림(Lambda&Stream)/index.html",
-    "_site/posts/람다와-스트림(Lambda&Stream)",
-    "assets/images/java/2022-09-02-람다와 스트림(Lambda&Stream) 1/IMG-20240902151634.png",
-    "assets/images/java/2022-09-02-람다와 스트림(Lambda&Stream) 1",
-    "assets/images/java/2022-09-02-람다와 스트림(Lambda&Stream)",
-    "assets/images/java/람다와 스트림(Lambda & Stream)",
-    "assets/images/람다와 스트림(Lambda & Stream)/람다와 스트림(Lambda & Stream)",
-    "assets/images/람다와 스트림(Lambda & Stream)",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/강의/강의.md",
-    "assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/강의/변수(Variable).md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/강의/자바 시작하기 전.md",
-    "_posts/blog/java/2022-08-28-쓰레드(thread).md",
-    "_site/posts/쓰레드(thread)/index.html",
-    "_site/posts/쓰레드(thread)",
-    "_site/assets/images/java/2022-08-28-쓰레드(thread)",
-    "_posts/blog/java/2022-08-26-지네릭스_열거형_애너테이션.md",
-    "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
-    "_site/2024-08-21-컬렉션 프레임웍(collections_framework).md",
-    "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md",
-    "이름 없는 보드.md",
-    "assets/images/java/Drawing 2024-08-17 14.50.45.excalidraw.md",
-    "assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.md",
-    "_posts/blog/java/2024-08-21-컬렉션 프레임웍(collections_framework).md",
-    "assets/images/java/Drawing 2024-09-02 10.57.45.excalidraw.md",
-    "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
-    "_posts/blog/java/2022-08-04-객체지향(OOP).md",
-    "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
-    "node_modules/npm/node_modules/socks/docs/examples/typescript/connectExample.md",
-    "node_modules/npm/node_modules/socks/docs/examples/typescript/bindExample.md",
-    "node_modules/npm/node_modules/socks/docs/examples/typescript/associateExample.md",
-    "node_modules/npm/node_modules/socks/docs/examples/javascript/connectExample.md",
-    "node_modules/npm/node_modules/socks/docs/examples/javascript/bindExample.md"
+    "_site/assets/images/java/IMG-20240902151633-1.png"
   ]
 }
