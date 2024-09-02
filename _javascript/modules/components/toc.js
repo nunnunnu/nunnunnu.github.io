@@ -1,3 +1,5 @@
+import { right } from "@popperjs/core";
+
 export function toc() {
   if (document.querySelector('main h2, main h3')) {
     // see: https://github.com/tscanlin/tocbot#usage

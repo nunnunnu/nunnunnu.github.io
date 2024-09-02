@@ -32,7 +32,6 @@ tail_includes:
           {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
         </span>
       {% endif %}
-
       {% if page.image %}
         {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
         {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
@@ -96,11 +95,6 @@ tail_includes:
   </header>
 
   <div class="content">
-    {% if page.toc %}
-      <nav class="toc">
-        {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
-      </nav>
-  {% endif %}
     {{ content }}
   </div>
 
