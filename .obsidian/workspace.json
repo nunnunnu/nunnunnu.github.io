@@ -11,11 +11,9 @@
             "id": "05018c266bba2832",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
-                "mode": "source",
-                "source": false
+                "file": "assets/images/java/Drawing_2024-08-17_13.36.47.excalidraw.png"
               }
             }
           },
@@ -43,13 +41,26 @@
             "id": "ca05ecf6601bd95f",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.md"
+                "file": "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "615931fb09d7e2ca",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/java/IMG-20240824190825-1.png"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -78,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Untitled 1 76.png",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -115,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
+                "file": "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
+                "file": "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md"
+                "file": "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md"
               }
             }
           },
@@ -196,53 +207,53 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "05018c266bba2832",
+  "active": "a486eb621c47cd0c",
   "lastOpenFiles": [
-    "_layouts/footer.html",
-    "_site/archives/index.html",
-    "_site/archives",
-    "_site/tools/test.sh",
-    "_site/tools/run.sh",
-    "_site/tools/release.sh",
-    "_site/tools/init.sh",
-    "_site/tools",
-    "_site/rollup.config.js",
-    "_site/purgecss.config.js",
-    "_site/jekyll-theme-chirpy.gemspec",
-    "_site/assets/img/favicons/mstile-150x150.png",
-    "_site/assets/img/favicons/favicon-32x32.png",
-    "_site/assets/img/favicons/favicon-16x16.png",
-    "_site/assets/img/favicons/apple-touch-icon.png",
-    "_site/assets/img/favicons/android-chrome-512x512.png",
-    "_site/assets/img/favicons/android-chrome-192x192.png",
-    "_site/assets/img/portfolio.jpeg",
-    "_posts/blog/java/2022-08-14-예외처리.md",
+    "_site/assets/images/java/Untitled_8_17.png",
+    "_site/assets/images/java/Untitled 8 17.png",
+    "assets/images/java/Untitled_8_17.png",
+    "assets/images/java/IMG-20240824190825-1.png",
+    "assets/images/java/IMG-20240902113145.png",
+    "_site/assets/images/java/IMG-20240902113147.png",
+    "_site/assets/images/java/IMG-20240902113147.jpg",
+    "_site/assets/images/java/IMG-20240902113147-1.png",
+    "_site/assets/images/java/IMG-20240902113146.png",
+    "_site/assets/images/java/IMG-20240902113146-4.png",
+    "_site/assets/images/java/IMG-20240902113146-3.png",
+    "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
+    "_site/posts/컬렉션_프레임웍(collections_framework)/index.html",
+    "_site/posts/컬렉션_프레임웍(collections_framework)",
+    "_site/assets/images/java/2022-08-21-컬렉션_프레임웍(collections_framework)",
+    "_site/page2/index.html",
+    "_site/page2",
+    "assets/images/java/2022-08-21-컬렉션_프레임웍(collections_framework)",
+    "_site/2024-08-21-컬렉션 프레임웍(collections_framework).md",
+    "_site/이름 없는 보드.html",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/강의/강의.md",
     "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md",
-    "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
-    "_posts/blog/java/2022-07-30-제어문 (flow control statemt).md",
-    "_posts/blog/java/2022-08-04-객체지향(OOP).md",
-    "_posts/blog/java/2022-07-30-연산자(Operator).md",
-    "_posts/blog/java/2022-07-28-자바 시작하기 전.md",
-    "_posts/잡동사니/무제 파일.md",
-    "assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037.png",
-    "assets/images/java/2022-08-05-상속(Ingeritance)/IMG-20240818213037-1.png",
-    "assets/images/java/IMG-20240824190825.png",
-    "assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw.md",
-    "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
-    "assets/images/java/2022-08-05-상속.md",
-    "assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.md",
-    "assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw.md",
+    "이름 없는 보드.md",
+    "2024-08-21-컬렉션 프레임웍(collections_framework).md",
     "assets/images/java/Drawing 2024-08-17 14.50.45.excalidraw.md",
-    "assets/images/Drawing_2024-08-17_14.43.20.excalidraw.png.md",
-    "_site/assets/images/Drawing_2024-08-17_14.43.20.excalidraw.png.md",
-    "asset/images/java/Drawing 2024-08-17 14.43.04.excalidraw.md",
-    "assets/images.md",
-    "assets/images/java/Drawing_2024-08-17_13.36.47.excalidraw.md",
-    "assets/images/annotated_IMG-20240817143526.md",
-    "assets/images/java.md",
-    "_posts/blog/java/2022-07-28-변수(Variable).md",
-    "_site/assets/images/java.md",
-    "_posts/blog/java/2022-07-31-배열.md",
-    "assets/images/객체지향(OPP)/2022-08-04-객체지향(OPP)/Drawing_2024-08-17_13.36.47.excalidraw.md"
+    "assets/images/java/Drawing_2024-08-17_14.43.20.excalidraw.md",
+    "assets/images/java/Drawing_2024-08-17_14.55.34.excalidraw.md",
+    "_posts/blog/java/2024-08-21-컬렉션 프레임웍(collections_framework).md",
+    "assets/images/java/Drawing 2024-09-02 10.57.45.excalidraw.md",
+    "assets/images/java/Drawing_2024-08-17_14.51.13.excalidraw.md",
+    "_site/assets/images/java/Drawing 2024-09-02 10.57.45.excalidraw.html",
+    "_site/posts/컬렉션-프레임웍(collections_framework)/index.html",
+    "_site/posts/컬렉션-프레임웍(collections_framework)",
+    "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
+    "_posts/blog/java/2022-08-04-객체지향(OOP).md",
+    "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
+    "node_modules/npm/node_modules/socks/docs/examples/typescript/connectExample.md",
+    "node_modules/npm/node_modules/socks/docs/examples/typescript/bindExample.md",
+    "node_modules/npm/node_modules/socks/docs/examples/typescript/associateExample.md",
+    "node_modules/npm/node_modules/socks/docs/examples/javascript/connectExample.md",
+    "node_modules/npm/node_modules/socks/docs/examples/javascript/bindExample.md",
+    "node_modules/npm/node_modules/socks/docs/examples/javascript/associateExample.md",
+    "node_modules/stylelint/node_modules/string-width/node_modules/strip-ansi/readme.md",
+    "node_modules/semantic-release/node_modules/execa/node_modules/get-stream/readme.md",
+    "node_modules/npm/node_modules/socks/docs/examples/index.md",
+    "node_modules/npm/node_modules/node-gyp/gyp/docs/UserDocumentation.md"
   ]
 }
