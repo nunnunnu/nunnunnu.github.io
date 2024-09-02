@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Jinny</title>
   <subtitle>-</subtitle>
-  <updated>2024-09-02T15:08:47+09:00</updated>
+  <updated>2024-09-02T15:25:37+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,89 @@
 
   
   <entry>
+    <title>람다와 스트림(Lambda &amp; Stream)</title>
+    <link href="http://localhost:4000/posts/%EB%9E%8C%EB%8B%A4%EC%99%80-%EC%8A%A4%ED%8A%B8%EB%A6%BC(Lambda&amp;Stream)/" rel="alternate" type="text/html" title="람다와 스트림(Lambda &amp;amp; Stream)" />
+    <published>2022-09-02T00:00:00+09:00</published>
+  
+    <updated>2022-09-02T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EB%9E%8C%EB%8B%A4%EC%99%80-%EC%8A%A4%ED%8A%B8%EB%A6%BC(Lambda&amp;Stream)/</id>
+    <content src="http://localhost:4000/posts/%EB%9E%8C%EB%8B%A4%EC%99%80-%EC%8A%A4%ED%8A%B8%EB%A6%BC(Lambda&amp;Stream)/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>람다식(Lambda Experssion)
+
+: 함수(메소드)를 간단한 식으로 표현하는 법 (ex. (a, b) → a &amp;amp;gt; b ? a : b )
+
+
+  익명함수(이름이 없는 함수, anonymous function) : 반환타입, 이름을 지우고 사이에 →를 붙인다
+  함수와 메소드는 근본적으로 동일하나 함수는 일반적 용어, 메소드는 객체지향개념 용어. 함수는 클래스에 독립적(클래스 바깥에 있는것. 자바에서는 불가능), 메소드는 클래스에 종속적(클래스안에 있음)
+  작성 법
+    
+      
+        메소드의 이름과 반환타입 제거 후 ‘ →’를 블럭{}앞에 추가
+ ( ex. (int a, int b) → return a&amp;amp;gt;b? a:b;)
+      
+      
+        반환값이 있...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>쓰레드(thread)</title>
+    <link href="http://localhost:4000/posts/%EC%93%B0%EB%A0%88%EB%93%9C(thread)/" rel="alternate" type="text/html" title="쓰레드(thread)" />
+    <published>2022-08-28T00:00:00+09:00</published>
+  
+    <updated>2022-08-28T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EC%93%B0%EB%A0%88%EB%93%9C(thread)/</id>
+    <content src="http://localhost:4000/posts/%EC%93%B0%EB%A0%88%EB%93%9C(thread)/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>프로세스와 쓰레드(process &amp;amp;amp; thread)
+
+
+  프로세스 : 실행중인 프로그램. 자원(resources)과 쓰레드로 구성 (공장)
+  쓰레드 : 프로세스 내에서 실제 작업을 수행. 모든 프로세서는 최소 하나의 쓰레드를 가지고 있다. (일꾼)
+  
+    싱글 쓰레드 프로세스 = 자원 + 쓰레드
+
+      public class  Main {
+    
+  	public static void main(String[] args) {
+  		long startTime = System.currentTimeMillis();
+    		
+  		for(int i=0;i&amp;amp;lt;300;i++) {
+  			System.out.printf(&amp;quot;%s&amp;quot;, new String(&amp;quot;-&amp;quot;));
+  		}
+    	...</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>지네릭스, 열거형, 애너테이션</title>
     <link href="http://localhost:4000/posts/%EC%A7%80%EB%84%A4%EB%A6%AD%EC%8A%A4_%EC%97%B4%EA%B1%B0%ED%98%95_%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98/" rel="alternate" type="text/html" title="지네릭스, 열거형, 애너테이션" />
-    <published>2024-08-26T00:00:00+09:00</published>
+    <published>2022-08-26T00:00:00+09:00</published>
   
-    <updated>2024-08-26T00:00:00+09:00</updated>
+    <updated>2022-08-26T00:00:00+09:00</updated>
   
     <id>http://localhost:4000/posts/%EC%A7%80%EB%84%A4%EB%A6%AD%EC%8A%A4_%EC%97%B4%EA%B1%B0%ED%98%95_%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98/</id>
     <content src="http://localhost:4000/posts/%EC%A7%80%EB%84%A4%EB%A6%AD%EC%8A%A4_%EC%97%B4%EA%B1%B0%ED%98%95_%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98/" />
@@ -65,7 +143,7 @@ public class  Main {
     <link href="http://localhost:4000/posts/%EC%BB%AC%EB%A0%89%EC%85%98_%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D(collections_framework)/" rel="alternate" type="text/html" title="컬렉션 프레임웍(collections framework)" />
     <published>2022-08-21T00:00:00+09:00</published>
   
-    <updated>2022-08-21T00:00:00+09:00</updated>
+    <updated>2024-09-02T15:10:17+09:00</updated>
   
     <id>http://localhost:4000/posts/%EC%BB%AC%EB%A0%89%EC%85%98_%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D(collections_framework)/</id>
     <content src="http://localhost:4000/posts/%EC%BB%AC%EB%A0%89%EC%85%98_%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8D(collections_framework)/" />
@@ -148,100 +226,6 @@ public class  Main {
 
 
 Calender클래...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>java.lang 패키지와 유용한 클래스</title>
-    <link href="http://localhost:4000/posts/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" rel="alternate" type="text/html" title="java.lang 패키지와 유용한 클래스" />
-    <published>2022-08-15T00:00:00+09:00</published>
-  
-    <updated>2024-08-24T19:14:30+09:00</updated>
-  
-    <id>http://localhost:4000/posts/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/</id>
-    <content src="http://localhost:4000/posts/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="JAVA" />
-    
-  
-
-  <summary>Object 클래스
-
-: 모든 클래스의 최고 조상. 오직 11개의 메소드만을 가지고 있다.
-
-nitity(), wait() 등은 쓰레드(13장)와 관련된 메소드이다
-
-
-  
-    
-      Object클래스의 메소드
-      설명
-    
-  
-  
-    
-      protected Object clone()
-      객체 자신의 복사본을 반환
-    
-    
-      public boolean equals(Object obj)
-      객체 자신과 객체 obj가 같은 객체인지 알려준다(같으면 true)
-    
-    
-      protected public void finalize()
-      객체가 소멸될 때 가비지 컬렉터에 의해 자동적으로 호출. 이 때 수행되어야하는 코드가 ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>예외처리</title>
-    <link href="http://localhost:4000/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" rel="alternate" type="text/html" title="예외처리" />
-    <published>2022-08-14T00:00:00+09:00</published>
-  
-    <updated>2022-08-14T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/</id>
-    <content src="http://localhost:4000/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="JAVA" />
-    
-  
-
-  <summary>프로그램 오류
-
-system.out.println(args[0]); //컴파일 에러
-System.out.println(args[0]); //런타임 에러 : 실행중 발생하는 에러. 매개변수로 받은 값이 없는데 실행해서 생김
-
-
-
-  논리적에러(logical error) : 작성 의도와 다르게 동작
-  컴파일러에러(compile-time error) : 컴파일 할 때 발생하는 에러번호
-    
-      컴파일러
-        
-          구문체크
-          번역
-          최적화 (ex. int i = 3+5를 8로 변경)
-        
-      
-    
-  
-  런타임에러(runtime error) : 실행할 때 발생하는 에러. 프로그램종료
-    
-      
-       ...</summary>
 
   </entry>
 
