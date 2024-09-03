@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Jinny</title>
   <subtitle>-</subtitle>
-  <updated>2024-09-03T13:24:53+09:00</updated>
+  <updated>2024-09-03T13:59:44+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,57 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>자바의 정석 연습문자 7장 - 상속 2</title>
+    <link href="http://localhost:4000/posts/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C_7%EC%9E%A5_%EC%83%81%EC%86%8D_2/" rel="alternate" type="text/html" title="자바의 정석 연습문자 7장 - 상속 2" />
+    <published>2022-10-10T00:00:00+09:00</published>
+  
+    <updated>2022-10-11T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C_7%EC%9E%A5_%EC%83%81%EC%86%8D_2/</id>
+    <content src="http://localhost:4000/posts/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C_7%EC%9E%A5_%EC%83%81%EC%86%8D_2/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>[7-17] 예제코드의 세 클래스에서 공통부분을 뽑아 Unit 클래스를 만들고 이 클래스를 상속받도록 코드를 변경
+
+  예제
+    class Marine{
+  int x,y;
+  void move(int x, int y){}
+  void stop(){}
+  void changeMode(){}
+}
+class Tank{
+  int x, y;
+  void move(int x, int y){}
+  void stop(){}
+  void changeMode(){}
+}
+class Dropship{
+  int x,y;
+  void move(int x, int y){}
+  void stop(){}
+  void load(){}
+  void unload(){}
+}
+    
+  
+  변경 코드
+
+
+package _2jav...</summary>
+
+  </entry>
 
   
   <entry>
@@ -196,52 +247,6 @@ public class ex6_1 {
 	
 	public static void main(String[] args) {
 		SutdaCard card1 = new Sut...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>자바의 정석 연습문제 5장 - 배열</title>
-    <link href="http://localhost:4000/posts/5%EC%9E%A5_%EB%B0%B0%EC%97%B4/" rel="alternate" type="text/html" title="자바의 정석 연습문제 5장 - 배열" />
-    <published>2022-10-03T00:00:00+09:00</published>
-  
-    <updated>2022-10-05T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/5%EC%9E%A5_%EB%B0%B0%EC%97%B4/</id>
-    <content src="http://localhost:4000/posts/5%EC%9E%A5_%EB%B0%B0%EC%97%B4/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="JAVA" />
-    
-  
-
-  <summary>[5-1] 잘못된것을 고르시오
-
-a. int[] arr[];
-b. int[] arr = {1,2,3,};
-c. int[] arr = new int[5];
-d. int[] arr = new int[5]{1,2,3,4,5}; - new int[5]나 {1,2,3,4,5} 둘중 하나를 지워야 함.
-e. int arr[5]; 선언하면서 크기지정 불가
-f. int[] arr[] = new int[3][];
-
-
-
-[5-2] arr[3].length의 값은?
-int [][] arr = {
-						{5,5,5,5,5},
-						{10,10,10},
-						{20,20,20,20},
-						{30,30}
-};
-
-
-arr[3]은 {30,30}를 뜻함. arr[3]은 값이 2개니까 length는 2.
-
-순서...</summary>
 
   </entry>
 
