@@ -6,57 +6,50 @@
       {
         "id": "4a6be4a2548240c0",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
-            "id": "05018c266bba2832",
+            "id": "615931fb09d7e2ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/java/2022-10-02-4장_조건문_반복문.md",
+                "file": "_posts/blog/java/2022-10-07-7장_상속_1.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "615931fb09d7e2ca",
+            "id": "9f95a8d4c1be3a84",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "excalidraw",
               "state": {
-                "file": "assets/images/java/IMG-20240902151633.png"
+                "file": "assets/images/java/Drawing 2024-09-03 13.10.14.excalidraw.md"
               }
             }
           }
         ]
       },
       {
-        "id": "98f4c1d7f1a285d0",
+        "id": "2610b7a1795fee72",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
-            "id": "d801a4ee23806bcf",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "eca5c9ecfc8b099c",
+            "id": "6b26c14dc01e2d89",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-15.md",
+                "file": "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/7장/7-3~7-9, 7-12~7-16.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -85,7 +78,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Untitled 1 76.png",
+                "query": "Tv(){}",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -106,7 +99,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 466.5
+    "width": 277.5
   },
   "right": {
     "id": "6ee3a94f67d83ffe",
@@ -122,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/java/2022-10-02-4장_조건문_반복문.md",
+                "file": "_posts/blog/java/2022-10-07-7장_상속_1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/java/2022-10-02-4장_조건문_반복문.md",
+                "file": "_posts/blog/java/2022-10-07-7장_상속_1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/java/2022-10-02-4장_조건문_반복문.md"
+                "file": "_posts/blog/java/2022-10-07-7장_상속_1.md"
               }
             }
           },
@@ -187,7 +180,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,51 +199,50 @@
   },
   "active": "a486eb621c47cd0c",
   "lastOpenFiles": [
-    "_site/assets/images/java/IMG-20240902164531.png",
-    "_site/posts/4장_조건문_반복문/index.html",
-    "_site/posts/4장_조건문_반복문",
-    "_site/assets/images/java/2022-10-02-4장_조건문_반복문/IMG-20240902164531.png",
-    "_site/assets/images/java/2022-10-02-4장_조건문_반복문",
-    "assets/images/java/2022-10-02-4장_조건문_반복문",
-    "_site/assets/images/java/20240902163719.png",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-15.md",
+    "assets/images/java/Drawing 2024-09-03 13.10.14.excalidraw.md",
+    "_posts/blog/java/2022-10-07-7장_상속_1.md",
+    "_site/assets/images/Pasted Image 20240903131030_448.jpg",
+    "assets/images/Pasted Image 20240903131030_448.jpg",
+    "_site/assets/images/java/Drawing 2024-09-03 13.10.14.excalidraw.html",
+    "_sass/minimal-mistakes/_syntax.scss",
+    "_sass/minimal-mistakes",
+    "_sass/layout/_syntax.scss",
+    "_site/posts/7장_상속_1/index.html",
+    "_site/posts/7장_상속_1",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/7장/7-3~7-9, 7-12~7-16.md",
+    "_posts/blog/java/2022-10-06-6장_객체_2.md",
+    "assets/images/java/IMG-20240903115038.png",
+    "_posts/blog/java/2022-10-05-6장_객체_1.md",
+    "_posts/blog/java/2022-10-06-6장_객체_3.md",
+    "_site/posts/6장_객체_3/index.html",
+    "_site/posts/6장_객체_3",
+    "_site/posts/6장_객체_2/index.html",
+    "_site/posts/6장_객체_2",
+    "_site/assets/images/java/IMG-20240903115401.png",
+    "_site/assets/images/java/IMG-20240903115038.png",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-24.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-23.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-22.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-21.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-6~6-7/6-6~6-7.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-3~6-5.md",
+    "_posts/blog/java/2022-10-03-5장_배열.md",
     "_posts/blog/java/2022-10-02-4장_조건문_반복문.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-14.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-13.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-12.md",
-    "assets/images/java/IMG-20240902164531.png",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-11.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-10.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-9.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-8.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-7.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-6.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-5.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-4.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-3.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/4장/4-2.md",
-    "_posts/blog/java/2022-10-02-2장_변수.md",
     "_posts/blog/java/2022-10-02-3장_연산자.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/3-10.md",
-    "_site/tags/연산자/index.html",
-    "_site/tags/연산자",
-    "_site/posts/3장_연산자/index.html",
-    "_site/posts/3장_연산자",
-    "_site/posts/2장_변수/index.html",
-    "_site/posts/2장_변수",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/3-9.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/3-8.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/3-7.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/3-6.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/예제 3-5.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/예제 3-4.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/3장/예제 3-3.md",
-    "assets/images/java/Drawing_2024-08-17_13.36.47.excalidraw.png",
-    "_site/assets/images/java/IMG-20240902151634.png",
-    "_site/assets/images/java/IMG-20240902151634-1.png",
-    "_site/assets/images/java/IMG-20240902151633.png",
-    "_site/assets/images/java/IMG-20240902151633-3.png",
-    "_site/assets/images/java/IMG-20240902151633-2.png",
-    "_site/assets/images/java/IMG-20240902151633-1.png"
+    "_posts/blog/java/2022-10-02-2장_변수.md",
+    "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md",
+    "_posts/blog/java/2022-08-28-쓰레드(thread).md",
+    "_posts/blog/java/2022-08-26-지네릭스_열거형_애너테이션.md",
+    "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
+    "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
+    "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md",
+    "_posts/blog/java/2022-08-14-예외처리.md",
+    "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
+    "_posts/blog/java/2022-08-04-객체지향(OOP).md",
+    "assets/images/java/IMG-20240824190825-1.png",
+    "assets/images/java/Untitled_8_17.png",
+    "assets/images/java/IMG-20240902164531.png",
+    "assets/images/java/IMG-20240902151634.png",
+    "assets/images/java/IMG-20240902151634-1.png"
   ]
 }

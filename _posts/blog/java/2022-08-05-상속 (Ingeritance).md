@@ -5,6 +5,7 @@ categories: JAVA
 tags:
   - java
   - 자바의정석
+  - 상속
 ---
 ### 상속
 

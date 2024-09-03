@@ -7,6 +7,7 @@ category: JAVA
 tags:
   - java
   - 자바의정석
+  - collection
 title: 컬렉션 프레임웍(collections framework)
 ---
 ## 컬렉션 프레임웍(collections framework)

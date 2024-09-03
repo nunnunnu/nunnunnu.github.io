@@ -1,0 +1,1007 @@
+<p>==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: ‘Decompress current Excalidraw file’. For more info check in plugin settings under ‘Saving’</p>
+
+<h1 id="excalidraw-data">Excalidraw Data</h1>
+<h2 id="text-elements">Text Elements</h2>
+<p>러닝가능 강or공원or호수 ^FmHViUxb</p>
+
+<p>내가 도서신청안해도 모든책이있는
+책개많은도서관 ^zLfQmjn1</p>
+
+<p>다이소 ^ydbJtUQ9</p>
+
+<p>가성비넘치는
+햄버거
+샌드위치
+분식
+빵
+덮밥
+약국 이 층별로있는
+어떠한 건물 ^mCHxTd4f</p>
+
+<p>편의점 ^qnD8UTRN</p>
+
+<p>마트 ^LKRziT0k</p>
+
+<p>가성비넘치고조용하며 분위기좋은 카페 ^k06gjHXo</p>
+
+<h2 id="embedded-files">Embedded Files</h2>
+<p>5bdf89fc3f059216ec6beddc0a16b8158862c392: [[assets/images/Pasted Image 20240903131030_448.jpg]]</p>
+
+<p>%%</p>
+<h2 id="drawing">Drawing</h2>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+	</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"excalidraw"</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.3.0"</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"imEIdskoP3uyioljfIgr7"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-314.18774509708703</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-318.115179601495</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">397.9187817258883</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">390</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a0"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">124077041</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1732581489</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336914370</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fileId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5bdf89fc3f059216ec6beddc0a16b8158862c392"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"scale"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="mi">1</span><span class="p">,</span><span class="w">
+				</span><span class="mi">1</span><span class="w">
+			</span><span class="p">]</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FmHViUxb"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-150.56427648833605</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-67.60063472509853</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">87.14036467325286</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.639063599964008</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a1"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">482045023</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">215</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1943399263</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336872410</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"러닝가능 강or공원or호수"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"러닝가능 강or공원or호수"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.511250879971207</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"러닝가능 강or공원or호수"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"zLfQmjn1"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-198.73797169456708</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-216.67094454620786</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">179.07919561822976</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">32.42147527882674</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a2"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1621356305</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">350</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">279090303</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336714456</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"내가 도서신청안해도 모든책이있는</span><span class="se">\n</span><span class="s2">책개많은도서관"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"내가 도서신청안해도 모든책이있는</span><span class="se">\n</span><span class="s2">책개많은도서관"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.968590111530686</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"내가 도서신청안해도 모든책이있는</span><span class="se">\n</span><span class="s2">책개많은도서관"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ydbJtUQ9"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-47.230121699217676</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-112.29264820777098</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">37.34390559428565</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">17.75576375413158</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a3"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">701558929</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">166</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1848496895</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336729377</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"다이소"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"다이소"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mf">14.204611003305283</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"다이소"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mCHxTd4f"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-231.2552862039234</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-148.4202504235466</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">62.06376555562019</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">80.39788335661434</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a4"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">836859953</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">544</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1942702769</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336873866</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"가성비넘치는</span><span class="se">\n</span><span class="s2">햄버거</span><span class="se">\n</span><span class="s2">샌드위치</span><span class="se">\n</span><span class="s2">분식</span><span class="se">\n</span><span class="s2">빵</span><span class="se">\n</span><span class="s2">덮밥</span><span class="se">\n</span><span class="s2">약국 이 층별로있는</span><span class="se">\n</span><span class="s2">어떠한 건물"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"가성비넘치는</span><span class="se">\n</span><span class="s2">햄버거</span><span class="se">\n</span><span class="s2">샌드위치</span><span class="se">\n</span><span class="s2">분식</span><span class="se">\n</span><span class="s2">빵</span><span class="se">\n</span><span class="s2">덮밥</span><span class="se">\n</span><span class="s2">약국 이 층별로있는</span><span class="se">\n</span><span class="s2">어떠한 건물"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.039788335661434</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"가성비넘치는</span><span class="se">\n</span><span class="s2">햄버거</span><span class="se">\n</span><span class="s2">샌드위치</span><span class="se">\n</span><span class="s2">분식</span><span class="se">\n</span><span class="s2">빵</span><span class="se">\n</span><span class="s2">덮밥</span><span class="se">\n</span><span class="s2">약국 이 층별로있는</span><span class="se">\n</span><span class="s2">어떠한 건물"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icZ5Jbh3XbmlBvFU44W3z"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rectangle"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-73.15150845711022</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-159.52563814222032</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">23.839996337890625</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a5"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">943480703</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">371</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">858547185</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="p">{</span><span class="w">
+					</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+					</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qnD8UTRN"</span><span class="w">
+				</span><span class="p">}</span><span class="w">
+			</span><span class="p">],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336850402</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qnD8UTRN"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-68.15150845711022</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-154.52563814222032</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">13.839996337890625</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a6"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1824035825</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">884784593</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336850402</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"편</span><span class="se">\n</span><span class="s2">의</span><span class="se">\n</span><span class="s2">점"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"편의점"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"center"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"middle"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"icZ5Jbh3XbmlBvFU44W3z"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"편의점"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"W62xFzxFL8cKLYAZ9ExHb"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rectangle"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-157.24649243119276</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-153.4368992812585</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mf">61.25763601111757</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a7"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">986598495</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">738758289</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="p">{</span><span class="w">
+					</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+					</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LKRziT0k"</span><span class="w">
+				</span><span class="p">}</span><span class="w">
+			</span><span class="p">],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336872399</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LKRziT0k"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-152.09049229386366</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-142.8080812756997</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">14.687999725341797</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a8"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">2010172849</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">2070994513</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336872399</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"마</span><span class="se">\n</span><span class="s2">트"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"마트"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"center"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"middle"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"W62xFzxFL8cKLYAZ9ExHb"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"마트"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thIoFNraYlTzv7mmSn3eh"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rectangle"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-190.32051255854554</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-42.27653472093456</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">167.13701594554092</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a9"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+			</span><span class="p">},</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1482935647</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">601</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1780437713</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+				</span><span class="p">{</span><span class="w">
+					</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+					</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"k06gjHXo"</span><span class="w">
+				</span><span class="p">}</span><span class="w">
+			</span><span class="p">],</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336913948</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"k06gjHXo"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-175.9519862752282</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-37.27653472093456</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">138.39996337890625</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a9V"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">686938417</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">353</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">825151665</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336913948</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"가성비넘치고조용하며</span><span class="se">\n</span><span class="s2">분위기좋은 카페"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"가성비넘치고조용하며 분위기좋은 카페"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"center"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"middle"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thIoFNraYlTzv7mmSn3eh"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"가성비넘치고조용하며 분위기좋은 카페"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="p">{</span><span class="w">
+			</span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"K5Rb7pO0"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-168.06406593099916</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-28.832015112157364</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mf">6.399993896484375</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"angle"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"backgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"strokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"groupIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+			</span><span class="nl">"frameId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aA"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"roundness"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"seed"</span><span class="p">:</span><span class="w"> </span><span class="mi">1755693553</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"versionNonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">1277213105</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"boundElements"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"updated"</span><span class="p">:</span><span class="w"> </span><span class="mi">1725336889595</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"rawText"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"fontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"textAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"verticalAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"containerId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"originalText"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"autoResize"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"lineHeight"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.25</span><span class="w">
+		</span><span class="p">}</span><span class="w">
+	</span><span class="p">],</span><span class="w">
+	</span><span class="nl">"appState"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="nl">"theme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"light"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"viewBackgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#ffffff"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemStrokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1e1e1e"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemBackgroundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transparent"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemFillStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemStrokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemStrokeStyle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemRoughness"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemFontFamily"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemFontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemTextAlign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"left"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemStartArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"currentItemEndArrowhead"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arrow"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"scrollX"</span><span class="p">:</span><span class="w"> </span><span class="mf">353.51931044845435</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"scrollY"</span><span class="p">:</span><span class="w"> </span><span class="mf">400.7674948417467</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"zoom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.4946939986317722</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="nl">"currentItemRoundness"</span><span class="p">:</span><span class="w"> </span><span class="s2">"round"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"gridSize"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"gridColor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nl">"Bold"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#C9C9C9"</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"Regular"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#EDEDED"</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="nl">"currentStrokeOptions"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"previousGridSize"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"frameRendering"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+			</span><span class="nl">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"clip"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+			</span><span class="nl">"outline"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+		</span><span class="p">},</span><span class="w">
+		</span><span class="nl">"objectsSnapModeEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+	</span><span class="p">},</span><span class="w">
+	</span><span class="nl">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+<p>%%</p>
