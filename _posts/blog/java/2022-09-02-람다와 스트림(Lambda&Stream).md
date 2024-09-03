@@ -2,8 +2,8 @@
 날짜: 2022-09-02
 생성 일시: 2022-09-02
 수업: 자바의 정석
-최종 편집 일시: 2022-09-11
-title: 람다와 스트림(Lambda & Stream)
+last_modified_at시: 2022-09-11
+title: 자바의 정석 강의 - 람다와 스트림(Lambda & Stream)
 category: JAVA
 tags:
   - java

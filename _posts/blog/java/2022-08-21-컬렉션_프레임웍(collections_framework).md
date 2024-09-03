@@ -2,13 +2,13 @@
 날짜: 2022-08-21
 생성 일시: 2022-08-21
 수업: 자바의 정석
-최종 편집 일시: 2022-08-26
+last_modified_at: 2022-08-26
 category: JAVA
 tags:
   - java
   - 자바의정석
   - collection
-title: 컬렉션 프레임웍(collections framework)
+title: 자바의 정석 강의 - 컬렉션 프레임웍(collections framework)
 ---
 ## 컬렉션 프레임웍(collections framework)
 

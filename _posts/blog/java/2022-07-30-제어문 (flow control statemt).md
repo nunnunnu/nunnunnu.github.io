@@ -1,7 +1,7 @@
 ---
 last_modified_at: 2022-07-30
 date: 2022-07-30
-수업: 자바의 정석
+title: 자바의 정석 강의 - 제어문 (flow control statemt)
 categories: JAVA
 tags:
   - java

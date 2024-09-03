@@ -2,9 +2,9 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://localhost:4000/</id>
-  <title>Jinny</title>
+  <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2024-09-03T13:59:44+09:00</updated>
+  <updated>2024-09-03T15:02:21+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -20,14 +20,14 @@
 
   
   <entry>
-    <title>자바의 정석 연습문자 7장 - 상속 2</title>
-    <link href="http://localhost:4000/posts/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C_7%EC%9E%A5_%EC%83%81%EC%86%8D_2/" rel="alternate" type="text/html" title="자바의 정석 연습문자 7장 - 상속 2" />
-    <published>2022-10-10T00:00:00+09:00</published>
+    <title>자바의 정석 연습문제 9장 - java.lang패키지와 유용한 클래스</title>
+    <link href="http://localhost:4000/posts/9%EC%9E%A5/" rel="alternate" type="text/html" title="자바의 정석 연습문제 9장 - java.lang패키지와 유용한 클래스" />
+    <published>2022-11-07T00:00:00+09:00</published>
   
-    <updated>2022-10-11T00:00:00+09:00</updated>
+    <updated>2022-11-07T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C_7%EC%9E%A5_%EC%83%81%EC%86%8D_2/</id>
-    <content src="http://localhost:4000/posts/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C_7%EC%9E%A5_%EC%83%81%EC%86%8D_2/" />
+    <id>http://localhost:4000/posts/9%EC%9E%A5/</id>
+    <content src="http://localhost:4000/posts/9%EC%9E%A5/" />
     <author>
       <name>jinny</name>
     </author>
@@ -38,215 +38,196 @@
     
   
 
-  <summary>[7-17] 예제코드의 세 클래스에서 공통부분을 뽑아 Unit 클래스를 만들고 이 클래스를 상속받도록 코드를 변경
+  <summary>[9-1] equals를 맴버변수인 num과 isKwang을 비교하도록 오버라이딩
 
-  예제
-    class Marine{
-  int x,y;
-  void move(int x, int y){}
-  void stop(){}
-  void changeMode(){}
-}
-class Tank{
-  int x, y;
-  void move(int x, int y){}
-  void stop(){}
-  void changeMode(){}
-}
-class Dropship{
-  int x,y;
-  void move(int x, int y){}
-  void stop(){}
-  void load(){}
-  void unload(){}
-}
-    
-  
-  변경 코드
+public class Ex9_1{
+    public static void main(String[] args) {
+        SutdaCard c1 = new SutdaCard(3, true);
+        SutdaCard c2 = new SutdaCard(3, true);
 
-
-package _2jav...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>자바의 정석 연습문자 7장 - 상속 1</title>
-    <link href="http://localhost:4000/posts/7%EC%9E%A5_%EC%83%81%EC%86%8D_1/" rel="alternate" type="text/html" title="자바의 정석 연습문자 7장 - 상속 1" />
-    <published>2022-10-07T00:00:00+09:00</published>
-  
-    <updated>2022-10-07T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/7%EC%9E%A5_%EC%83%81%EC%86%8D_1/</id>
-    <content src="http://localhost:4000/posts/7%EC%9E%A5_%EC%83%81%EC%86%8D_1/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="JAVA" />
-    
-  
-
-  <summary>[7-1] SutdaCard 배열을 초기화하는 문제. 숫자가 1,3,8인경우 isKwang이 true여야함.
-
-package _2javajungsuktestEx7;
-
-class SutdaDeck{
-	final int CARD_NUM=20;
-	SutdaCard cards[] = new SutdaCard[CARD_NUM];
-	
-	SutdaDeck() {
-		for(int i=0;i&amp;amp;lt;CARD_NUM;i++) {
-			int num = i%10+1;
-			boolean isKwang = i&amp;amp;lt;10&amp;amp;amp;&amp;amp;amp; (num==1 || num==3 || num==8);
-			
-			cards[i] = new SutdaCard(num, isKwang);
-		}
-		// for(int i=0;i&amp;amp;lt;10...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>자바의 정석 연습문제 6장 - 객체 3</title>
-    <link href="http://localhost:4000/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_3/" rel="alternate" type="text/html" title="자바의 정석 연습문제 6장 - 객체 3" />
-    <published>2022-10-06T00:00:00+09:00</published>
-  
-    <updated>2022-10-06T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_3/</id>
-    <content src="http://localhost:4000/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_3/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="JAVA" />
-    
-  
-
-  <summary>[6-20] 메소드 shuffle을 정의해 배열을 섞기
-
-package _2javajungsuktestEx6;
-
-import java.util.Arrays;
-
-public class ex6_20 {
-
-	static int[] shuffle(int arr[]) {
-		if(arr==null || arr.length==0) return arr;
-		int tmp=0;
-		for(int i=0;i&amp;amp;lt;arr.length;i++) {
-			int x = (int)(Math.random()*arr.length);
-			tmp=arr[i];
-			arr[i] = arr[x];
-			arr[x] = tmp;
-		}
-		return arr;
-	}
-	
-	public static void main(String[] ar...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>자바의 정석 연습문제 6장 - 객체 2</title>
-    <link href="http://localhost:4000/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_2/" rel="alternate" type="text/html" title="자바의 정석 연습문제 6장 - 객체 2" />
-    <published>2022-10-06T00:00:00+09:00</published>
-  
-    <updated>2022-10-06T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_2/</id>
-    <content src="http://localhost:4000/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_2/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="JAVA" />
-    
-  
-
-  <summary>[6-8] 다음 코드에 정의된 변수들을 종류별로 구분해서 적기
-
-class PlayingCard{
-	int kind;
-	int num;
-
-	static int width;
-	static int height;
-
-	PlayingCard(int k, int n){
-		kind = k;
-		num = n;
-	}
-	public static void main(String[] args){
-		PlayingCard card= new PlayingCard(1,1);
+        System.out.println(&amp;quot;c1 = &amp;quot;+c1);
+        System.out.println(&amp;quot;c2 = &amp;quot;+c2);
+        System.out.println(&amp;quot;c1.equals(c2) : &amp;quot;+c1.equals(c2));
+    }
 }
 
-
-  클래스변수 (static변수) : width, height
-  인스턴스변수 : kind, num
-  지역변수: k, n, card
-
-
-
-
-[6-9] static이 붙어야하는 것과 그 이유는?(모든 병사의 공격력과 방어력은 같아야함)
-
-class ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>자바의 정석 연습문제 6장 - 객체 1</title>
-    <link href="http://localhost:4000/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_1/" rel="alternate" type="text/html" title="자바의 정석 연습문제 6장 - 객체 1" />
-    <published>2022-10-05T00:00:00+09:00</published>
-  
-    <updated>2022-10-05T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_1/</id>
-    <content src="http://localhost:4000/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_1/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="JAVA" />
-    
-  
-
-  <summary>[6-1~6-2] SutdaCard클래스를 정의하고 두개의 생성자와 info()를 추가
-
-package _2javajungsuktestEx6;
 class SutdaCard{
-	int num=3 ;
-	boolean isKwang=true;
-	
-	SutdaCard(){
-		this(1,true);
-	}
-	
-	SutdaCard(int num, boolean isKwang){
-		this.num=num;
-		this.isKwang=isKwang;
-	}
-	String info() {
-		return num+(isKwang?&amp;quot;K&amp;quot;:&amp;quot;&amp;quot;);
-	}
-}
+    int num;
+    boole...</summary>
 
-public class ex6_1 {
-	
-	public static void main(String[] args) {
-		SutdaCard card1 = new Sut...</summary>
+  </entry>
+
+  
+  <entry>
+    <title>[국비교육학원-수업내용정리] 컬렉션 프레임워크</title>
+    <link href="http://localhost:4000/posts/%EC%BB%AC%EB%A0%89%EC%85%98-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 컬렉션 프레임워크" />
+    <published>2022-11-01T00:00:00+09:00</published>
+  
+    <updated>2022-11-01T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EC%BB%AC%EB%A0%89%EC%85%98-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/</id>
+    <content src="http://localhost:4000/posts/%EC%BB%AC%EB%A0%89%EC%85%98-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>list
+
+public class WrapperEx {
+  public static void main(String[] args) {
+    //wrapper Class
+    Integer value =10;
+    int value2= 20;
+    value = null; //Integer가 클래스타입이라서 null가능. 
+    // value2 = null; //null불가능. 
+    value=10;
+    System.out.println(value+value2);
+    String s = &amp;quot;123456&amp;quot;;
+    System.out.println(s+100);
+    System.out.println(Integer.parseInt(s)+100); //Warpper class의 핵심기능....</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[국비교육학원-수업내용정리] 객체지향언어</title>
+    <link href="http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%96%B8%EC%96%B4/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 객체지향언어" />
+    <published>2022-10-28T00:00:00+09:00</published>
+  
+    <updated>2022-10-28T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%96%B8%EC%96%B4/</id>
+    <content src="http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%96%B8%EC%96%B4/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>객체≥인스턴스, 객체가 상위개념이나 거의 동일하게 사용함
+
+
+  
+    마우스
+
+      package JAVA_221028;
+    
+  public class Mouse {
+    
+    //클래스 상수
+    final static int VALUE = 100;
+    
+    //클래스변수
+    //static - 정적메모리(프로그램 실행시에 생성됨)
+    //모든 인스턴스가 공유하는 변수
+    static int count = 0;
+    
+    //인스턴스변수(Mouse클래스의 멤버변수)
+    //인스턴스화가 되어야 사용가능(메모리에 생성되어야 사용가능)
+    boolean wireless;
+    boolean wheel;
+    boolean leftBtn;
+    boo...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[국비교육학원-수업내용정리] 변수와 메소드</title>
+    <link href="http://localhost:4000/posts/%EB%B3%80%EC%88%98%EC%99%80-%EB%A9%94%EC%86%8C%EB%93%9C/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 변수와 메소드" />
+    <published>2022-10-27T00:00:00+09:00</published>
+  
+    <updated>2022-10-28T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EB%B3%80%EC%88%98%EC%99%80-%EB%A9%94%EC%86%8C%EB%93%9C/</id>
+    <content src="http://localhost:4000/posts/%EB%B3%80%EC%88%98%EC%99%80-%EB%A9%94%EC%86%8C%EB%93%9C/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+  
+
+  <summary>인스턴스변수 : 대표적으로 String str = new String(0);
+
+지역변수 : 메소드내에서 변수선언문 
+수행 시
+
+메소드 : 명령문의 집합. 값을 입력받아처리 후 결과를 돌려줌(결과 안돌려줄수도있음 - void[공허]), ()붙은건 전부 메소드임. - 정보은닉, 캡슐화
+
+
+  cmd로 args값 받는 법
+
+
+
+
+M누르고 탭누르면 해당 자바파일 자동완성됨
+
+프로그램실행시에 완전 외부에서 특정 데이터를 심어서 같이실행하는 방법(java -version과 같은것임)
+
+
+
+
+
+프로그램으로 받을수도 있음
+
+실행결과가 뜨는 터미널이 파워쉘(cmd비슷한거)임.
+
+import java.util.Scanner;
+
+public class Member_method {
+    static final int MA...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[국비교육학원-수업내용정리] 배열2</title>
+    <link href="http://localhost:4000/posts/%EB%B0%B0%EC%97%B42/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 배열2" />
+    <published>2022-10-26T00:00:00+09:00</published>
+  
+    <updated>2022-10-26T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EB%B0%B0%EC%97%B42/</id>
+    <content src="http://localhost:4000/posts/%EB%B0%B0%EC%97%B42/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>회원가입
+
+package JAVA_221026;
+
+import java.util.Scanner;
+
+public class Ex01 {
+    public static void main(String[] args) {
+        String user_id = &amp;quot;&amp;quot;;
+        String user_pw = &amp;quot;&amp;quot;;
+        String user_name = &amp;quot;&amp;quot;;
+        String user_birth = &amp;quot;&amp;quot;;        
+        String user[][] = new String[10][4];
+        int index = 0;
+        for(int i=0;i&amp;amp;lt;user.length;i++){
+            user[i][0] = &amp;quot;&amp;quot;;
+        ...</summary>
 
   </entry>
 

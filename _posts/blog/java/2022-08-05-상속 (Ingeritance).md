@@ -6,6 +6,7 @@ tags:
   - java
   - 자바의정석
   - 상속
+title: 자바의 정석 강의 - 상속(Ingeritance)
 ---
 ### 상속
 
