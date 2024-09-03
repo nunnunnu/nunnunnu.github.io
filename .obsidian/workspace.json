@@ -6,46 +6,26 @@
       {
         "id": "4a6be4a2548240c0",
         "type": "tabs",
-        "dimension": 50,
         "children": [
           {
-            "id": "9f95a8d4c1be3a84",
+            "id": "7cd9fda0e640c22b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/java/2022-10-10-자바의정석_연습문제_7장_상속_2.md",
+                "file": "_posts/blog/java/그린/2022-11-01-컬렉션 프레임워크.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "55d7460e653f218f",
+            "id": "7f1da0040a533aa5",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "assets/images/java/20240903135325.png"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "2610b7a1795fee72",
-        "type": "tabs",
-        "dimension": 50,
-        "children": [
-          {
-            "id": "6b26c14dc01e2d89",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/7장/7-22~7-23.md",
-                "mode": "source",
-                "source": false
+                "file": "assets/images/java/IMG-20240903145323.png"
               }
             }
           }
@@ -78,7 +58,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Tv(){}",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -115,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/java/2022-10-10-자바의정석_연습문제_7장_상속_2.md",
+                "file": "_posts/blog/java/그린/2022-11-01-컬렉션 프레임워크.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/java/2022-10-10-자바의정석_연습문제_7장_상속_2.md",
+                "file": "_posts/blog/java/그린/2022-11-01-컬렉션 프레임워크.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/java/2022-10-10-자바의정석_연습문제_7장_상속_2.md"
+                "file": "_posts/blog/java/그린/2022-11-01-컬렉션 프레임워크.md"
               }
             }
           },
@@ -197,53 +177,53 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "9f95a8d4c1be3a84",
+  "active": "7cd9fda0e640c22b",
   "lastOpenFiles": [
-    "_site/posts/자바의정석_연습문제_7장_상속_2/index.html",
-    "_site/posts/자바의정석_연습문제_7장_상속_2",
-    "_site/assets/images/java/20240903135325.png",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/7장/7-22~7-23.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/7장/7-20~7-21, 7-24.md",
+    "_site/posts/컬렉션-프레임워크/index.html",
+    "_site/posts/컬렉션-프레임워크",
+    "_posts/blog/java/그린/2022-10-28-객체지향언어.md",
+    "_site/posts/객체지향언어/index.html",
+    "_site/posts/객체지향언어",
+    "_posts/blog/java/그린/2022-10-27-변수와 메소드.md",
+    "assets/images/java/IMG-20240903145323.png",
+    "_site/assets/images/java/IMG-20240903145323.png",
+    "_site/assets/images/java/IMG-20240903145323-2.png",
+    "_site/assets/images/java/IMG-20240903145323-1.png",
+    "_site/posts/변수와-메소드/index.html",
+    "_site/posts/변수와-메소드",
+    "_site/assets/images/그린/2022-10-27-변수와 메소드/IMG-20240903145323.png",
+    "_site/assets/images/그린/2022-10-27-변수와 메소드/IMG-20240903145323-2.png",
+    "_site/assets/images/그린/2022-10-27-변수와 메소드/IMG-20240903145323-1.png",
+    "_site/assets/images/그린/2022-10-27-변수와 메소드",
+    "_site/assets/images/그린",
+    "assets/images/그린/2022-10-27-변수와 메소드",
+    "_posts/blog/java/그린/2022-10-17-그린_변수(Variable).md",
+    "assets/images/그린/변수와 메소드",
+    "assets/images/변수와 메소드/변수와 메소드",
+    "_posts/blog/java/그린/2022-10-26-배열2.md",
+    "_posts/blog/java/그린/2022-10-21-그린_정리.md",
+    "_posts/blog/java/그린/2022-10-20-그린_배열.md",
+    "_posts/blog/java/2022-11-07-9장.md",
+    "_posts/blog/java/2022-10-16-8장.md",
     "_posts/blog/java/2022-10-10-자바의정석_연습문제_7장_상속_2.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/7장/7-19.md",
-    "assets/images/java/20240903135325.png",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/7장/7-18.md",
     "_posts/blog/java/2022-10-07-7장_상속_1.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/7장/7-3~7-9, 7-12~7-16.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/7장/7-10.md",
-    "assets/images/java/IMG-20240903115401.png",
-    "assets/images/java/IMG-20240903115038.png",
-    "assets/images/java/Drawing 2024-09-03 13.10.14.excalidraw.md",
-    "assets/images/Pasted Image 20240903131030_448.jpg",
-    "_site/tags/조건문/index.html",
-    "_site/tags/조건문",
-    "_site/tags/제어문/index.html",
-    "_site/tags/제어문",
-    "_site/tags/예외/index.html",
-    "_site/tags/예외",
-    "_site/tags/연산자/index.html",
-    "_site/tags/연산자",
-    "_site/tags/쓰레드/index.html",
-    "_site/assets/images/java/IMG-20240903115401.png",
-    "_site/assets/images/java/IMG-20240903115038.png",
-    "_site/assets/images/Pasted Image 20240903131030_448.jpg",
     "_posts/blog/java/2022-10-06-6장_객체_3.md",
     "_posts/blog/java/2022-10-06-6장_객체_2.md",
     "_posts/blog/java/2022-10-05-6장_객체_1.md",
     "_posts/blog/java/2022-10-03-5장_배열.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-24.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-23.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-22.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-21.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-6~6-7/6-6~6-7.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/연습문제/6장/6-3~6-5.md",
     "_posts/blog/java/2022-10-02-4장_조건문_반복문.md",
     "_posts/blog/java/2022-10-02-3장_연산자.md",
     "_posts/blog/java/2022-10-02-2장_변수.md",
     "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md",
     "_posts/blog/java/2022-08-28-쓰레드(thread).md",
     "_posts/blog/java/2022-08-26-지네릭스_열거형_애너테이션.md",
-    "assets/images/java/IMG-20240824190825-1.png",
-    "assets/images/java/Untitled_8_17.png"
+    "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
+    "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
+    "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md",
+    "_posts/blog/java/2022-08-14-예외처리.md",
+    "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
+    "_site/assets/images/자바의정석/2022-09-02-람다와 스트림(Lambda&Stream)/IMG-20240903142226.png",
+    "_site/assets/images/자바의정석/2022-09-02-람다와 스트림(Lambda&Stream)/IMG-20240903142226-1.png",
+    "_site/assets/images/자바의정석/2022-08-04-객체지향(OOP)/IMG-20240903142226.png"
   ]
 }
