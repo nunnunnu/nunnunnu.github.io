@@ -4,28 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "4a6be4a2548240c0",
+        "id": "e70e77d10c63ce94",
         "type": "tabs",
         "children": [
           {
-            "id": "7cd9fda0e640c22b",
+            "id": "4159bc9b09868ce1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/java/그린/2022-11-01-컬렉션 프레임워크.md",
+                "file": "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/CRUD.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "7f1da0040a533aa5",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/java/IMG-20240903145323.png"
               }
             }
           }
@@ -95,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/java/그린/2022-11-01-컬렉션 프레임워크.md",
+                "file": "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/CRUD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/java/그린/2022-11-01-컬렉션 프레임워크.md",
+                "file": "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/CRUD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/java/그린/2022-11-01-컬렉션 프레임워크.md"
+                "file": "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/CRUD.md"
               }
             }
           },
@@ -177,53 +167,53 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "7cd9fda0e640c22b",
+  "active": "4159bc9b09868ce1",
   "lastOpenFiles": [
-    "_site/posts/컬렉션-프레임워크/index.html",
-    "_site/posts/컬렉션-프레임워크",
-    "_posts/blog/java/그린/2022-10-28-객체지향언어.md",
-    "_site/posts/객체지향언어/index.html",
-    "_site/posts/객체지향언어",
-    "_posts/blog/java/그린/2022-10-27-변수와 메소드.md",
-    "assets/images/java/IMG-20240903145323.png",
-    "_site/assets/images/java/IMG-20240903145323.png",
-    "_site/assets/images/java/IMG-20240903145323-2.png",
-    "_site/assets/images/java/IMG-20240903145323-1.png",
-    "_site/posts/변수와-메소드/index.html",
-    "_site/posts/변수와-메소드",
-    "_site/assets/images/그린/2022-10-27-변수와 메소드/IMG-20240903145323.png",
-    "_site/assets/images/그린/2022-10-27-변수와 메소드/IMG-20240903145323-2.png",
-    "_site/assets/images/그린/2022-10-27-변수와 메소드/IMG-20240903145323-1.png",
-    "_site/assets/images/그린/2022-10-27-변수와 메소드",
-    "_site/assets/images/그린",
-    "assets/images/그린/2022-10-27-변수와 메소드",
-    "_posts/blog/java/그린/2022-10-17-그린_변수(Variable).md",
-    "assets/images/그린/변수와 메소드",
-    "assets/images/변수와 메소드/변수와 메소드",
-    "_posts/blog/java/그린/2022-10-26-배열2.md",
-    "_posts/blog/java/그린/2022-10-21-그린_정리.md",
-    "_posts/blog/java/그린/2022-10-20-그린_배열.md",
+    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/정규화/정규화.md",
+    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/외래키/외래키.md",
+    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/쿠팡(6조 작업)/쿠팡(6조 작업).md",
+    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/sqld 시험/최종 정리본.md",
+    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/sqld 시험/스피드퀴즈.md",
+    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/CRUD.md",
+    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/join.md",
+    "assets/images/자바의정석/2022-07-30-제어문 (flow control statemt)/IMG-20240903142226.png",
+    "_posts/blog/RDBMS",
+    "_posts/blog/spring",
+    "_posts/코딩/개발 학습/기술/백엔드/Spring/Spring.md",
+    "_posts/코딩/개발 학습/기술/백엔드/ORM/공부/@Meta 어노테이션 사용기.md",
+    "_posts/코딩/개발 학습/기술/백엔드/ORM/공부/공부.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/JAVA.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/강의/강의.md",
     "_posts/blog/java/2022-11-07-9장.md",
-    "_posts/blog/java/2022-10-16-8장.md",
-    "_posts/blog/java/2022-10-10-자바의정석_연습문제_7장_상속_2.md",
-    "_posts/blog/java/2022-10-07-7장_상속_1.md",
-    "_posts/blog/java/2022-10-06-6장_객체_3.md",
-    "_posts/blog/java/2022-10-06-6장_객체_2.md",
-    "_posts/blog/java/2022-10-05-6장_객체_1.md",
-    "_posts/blog/java/2022-10-03-5장_배열.md",
-    "_posts/blog/java/2022-10-02-4장_조건문_반복문.md",
-    "_posts/blog/java/2022-10-02-3장_연산자.md",
-    "_posts/blog/java/2022-10-02-2장_변수.md",
-    "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md",
-    "_posts/blog/java/2022-08-28-쓰레드(thread).md",
-    "_posts/blog/java/2022-08-26-지네릭스_열거형_애너테이션.md",
-    "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
-    "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
-    "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md",
-    "_posts/blog/java/2022-08-14-예외처리.md",
-    "_posts/blog/java/2022-08-05-상속 (Ingeritance).md",
-    "_site/assets/images/자바의정석/2022-09-02-람다와 스트림(Lambda&Stream)/IMG-20240903142226.png",
-    "_site/assets/images/자바의정석/2022-09-02-람다와 스트림(Lambda&Stream)/IMG-20240903142226-1.png",
-    "_site/assets/images/자바의정석/2022-08-04-객체지향(OOP)/IMG-20240903142226.png"
+    "_posts/blog/java/그린/2022-11-09-그린_날짜.md",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/그린아트컴퓨터학원 수업과정 - JAVA/java prepare/java prepare.md",
+    "_site/posts/그린_날짜/index.html",
+    "_site/posts/그린_날짜",
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/그린아트컴퓨터학원 수업과정 - JAVA/그린아트컴퓨터학원 수업과정 - JAVA.md",
+    "_posts/blog/java/그린/2022-11-08-예외처리_파일입출력.md",
+    "_site/posts/예외처리_파일입출력/index.html",
+    "_site/posts/예외처리_파일입출력",
+    "_posts/blog/java/그린/2022-11-03-그린_컬렉션프레임워크2.md",
+    "_posts/blog/java/그린/2022-11-03-그린_객체지향2.md",
+    "_site/posts/그린_객체지향2/index.html",
+    "_site/posts/그린_객체지향2",
+    "_site/assets/images/java/Untitled_221103.png",
+    "_site/assets/images/java/IMG-20240907205803.png",
+    "_site/assets/images/java/IMG-20240907205803-2.png",
+    "_site/assets/images/java/IMG-20240907205803-1.png",
+    "_site/assets/images/java/IMG-20240907205802.png",
+    "assets/images/java/IMG-20240903145323.png",
+    "assets/images/java/Untitled_221103.png",
+    "_posts/blog/java/그린/2022-10-28-객체지향언어.md",
+    "assets/images/java/IMG-20240907205803-2.png",
+    "assets/images/java/IMG-20240907205802.png",
+    "assets/images/그린/2022-11-03-그린_객체지향2",
+    "assets/images/그린/객체지향2",
+    "_posts/코딩/개발 학습/문제 해결과정/vscode에서 args값 받는 법.md",
+    "_posts/blog/java/그린/2022-11-01-컬렉션 프레임워크.md",
+    "_posts/blog/java/그린/2022-10-27-변수와 메소드.md",
+    "_posts/blog/java/그린/2022-10-17-그린_변수(Variable).md",
+    "_posts/blog/java/그린/2022-10-26-배열2.md",
+    "_posts/blog/java/그린/2022-10-21-그린_정리.md"
   ]
 }

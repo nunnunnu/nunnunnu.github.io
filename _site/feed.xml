@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2024-09-03T15:02:21+09:00</updated>
+  <updated>2024-09-07T21:28:34+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,77 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[국비교육학원-수업내용정리] 날짜</title>
+    <link href="http://localhost:4000/posts/%EA%B7%B8%EB%A6%B0_%EB%82%A0%EC%A7%9C/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 날짜" />
+    <published>2022-11-09T00:00:00+09:00</published>
+  
+    <updated>2022-11-09T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EA%B7%B8%EB%A6%B0_%EB%82%A0%EC%A7%9C/</id>
+    <content src="http://localhost:4000/posts/%EA%B7%B8%EB%A6%B0_%EB%82%A0%EC%A7%9C/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>substring, split
+
+public class UtilitiesEx {
+  public static void main(String[] args) {
+    String str = &amp;quot;Hello world&amp;quot;;
+    System.out.println(str.substring(0,5));
+    System.out.println(str.substring(5));
+    String filename = &amp;quot;data_12346513.dat&amp;quot;;
+    System.out.println(filename.substring(5));
+    String imgFile=&amp;quot;image.jpg&amp;quot;;
+    String[] split = imgFile.split(&amp;quot;\\.&amp;quot;);
+    String ext = split[spl...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[국비교육학원-수업내용정리] 예외처리 - 파일입출력</title>
+    <link href="http://localhost:4000/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC_%ED%8C%8C%EC%9D%BC%EC%9E%85%EC%B6%9C%EB%A0%A5/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 예외처리 - 파일입출력" />
+    <published>2022-11-08T00:00:00+09:00</published>
+  
+    <updated>2022-11-08T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC_%ED%8C%8C%EC%9D%BC%EC%9E%85%EC%B6%9C%EB%A0%A5/</id>
+    <content src="http://localhost:4000/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC_%ED%8C%8C%EC%9D%BC%EC%9E%85%EC%B6%9C%EB%A0%A5/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="JAVA" />
+    
+  
+
+  <summary>예외처리
+
+public class ExceptionEx {
+  public static void main(String[] args) {
+    int a=10;
+    int b=0;
+    int[] arr={10,20};
+    try {
+      //예외가 발생할 수도 있는 명령문은 try안에
+      System.out.println(a/b);
+      System.out.println(arr[3]); //ArrayIndexOutOfBoundException발생(위에코드가 예외가 뜨면 작동되지 않음)
+    // } catch (ArithmeticException e) { //괄호 안쪽은, 처리할 예외의 종류를 씀(산술연산 예외) 
+    //   //a/b했을때 발생할 수 있는 예외 - ...</summary>
+
+  </entry>
 
   
   <entry>
@@ -59,14 +130,14 @@ class SutdaCard{
 
   
   <entry>
-    <title>[국비교육학원-수업내용정리] 컬렉션 프레임워크</title>
-    <link href="http://localhost:4000/posts/%EC%BB%AC%EB%A0%89%EC%85%98-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 컬렉션 프레임워크" />
-    <published>2022-11-01T00:00:00+09:00</published>
+    <title>[국비교육학원-수업내용정리] 컬렉션 프레임워크 2</title>
+    <link href="http://localhost:4000/posts/%EA%B7%B8%EB%A6%B0_%EC%BB%AC%EB%A0%89%EC%85%98%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC2/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 컬렉션 프레임워크 2" />
+    <published>2022-11-03T00:00:00+09:00</published>
   
-    <updated>2022-11-01T00:00:00+09:00</updated>
+    <updated>2022-11-03T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/%EC%BB%AC%EB%A0%89%EC%85%98-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/</id>
-    <content src="http://localhost:4000/posts/%EC%BB%AC%EB%A0%89%EC%85%98-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/" />
+    <id>http://localhost:4000/posts/%EA%B7%B8%EB%A6%B0_%EC%BB%AC%EB%A0%89%EC%85%98%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC2/</id>
+    <content src="http://localhost:4000/posts/%EA%B7%B8%EB%A6%B0_%EC%BB%AC%EB%A0%89%EC%85%98%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC2/" />
     <author>
       <name>jinny</name>
     </author>
@@ -77,33 +148,36 @@ class SutdaCard{
     
   
 
-  <summary>list
+  <summary>Hash Map
 
-public class WrapperEx {
+!!프론트엔드에 데이터를 넘겨줄때 사용
+
+이걸로 출력하면 JSON으로 출력됨.
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class MapEx{
   public static void main(String[] args) {
-    //wrapper Class
-    Integer value =10;
-    int value2= 20;
-    value = null; //Integer가 클래스타입이라서 null가능. 
-    // value2 = null; //null불가능. 
-    value=10;
-    System.out.println(value+value2);
-    String s = &amp;quot;123456&amp;quot;;
-    System.out.println(s+100);
-    System.out.println(Integer.parseInt(s)+100); //Warpper class의 핵심기능....</summary>
+    //Key, Value
+    //특정 key에 특정 값을 mapping(연결)
+    Map&amp;amp;lt;String, Integer&amp;amp;gt; map = new HashMap&amp;amp;lt;String, Integer&amp;amp;gt;();
+    map.put(&amp;quot;asdf&amp;quot;, 1234); //추가
+    System.out.println(map); //{asdf=1234}...</summary>
 
   </entry>
 
   
   <entry>
-    <title>[국비교육학원-수업내용정리] 객체지향언어</title>
-    <link href="http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%96%B8%EC%96%B4/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 객체지향언어" />
-    <published>2022-10-28T00:00:00+09:00</published>
+    <title>[국비교육학원-수업내용정리] 객체지향언어 2</title>
+    <link href="http://localhost:4000/posts/%EA%B7%B8%EB%A6%B0_%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A52/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 객체지향언어 2" />
+    <published>2022-11-03T00:00:00+09:00</published>
   
-    <updated>2022-10-28T00:00:00+09:00</updated>
+    <updated>2022-11-08T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%96%B8%EC%96%B4/</id>
-    <content src="http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%96%B8%EC%96%B4/" />
+    <id>http://localhost:4000/posts/%EA%B7%B8%EB%A6%B0_%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A52/</id>
+    <content src="http://localhost:4000/posts/%EA%B7%B8%EB%A6%B0_%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A52/" />
     <author>
       <name>jinny</name>
     </author>
@@ -114,120 +188,32 @@ public class WrapperEx {
     
   
 
-  <summary>객체≥인스턴스, 객체가 상위개념이나 거의 동일하게 사용함
+  <summary>상속 : 클래스의 확장. 프레임워크를 개발할때 많이사용함. 그외에는 잘안씀
+
+해당 클래스를 아무도 상속받지못하게하려면 final을 사용하면됨
+
+포함 : 클래스안에 클래스. 대표적으로 String
 
 
   
-    마우스
+    도형
 
-      package JAVA_221028;
+      public class Point {
+    int x,y;
+    public Point(){}
+    public Point(int x, int y){
+      this.x = x;
+      this.y = y;
+    }
+    void printPoint(){
+      System.out.println(&amp;quot;(&amp;quot;+x+&amp;quot;, &amp;quot;+y+&amp;quot;)&amp;quot;);
+    }
     
-  public class Mouse {
+  }
     
-    //클래스 상수
-    final static int VALUE = 100;
-    
-    //클래스변수
-    //static - 정적메모리(프로그램 실행시에 생성됨)
-    //모든 인스턴스가 공유하는 변수
-    static int count = 0;
-    
-    //인스턴스변수(Mouse클래스의 멤버변수)
-    //인스턴스화가 되어야 사용가능(메모리에 생성되어야 사용가능)
-    boolean wireless;
-    boolean wheel;
-    boolean leftBtn;
-    boo...</summary>
 
-  </entry>
-
-  
-  <entry>
-    <title>[국비교육학원-수업내용정리] 변수와 메소드</title>
-    <link href="http://localhost:4000/posts/%EB%B3%80%EC%88%98%EC%99%80-%EB%A9%94%EC%86%8C%EB%93%9C/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 변수와 메소드" />
-    <published>2022-10-27T00:00:00+09:00</published>
-  
-    <updated>2022-10-28T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/%EB%B3%80%EC%88%98%EC%99%80-%EB%A9%94%EC%86%8C%EB%93%9C/</id>
-    <content src="http://localhost:4000/posts/%EB%B3%80%EC%88%98%EC%99%80-%EB%A9%94%EC%86%8C%EB%93%9C/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-  
-
-  <summary>인스턴스변수 : 대표적으로 String str = new String(0);
-
-지역변수 : 메소드내에서 변수선언문 
-수행 시
-
-메소드 : 명령문의 집합. 값을 입력받아처리 후 결과를 돌려줌(결과 안돌려줄수도있음 - void[공허]), ()붙은건 전부 메소드임. - 정보은닉, 캡슐화
-
-
-  cmd로 args값 받는 법
-
-
-
-
-M누르고 탭누르면 해당 자바파일 자동완성됨
-
-프로그램실행시에 완전 외부에서 특정 데이터를 심어서 같이실행하는 방법(java -version과 같은것임)
-
-
-
-
-
-프로그램으로 받을수도 있음
-
-실행결과가 뜨는 터미널이 파워쉘(cmd비슷한거)임.
-
-import java.util.Scanner;
-
-public class Member_method {
-    static final int MA...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[국비교육학원-수업내용정리] 배열2</title>
-    <link href="http://localhost:4000/posts/%EB%B0%B0%EC%97%B42/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] 배열2" />
-    <published>2022-10-26T00:00:00+09:00</published>
-  
-    <updated>2022-10-26T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/%EB%B0%B0%EC%97%B42/</id>
-    <content src="http://localhost:4000/posts/%EB%B0%B0%EC%97%B42/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="JAVA" />
-    
-  
-
-  <summary>회원가입
-
-package JAVA_221026;
-
-import java.util.Scanner;
-
-public class Ex01 {
-    public static void main(String[] args) {
-        String user_id = &amp;quot;&amp;quot;;
-        String user_pw = &amp;quot;&amp;quot;;
-        String user_name = &amp;quot;&amp;quot;;
-        String user_birth = &amp;quot;&amp;quot;;        
-        String user[][] = new String[10][4];
-        int index = 0;
-        for(int i=0;i&amp;amp;lt;user.length;i++){
-            user[i][0] = &amp;quot;&amp;quot;;
-        ...</summary>
+      public class Point3D extends Point {
+    int z...</summary>
 
   </entry>
 
