@@ -1944,7 +1944,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1921 단어"
+  title="1957 단어"
 >
   <em>10 분</em>읽는 시간</span>
 
@@ -2213,43 +2213,81 @@ Try Postman for free!<br />
 <span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;views/main.html&lt;/h1&gt;
-    &lt;h3&gt;&lt;span th:text="${name}"&gt;&lt;/span&gt;&lt;/h3&gt;
-    &lt;p&gt;&lt;span th:text="${product}"&gt;&lt;/span&gt;&lt;/p&gt;
-    &lt;div&gt;
-        &lt;img th:src="${product.pi_img}"&gt;
-        &lt;p th:text="${product.pi_name}"&gt;
-        &lt;p&gt;
-            &lt;span th:text="${product.pi_discount_rate*100}"&gt;&lt;/span&gt;%
-            &lt;span th:text="${product.pi_price}" style="text-decoration:line-through"&gt;&lt;/span&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;span th:text="${product.pi_price*(1-product.pi_discount_rate)}"&gt;&lt;/span&gt;&lt;span&gt;원&lt;/span&gt;
-        &lt;/p&gt; 
-        &lt;p th:text="${product.pi_score}"&gt;&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;p th:text="${userList}"&gt;&lt;/p&gt;
-    &lt;table border="1"&gt;
-        &lt;tbody&gt;
-            &lt;tr th:each="user, i : ${userList}"&gt;
-                &lt;td th:text="${i.count}"&gt;&lt;/td&gt;
-                &lt;td th:text="${user.id}"&gt;&lt;/td&gt;
-                &lt;td th:text="${user.name}"&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="code-header">
+        <span data-label-text="HTML"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="복사되었습니다!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>views/main.html<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h3&gt;&lt;span</span> <span class="na">th:text=</span><span class="s">"${name}"</span><span class="nt">&gt;&lt;/span&gt;&lt;/h3&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;span</span> <span class="na">th:text=</span><span class="s">"${product}"</span><span class="nt">&gt;&lt;/span&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">th:src=</span><span class="s">"${product.pi_img}"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">th:text=</span><span class="s">"${product.pi_name}"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">th:text=</span><span class="s">"${product.pi_discount_rate*100}"</span><span class="nt">&gt;&lt;/span&gt;</span>%
+            <span class="nt">&lt;span</span> <span class="na">th:text=</span><span class="s">"${product.pi_price}"</span> <span class="na">style=</span><span class="s">"text-decoration:line-through"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">th:text=</span><span class="s">"${product.pi_price*(1-product.pi_discount_rate)}"</span><span class="nt">&gt;&lt;/span&gt;&lt;span&gt;</span>원<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/p&gt;</span> 
+        <span class="nt">&lt;p</span> <span class="na">th:text=</span><span class="s">"${product.pi_score}"</span><span class="nt">&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">th:text=</span><span class="s">"${userList}"</span><span class="nt">&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+            <span class="nt">&lt;tr</span> <span class="na">th:each=</span><span class="s">"user, i : ${userList}"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">th:text=</span><span class="s">"${i.count}"</span><span class="nt">&gt;&lt;/td&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">th:text=</span><span class="s">"${user.id}"</span><span class="nt">&gt;&lt;/td&gt;</span>
+                <span class="nt">&lt;td</span> <span class="na">th:text=</span><span class="s">"${user.name}"</span><span class="nt">&gt;&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <div class="language-java highlighter-rouge"><div class="code-header">
         <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
