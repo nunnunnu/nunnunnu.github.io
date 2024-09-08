@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md",
+                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_중급 문법.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md",
+                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_중급 문법.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md",
+                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_중급 문법.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md"
+                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_중급 문법.md"
               }
             }
           },
@@ -169,6 +169,7 @@
   },
   "active": "4159bc9b09868ce1",
   "lastOpenFiles": [
+    "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md",
     "_site/posts/쿼리언어_기본문법/index.html",
     "_site/posts/쿼리언어_기본문법",
     "_site/assets/images/김영한ORM/IMG-20240908212217.png",
@@ -191,7 +192,6 @@
     "assets/images/김영한ORM/IMG-20240908210651-2.png.sb-24eaa92c-7pUnJR",
     "assets/images/김영한ORM/IMG-20240908210651.png.sb-24eaa92c-fa4Jsu",
     "assets/images/김영한ORM/IMG-20240908210651-4.png.sb-24eaa92c-6vcV4e",
-    "assets/images/김영한ORM/IMG-20240908210651-3.png.sb-24eaa92c-SqKreK",
     "_posts/blog/jpa/김영한ORM/2022-12-30-프록시와_연관관계_관리.md",
     "_posts/blog/jpa/김영한ORM/2022-12-29-고급매핑.md",
     "_posts/blog/jpa/김영한ORM/2022-12-27-연관관계_매핑.md",
