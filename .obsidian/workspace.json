@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/spring/green/2022-12-26-MVC.md",
+                "file": "_posts/blog/spring/김영한기본/2023-01-29-스프링_컨테이너와_빈.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/spring/green/2022-12-26-MVC.md",
+                "file": "_posts/blog/spring/김영한기본/2023-01-29-스프링_컨테이너와_빈.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/spring/green/2022-12-26-MVC.md",
+                "file": "_posts/blog/spring/김영한기본/2023-01-29-스프링_컨테이너와_빈.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/spring/green/2022-12-26-MVC.md"
+                "file": "_posts/blog/spring/김영한기본/2023-01-29-스프링_컨테이너와_빈.md"
               }
             }
           },
@@ -170,30 +169,33 @@
   },
   "active": "4159bc9b09868ce1",
   "lastOpenFiles": [
+    "_site/posts/스프링_컨테이너와_빈/index.html",
+    "_site/posts/스프링_컨테이너와_빈",
+    "_site/assets/images/김영한기본/IMG-20240908170920.png",
+    "_site/assets/images/김영한기본/IMG-20240908170920-3.png",
+    "_site/assets/images/김영한기본/IMG-20240908170920-2.png",
+    "_site/assets/images/김영한기본/IMG-20240908170920-1.png",
+    "_site/page6/index.html",
+    "_site/page6",
+    "_posts/blog/spring/김영한기본/2022-12-21-객체지향_설계.md",
+    "_site/posts/객체지향_설계/index.html",
+    "_site/posts/객체지향_설계",
+    "_site/posts/객체지향_설계와_스프링/index.html",
+    "_site/posts/객체지향_설계와_스프링",
+    "_site/assets/images/스프링 컨테이너와 빈/IMG-20240908165944.png",
+    "_site/assets/images/스프링 컨테이너와 빈/IMG-20240908165943.png",
+    "_site/assets/images/스프링 컨테이너와 빈/IMG-20240908165943-2.png",
+    "_site/assets/images/스프링 컨테이너와 빈/IMG-20240908165943-1.png",
+    "_site/assets/images/스프링 컨테이너와 빈",
+    "_site/assets/images/김영한기본/IMG-20240908170353.png",
+    "_site/assets/images/김영한기본/IMG-20240908170353-1.png",
+    "_site/assets/images/김영한기본",
+    "_site/tags/김영한스프링핵심원리기본편/index.html",
+    "_posts/blog/spring/김영한기본/2022-12-20-객체지향_설계와_스프링.md",
+    "_posts/blog/spring/green/2022-12-26-MVC.md",
     "_posts/blog/jpa/green/2022-12-13-green_jpa2.md",
     "_posts/blog/spring/green/2023-01-04-jsp.md",
     "_posts/blog/spring/green/2023-02-24-스프링시큐리티.md",
-    "_site/posts/스프링시큐리티/index.html",
-    "_site/posts/스프링시큐리티",
-    "_site/assets/images/green/IMG-20240908162233.png",
-    "_site/assets/images/green/IMG-20240908162233-1.png",
-    "_site/assets/images/green/IMG-20240908162232.zip",
-    "_site/assets/images/green/IMG-20240908162232.png",
-    "_site/assets/images/green/IMG-20240908162232-2.png",
-    "_site/assets/images/green/IMG-20240908162232-1.png",
-    "_site/tags/security/index.html",
-    "_site/tags/security",
-    "assets/images/스프링 시큐리티",
-    "_site/posts/jsp/index.html",
-    "_site/posts/jsp",
-    "_site/assets/images/green/IMG-20240908161923.png",
-    "_site/tags/jsp/index.html",
-    "_site/tags/jsp",
-    "_posts/blog/spring/green/2022-12-26-MVC.md",
-    "_site/assets/images/green/IMG-20240908160525.png",
-    "_site/assets/images/green/IMG-20240908160525-1.png",
-    "_site/assets/images/green/IMG-20240908160524.png",
-    "_site/assets/images/green/IMG-20240908160524-2.png",
     "_posts/blog/jpa/green/2022-12-08-green_jpa.md",
     "_posts/blog/spring/green/2022-12-06-웹페이지생성.md",
     "_posts/blog/spring/green/2022-12-07-웹_페이지_생성2.md",
@@ -212,9 +214,6 @@
     "_posts/코딩/개발 학습/기술/백엔드/ORM/공부/@Meta 어노테이션 사용기.md",
     "_posts/코딩/개발 학습/기술/백엔드/ORM/공부/공부.md",
     "_posts/코딩/개발 학습/기술/백엔드/JAVA/JAVA.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/강의/강의.md",
-    "_posts/blog/java/2022-11-07-9장.md",
-    "_posts/blog/java/그린/2022-11-09-그린_날짜.md",
-    "_posts/코딩/개발 학습/기술/백엔드/JAVA/그린아트컴퓨터학원 수업과정 - JAVA/java prepare/java prepare.md"
+    "_posts/코딩/개발 학습/기술/백엔드/JAVA/자바의 정석/강의/강의.md"
   ]
 }

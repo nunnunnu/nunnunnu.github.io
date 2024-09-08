@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2024-09-08T16:41:43+09:00</updated>
+  <updated>2024-09-08T17:14:03+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -70,6 +70,38 @@ version = &amp;#39;0.0.1-SNAPSHOT&amp;#39;
 sourceCompatibility = &amp;#39;17&amp;#39;
 
 configuration...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[김영한 스프링 핵심원리 기본편] 스프링 컨테이너와 빈</title>
+    <link href="http://localhost:4000/posts/%EC%8A%A4%ED%94%84%EB%A7%81_%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%99%80_%EB%B9%88/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 기본편] 스프링 컨테이너와 빈" />
+    <published>2023-01-29T00:00:00+09:00</published>
+  
+    <updated>2023-01-29T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%EC%8A%A4%ED%94%84%EB%A7%81_%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%99%80_%EB%B9%88/</id>
+    <content src="http://localhost:4000/posts/%EC%8A%A4%ED%94%84%EB%A7%81_%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%99%80_%EB%B9%88/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="Spring" />
+    
+  
+
+  <summary>스프링 컨테이너 생성
+
+ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Appconfig.class);
+
+ApplicationContext(인터페이스임)를 스프링 컨테이너라고 부름 - 정확히는 BeanFactory, ApplicationContext로 구분해서 부르는데 BeanFactory를 사용하는 경우가 거의 없음
+
+XML기반이나 어노테이션 기반의 자바 설정 클래스로 만들 수 있음. 직전 강의에서 사용한 AppConfig가 어노테이션기반의 자바 설정 클래스로 스프링 컨테이너를 만든 것.
+
+new AnnotationConfigApplicationContext(Appconfig.class); 이게 Applica...</summary>
 
   </entry>
 
@@ -154,14 +186,14 @@ callback(프로그램이 메소드를 실행)개념과도 맞물림 - 자바스�
 
   
   <entry>
-    <title>[국비교육학원-수업내용정리] jpql</title>
-    <link href="http://localhost:4000/posts/jpql/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] jpql" />
-    <published>2022-12-16T00:00:00+09:00</published>
+    <title>[김영한 스프링 핵심원리 기본편] 객체지향 설계</title>
+    <link href="http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5_%EC%84%A4%EA%B3%84/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 기본편] 객체지향 설계" />
+    <published>2022-12-21T00:00:00+09:00</published>
   
-    <updated>2023-01-26T00:00:00+09:00</updated>
+    <updated>2022-12-21T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/jpql/</id>
-    <content src="http://localhost:4000/posts/jpql/" />
+    <id>http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5_%EC%84%A4%EA%B3%84/</id>
+    <content src="http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5_%EC%84%A4%EA%B3%84/" />
     <author>
       <name>jinny</name>
     </author>
@@ -172,67 +204,22 @@ callback(프로그램이 메소드를 실행)개념과도 맞물림 - 자바스�
     
   
 
-  <summary>sql문 지정방법 - @Query 어노테이션 사용
-
-
-(오타가 하나라도 있으면 리포지토리가 생성이 안됨)
-
-package com.nunnunnu.jpql.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Dat...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[국비교육학원-수업내용정리] JPA2</title>
-    <link href="http://localhost:4000/posts/green_jpa2/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] JPA2" />
-    <published>2022-12-13T00:00:00+09:00</published>
-  
-    <updated>2023-01-20T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/green_jpa2/</id>
-    <content src="http://localhost:4000/posts/green_jpa2/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
+  <summary>비즈니스 요구사항과 설계
     
-    <category term="JPA" />
-    
-  
-
-  <summary>— API명세서 작성
-
-
-
-  회원 정보 조회시 비밀번호 빼고 조회하는 법
-
-
-package com.green.jpa_test.member.entity;
-
-import java.util.Date;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProper...</summary>
+      회원
+        
+          
+            회원을 가입하고 조회할 수 있다.
+  회원은 일반과 VIP 두 가지 등급이 있다.
+          
+          회원 데이터는 자체 DB를 구축할 수 있고, 외부 시스템과 연동할 수 있다. (미확정)
+          
+            주문과 할인 정책
+  회원은 상품을 주문할 수 있다.
+  회원 등급에 따라 할인 정책을 적용할 수 있다.
+          
+          할인 정책은 모든 VIP는 1000원을 할인해주는 고정 금액 할인을 적용해달라. (나중에 변경 될 수 있다.)
+          할인 정책은 변경 가능성이 높다. 회사의 기본 할인 정책을 아직 정하지 못했고, 오...</summary>
 
   </entry>
 
