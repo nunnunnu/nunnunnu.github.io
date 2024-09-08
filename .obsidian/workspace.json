@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/spring/green/2022-12-06-웹페이지생성.md",
+                "file": "_posts/blog/jpa/green/2022-12-13-green_jpa2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/spring/green/2022-12-06-웹페이지생성.md",
+                "file": "_posts/blog/jpa/green/2022-12-13-green_jpa2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/spring/green/2022-12-06-웹페이지생성.md",
+                "file": "_posts/blog/jpa/green/2022-12-13-green_jpa2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/spring/green/2022-12-06-웹페이지생성.md"
+                "file": "_posts/blog/jpa/green/2022-12-13-green_jpa2.md"
               }
             }
           },
@@ -169,28 +169,33 @@
   },
   "active": "4159bc9b09868ce1",
   "lastOpenFiles": [
+    "_site/posts/green_jpa2/index.html",
+    "_site/posts/green_jpa2",
+    "_site/assets/images/green/IMG-20240908151547.png",
+    "_site/assets/images/green/IMG-20240908151547.mp4",
+    "_site/assets/images/green/IMG-20240908151547-4.png",
+    "_site/assets/images/green/IMG-20240908151547-3.png",
+    "_site/assets/images/green/IMG-20240908151547-2.png",
+    "_site/assets/images/green/IMG-20240908151547-1.png",
+    "_site/assets/images/green/IMG-20240908151546.png",
+    "_site/assets/images/green/IMG-20240908151546-3.png",
+    "_site/assets/images/green/IMG-20240908151546-2.png",
+    "_site/assets/images/green/IMG-20240908151546-1.png",
+    "_site/assets/images/green/20240908151956.png",
+    "_posts/blog/jpa/green/2022-12-13-green_jpa2.md",
+    "assets/images/green/IMG-20240908151547.mp4",
     "_posts/blog/spring/green/2022-12-05-그린_환경설정.md",
     "_posts/blog/spring/green/2022-12-06-웹페이지생성.md",
-    "_site/posts/웹페이지생성/index.html",
-    "_site/posts/웹페이지생성",
-    "_site/assets/images/환경설정/IMG-20240907220756-4.png",
-    "_site/assets/images/환경설정/IMG-20240907220754-4.png",
-    "_site/assets/images/green/IMG-20240907220958.png",
-    "_site/assets/images/green/IMG-20240907220958-2.png",
-    "_site/assets/images/green/IMG-20240907220958-1.png",
-    "_site/assets/images/green/IMG-20240907220957.png",
-    "_site/assets/images/green/IMG-20240907220957-2.png",
-    "_site/assets/images/green/IMG-20240907220957-1.png",
-    "_site/assets/images/green/IMG-20240907220918.png",
-    "_site/assets/images/green/IMG-20240907220917.png",
-    "_site/assets/images/green/IMG-20240907220917.mp4",
-    "_site/assets/images/green",
-    "assets/images/green/IMG-20240907220917.mp4",
-    "assets/images/green",
-    "assets/images/웹페이지생성",
-    "assets/images/웹 페이지 생성",
-    "_site/posts/그린_환경설정/index.html",
-    "_site/posts/그린_환경설정",
+    "_posts/blog/jpa/green/2022-12-08-green_jpa.md",
+    "assets/images/jpa2",
+    "_site/tags/orm/index.html",
+    "_site/tags/orm",
+    "_site/posts/green_jpa/index.html",
+    "_site/posts/green_jpa",
+    "_site/assets/images/jpa",
+    "_site/categories/jpa/index.html",
+    "_posts/blog/spring/green/2022-12-08-웹페이지3.md",
+    "_posts/blog/spring/green/2022-12-07-웹_페이지_생성2.md",
     "_posts/코딩/개발 학습/기술/백엔드/Spring/Spring.md",
     "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/CRUD.md",
     "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/정규화/정규화.md",
@@ -209,10 +214,6 @@
     "_posts/코딩/개발 학습/기술/백엔드/JAVA/그린아트컴퓨터학원 수업과정 - JAVA/그린아트컴퓨터학원 수업과정 - JAVA.md",
     "_posts/blog/java/그린/2022-11-08-예외처리_파일입출력.md",
     "_posts/blog/java/그린/2022-11-03-그린_컬렉션프레임워크2.md",
-    "_posts/blog/java/그린/2022-11-03-그린_객체지향2.md",
-    "_posts/blog/java/그린/2022-10-28-객체지향언어.md",
-    "_posts/코딩/개발 학습/문제 해결과정/vscode에서 args값 받는 법.md",
-    "_posts/blog/java/그린/2022-11-01-컬렉션 프레임워크.md",
-    "_posts/blog/java/그린/2022-10-27-변수와 메소드.md"
+    "_posts/blog/java/그린/2022-11-03-그린_객체지향2.md"
   ]
 }
