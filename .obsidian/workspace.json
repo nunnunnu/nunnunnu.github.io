@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/spring/김영한스프링입문/2022-12-12-AOP.md",
+                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/spring/김영한스프링입문/2022-12-12-AOP.md",
+                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/spring/김영한스프링입문/2022-12-12-AOP.md",
+                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/spring/김영한스프링입문/2022-12-12-AOP.md"
+                "file": "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md"
               }
             }
           },
@@ -169,33 +169,43 @@
   },
   "active": "4159bc9b09868ce1",
   "lastOpenFiles": [
+    "_site/posts/쿼리언어_기본문법/index.html",
+    "_site/posts/쿼리언어_기본문법",
+    "_site/assets/images/김영한ORM/IMG-20240908212217.png",
+    "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_중급 문법.md",
+    "_site/posts/쿼리언어_중급-문법/index.html",
+    "_site/posts/쿼리언어_중급-문법",
+    "_site/assets/images/김영한ORM/IMG-20240908211515.png",
+    "_site/assets/images/김영한ORM/IMG-20240908211515-5.png",
+    "_site/assets/images/김영한ORM/IMG-20240908211515-4.png",
+    "_site/assets/images/김영한ORM/IMG-20240908211515-3.png",
+    "_site/assets/images/김영한ORM/IMG-20240908211515-2.png",
+    "_site/assets/images/김영한ORM/IMG-20240908211515-1.png",
+    "_site/assets/images/김영한ORM/IMG-20240908211514.png",
+    "_site/assets/images/김영한ORM/IMG-20240908211514-3.png",
+    "_site/assets/images/김영한ORM/IMG-20240908211514-2.png",
+    "_posts/blog/jpa/김영한ORM/2022-12-31-값타입.md",
+    "_site/posts/값타입/index.html",
+    "_site/posts/값타입",
+    "assets/images/김영한ORM/IMG-20240908210651-3.png.sb-24eaa92c-UxtKWb",
+    "assets/images/김영한ORM/IMG-20240908210651-2.png.sb-24eaa92c-7pUnJR",
+    "assets/images/김영한ORM/IMG-20240908210651.png.sb-24eaa92c-fa4Jsu",
+    "assets/images/김영한ORM/IMG-20240908210651-4.png.sb-24eaa92c-6vcV4e",
+    "assets/images/김영한ORM/IMG-20240908210651-3.png.sb-24eaa92c-SqKreK",
+    "_posts/blog/jpa/김영한ORM/2022-12-30-프록시와_연관관계_관리.md",
+    "_posts/blog/jpa/김영한ORM/2022-12-29-고급매핑.md",
+    "_posts/blog/jpa/김영한ORM/2022-12-27-연관관계_매핑.md",
+    "_posts/blog/jpa/김영한ORM/2022-12-26-엔티티_매핑.md",
+    "_posts/blog/jpa/김영한ORM/2022-12-25-영속성_관리.md",
+    "_posts/blog/jpa/김영한ORM/2022-12-23-설정.md",
+    "_posts/코딩/개발 학습/기술/백엔드/ORM/JPA/JPA.md",
+    "_posts/blog/spring/김영한기본/2023-01-29-스프링_컨테이너와_빈.md",
+    "_posts/blog/spring/김영한스프링입문/2022-12-12-AOP.md",
     "_posts/blog/spring/김영한스프링입문/2022-12-10-웹_MVC.md",
     "_posts/blog/spring/김영한스프링입문/2022-12-10-스프링_DB_접근.md",
-    "_posts/blog/spring/김영한스프링입문/2022-12-12-AOP.md",
-    "_site/posts/웹_MVC/index.html",
-    "_site/posts/웹_MVC",
-    "_site/posts/스프링_빈과_의존관계/index.html",
-    "_site/posts/스프링_빈과_의존관계",
-    "_site/assets/images/김영한스프링입문/IMG-20240908180946.png",
     "_posts/blog/spring/김영한스프링입문/2022-12-08-스프링_빈과_의존관계.md",
     "_posts/blog/spring/김영한스프링입문/2022-12-06-회원관리.md",
-    "_site/posts/회원관리/index.html",
-    "_site/posts/회원관리",
-    "_site/assets/images/김영한스프링입문/IMG-20240908180545.png",
-    "_site/assets/images/김영한스프링입문/IMG-20240908180545-1.png",
     "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md",
-    "_site/posts/웹개발_방법/index.html",
-    "_site/posts/웹개발_방법",
-    "_site/assets/images/회원관리/IMG-20240908175402.png",
-    "_site/assets/images/회원관리/IMG-20240908175402-1.png",
-    "_site/assets/images/회원관리",
-    "_site/assets/images/스프링 빈과 의존관계/IMG-20240908175402.png",
-    "_site/assets/images/스프링 빈과 의존관계",
-    "_site/assets/images/김영한스프링입문/IMG-20240908175450.png",
-    "_site/assets/images/김영한스프링입문/IMG-20240908175450-4.png",
-    "_site/assets/images/김영한스프링입문/IMG-20240908175450-3.png",
-    "_site/assets/images/김영한스프링입문/IMG-20240908175450-1.png",
-    "_posts/blog/spring/김영한기본/2023-01-29-스프링_컨테이너와_빈.md",
     "_posts/blog/spring/김영한스프링입문/김영한 스프링 입문.md",
     "_posts/blog/spring/김영한기본/2022-12-21-객체지향_설계.md",
     "_posts/blog/spring/김영한기본/2022-12-20-객체지향_설계와_스프링.md",
@@ -204,16 +214,6 @@
     "_posts/blog/spring/green/2023-01-04-jsp.md",
     "_posts/blog/spring/green/2023-02-24-스프링시큐리티.md",
     "_posts/blog/jpa/green/2022-12-08-green_jpa.md",
-    "_posts/blog/spring/green/2022-12-06-웹페이지생성.md",
-    "_posts/blog/spring/green/2022-12-07-웹_페이지_생성2.md",
-    "_posts/blog/spring/green/2022-12-08-웹페이지3.md",
-    "_posts/blog/spring/green/2022-12-16-jpql.md",
-    "_posts/코딩/개발 학습/기술/백엔드/ORM/JPA/그린컴퓨터학원 수업과정 - JPA/그린컴퓨터학원 수업과정 - JPA.md",
-    "_posts/blog/spring/green/2022-12-05-그린_환경설정.md",
-    "_posts/코딩/개발 학습/기술/백엔드/Spring/Spring.md",
-    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/CRUD.md",
-    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/정규화/정규화.md",
-    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/외래키/외래키.md",
-    "_posts/코딩/개발 학습/기술/백엔드/RDBMS/그린아트컴퓨터학원 수업과정 - MYSQL/쿠팡(6조 작업)/쿠팡(6조 작업).md"
+    "_posts/blog/spring/green/2022-12-06-웹페이지생성.md"
   ]
 }

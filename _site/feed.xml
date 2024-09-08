@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2024-09-08T18:13:35+09:00</updated>
+  <updated>2024-09-08T21:27:41+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -148,78 +148,76 @@ dependencies {
 
   
   <entry>
-    <title>[국비교육학원-수업내용정리] MVC패턴 실습</title>
-    <link href="http://localhost:4000/posts/MVC/" rel="alternate" type="text/html" title="[국비교육학원-수업내용정리] MVC패턴 실습" />
-    <published>2022-12-26T00:00:00+09:00</published>
+    <title>[김영한 자바 ORM 표준 JPA] 쿼리언어 - 중급 문법</title>
+    <link href="http://localhost:4000/posts/%EC%BF%BC%EB%A6%AC%EC%96%B8%EC%96%B4_%EC%A4%91%EA%B8%89-%EB%AC%B8%EB%B2%95/" rel="alternate" type="text/html" title="[김영한 자바 ORM 표준 JPA] 쿼리언어 - 중급 문법" />
+    <published>2022-12-31T00:00:00+09:00</published>
   
-    <updated>2022-12-26T00:00:00+09:00</updated>
+    <updated>2023-09-03T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/MVC/</id>
-    <content src="http://localhost:4000/posts/MVC/" />
+    <id>http://localhost:4000/posts/%EC%BF%BC%EB%A6%AC%EC%96%B8%EC%96%B4_%EC%A4%91%EA%B8%89-%EB%AC%B8%EB%B2%95/</id>
+    <content src="http://localhost:4000/posts/%EC%BF%BC%EB%A6%AC%EC%96%B8%EC%96%B4_%EC%A4%91%EA%B8%89-%EB%AC%B8%EB%B2%95/" />
     <author>
       <name>jinny</name>
     </author>
 
   
     
-    <category term="Spring" />
+    <category term="JPA" />
     
   
 
-  <summary>클라이언트사이드 렌더링(CSR) : 사용자의 컴퓨터 성능에따라 달라짐. (지금까지 한 방법)
+  <summary>경로 표현식
 
-서버사이드 렌더링(SSR) : 서버의 성능에 따라 움직임?(새로 시도할 방법)
+.(점)을 찍어서 객체 그래프를 탐색함
 
-jdk버전 17.0.4.1로 업데이트함
 
-환경변수 JAVA_HOME 경로 변경해주기. vscode에서도 자바버전 확인해보기
+  [!important]
+select m.username -&amp;amp;gt; 상태 필드from Member mjoin m.team t -&amp;amp;gt; 단일 값 연관 필드(엔티티로 넘어감. ManyToOne or OneToOne)join m.orders o -&amp;amp;gt; 컬렉션 값 연관 필드(양방향 관계. 컬렉션으로 넘어감)where t.name = ‘팀A’
 
-스프링 프로젝트 생성시 자바 3.0.1, 17버전으로 선택
 
-application.properties에서 공백이 들어가면 안됨. 종료를 의미하는 ;을 사용하지 않아서 제대로 써줘야함
 
-controller(사용자와의 연결을 관리)에서 날아온 medel을 viewResolver가 파일을 찾아서 view에 표시함
+  상태 필드(state field): 단순히 값을 저장하기 위한 필드(ex: m.username). 경로 탐색의 끝(.찍어서 어디 못간다는 소리). 탐색x
+  
+    연관 필드(association field): 연관관계를 위한 필드
 
-callback(프로그램이 메소드를 실행)개념과도 맞물림 - 자바스크립트의 event, click,...</summary>
+    
+      단일 값 연관 필드 : @ManyToOne, ...</summary>
 
   </entry>
 
   
   <entry>
-    <title>[김영한 스프링 핵심원리 기본편] 객체지향 설계</title>
-    <link href="http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5_%EC%84%A4%EA%B3%84/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 기본편] 객체지향 설계" />
-    <published>2022-12-21T00:00:00+09:00</published>
+    <title>[김영한 자바 ORM 표준 JPA] 쿼리언어 기본문법</title>
+    <link href="http://localhost:4000/posts/%EC%BF%BC%EB%A6%AC%EC%96%B8%EC%96%B4_%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95/" rel="alternate" type="text/html" title="[김영한 자바 ORM 표준 JPA] 쿼리언어 기본문법" />
+    <published>2022-12-31T00:00:00+09:00</published>
   
-    <updated>2022-12-21T00:00:00+09:00</updated>
+    <updated>2023-09-03T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5_%EC%84%A4%EA%B3%84/</id>
-    <content src="http://localhost:4000/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5_%EC%84%A4%EA%B3%84/" />
+    <id>http://localhost:4000/posts/%EC%BF%BC%EB%A6%AC%EC%96%B8%EC%96%B4_%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95/</id>
+    <content src="http://localhost:4000/posts/%EC%BF%BC%EB%A6%AC%EC%96%B8%EC%96%B4_%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95/" />
     <author>
       <name>jinny</name>
     </author>
 
   
     
-    <category term="Spring" />
+    <category term="JPA" />
     
   
 
-  <summary>비즈니스 요구사항과 설계
-    
-      회원
-        
-          
-            회원을 가입하고 조회할 수 있다.
-  회원은 일반과 VIP 두 가지 등급이 있다.
-          
-          회원 데이터는 자체 DB를 구축할 수 있고, 외부 시스템과 연동할 수 있다. (미확정)
-          
-            주문과 할인 정책
-  회원은 상품을 주문할 수 있다.
-  회원 등급에 따라 할인 정책을 적용할 수 있다.
-          
-          할인 정책은 모든 VIP는 1000원을 할인해주는 고정 금액 할인을 적용해달라. (나중에 변경 될 수 있다.)
-          할인 정책은 변경 가능성이 높다. 회사의 기본 할인 정책을 아직 정하지 못했고, 오...</summary>
+  <summary>JPAFactoryQuery query = new JPAQueryFactory(em);
+QMember m = QMember.member;
+
+JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 검색쿼리. 검색을 할때도 테이블이 아닌 객체를 대상으로 검색을 함. 모든 DB데이터를 객체로 변환해서 검색을 하는 것은 불가능함
+에플리케이션이 필요한 데이터만 DB에 불러오려면 결국 검색조건이 포함된 SQL이 필요함.
+
+JPQL(Java Persistence Query Language)
+
+가장 단순한 조회 방법 - entityManager.find(), 객체 그래프 탐색(a.getB().getC())
+
+JPA는 SQL을 추상화 한 JPQL이라는 객체 지향 쿼리 언어를 제공함
+
+SQL과 문법이 유사함. se...</summary>
 
   </entry>
 
