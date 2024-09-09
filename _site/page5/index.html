@@ -546,30 +546,26 @@
 <div id="post-list" class="flex-grow-1 px-xl-1">
   
     <article class="card-wrapper card">
-      <a href="/posts/%EA%B7%B8%EB%A6%B0_%EC%97%B0%EC%82%B0%EC%9E%90(Operator)/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/jpql/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 연산자(Operator)</h1>
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] jpql</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>비교연산자는 우선순위가 거의 비슷해서 적은 순서대로 처리됨
+              <p>sql문 지정방법 - @Query 어노테이션 사용
 
-비트연산자는 거의 안씀. (», «) - low level에서 사용
 
-low level : 컴퓨터 기계쪽에 가까움(서버)
+(오타가 하나라도 있으면 리포지토리가 생성이 안됨)
 
-high level : 사용자쪽에 가까움(프론트)
+package com.nunnunnu.jpql.entity;
 
-middle level : 백엔드
-
-=가 제일 후순위임
-
-import java.io.BufferedReader;
-im...</p>
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedVa...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -586,11 +582,11 @@ im...</p>
 
 <time
   
-  data-ts="1666018800"
+  data-ts="1671116400"
   data-df="YYYY/MM/DD"
   
 >
-  2022/10/18
+  2022/12/16
 </time>
 
 
@@ -599,7 +595,7 @@ im...</p>
                   <i class="far fa-folder-open fa-fw me-1"></i>
                   <span class="categories">
                     
-                      JAVA
+                      Spring
                   </span>
                 
               </div>
@@ -614,30 +610,553 @@ im...</p>
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EA%B7%B8%EB%A6%B0_%EB%B3%80%EC%88%98(Variable)/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/green_jpa2/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 변수(Variable)</h1>
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] JPA2</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>단축키
+              <p>— API명세서 작성
+
+
+
+  회원 정보 조회시 비밀번호 빼고 조회하는 법
+
+
+package com.green.jpa_test.member.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persist...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1670857200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/12/13
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      JPA
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/AOP/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 입문] AOP</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>public Long join(Member member) {
+	 long start = System.currentTimeMillis();
+	 try {
+		 validateDuplicateMember(member); //중복 회원 검증
+		 memberRepository.save(member);
+		 return member.getId();
+	 } f...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1670770800"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/12/12
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Spring
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EC%9B%B9_MVC/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 입문] 웹 MVC</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>package com.greenart.practice.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.spring...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1670598000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/12/10
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Spring
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EC%8A%A4%ED%94%84%EB%A7%81_DB_%EC%A0%91%EA%B7%BC/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 입문] 스프링 DB 접근</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>순수 JDBC
+
+h2 사용
+
+package com.greenart.practice.repository;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Sta...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1670598000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/12/10
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Spring
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EC%8A%A4%ED%94%84%EB%A7%81_%EB%B9%88%EA%B3%BC_%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 입문] 스프링 빈과 의존관계</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>controller가 service를 이용해서 데이터 추가, 조회 등을 실행할 수 있어야함(=의존관계가 있어야함).
+
+Acontroller만 Aservice를 사용할 수 있어야함. Bcontroller는 Bservice만 사용가능. Aservice는 사용불가능.→
+
+
+
+— 스프링 빈 등록하는 방법
+
+
+  컴포넌트 스캔과 자동 의존관계 설정
+
+
+pack...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1670425200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/12/08
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Spring
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%803/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 웹페이지 생성 3</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>package com.green.practice5.data;
+
+import java.util.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+publi...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1670425200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/12/08
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Spring
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/green_jpa/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] JPA</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>생성후 sql DB생성
+
+package com.greenart.dbconnect.api;
+
+import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+impor...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1670425200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/12/08
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      JPA
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EC%9B%B9_%ED%8E%98%EC%9D%B4%EC%A7%80_%EC%83%9D%EC%84%B12/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 웹페이지 생성 2</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>DI : 객체간의 관계 설정
+
+IOC : 제어 역전. 실행의 주체가 바뀜.
+
+AOP : 상속등의 개념을 적극활용 . 파편화위험있음
+
+GoF : 디자인 패턴
+
+package com.greenart.practice3;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework....</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1670338800"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/12/07
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Spring
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%ED%9A%8C%EC%9B%90%EA%B4%80%EB%A6%AC/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 입문] 회원관리</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>비지니스 요구사항 정리
+
     
-      ctrl + alt + 방향키 - 멀티라인 셀렉트. 동시수정 단축키
-      주석처리 ctrl + /
+      데이터 : 회원id, 이름
+      기능 : 회원등록, 조회
+      아직 테이터 저장소가 선정되지 않음.(가상 시나리오)
+    
+
+    
+
     
   
+  
+    회원 도메인과 리포지토리 만들기
 
-
-int와 double이 처리속도가 가장 빠름
-
-shift + home - 커서부터 줄의 맨 앞쪽까지 선택
-
-public class VariablesEx {
-    public static void main...</p>
+      package com.greenart.practice.domain;
+    
+  impo...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -654,537 +1173,15 @@ public class VariablesEx {
 
 <time
   
-  data-ts="1665932400"
+  data-ts="1670252400"
   data-df="YYYY/MM/DD"
   
 >
-  2022/10/17
+  2022/12/06
 </time>
 
 
                 <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/8%EC%9E%A5/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 8장 - 예외</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[8-1] 예외처리의 정의와 목적
-
-정의 : 발생할 수 있는 예외(에러아님)를 미리 대비해놓는 것
-
-목적 : 이미 일어날 것을 예상한 예외를 무시하고 정삭적인 실행상태를 유지시키기위해 사용
-
-
-
-[8-2] 실행도중 예외가 발생하여 화면에 출력된 내용. 옳지않은것은?
-
-
-  [!important]
-java.lang.ArithmeticException :...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1665846000"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/16
-</time>
-
-
-                <!-- categories -->
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C_7%EC%9E%A5_%EC%83%81%EC%86%8D_2/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문자 7장 - 상속 2</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[7-17] 예제코드의 세 클래스에서 공통부분을 뽑아 Unit 클래스를 만들고 이 클래스를 상속받도록 코드를 변경
-
-  예제
-    class Marine{
-  int x,y;
-  void move(int x, int y){}
-  void stop(){}
-  void changeMode(){}
-}
-class Tank{
-  int x, y;
-  void...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1665327600"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/10
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/7%EC%9E%A5_%EC%83%81%EC%86%8D_1/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문자 7장 - 상속 1</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[7-1] SutdaCard 배열을 초기화하는 문제. 숫자가 1,3,8인경우 isKwang이 true여야함.
-
-package _2javajungsuktestEx7;
-
-class SutdaDeck{
-	final int CARD_NUM=20;
-	SutdaCard cards[] = new SutdaCard[CARD_NUM];
-	
-	SutdaDeck() {
-...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1665068400"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/07
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_3/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 6장 - 객체 3</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[6-20] 메소드 shuffle을 정의해 배열을 섞기
-
-package _2javajungsuktestEx6;
-
-import java.util.Arrays;
-
-public class ex6_20 {
-
-	static int[] shuffle(int arr[]) {
-		if(arr==null || arr.length==0) return arr;
-		int...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664982000"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/06
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_2/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 6장 - 객체 2</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[6-8] 다음 코드에 정의된 변수들을 종류별로 구분해서 적기
-
-class PlayingCard{
-	int kind;
-	int num;
-
-	static int width;
-	static int height;
-
-	PlayingCard(int k, int n){
-		kind = k;
-		num = n;
-	}
-	public static void main(S...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664982000"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/06
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_1/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 6장 - 객체 1</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[6-1~6-2] SutdaCard클래스를 정의하고 두개의 생성자와 info()를 추가
-
-package _2javajungsuktestEx6;
-class SutdaCard{
-	int num=3 ;
-	boolean isKwang=true;
-	
-	SutdaCard(){
-		this(1,true);
-	}
-	
-	SutdaCard(int num, boolean...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664895600"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/05
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/5%EC%9E%A5_%EB%B0%B0%EC%97%B4/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 5장 - 배열</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[5-1] 잘못된것을 고르시오
-
-a. int[] arr[];
-b. int[] arr = {1,2,3,};
-c. int[] arr = new int[5];
-d. int[] arr = new int[5]{1,2,3,4,5}; - new int[5]나 {1,2,3,4,5} 둘중 하나를 지워야 함.
-e. int arr[5]; 선언하면서 크기지정 불가
-f. i...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664722800"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/03
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/4%EC%9E%A5_%EC%A1%B0%EA%B1%B4%EB%AC%B8_%EB%B0%98%EB%B3%B5%EB%AC%B8/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 4장 - 조건문, 반복문</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[4-1] 다음의 문장들을 조건식으로 표현하라.
-
-package _2javajungsuktestEx4;
-
-public class ex4_1 {
-
-	public static void main(String[] args) {
-//		1. int형 변수 x가 10보다 크고 20 보다 작을 때 true인 조건식
-		int x=10;
-		System.out.pr...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664636400"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/02
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
                 
               </div>
 
@@ -1331,12 +1328,56 @@ public class ex4_1 {
       
 
       
+        <!-- hide number -->
+        
+          <li class="page-item disabled">
+            <span class="page-link">...</span>
+          </li>
+          
+        
+      
+    
+      
+      
+      
+      
+      
+
+      
+
+      
+        <!-- hide number -->
+        
+      
+    
+      
+      
+      
+      
+      
+
+      
+
+      
+        <!-- hide number -->
+        
+      
+    
+      
+      
+      
+      
+      
+
+      
+
+      
         <!-- show number -->
         <li class="page-item ">
           <a
             class="page-link"
-            href="/page7"
-          >7</a>
+            href="/page10"
+          >10</a>
         </li>
       
     
@@ -1344,7 +1385,7 @@ public class ex4_1 {
     <!-- mobile pagination -->
     <li class="page-index align-middle">
       <span>5</span>
-      <span class="text-muted">/ 7</span>
+      <span class="text-muted">/ 10</span>
     </li>
 
     <!-- right arrow -->
@@ -1458,90 +1499,6 @@ public class ex4_1 {
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1601,85 +1558,10 @@ public class ex4_1 {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1768,10 +1650,6 @@ public class ex4_1 {
     
     
     
-      
-        
-        
-
   
     
     
@@ -1793,6 +1671,31 @@ public class ex4_1 {
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1953,6 +1856,145 @@ public class ex4_1 {
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2022,6 +2064,80 @@ public class ex4_1 {
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2081,7 +2197,15 @@ public class ex4_1 {
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2104,7 +2228,16 @@ public class ex4_1 {
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/spring/">spring</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/java/">java</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/jpa/">jpa</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/orm/">ORM</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D/">자바의정석</a>
@@ -2113,25 +2246,16 @@ public class ex4_1 {
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B5%AD%EB%B9%84%EA%B5%90%EC%9C%A1/">국비교육</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/spring/">spring</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/orm/">ORM</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/jpa/">jpa</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%9E%90%EB%B0%94orm%ED%91%9C%EC%A4%80jpa/">김영한자바ORM표준JPA</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B0%9D%EC%B2%B4/">객체</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mvc/">mvc</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%EC%9E%85%EB%AC%B8/">김영한스프링입문</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81mvc1/">김영한스프링MVC1</a>
       
     </div>
   </section>
@@ -2210,90 +2334,6 @@ public class ex4_1 {
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2353,85 +2393,10 @@ public class ex4_1 {
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2520,10 +2485,6 @@ public class ex4_1 {
     
     
     
-      
-        
-        
-
   
     
     
@@ -2545,6 +2506,31 @@ public class ex4_1 {
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2705,6 +2691,145 @@ public class ex4_1 {
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2774,6 +2899,80 @@ public class ex4_1 {
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2833,7 +3032,15 @@ public class ex4_1 {
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2856,7 +3063,16 @@ public class ex4_1 {
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/spring/">spring</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/java/">java</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/jpa/">jpa</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/orm/">ORM</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D/">자바의정석</a>
@@ -2865,25 +3081,16 @@ public class ex4_1 {
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B5%AD%EB%B9%84%EA%B5%90%EC%9C%A1/">국비교육</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/spring/">spring</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/orm/">ORM</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/jpa/">jpa</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%9E%90%EB%B0%94orm%ED%91%9C%EC%A4%80jpa/">김영한자바ORM표준JPA</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B0%9D%EC%B2%B4/">객체</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mvc/">mvc</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%EC%9E%85%EB%AC%B8/">김영한스프링입문</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81mvc1/">김영한스프링MVC1</a>
       
     </div>
   </section>
