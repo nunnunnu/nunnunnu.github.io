@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/spring/high/2024-02-17-빈후처리기_BeanPostProcessor.md",
+                "file": "_posts/blog/spring/high/2024-03-02-프록시기술과한계.md",
                 "mode": "source",
                 "source": false
               }
@@ -209,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/spring/high/2024-02-17-빈후처리기_BeanPostProcessor.md",
+                "file": "_posts/blog/spring/high/2024-03-02-프록시기술과한계.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -226,7 +226,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/spring/high/2024-02-17-빈후처리기_BeanPostProcessor.md",
+                "file": "_posts/blog/spring/high/2024-03-02-프록시기술과한계.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -249,7 +249,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/spring/high/2024-02-17-빈후처리기_BeanPostProcessor.md"
+                "file": "_posts/blog/spring/high/2024-03-02-프록시기술과한계.md"
               }
             }
           },
@@ -293,9 +293,15 @@
   },
   "active": "4c1f1d4581934dac",
   "lastOpenFiles": [
-    "_posts/blog/spring/high/2024-02-17-스프링AOP구현.md",
-    "_posts/blog/spring/high/2024-02-17-빈후처리기_BeanPostProcessor.md",
+    "assets/images/high/Untitled.png",
+    "assets/images/high/Untitled1.png",
+    "assets/images/high/Untitled2.png",
+    "assets/images/high/Untitled3.png",
+    "assets/images/high/Untitled7.png",
+    "_posts/blog/spring/high/2024-03-02-프록시기술과한계.md",
     "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
+    "_posts/blog/spring/high/2024-02-17-빈후처리기_BeanPostProcessor.md",
+    "_posts/blog/spring/high/2024-02-17-스프링AOP구현.md",
     "_site/posts/프록시기술과한계/index.html",
     "_site/posts/프록시기술과한계",
     "_site/posts/프록시내부호출/index.html",
@@ -312,8 +318,6 @@
     "_site/assets/images/high/Untitled1.png",
     "_site/assets/images/high/Untitled.png",
     "_site/assets/images/high/IMG-20240909161736.png",
-    "_site/assets/images/high/IMG-20240909161736-2.png",
-    "_site/assets/images/high/IMG-20240909161736-1.png",
     "_site/Invalid date.md",
     "_posts/blog/spring/high/2024-01-01-디자인패턴_strategy.md",
     "_posts/blog/spring/high/2024-01-01-디자인패턴_templateMethod.md",
@@ -325,10 +329,7 @@
     "_posts/blog/spring/high/2024-02-17-프록시_팩토리.md",
     "_posts/blog/spring/high/2024-02-17-프록시_프록시 패턴, 데코레이터 패턴.md",
     "_posts/blog/spring/high/2024-02-25-포인트컷지시자.md",
-    "_posts/blog/spring/high/2024-03-02-프록시기술과한계.md",
-    "assets/images/high/Pastedimage20240909151813.png",
     "Invalid date.md",
-    "assets/images/high/Pastedimage20240909154041.png",
     "_posts/코딩/개발 학습/기술/백엔드/Spring/김영한 스프링 입문 로드맵/스프링 핵심원리 - 고급/스프링 핵심원리 - 고급.md",
     "_posts/코딩/개발 학습/기술/백엔드/Spring/김영한 스프링 입문 로드맵/스프링MVC2/스프링MVC2.md",
     "_posts/코딩/개발 학습/기술/백엔드/Spring/김영한 스프링 입문 로드맵/스프링MVC2/로그인.md",
