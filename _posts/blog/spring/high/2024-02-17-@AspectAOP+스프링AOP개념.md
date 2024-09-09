@@ -1,8 +1,14 @@
 ---
-생성일: Invalid date
+생성일: 2024-02-17
 하위태그:
   - 스프링 핵심원리 - 고급
-최종 편집 일시: Invalid date
+last_modified_at: 2024-02-17
+category: Spring
+tags:
+  - spring
+  - 김영한스프링핵심원리-고급
+  - AOP
+title: "[김영한 스프링 핵심원리 - 고급] @Aspect AOP + 스프링 AOP 개념"
 ---
 빈 후처리기에서 프록시 생성시 빈으로 등록된 어드바이저를 모두 조회하여 적용대상여부를 판단한다고했는데
 
@@ -10,7 +16,7 @@
 
 @Aspect어노테이션을 사용하면됨
 
-```Java
+```java
 package com.example.proxy.config.V6_aop.aspect;
 
 import com.example.proxy.trace.TraceStatus;
@@ -49,7 +55,7 @@ public class LogTraceAspect {
 }
 ```
 
-```Java
+```java
 package com.example.proxy.config.V6_aop;
 
 import com.example.proxy.config.AppV1Config;
@@ -70,7 +76,7 @@ public class AopConfig {
 }
 ```
 
-```Java
+```java
 package com.example.proxy;
 
 @Import(AopConfig.class)
@@ -88,7 +94,7 @@ public class ProxyApplication {
 }
 ```
 
-![[assets/images/@Aspect AOP + 스프링 AOP 개념/IMG-20240909142414.png|IMG-20240909142414.png]]
+![images](/assets/images/high/IMG-20240909155646.png)
 
 1. 실행 : 스프링 애플리케이션 로딩 시점에 자동 프록시 생성기 호출
 2. 모든 @Aspect빈을 조회 : 스프링컨테이너에서 @Aspect가 붙은 스프링 빈을 모두 조회
@@ -96,12 +102,10 @@ public class ProxyApplication {
 4. @Aspect 기반 어드바이저 저장 : 생성한 어드바이저를 @Aspect 어드바이저 빌더 내부에 저장
 
 — @Aspect
-
 BeanFactoryAspectJAdvisorsBuilder클래스. @Aspect의 정보를 기반으로 포인트컷, 어드바이스, 어드바이저를 생성, 보관
-
 @Aspect 정보를 기반으로 어드바이저를 만들고 @Aspect 어드바이저 빌더 내부 저장소에 캐시. 캐시에 어드바이저가 이미 만들어져 있으면 저장된 어드바이저 반환
 
-![[assets/images/@Aspect AOP + 스프링 AOP 개념/IMG-20240909142414-1.png|IMG-20240909142414-1.png]]
+![images](/assets/images/high/IMG-20240909155646-1.png)
 
 1. 빈 객체 생성
 2. 전달
@@ -116,10 +120,9 @@ BeanFactoryAspectJAdvisorsBuilder클래스. @Aspect의 정보를 기반으로 �
 
 지금까지 요구사항을 적용하기위해 프록시를 사용하여 처리를 했는데 이처럼
 
-여러 메소드에서 공통으로 사용해야하는 부가 기능(해당객체가 제공하는 고유의 기능을 보조하기위한 기능)을 ==**횡단관심사**== 라고한다
+여러 메소드에서 공통으로 사용해야하는 부가 기능(해당객체가 제공하는 고유의 기능을 보조하기위한 기능)을 **<mark class="hltr-cyan">횡단관심사</mark>** 라고한다
 
-스프링 AOP는 여기서 횡단 관심사를 전문으로 해결하는 기술이다
-
+스프링 AOP는 여기서 횡단 관심사를 전문으로 해결하는 기술이다=
 1. 핵심 기능과 부가기능을 분리하여
 2. 한번의 구현으로 원하는곳 모든 곳에 일괄로 부가기능을 적용
 3. 애스팩트(관점)을 사용한 프로그래밍 = 관점지향프로그래밍(AOP)라고 함
@@ -142,31 +145,24 @@ BeanFactoryAspectJAdvisorsBuilder클래스. @Aspect의 정보를 기반으로 �
         - 스프링과같은 컨테이너의 도움을 받고 프록시와 DI, 빈 포스트 프로세서같은 개념을 총 동원해야한다. 최종적으로 프록시를 통해 스프링 빈에 부가기능을 적용할 수 있음
         - 지금까지 강의에서 학습한 것
         - 프록시를 사용하기때문에 AOP기능에 일부 제약이있으나 특별한 컴파일러나 복잡한 옵션없이 스프링만 있으면 AOP를 적용할 수 있음
-
 - AOP 적용 위치
     - 적용 가능 지점(조인포인트) : 생성자, 필드 값 접근, static 메소드 접근, 메서드 실행
         - 이렇게 AOP를 적용할 수 있는 지점을 조인 포인트라고 함
     - AspectJ를 사용하여 컴파일 시점과 클래스 로딩 시점에 적용하는 AOP는 바이트 코드를 실제 조작하기 때문에 해당 기능을 모든 지점에 다 적용 가능
     - 프록시 방식을 사용하는 스프링 AOP는 메소드 실행 지점에서만 AOP를 적용
         - 프록시는 메소드 오버라이딩 개념으로 동작. 따라서 생성자, static메서드, 필드 값 접근에는 프록시 개념이 적용불가능함
-        - ==프록시를 사용하는 스프링 AOP의 조인포인트는 메서드 실행으로 제한됨==
+        - <mark class="hltr-cyan">프록시를 사용하는 스프링 AOP의 조인포인트는 메서드 실행으로 제한됨</mark>
     - 프록시를 사용하는 스프링 AOP는 스프링 컨테이너가 관리할 수 있는 스프링 빈에만 AOP를 적용가능함
-
 ❗스프링은 AspectJ를 차용하는것이지 직접 사용하는것이 아님
-
 ❗그렇다면 조인포인트에 제한이있는 스프링 AOP보다는 Aspect를 직접 사용하는것이 좋은것이 아닌가? → 불필요하게 공부해야할 내용이 많고 어지간하면 스프링 AOP로도 대부분의 문제를 해결 가능하기때문에 굳이 AspectJ를 공부할 필요는 없음
 
-  
-
 — 용어 정리
-
 - **포인트컷(Pointcut)**
     - 조인 포인트 중에서 어드바이스가 적용될 위치를 선별하는 기능
     - 주로 AspectJ 표현식을 사용해서 지정
     - 프록시를 사용하는 스프링 AOP는 메서드 실행 지점만 포인트컷으로 선별 가능
 - **타켓(Target)**  
     어드바이스를 받는 객체, 포인트컷으로 결정  
-    
 - **어드바이스(Advice)**
     - 부가 기능
     - 특정 조인 포인트에서 Aspect에 의해 취해지는 조치

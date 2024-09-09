@@ -1,26 +1,29 @@
 ---
-생성일: Invalid date
+생성일: 2024-02-17
 하위태그:
   - 스프링 핵심원리 - 고급
-최종 편집 일시: Invalid date
+last_modified_at: 2024-02-17
+category: Spring
+title: "[김영한 스프링 핵심원리 - 고급] 빈 후처리기 - BeanPostProcessor"
+tags:
+  - spring
+  - 김영한스프링핵심원리-고급
 ---
 @Bean이나 컴포넌트스캔으로 빈을 등록하면 스프링은 해당 객체를 생성하고 스프링컨테이너 내부에 빈저장소에 등록함. 이후에 등록한 스프링빈을 컨테이너에서 조회해 사용
 
   
 
-만약 ==**스프링이 빈 저장소에 등록할 목적으로 생성한 객체를 저장하기 직전에 조작**==하고싶다면 사용하는것이 빈후처리기
-
+만약 **<mark class="hltr-cyan">스프링이 빈 저장소에 등록할 목적으로 생성한 객체를 저장하기 직전에 조작</mark>**하고싶다면 사용하는것이 빈후처리기
 1. 생성 - 빈 등록 대상 객체 생성
 2. 전달 - 스프링이 빈 후처리기에 에 생성객체를 전달
 3. 후처리작업 - 빈 후처리기가 생성된 객체를 받아서 조작 or 다른객체로 바꿔치기
 4. 등록 - 빈 후처리기가 빈 저장소에 넘겨준 (조작or바꿔치기한)객체를 저장함(스프링이 빈후처리기에 전달한 원본객체는 빈 저장소에 저장되지않음)
-
 ⇒ 빈 등록할때 선언한 클래스와 다른 구조로 스프링빈이 등록됨
 
 - 예제
     - 일반적인 빈 등록
         
-        ```Java
+        ```java
         package com.example.proxy.postprocessor;
         
         import lombok.extern.slf4j.Slf4j;
@@ -71,7 +74,7 @@
         
     - 빈후처리기 적용 한 후
         
-        ```Java
+        ```java
         package com.example.proxy.postprocessor;
         
         import lombok.extern.slf4j.Slf4j;
@@ -144,7 +147,7 @@
 
 - 적용
 
-```Java
+```java
 package com.example.proxy.config.v4_postprocessor.postprocessor;
 
 import lombok.extern.slf4j.Slf4j;
@@ -184,7 +187,7 @@ public class PackageLogTracePostProcessor implements BeanPostProcessor {
 }
 ```
 
-```Java
+```java
 package com.example.proxy.config.v4_postprocessor;
 
 import com.example.proxy.config.AppV1Config;
@@ -222,7 +225,7 @@ public class BeanPostProcessorConfig {
 }
 ```
 
-```Java
+```java
 package com.example.proxy;
 
 @Import(BeanPostProcessorConfig.class)
@@ -255,7 +258,7 @@ public class ProxyApplication {
     - 스프링 빈으로 등록된 Advisor를 자동으로 찾아 프록시가 필요한곳에 자동으로 적용함
     - AnnotationAwareAspectJAutoProxyCreator는 @AspectJ와 관련된 기능도 자동으로 찾아서 처리해줌
 
-![[assets/images/빈 후처리기 - BeanPostProcessor/IMG-20240909142414.png|IMG-20240909142414.png]]
+![images](/assets/images/high/IMG-20240909155441.png)
 
 1. 생성 : 스프링 빈 대상 객체 생성
 2. 전달 : 생성객체 빈후처리기에 전달
@@ -263,12 +266,11 @@ public class ProxyApplication {
 4. 프록시 적용 대상 체크 : 조회한 Advisor에 있는 pointcut으로 해당 객체가 적용대상인지 확인함
 5. 프록시 생성 : 만약 적용대상이였다면 프록시를 생성하여 반환함(아니면 받은 원본객체 그대로 반환함)
 6. 빈 등록 : 반환된 객체는 스프링 빈으로 등록
-
 ⇒ 프록시는 내부에 어드바이저와 실제 호출해야할 대상 객체를 알고있음
 
 - 적용
 
-```Java
+```java
 package com.example.proxy.config.v5_autoproxy;
 
 import com.example.proxy.config.AppV1Config;
@@ -329,10 +331,7 @@ public class AutoProxyConfig {
 > 결론적으로 포인트컷은1. 프록시 적용여부 판단(생성시) : 빈 등록시 해당 빈이 프록시 대상여부인지 판단2. 어드바이스 적용여부 판단(사용시) : 프록시 호출 시 부가기능인 어드바이스를 적용할지말지 포인트컷을 보고 판단함(적용대상이면 어드바이스먼저호출 → 타겟클래스 호출, 아니면 타겟클래스만 호출)2가지 경우에 사용됨  
 
 그럼 여기서 빈 후처리기에서 advisor를 조회 후 프록시적용여부를 판단한다고했는데
-
 advisor가 여러개일경우는?
-
 프록시 1개를 생성한 후 프록시에 여러 어드바이저를 모두 적용함  
 = 프록시 1개 - 어드바이저 N개 의 구조로 생성됨  
-
 스프링 AOP도 같은 방식으로 동작함

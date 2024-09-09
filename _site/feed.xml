@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2024-09-09T15:49:14+09:00</updated>
+  <updated>2024-09-09T16:27:02+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,130 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[김영한 스프링 핵심원리 - 고급] 프록시 기술과 한계</title>
+    <link href="http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C%EA%B8%B0%EC%88%A0%EA%B3%BC%ED%95%9C%EA%B3%84/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 프록시 기술과 한계" />
+    <published>2024-03-02T00:00:00+09:00</published>
+  
+    <updated>2024-03-02T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C%EA%B8%B0%EC%88%A0%EA%B3%BC%ED%95%9C%EA%B3%84/</id>
+    <content src="http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C%EA%B8%B0%EC%88%A0%EA%B3%BC%ED%95%9C%EA%B3%84/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="Spring" />
+    
+  
+
+  <summary>JDK 동적 프록시의 한계
+
+
+  
+    타입캐스팅
+
+    인터페이스 기반으로 프록시를 생성하기때문에 구체클래스로 타입캐스팅이 불가능하다는 한계가 있음
+
+      package hello.aop.proxys;
+    
+  import org.junit.jupiter.api.Assertions;
+  import org.junit.jupiter.api.Test;
+  import org.springframework.aop.framework.ProxyFactory;
+    
+  import hello.aop.member.MemberService;
+  import hello.aop.member.MemberServiceImpl;
+  import lombok.extern.slf4j.Slf4j;
+    
+  @...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[김영한 스프링 핵심원리 - 고급] 프록시 내부 호출</title>
+    <link href="http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C%EB%82%B4%EB%B6%80%ED%98%B8%EC%B6%9C/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 프록시 내부 호출" />
+    <published>2024-02-26T00:00:00+09:00</published>
+  
+    <updated>2024-03-02T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C%EB%82%B4%EB%B6%80%ED%98%B8%EC%B6%9C/</id>
+    <content src="http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C%EB%82%B4%EB%B6%80%ED%98%B8%EC%B6%9C/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="Spring" />
+    
+  
+
+  <summary>문제
+
+package hello.aop.internalcall;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+ 
+@Slf4j
+@Component
+public class CallServiceV0 {
+    public void external() {
+        log.info(&amp;quot;call external&amp;quot;);
+
+        internal(); //내부 메소드 호출(this.internal())
+    }
+
+    public void internal() {
+        log.info(&amp;quot;call internal&amp;quot;);
+    }
+}
+
+
+
+package hello.aop.internalcall.a...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[김영한 스프링 핵심원리 - 고급] 포인트 컷 지시자</title>
+    <link href="http://localhost:4000/posts/%ED%8F%AC%EC%9D%B8%ED%8A%B8%EC%BB%B7%EC%A7%80%EC%8B%9C%EC%9E%90/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 포인트 컷 지시자" />
+    <published>2024-02-25T00:00:00+09:00</published>
+  
+    <updated>2024-02-25T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/%ED%8F%AC%EC%9D%B8%ED%8A%B8%EC%BB%B7%EC%A7%80%EC%8B%9C%EC%9E%90/</id>
+    <content src="http://localhost:4000/posts/%ED%8F%AC%EC%9D%B8%ED%8A%B8%EC%BB%B7%EC%A7%80%EC%8B%9C%EC%9E%90/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="Spring" />
+    
+  
+
+  <summary>에스팩트J가 제공하는 포인트컷 표현식(pointcut expression)을 포인트컷 표현식이라고 부른다.
+
+포인트컷 표현식은 execution같은 포인트컷 지시자(pointcut Designator)로 시작 해 PCD라 부른다
+
+
+  포인트컷 지시자(pointcut Designator)
+    
+      execution : 메소드 실행 조인 포인트 매칭, 스프링 AOP에서 가장 많이 사용하고 기능도 복잡
+      within : 특정 타입내 조인포인트를 매칭
+      args : 인자가 주어진 타입의 인스턴스인 조인포인트
+      this : 스프링 빈 객체(스프링 AOP 프록시)를 대상으로 하는 조인포인트)
+      target : Target객체(스프링AOP가 가르키는 실제대상)를 대상...</summary>
+
+  </entry>
 
   
   <entry>
@@ -81,123 +205,6 @@ Advice는 InvocationHandler와 MethodInterceptor를 신경쓰지않기위해 스
 
 결과적으로 InvocationHandler와 MethodInterceptor는 Advice를 호출하게됨. 프록시 팩토리가 Advice를 호출하는 전용 InvocationHandler와 MethodInterceptor를 내부에서 사용함
 ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[김영한 스프링 핵심원리 - 고급] 동적 프록시</title>
-    <link href="http://localhost:4000/posts/%EB%8F%99%EC%A0%81%ED%94%84%EB%A1%9D%EC%8B%9C/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 동적 프록시" />
-    <published>2024-02-17T00:00:00+09:00</published>
-  
-    <updated>2024-03-02T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/%EB%8F%99%EC%A0%81%ED%94%84%EB%A1%9D%EC%8B%9C/</id>
-    <content src="http://localhost:4000/posts/%EB%8F%99%EC%A0%81%ED%94%84%EB%A1%9D%EC%8B%9C/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="Spring" />
-    
-  
-
-  <summary>프록시를 적용하여 프록시패턴, 데코레이터패턴을 적용해보니 클래스가 너무 많이생긴다는 단점이있었음
-
-게다가 많은 프록시 클래스들의 코드는 거의 중복코드였음
-
-자바가 기본으로 제공하는 JDK 동적프록시 기술이나 CGLIB같은 프록시 생성 오픈기술을 활용하면 프록시 객체를 동적으로 만들 수 있음
-JDK 동적 프록시
-구조
-    package com.example.proxy.jdkdynamic;
-    
-    import lombok.extern.slf4j.Slf4j;
-    import org.junit.jupiter.api.Test;
-    
-    import java.lang.reflect.InvocationTargetException;
-    import java.lang.reflect.Method...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[김영한 스프링 핵심원리 - 고급] 디자인 패턴 - template call back</title>
-    <link href="http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_template_call_back/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 디자인 패턴 - template call back" />
-    <published>2024-01-07T00:00:00+09:00</published>
-  
-    <updated>2024-01-07T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_template_call_back/</id>
-    <content src="http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_template_call_back/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="Spring" />
-    
-  
-
-  <summary>-전략패턴에서 구현한
-
-package com.hello.high.trace.strategy.code;
-
-import com.hello.high.trace.strategy.code.strategy.Strategy;
-
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
-public class ContextV2 {
-	public void execute(Strategy strategy) {
-		long startTime = System.currentTimeMillis();
-		//비지니스로직 실행
-		strategy.call(); //위임
-		long endTime = System.currentTimeMillis();
-		long resultTime = endTime - startTim...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[김영한 스프링 핵심원리 - 고급] 디자인 패턴 - templateMethod</title>
-    <link href="http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_templateMethod/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 디자인 패턴 - templateMethod" />
-    <published>2024-01-01T00:00:00+09:00</published>
-  
-    <updated>2024-01-01T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_templateMethod/</id>
-    <content src="http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_templateMethod/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="Spring" />
-    
-  
-
-  <summary>그전 강의 챕터에서 비지니스로직을 구현할때마다 로그를 찍을때
-
-@GetMapping(&amp;quot;/v2/request&amp;quot;)
-	public String request(String itemId) {
-		TraceStatus status = null;
-		try {
-			 status = trace.begin(&amp;quot;OrderController.requset()&amp;quot;);
-			orderService.orderItem(status.getTraceId(), itemId);
-			trace.end(status);
-			return &amp;quot;ok&amp;quot;;
-		} catch (Exception e) {
-			trace.exception(status, e);
-			throw e; //예외를 꼭 다시 던져줘야함
-		}
-	}
-
-
-위처럼 중복 코드를 작성해...</summary>
 
   </entry>
 
