@@ -13,9 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/spring/mvc1/2023-06-11-MVC_프레임워크.md",
+                "file": "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "1a2c64f3cd615ed3",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/mvc1/IMG-20240909121230-1.png"
               }
             }
           },
@@ -152,7 +162,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "application.properties",
+                "query": "SQL anti",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -189,7 +199,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/spring/mvc1/2023-06-11-MVC_프레임워크.md",
+                "file": "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -206,7 +216,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/spring/mvc1/2023-06-11-MVC_프레임워크.md",
+                "file": "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -229,7 +239,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/spring/mvc1/2023-06-11-MVC_프레임워크.md"
+                "file": "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md"
               }
             }
           },
@@ -273,10 +283,13 @@
   },
   "active": "4159bc9b09868ce1",
   "lastOpenFiles": [
+    "assets/images/mvc1/IMG-20240909121230-1.png",
+    "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md",
+    "_posts/blog/spring/mvc1/2023-06-11-MVC_프레임워크.md",
+    "_posts/blog/jpa/querydsl/2023-01-21-기본문법.md",
     "_posts/blog/spring/mvc1/2023-02-05-웹애플리케이션이해.md",
     "_posts/blog/spring/mvc1/2023-04-17-서블릿.md",
     "_posts/blog/spring/mvc1/2023-05-29-서블릿_mvc_jsp.md",
-    "_posts/blog/spring/mvc1/2023-06-11-MVC_프레임워크.md",
     "_posts/blog/spring/mvc1/2023-06-25-스프링_MVC_구조.md",
     "_posts/blog/spring/mvc1/2023-06-25-스프링MVC기본기능.md",
     "_posts/blog/spring/mvc1/2023-08-05-상품도메인개발.md",
@@ -301,12 +314,10 @@
     "assets/images/mvc1/IMG-20240909120922.png",
     "IMG-20240909120922.png|IMG-20240909120922.png.md",
     "_site/assets/images/mvc1/IMG-20240909120504.png",
-    "_site/assets/images/mvc1/IMG-20240909120504-2.png",
     "_posts/코딩/개발 학습/기술/백엔드/Spring/김영한 스프링 입문 로드맵/스프링MVC1/스프링MVC1.md",
     "_posts/blog/jpa/querydsl/2023-04-17-Querydsl_기능.md",
     "_posts/blog/jpa/querydsl/2023-02-08-springdatajpa와querydsl.md",
     "_posts/blog/jpa/querydsl/2023-02-06-중급문법.md",
-    "_posts/blog/jpa/querydsl/2023-01-21-기본문법.md",
     "_posts/blog/jpa/querydsl/2023-01-21-환경설정.md",
     "_site/SQL.md",
     "SQL.md",
@@ -316,8 +327,6 @@
     "_site/2023-01-07.md",
     "2023-01-07.md",
     "_site/IMG-20240909104958.png|IMG-20240909104958.png.md",
-    "IMG-20240909104958.png|IMG-20240909104958.png.md",
-    "_posts/blog/jpa/usejpa2/2023-01-07-기본.md",
-    "_posts/blog/jpa/usejpa1/2023-01-04-웹_계층_개발.md"
+    "IMG-20240909104958.png|IMG-20240909104958.png.md"
   ]
 }
