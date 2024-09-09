@@ -1,0 +1,491 @@
+---
+생성일: Invalid date
+하위태그:
+  - 스프링 핵심원리 - 고급
+최종 편집 일시: Invalid date
+---
+- 필요한 의존성 추가
+    - aop
+        
+        `implementation 'org.springframework.boot:spring-boot-starter-aop'`
+        
+    - 테스트 코드에서 롬복 사용
+        
+        `testCompileOnly 'org.projectlombok:lombok'``testAnnotationProcessor 'org.projectlombok:lombok'`
+        
+    - Aspect는 원래 @EnableAspectJAutoProxy를 추가해야하지만 스프링부트가 자동으로 추가해줌
+- 프로젝트 구조
+
+```Java
+package hello.aop.order;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Repository;
+
+@Slf4j
+@Repository
+public class OrderRepository {
+    public String save(String itemId) {
+        log.info("[orderRepository] 실행");
+        //저장 로직
+        if (itemId.equals("ex")) {
+            throw new IllegalArgumentException("예외 발생");
+        }
+        return "ok";
+    }
+}
+```
+
+```Java
+package hello.aop.order;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+@Slf4j
+@Service
+public class OrderService {
+    private final OrderRepository orderRepository;
+
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
+
+    public void orderItem(String itemId) {
+        log.info("[orderService] 실행");
+        orderRepository.save(itemId);
+    }
+}
+```
+
+```Java
+package hello.aop.order.aop;
+
+import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+
+@Slf4j
+@Aspect
+public class AspectV1 {
+
+    @Around("execution(* hello.aop.order..*(..))")
+    public Object doLog(ProceedingJoinPoint joinPoint) throws Throwable {
+        log.info("[log] {}", joinPoint.getSignature());
+        return joinPoint.proceed();
+    }
+}
+```
+
+```Java
+package hello.aop;
+
+import hello.aop.order.OrderRepository;
+import hello.aop.order.OrderService;
+import hello.aop.order.aop.AspectV1;
+import lombok.extern.slf4j.Slf4j;
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.aop.support.AopUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
+
+@Slf4j
+@SpringBootTest
+@Import(AspectV1.class) //보통 설정파일을 추가할때 사용하나 빈을 등록할때도 사용가능하다. 
+//테스트에서는 버전을 올려가면서 변경할 예정이라 Import기능을 사용했다
+public class AopTest {
+
+    @Autowired
+    OrderService orderService;
+    @Autowired
+    OrderRepository orderRepository;
+
+    @Test
+    void aopInfo() {
+				//true반환됨. 위의 @Import(AspectV1.class)가 없으면 false
+        log.info("isAopProxy, orderService={}", AopUtils.isAopProxy(orderService));
+        log.info("isAopProxy, orderService={}", AopUtils.isAopProxy(orderRepository));
+    }
+
+    @Test
+    void success() {
+        orderService.orderItem("itemA");
+    }
+
+    @Test
+    void exception() {
+        Assertions.assertThatThrownBy(() -> orderService.orderItem("ex"))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+}
+```
+
+## 포인트 컷 분리
+
+```Java
+package hello.aop.order.aop;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Aspect
+public class AspectV2 {
+
+    //hello.aop.order 패키지와 하위 패키지
+    @Pointcut("execution(* hello.aop.order..*(..))")
+    private void allOrder() { //pointcut signature
+
+    }
+
+    @Around("allOrder()")
+    public Object doLog(ProceedingJoinPoint joinPoint) throws Throwable {
+        log.info("[log] {}", joinPoint.getSignature());
+        return joinPoint.proceed();
+    }
+
+    //예시를 위해 작성. 포인트 컷을 분리했기때문에 중복 선언없이 포인트컷을 호출해서 쓰면됨
+    @Around("allOrder()")
+    public Object doLog2(ProceedingJoinPoint joinPoint) throws Throwable {
+        // log.info("[log] {}", joinPoint.getSignature());
+        return joinPoint.proceed();
+    }
+}
+```
+
+```Java
+package hello.aop;
+
+import hello.aop.order.OrderRepository;
+import hello.aop.order.OrderService;
+import hello.aop.order.aop.AspectV1;
+import hello.aop.order.aop.AspectV2;
+import lombok.extern.slf4j.Slf4j;
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.aop.support.AopUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
+
+@Slf4j
+@SpringBootTest
+// @Import(AspectV1.class)
+@Import(AspectV2.class)
+public class AopTest {
+
+    @Autowired
+    OrderService orderService;
+    @Autowired
+    OrderRepository orderRepository;
+
+    @Test
+    void aopInfo() {
+        log.info("isAopProxy, orderService={}", AopUtils.isAopProxy(orderService));
+        log.info("isAopProxy, orderService={}", AopUtils.isAopProxy(orderRepository));
+    }
+
+    @Test
+    void success() {
+        orderService.orderItem("itemA");
+    }
+
+    @Test
+    void exception() {
+        Assertions.assertThatThrownBy(() -> orderService.orderItem("ex"))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+}
+```
+
+결과의 차이는 없음. 그냥 분리해서 쓸수있다는거임
+
+포인트컷 내부는 비워두어도 아무 문제없음
+
+위 예제에서는 분리한 포인트컷에 private 접근제어자를 사용했지만 public을 사용해서 다른 애스펙트에서 참고하는것도 가능하다
+
+### 어드바이스 추가
+
+```Java
+package hello.aop.order.aop;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Aspect
+public class AspectV3 {
+
+    //hello.aop.order 패키지와 하위 패키지
+    @Pointcut("execution(* hello.aop.order..*(..))")
+    private void allOrder() { //pointcut signature
+
+    }
+
+    //클래스 이름 패턴이 *Service임
+    @Pointcut("execution(* *..*Service.*( ..))")
+    private void allService() { //pointcut signature
+
+    }
+
+    @Around("allOrder()")
+    public Object doLog(ProceedingJoinPoint joinPoint) throws Throwable {
+        log.info("[log] {}", joinPoint.getSignature());
+        return joinPoint.proceed();
+    }
+
+    //예시를 위해 작성. 포인트 컷을 분리했기때문에 중복 선언없이 포인트컷을 호출해서 쓰면됨
+    @Around("allOrder()")
+    public Object doLog2(ProceedingJoinPoint joinPoint) throws Throwable {
+        // log.info("[log] {}", joinPoint.getSignature());
+        return joinPoint.proceed();
+    }
+
+    //hello.aop.order 패키지와 하위 패키지면서 클래스 이름 패턴이 *Service
+    @Around("allOrder() && allService()")
+    //두 포인트 컷 모두 해당하는 곳에 적용됨
+    public Object doTransaction(ProceedingJoinPoint joinPoint) throws Throwable {
+        try {
+            log.info("[트랜잭션 시작] {}", joinPoint.getSignature());
+            Object result = joinPoint.proceed();
+            log.info("[트랜잭션 커밋] {}", joinPoint.getSignature());
+            return result;
+        } catch (Exception e) {
+            log.info("[트랜잭션 롤백] {}", joinPoint.getSignature());
+            throw e;
+        } finally {
+            log.info("[트랜잭션 릴리즈] {}", joinPoint.getSignature());
+
+        }
+    }
+}
+```
+
+결론적으로
+
+orderService: doLog와 doTransaction 모두 적용
+
+orderRepository : doLog만 적용
+
+- 로그
+    
+    2024-02-17T17:38:44.038+09:00 INFO 91584 --- [ Test worker] hello.aop.AopTest : Starting AopTest using Java 20.0.1 with PID 91584 (started by rubric in /Users/rubric/Desktop/Study/Spring/aop)  
+    2024-02-17T17:38:44.046+09:00 INFO 91584 --- [ Test worker] hello.aop.AopTest : No active profile set, falling back to 1 default profile: "default"  
+    2024-02-17T17:38:47.575+09:00 INFO 91584 --- [ Test worker] hello.aop.AopTest : Started AopTest in 3.977 seconds (process running for 5.77)  
+    2024-02-17T17:38:48.956+09:00 INFO 91584 --- [ Test worker] hello.aop.order.aop.AspectV3 : [log] void hello.aop.order.OrderService.orderItem(String)  
+    2024-02-17T17:38:48.961+09:00 INFO 91584 --- [ Test worker] hello.aop.order.aop.AspectV3 : [트랜잭션 시작] void hello.aop.order.OrderService.orderItem(String)  
+    2024-02-17T17:38:48.964+09:00 INFO 91584 --- [ Test worker] hello.aop.order.OrderService : [orderService] 실행  
+    2024-02-17T17:38:48.966+09:00 INFO 91584 --- [ Test worker] hello.aop.order.aop.AspectV3 : [log] String hello.aop.order.OrderRepository.save(String)  
+    2024-02-17T17:38:48.967+09:00 INFO 91584 --- [ Test worker] hello.aop.order.OrderRepository : [orderRepository] 실행  
+    2024-02-17T17:38:48.968+09:00 INFO 91584 --- [ Test worker] hello.aop.order.aop.AspectV3 : [트랜잭션 커밋] void hello.aop.order.OrderService.orderItem(String)  
+    2024-02-17T17:38:48.969+09:00 INFO 91584 --- [ Test worker] hello.aop.order.aop.AspectV3 : [트랜잭션 릴리즈] void hello.aop.order.OrderService.orderItem(String)  
+    2024-02-17T17:38:49.037+09:00 INFO 91584 --- [ Test worker] hello.aop.AopTest : isAopProxy, orderService=true  
+    2024-02-17T17:38:49.037+09:00 INFO 91584 --- [ Test worker] hello.aop.AopTest : isAopProxy, orderService=true  
+    2024-02-17T17:38:49.083+09:00 INFO 91584 --- [ Test worker] hello.aop.order.aop.AspectV3 : [log] void hello.aop.order.OrderService.orderItem(String)  
+    2024-02-17T17:38:49.083+09:00 INFO 91584 --- [ Test worker] hello.aop.order.aop.AspectV3 : [트랜잭션 시작] void hello.aop.order.OrderService.orderItem(String)  
+    2024-02-17T17:38:49.084+09:00 INFO 91584 --- [ Test worker] hello.aop.order.OrderService : [orderService] 실행  
+    2024-02-17T17:38:49.084+09:00 INFO 91584 --- [ Test worker] hello.aop.order.aop.AspectV3 : [log] String hello.aop.order.OrderRepository.save(String)  
+    2024-02-17T17:38:49.084+09:00 INFO 91584 --- [ Test worker] hello.aop.order.OrderRepository : [orderRepository] 실행  
+    2024-02-17T17:38:49.084+09:00 INFO 91584 --- [ Test worker] hello.aop.order.aop.AspectV3 : [트랜잭션 롤백] void hello.aop.order.OrderService.orderItem(String)  
+    2024-02-17T17:38:49.085+09:00 INFO 91584 --- [ Test worker] hello.aop.order.aop.AspectV3 : [트랜잭션 릴리즈] void hello.aop.order.OrderService.orderItem(String)  
+    
+
+- 포인트컷을 모듈화 하고싶다면?
+    
+    ### 포인트 컷 참조
+    
+    포인트컷만 특정 클래스에 모아서 사용하는 법
+    
+    ```Java
+    package hello.aop.order.aop;
+    
+    import org.aspectj.lang.annotation.Pointcut;
+    
+    public class Pointcuts {
+    	@Pointcut("execution(* hello.aop.order..*(..))")
+    	public void allOrder() { //pointcut signature
+    
+    	}
+    
+    	//클래스 이름 패턴이 *Service임
+    	@Pointcut("execution(* *..*Service.*( ..))")
+    	public void allService() { //pointcut signature
+    
+    	}
+    
+    	@Pointcut("allOrder() && allService()")
+    	public void orderAndService(){}
+    }
+    ```
+    
+    ```Java
+    package hello.aop.order.aop;
+    
+    import org.aspectj.lang.ProceedingJoinPoint;
+    import org.aspectj.lang.annotation.Around;
+    import org.aspectj.lang.annotation.Aspect;
+    
+    import lombok.extern.slf4j.Slf4j;
+    
+    @Slf4j
+    @Aspect
+    public class AspectV4Pointcut {
+    
+        @Around("hello.aop.order.aop.Pointcuts.allOrder()")
+        public Object doLog(ProceedingJoinPoint joinPoint) throws Throwable {
+            log.info("[log] {}", joinPoint.getSignature());
+            return joinPoint.proceed();
+        }
+    
+        //예시를 위해 작성. 포인트 컷을 분리했기때문에 중복 선언없이 포인트컷을 호출해서 쓰면됨
+        @Around("hello.aop.order.aop.Pointcuts.allOrder()")
+        public Object doLog2(ProceedingJoinPoint joinPoint) throws Throwable {
+            // log.info("[log] {}", joinPoint.getSignature());
+            return joinPoint.proceed();
+        }
+    
+        //hello.aop.order 패키지와 하위 패키지면서 클래스 이름 패턴이 *Service
+        @Around("hello.aop.order.aop.Pointcuts.orderAndService()")
+        //두 포인트 컷 모두 해당하는 곳에 적용됨
+        public Object doTransaction(ProceedingJoinPoint joinPoint) throws Throwable {
+            try {
+                log.info("[트랜잭션 시작] {}", joinPoint.getSignature());
+                Object result = joinPoint.proceed();
+                log.info("[트랜잭션 커밋] {}", joinPoint.getSignature());
+                return result;
+            } catch (Exception e) {
+                log.info("[트랜잭션 롤백] {}", joinPoint.getSignature());
+                throw e;
+            } finally {
+                log.info("[트랜잭션 릴리즈] {}", joinPoint.getSignature());
+    
+            }
+        }
+    }
+    ```
+    
+- 위 로그내용을 보면 doLog → transaction순으로 적용되는데 순서를 바꾸고싶다면?
+    
+    ### 어드바이스 순서
+    
+    어드바이스는 기본적으로 순서를 적용하지않기때문에 클래스단위로 적용해야함
+    
+    순서는 @Aspect단위로 지정되기때문에 @Aspect어노테이션이 있는 위치에 @Order어노테이션을 사용해야함
+    
+    메소드 단위로 @Order를 사용해도 변화없음..
+    
+    ```Java
+    package hello.aop.order.aop;
+    
+    import org.aspectj.lang.ProceedingJoinPoint;
+    import org.aspectj.lang.annotation.Around;
+    import org.aspectj.lang.annotation.Aspect;
+    import org.springframework.core.annotation.Order;
+    
+    import lombok.extern.slf4j.Slf4j;
+    
+    public class AspectV5Order {
+        @Slf4j
+        @Aspect
+        @Order(2)
+        static class LogAspect {
+            @Around("hello.aop.order.aop.Pointcuts.allOrder()")
+            public Object doLog(ProceedingJoinPoint joinPoint) throws Throwable {
+                log.info("[log] {}", joinPoint.getSignature());
+                return joinPoint.proceed();
+            }
+    
+            //예시를 위해 작성. 포인트 컷을 분리했기때문에 중복 선언없이 포인트컷을 호출해서 쓰면됨
+            @Around("hello.aop.order.aop.Pointcuts.allOrder()")
+            public Object doLog2(ProceedingJoinPoint joinPoint) throws Throwable {
+                // log.info("[log] {}", joinPoint.getSignature());
+                return joinPoint.proceed();
+            }
+        }
+    
+    
+        @Slf4j
+        @Aspect
+        @Order(1)
+        static class TxAspect {
+            //hello.aop.order 패키지와 하위 패키지면서 클래스 이름 패턴이 *Service
+            @Around("hello.aop.order.aop.Pointcuts.orderAndService()")
+            //두 포인트 컷 모두 해당하는 곳에 적용됨
+            public Object doTransaction(ProceedingJoinPoint joinPoint) throws Throwable {
+                try {
+                    log.info("[트랜잭션 시작] {}", joinPoint.getSignature());
+                    Object result = joinPoint.proceed();
+                    log.info("[트랜잭션 커밋] {}", joinPoint.getSignature());
+                    return result;
+                } catch (Exception e) {
+                    log.info("[트랜잭션 롤백] {}", joinPoint.getSignature());
+                    throw e;
+                } finally {
+                    log.info("[트랜잭션 릴리즈] {}", joinPoint.getSignature());
+    
+                }
+            }
+        }
+    }
+    ```
+    
+    ```Java
+    package hello.aop;
+    
+    import hello.aop.order.OrderRepository;
+    import hello.aop.order.OrderService;
+    import hello.aop.order.aop.AspectV1;
+    import hello.aop.order.aop.AspectV2;
+    import hello.aop.order.aop.AspectV3;
+    import hello.aop.order.aop.AspectV4Pointcut;
+    import hello.aop.order.aop.AspectV5Order;
+    import lombok.extern.slf4j.Slf4j;
+    import org.assertj.core.api.Assertions;
+    import org.junit.jupiter.api.Test;
+    import org.springframework.aop.support.AopUtils;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.boot.test.context.SpringBootTest;
+    import org.springframework.context.annotation.Import;
+    
+    @Slf4j
+    @SpringBootTest
+    // @Import(AspectV1.class)
+    // @Import(AspectV3.class)
+    // @Import(AspectV4Pointcut.class)
+    @Import(AspectV5Order.class)
+    public class AopTest {
+    
+        @Autowired
+        OrderService orderService;
+        @Autowired
+        OrderRepository orderRepository;
+    
+        @Test
+        void aopInfo() {
+            log.info("isAopProxy, orderService={}", AopUtils.isAopProxy(orderService));
+            log.info("isAopProxy, orderService={}", AopUtils.isAopProxy(orderRepository));
+        }
+    
+        @Test
+        void success() {
+            orderService.orderItem("itemA");
+        }
+    
+        @Test
+        void exception() {
+            Assertions.assertThatThrownBy(() -> orderService.orderItem("ex"))
+                    .isInstanceOf(IllegalArgumentException.class);
+        }
+    }
+    ```

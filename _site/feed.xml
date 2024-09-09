@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2024-09-09T12:32:44+09:00</updated>
+  <updated>2024-09-09T15:44:01+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -20,14 +20,14 @@
 
   
   <entry>
-    <title>[김영한 스프링 MVC 1] 상품 도메인 개발</title>
-    <link href="http://localhost:4000/posts/%EC%83%81%ED%92%88%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B0%9C%EB%B0%9C/" rel="alternate" type="text/html" title="[김영한 스프링 MVC 1] 상품 도메인 개발" />
-    <published>2023-08-05T00:00:00+09:00</published>
+    <title>[김영한 스프링 핵심원리 - 고급] 프록시- 프록시 패턴, 데코레이터 패턴</title>
+    <link href="http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C_%ED%94%84%EB%A1%9D%EC%8B%9C-%ED%8C%A8%ED%84%B4,-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%ED%8C%A8%ED%84%B4/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 프록시- 프록시 패턴, 데코레이터 패턴" />
+    <published>2024-02-17T00:00:00+09:00</published>
   
-    <updated>2023-08-15T00:00:00+09:00</updated>
+    <updated>2024-02-17T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/%EC%83%81%ED%92%88%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B0%9C%EB%B0%9C/</id>
-    <content src="http://localhost:4000/posts/%EC%83%81%ED%92%88%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B0%9C%EB%B0%9C/" />
+    <id>http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C_%ED%94%84%EB%A1%9D%EC%8B%9C-%ED%8C%A8%ED%84%B4,-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%ED%8C%A8%ED%84%B4/</id>
+    <content src="http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C_%ED%94%84%EB%A1%9D%EC%8B%9C-%ED%8C%A8%ED%84%B4,-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-%ED%8C%A8%ED%84%B4/" />
     <author>
       <name>jinny</name>
     </author>
@@ -38,44 +38,29 @@
     
   
 
-  <summary>entity
-```java
-package hello.itemservice.domain.item;
+  <summary>구조1. 인터페이스 + 구현클래스 - 수동등록
 
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-public class Item {
-	private Long id;
-	private String itemName;
-	private Integer price;
-	private Integer quantity;
-}
-
-- repository
-
-```java
-package hello.itemservice.domain.i...</summary>
+      package com.example.proxy.app.v1;
+    
+  import org.springframework.web.bind.annotation.GetMapping;
+  import org.springframework.web.bind.annotation.RequestMapping;
+  import org.springframework.web.bind.annotation.RequestParam;
+  import org.springframework.web.bind.annotation.ResponseBody;
+    
+  @RequestMapping //@Controller or RequestMapping 이 있어야 스프링 컨트롤러로 인식...</summary>
 
   </entry>
 
   
   <entry>
-    <title>[김영한 스프링 MVC 1] 스프링 MVC 구조</title>
-    <link href="http://localhost:4000/posts/%EC%8A%A4%ED%94%84%EB%A7%81_MVC_%EA%B5%AC%EC%A1%B0/" rel="alternate" type="text/html" title="[김영한 스프링 MVC 1] 스프링 MVC 구조" />
-    <published>2023-06-25T00:00:00+09:00</published>
+    <title>[김영한 스프링 핵심원리 - 고급] 프록시 팩토리(스프링이 지원하는 프록시)</title>
+    <link href="http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C_%ED%8C%A9%ED%86%A0%EB%A6%AC/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 프록시 팩토리(스프링이 지원하는 프록시)" />
+    <published>2024-02-17T00:00:00+09:00</published>
   
-    <updated>2023-06-25T00:00:00+09:00</updated>
+    <updated>2024-02-17T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/%EC%8A%A4%ED%94%84%EB%A7%81_MVC_%EA%B5%AC%EC%A1%B0/</id>
-    <content src="http://localhost:4000/posts/%EC%8A%A4%ED%94%84%EB%A7%81_MVC_%EA%B5%AC%EC%A1%B0/" />
+    <id>http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C_%ED%8C%A9%ED%86%A0%EB%A6%AC/</id>
+    <content src="http://localhost:4000/posts/%ED%94%84%EB%A1%9D%EC%8B%9C_%ED%8C%A9%ED%86%A0%EB%A6%AC/" />
     <author>
       <name>jinny</name>
     </author>
@@ -86,31 +71,29 @@ package hello.itemservice.domain.i...</summary>
     
   
 
-  <summary>DispatcherServlet
+  <summary>JDK 동적프록시와 CGLIB를 동적으로 사용하려면(인터페이스가있는경우에는 JDK동적프록시, 아니면 CGLIB를 사용) 스프링이 제공하는 프록시 팩토리를 사용해야함
 
-DIspatcherServlet도 부모클래스가 HttpServlet을 상속받고있음. → 모든경로에대해 매핑을 해놓음
 
-(자세한 경로가 우선순위가 높아서 기존에 등록한 서블릿도 동작함)
 
-protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception {
-    HttpServletRequest processedRequest = request;
-    HandlerExecutionChain mappedHandler = null;
-    ModelAndView mv = null;
-		// 1. 핸들러 조회
-		mappedHandler = getHandler(...</summary>
+사용할때 InvocationHandler(JDK 동적프록시가 제공), MethodInterceptor(CGLIB가 제공)을 각각 중복으로 만들지않고 Advice를 사용하면된다.
+
+Advice는 InvocationHandler와 MethodInterceptor를 신경쓰지않기위해 스프링이 만들어 낸 개념임
+
+결과적으로 InvocationHandler와 MethodInterceptor는 Advice를 호출하게됨. 프록시 팩토리가 Advice를 호출하는 전용 InvocationHandler와 MethodInterceptor를 내부에서 사용함
+...</summary>
 
   </entry>
 
   
   <entry>
-    <title>[김영한 스프링 MVC 1] 스프링 MVC 기본기능</title>
-    <link href="http://localhost:4000/posts/%EC%8A%A4%ED%94%84%EB%A7%81MVC%EA%B8%B0%EB%B3%B8%EA%B8%B0%EB%8A%A5/" rel="alternate" type="text/html" title="[김영한 스프링 MVC 1] 스프링 MVC 기본기능" />
-    <published>2023-06-25T00:00:00+09:00</published>
+    <title>[김영한 스프링 핵심원리 - 고급] 동적 프록시</title>
+    <link href="http://localhost:4000/posts/%EB%8F%99%EC%A0%81%ED%94%84%EB%A1%9D%EC%8B%9C/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 동적 프록시" />
+    <published>2024-02-17T00:00:00+09:00</published>
   
-    <updated>2023-06-25T00:00:00+09:00</updated>
+    <updated>2024-03-02T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/%EC%8A%A4%ED%94%84%EB%A7%81MVC%EA%B8%B0%EB%B3%B8%EA%B8%B0%EB%8A%A5/</id>
-    <content src="http://localhost:4000/posts/%EC%8A%A4%ED%94%84%EB%A7%81MVC%EA%B8%B0%EB%B3%B8%EA%B8%B0%EB%8A%A5/" />
+    <id>http://localhost:4000/posts/%EB%8F%99%EC%A0%81%ED%94%84%EB%A1%9D%EC%8B%9C/</id>
+    <content src="http://localhost:4000/posts/%EB%8F%99%EC%A0%81%ED%94%84%EB%A1%9D%EC%8B%9C/" />
     <author>
       <name>jinny</name>
     </author>
@@ -121,36 +104,33 @@ protected void doDispatch(HttpServletRequest request, HttpServletResponse respon
     
   
 
-  <summary>기본적인 내용이 많아서 좀 생략함
+  <summary>프록시를 적용하여 프록시패턴, 데코레이터패턴을 적용해보니 클래스가 너무 많이생긴다는 단점이있었음
 
-  war : 톰캣 별도 설치(내장도되긴함), servlet, jsp에도 배포가능함
-  jar : 내장톰캣 사용. 내장서버사용에 최적화됨
+게다가 많은 프록시 클래스들의 코드는 거의 중복코드였음
 
-
-— 로깅
-운영시스템에서는 sout안씀. SLF4J와 Logback 두 라이브러리가있는데 대부분 Logback사용함(스프링부트 기본제공)
-
-package com.hello.springmvc1.basic;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@Res...</summary>
+자바가 기본으로 제공하는 JDK 동적프록시 기술이나 CGLIB같은 프록시 생성 오픈기술을 활용하면 프록시 객체를 동적으로 만들 수 있음
+JDK 동적 프록시
+구조
+    package com.example.proxy.jdkdynamic;
+    
+    import lombok.extern.slf4j.Slf4j;
+    import org.junit.jupiter.api.Test;
+    
+    import java.lang.reflect.InvocationTargetException;
+    import java.lang.reflect.Method...</summary>
 
   </entry>
 
   
   <entry>
-    <title>[김영한 스프링 MVC 1] MVC 프레임워크</title>
-    <link href="http://localhost:4000/posts/MVC_%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/" rel="alternate" type="text/html" title="[김영한 스프링 MVC 1] MVC 프레임워크" />
-    <published>2023-06-11T00:00:00+09:00</published>
+    <title>[김영한 스프링 핵심원리 - 고급] 디자인 패턴 - template call back</title>
+    <link href="http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_template_call_back/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 디자인 패턴 - template call back" />
+    <published>2024-01-07T00:00:00+09:00</published>
   
-    <updated>2023-06-11T00:00:00+09:00</updated>
+    <updated>2024-01-07T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/MVC_%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/</id>
-    <content src="http://localhost:4000/posts/MVC_%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/" />
+    <id>http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_template_call_back/</id>
+    <content src="http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_template_call_back/" />
     <author>
       <name>jinny</name>
     </author>
@@ -161,33 +141,35 @@ import org.springframework.web.bind.annotation.RestController;
     
   
 
-  <summary>프론트 컨트롤러 도입
+  <summary>-전략패턴에서 구현한
 
-프론트 컨트롤러 서블릿 하나로 클라이언트의 요청을 받아 요청에맞는 컨트롤러를 호출(컨트롤러는 서블릿필요없음)
+package com.hello.high.trace.strategy.code;
 
-package com.mvc1.servlet.web.frontController.v1.controller;
+import com.hello.high.trace.strategy.code.strategy.Strategy;
 
-import java.io.IOException;
+import lombok.extern.slf4j.Slf4j;
 
-import com.mvc1.servlet.web.frontController.v1.ControllerV1;
-
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServlet...</summary>
+@Slf4j
+public class ContextV2 {
+	public void execute(Strategy strategy) {
+		long startTime = System.currentTimeMillis();
+		//비지니스로직 실행
+		strategy.call(); //위임
+		long endTime = System.currentTimeMillis();
+		long resultTime = endTime - startTim...</summary>
 
   </entry>
 
   
   <entry>
-    <title>[김영한 스프링 MVC 1] 서블릿, MVC, JSP</title>
-    <link href="http://localhost:4000/posts/%EC%84%9C%EB%B8%94%EB%A6%BF_mvc_jsp/" rel="alternate" type="text/html" title="[김영한 스프링 MVC 1] 서블릿, MVC, JSP" />
-    <published>2023-05-29T00:00:00+09:00</published>
+    <title>[김영한 스프링 핵심원리 - 고급] 디자인 패턴 - templateMethod</title>
+    <link href="http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_templateMethod/" rel="alternate" type="text/html" title="[김영한 스프링 핵심원리 - 고급] 디자인 패턴 - templateMethod" />
+    <published>2024-01-01T00:00:00+09:00</published>
   
-    <updated>2023-05-29T00:00:00+09:00</updated>
+    <updated>2024-01-01T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/%EC%84%9C%EB%B8%94%EB%A6%BF_mvc_jsp/</id>
-    <content src="http://localhost:4000/posts/%EC%84%9C%EB%B8%94%EB%A6%BF_mvc_jsp/" />
+    <id>http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_templateMethod/</id>
+    <content src="http://localhost:4000/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_templateMethod/" />
     <author>
       <name>jinny</name>
     </author>
@@ -198,28 +180,24 @@ import jakarta.servlet.http.HttpServlet...</summary>
     
   
 
-  <summary>동시성 문제 고려안하고 진행(고려시 ConcurrentHashMap, AtomicLong사용을 고려해야함)
+  <summary>그전 강의 챕터에서 비지니스로직을 구현할때마다 로그를 찍을때
 
-package com.mvc1.servlet.domain;
+@GetMapping(&amp;quot;/v2/request&amp;quot;)
+	public String request(String itemId) {
+		TraceStatus status = null;
+		try {
+			 status = trace.begin(&amp;quot;OrderController.requset()&amp;quot;);
+			orderService.orderItem(status.getTraceId(), itemId);
+			trace.end(status);
+			return &amp;quot;ok&amp;quot;;
+		} catch (Exception e) {
+			trace.exception(status, e);
+			throw e; //예외를 꼭 다시 던져줘야함
+		}
+	}
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Member {
-    private Long id;
-    private String username;
-    private int age;
-}
-
-
-package com.mvc1.servlet.domain;
-
-import java.util.ArrayList;
-import jav...</summary>
+위처럼 중복 코드를 작성해...</summary>
 
   </entry>
 

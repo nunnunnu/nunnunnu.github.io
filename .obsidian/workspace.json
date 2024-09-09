@@ -13,9 +13,39 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md",
+                "file": "_posts/blog/spring/high/2024-02-17-프록시_팩토리.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "227509507d9cd234",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/high/Pastedimage20240909154041.png"
+              }
+            }
+          },
+          {
+            "id": "4c1f1d4581934dac",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/high/Pastedimage20240909151813.png"
+              }
+            }
+          },
+          {
+            "id": "5b57938452104821",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/high/Pastedimage20240909151547.png"
               }
             }
           },
@@ -199,7 +229,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md",
+                "file": "_posts/blog/spring/high/2024-02-17-프록시_팩토리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +246,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md",
+                "file": "_posts/blog/spring/high/2024-02-17-프록시_팩토리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -239,7 +269,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md"
+                "file": "_posts/blog/spring/high/2024-02-17-프록시_팩토리.md"
               }
             }
           },
@@ -283,7 +313,38 @@
   },
   "active": "4159bc9b09868ce1",
   "lastOpenFiles": [
-    "assets/images/mvc1/IMG-20240909121230-1.png",
+    "_site/posts/프록시_팩토리/index.html",
+    "_site/posts/프록시_팩토리",
+    "_site/assets/images/high/Pastedimage20240909154041.png",
+    "assets/images/high/Pastedimage20240909154041.png",
+    "_posts/blog/spring/high/2024-02-17-프록시_팩토리.md",
+    "_site/assets/images/high/IMG-20240909153917.png",
+    "_site/assets/images/high/IMG-20240909153917-1.png",
+    "_site/assets/images/high/IMG-20240909153916.png",
+    "_site/assets/images/high/IMG-20240909153916-3.png",
+    "_site/assets/images/high/IMG-20240909153916-2.png",
+    "_site/assets/images/high/IMG-20240909153916-1.png",
+    "_site/assets/images/high/IMG-20240909153910.png",
+    "_site/assets/images/high/IMG-20240909153910-2.png",
+    "_posts/blog/spring/high/2024-02-17-동적프록시.md",
+    "_site/posts/동적프록시/index.html",
+    "_site/posts/동적프록시",
+    "_site/tags/프록시/index.html",
+    "_site/tags/프록시",
+    "_posts/blog/spring/high/2024-02-17-프록시_프록시 패턴, 데코레이터 패턴.md",
+    "_posts/blog/spring/high/2024-01-07-디자인패턴_template_call_back.md",
+    "_posts/blog/spring/high/2024-01-01-디자인패턴_templateMethod.md",
+    "_posts/blog/spring/high/2024-01-01-디자인패턴_strategy.md",
+    "_posts/blog/spring/high/2024-01-01-ThreadLocal.md",
+    "_site/posts/프록시_프록시-패턴,-데코레이터-패턴/index.html",
+    "_site/posts/프록시_프록시-패턴,-데코레이터-패턴",
+    "_site/assets/images/high",
+    "assets/images/high",
+    "_site/posts/디자인패턴_template_call_back/index.html",
+    "_posts/코딩/개발 학습/기술/백엔드/Spring/김영한 스프링 입문 로드맵/스프링MVC2/로그인.md",
+    "_posts/코딩/개발 학습/기술/백엔드/Spring/김영한 스프링 입문 로드맵/스프링MVC2/서블릿 필터 - 스프링 인터셉터/서블릿 필터 - 스프링 인터셉터.md",
+    "_posts/코딩/개발 학습/기술/백엔드/Spring/김영한 스프링 입문 로드맵/김영한 스프링 입문 로드맵.md",
+    "_posts/blog/spring/high/스프링 AOP 구현.md",
     "_posts/blog/spring/김영한스프링입문/2022-12-05-웹개발_방법.md",
     "_posts/blog/spring/mvc1/2023-06-11-MVC_프레임워크.md",
     "_posts/blog/jpa/querydsl/2023-01-21-기본문법.md",
@@ -293,40 +354,10 @@
     "_posts/blog/spring/mvc1/2023-06-25-스프링_MVC_구조.md",
     "_posts/blog/spring/mvc1/2023-06-25-스프링MVC기본기능.md",
     "_posts/blog/spring/mvc1/2023-08-05-상품도메인개발.md",
-    "_site/posts/상품도메인개발/index.html",
-    "_site/posts/상품도메인개발",
-    "_site/posts/스프링_MVC_구조/index.html",
-    "_site/posts/스프링_MVC_구조",
-    "_site/posts/스프링MVC기본기능/index.html",
-    "_site/posts/스프링MVC기본기능",
-    "_site/assets/images/mvc1/IMG-20240909121231.png",
-    "_site/assets/images/mvc1/IMG-20240909121231-1.png",
-    "_site/assets/images/mvc1/IMG-20240909121230.png",
-    "_site/assets/images/mvc1/IMG-20240909121230-1.png",
-    "_site/assets/images/mvc1/IMG-20240909120922.png",
-    "_site/assets/images/mvc1/IMG-20240909120922-2.png",
-    "_site/assets/images/mvc1/IMG-20240909120922-1.png",
     "_site/IMG-20240909120922.png|IMG-20240909120922.png.md",
-    "_site/page10/index.html",
-    "_site/page10",
-    "_site/tags/타임리프/index.html",
-    "_site/tags/타임리프",
-    "assets/images/mvc1/IMG-20240909120922.png",
     "IMG-20240909120922.png|IMG-20240909120922.png.md",
-    "_site/assets/images/mvc1/IMG-20240909120504.png",
     "_posts/코딩/개발 학습/기술/백엔드/Spring/김영한 스프링 입문 로드맵/스프링MVC1/스프링MVC1.md",
     "_posts/blog/jpa/querydsl/2023-04-17-Querydsl_기능.md",
-    "_posts/blog/jpa/querydsl/2023-02-08-springdatajpa와querydsl.md",
-    "_posts/blog/jpa/querydsl/2023-02-06-중급문법.md",
-    "_posts/blog/jpa/querydsl/2023-01-21-환경설정.md",
-    "_site/SQL.md",
-    "SQL.md",
-    "_posts/blog/jpa/usejpa2/2023-01-14-OSIV와_성능_최적화.md",
-    "_posts/blog/jpa/usejpa2/2023-01-09-고급_컬렉션_조회_최적화.md",
-    "_posts/blog/jpa/usejpa2/2023-01-07-고급_지연로딩, 조회성능_최적화.md",
-    "_site/2023-01-07.md",
-    "2023-01-07.md",
-    "_site/IMG-20240909104958.png|IMG-20240909104958.png.md",
-    "IMG-20240909104958.png|IMG-20240909104958.png.md"
+    "_posts/blog/jpa/querydsl/2023-02-08-springdatajpa와querydsl.md"
   ]
 }
