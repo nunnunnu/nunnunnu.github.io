@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
+                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
                 "mode": "source",
                 "source": false
               }
@@ -209,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
+                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -226,7 +226,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
+                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -249,7 +249,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/spring/high/2024-02-26-프록시내부호출.md"
+                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md"
               }
             }
           },
@@ -293,40 +293,44 @@
   },
   "active": "e1d716bb9ef7eb1f",
   "lastOpenFiles": [
+    "_posts/blog/http/2023-01-23-HTTP 상태코드.md",
+    "_site/posts/HTTP-상태코드/index.html",
+    "_site/posts/HTTP-상태코드",
+    "_site/assets/images/http/IMG-20240910114022.png",
+    "_site/assets/images/http/IMG-20240910114021.png",
+    "_site/page12/index.html",
+    "_site/page12",
+    "_site/assets/images/http/IMG-20240910114012.png",
+    "_site/assets/images/http/IMG-20240910114012-1.png",
+    "_posts/blog/http/2023-01-22-HTTP 메소드.md",
+    "_site/posts/HTTP-메소드/index.html",
+    "_site/posts/HTTP-메소드",
+    "_site/assets/images/http/IMG-20240910113607.png",
+    "_site/assets/images/http/IMG-20240910113607-1.png",
+    "_site/assets/images/http/IMG-20240910113554.png",
+    "_site/assets/images/http/IMG-20240910113554-1.png",
+    "_posts/blog/http/2023-01-22-HTTP 메소드 활용.md",
+    "_site/posts/HTTP-메소드-활용/index.html",
+    "_site/posts/HTTP-메소드-활용",
+    "_site/assets/images/http/IMG-20240910112914.png",
+    "_site/assets/images/http/IMG-20240910112914-1.png",
+    "_posts/blog/http/2023-01-22-HTTP 기본.md",
+    "_site/posts/HTTP-기본/index.html",
+    "_site/posts/HTTP-기본",
+    "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
     "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
     "_posts/blog/http/2023-01-22-인터넷 네트워크.md",
-    "assets/images/http/IMG-20240910102101.png",
     "node_modules/obsidian-callouts-markdown/README.md",
-    "node_modules/obsidian-callouts-markdown/package.json",
-    "node_modules/obsidian-callouts-markdown/dist/obsidian-callouts-markdown.js",
-    "node_modules/obsidian-callouts-markdown/dist/index.d.ts",
-    "node_modules/obsidian-callouts-markdown/dist",
-    "node_modules/loose-envify/replace.js",
-    "node_modules/loose-envify/cli.js",
-    "node_modules/loose-envify/package.json",
     "node_modules/loose-envify/README.md",
-    "node_modules/loose-envify/loose-envify.js",
-    "node_modules/loose-envify/index.js",
-    "node_modules/loose-envify/custom.js",
     "node_modules/react-dom/README.md",
     "node_modules/scheduler/README.md",
     "node_modules/react/README.md",
     "node_modules/fsevents/README.md",
-    "_site/assets/images/http/IMG-20240910102740.png",
-    "_site/assets/images/http/IMG-20240910102740-2.png",
-    "_site/assets/images/http/IMG-20240910102740-1.png",
-    "_site/assets/images/http/IMG-20240910102724.png",
-    "_site/assets/images/http/IMG-20240910102724-1.png",
-    "_site/assets/images/http/IMG-20240910102723.png",
-    "_site/assets/images/컴퓨터 네트워크의 기본/IMG-20240910101942.gif",
-    "_site/assets/images/http/IMG-20240910102101.png",
-    "_site/assets/images/http/IMG-20240910102101-5.png",
     "_posts/blog/spring/mvc1/2023-06-11-MVC_프레임워크.md",
     "_posts/blog/spring/mvc1/2023-06-25-스프링MVC기본기능.md",
     "_posts/blog/spring/mvc1/2023-06-25-스프링_MVC_구조.md",
     "_posts/blog/spring/mvc1/2023-08-05-상품도메인개발.md",
     "_posts/blog/spring/high/2024-03-02-프록시기술과한계.md",
-    "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
     "_posts/blog/spring/high/2024-02-17-빈후처리기_BeanPostProcessor.md",
     "_posts/blog/spring/high/2024-02-17-스프링AOP구현.md",
     "_site/Invalid date.md",
@@ -334,9 +338,6 @@
     "_posts/blog/spring/high/2024-01-01-디자인패턴_templateMethod.md",
     "_posts/blog/spring/high/2024-01-01-ThreadLocal.md",
     "_posts/blog/spring/high/2024-01-07-디자인패턴_template_call_back.md",
-    "_posts/blog/spring/high/2024-02-05-실전예제.md",
-    "_posts/blog/spring/high/2024-02-17-@AspectAOP+스프링AOP개념.md",
-    "_posts/blog/spring/high/2024-02-17-동적프록시.md",
-    "_posts/blog/spring/high/2024-02-17-프록시_팩토리.md"
+    "_posts/blog/spring/high/2024-02-05-실전예제.md"
   ]
 }
