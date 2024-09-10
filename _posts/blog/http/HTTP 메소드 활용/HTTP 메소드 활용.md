@@ -1,0 +1,121 @@
+---
+생성일: Invalid date
+태그:
+  - 모든 개발자를 위한 HTTP 웹 기본지식
+강사:
+  - 김영한
+---
+### 클라이언트 서버로 데이터 전송
+
+- 쿼리 파라미터를 통한 데이터 전송
+    - GET
+    - 주로 정렬 필터(검색어)
+- 메시지 바디를 통한 데이터 전송
+    - POST, PUT, PATCH
+    - 회원 가입, 상품 주문, 리소스 등록, 리소스 변경
+
+---
+
+4가지 상황 예시
+
+1. 정적 데이터 조회
+    - 쿼리 파라미터 미사용. 일반적으로 리소스 경로로 단순하게 조회가능함
+    - 이미지, 정적 텍스트 문서
+    - 조회는 GET사용
+2. 동적 데이터 조회
+    - 쿼리 파라미터를 사용
+    - GET사용
+    - 검색, 게시판 목록에서 정렬 필터(검색어), 조회조건을 줄이는 필터, 조회결과 정렬 조건 등에 주로 사용
+3. HTML Form을 통한 데이터 전송
+    - Content-Type: application/x-www-form-urlencoded 사용
+        
+        ![[IMG-20240910101951.png|IMG-20240910101951.png]]
+        
+        만약 method를 GET으로 했으면 GET은 메시지바디를 사용하지않기때문에 username=kim&age=20을 쿼리파라미터에 넣어버림. GET /save?username=kim&age=20로 나가는거임. 그러나 GET은 조회에만 사용하는거라 리소스가 변경되면 안됨. 위 상황에서는 이름이 kim이고 나이가 20인사람을 조회하는 서비스를 제공해야함
+        
+        - form의 내용을 메시지 바디를 통해 전송. (key=value, 쿼리파라미터형식)
+        - 전송 데이터를 url encoding 처리(abc김 → avc%EA%E9%80 이런식)
+    - Content-Type: multipart/form-data;
+        
+        ![[IMG-20240910101951-1.png|IMG-20240910101951-1.png]]
+        
+        - 파일업로드 같은 바이너리 데이터 전송시 사용
+        - 다른종류의 여러 파일과 폼의 내용 함께 전송 가능(그래서 이름이 multipart)
+        
+        ⚠️HTML Form 전송은 GET, POST만 지원가능
+        
+4. HTTP API를 통한 데이터 전송
+    
+    ![[IMG-20240910101952.png|IMG-20240910101952.png]]
+    
+    JSON으로 형식 전달
+    
+    - 서버 to 서버 → 백엔드 시스템 통신
+    - 앱클라이언트 → 아이폰, 안드로이드
+    - 웹 클라이언트
+        - HTML에서 Form전송 대신 자바 스크립트를 통한 통신에 사용
+        - React, VueJs 같은 웹 클라이언트와 API 통신
+    - POST, PUT, PATCH - 메시지 바디를 통해 데이터 전송
+    - GET - 조회, 쿼리파라미터로 데이터 전송
+    - Content-Type: application/json 을 주로 사용(사실상 표준)
+        - TEXT, XML, JSON(거의 표준) 등등
+
+### HTTP API 설계 예시
+
+— 회원 관리 시스템  
+→ 클라이언트는 등록될 리소스의 URI를 모음 → 서버가 신규 리소스의 URI를 생성해줌.  
+
+- API 설계(POST 기반 등록)
+    - 회원 목록 - /members → GET
+    - 회원 등록 - /members → POST
+    - 회원 조회 - /members/{id} → GET
+    - 회원 수정 - /members/{id} → PATCH, PUT, POST
+    - 회원 삭제 - /members/{id} → DELETE
+
+❗POST로 신규 등록시 서버에서 신규 리소스의 식별자(기본키)를 생성한뒤 응답할때 URI를 만들어서 전송해줌
+
+> [!important]  
+> 컬렉션(Collection)- 서버가 관리하는 리소스 디렉토리- 서버가 리소스의 URI를 생성하고 관리함- 위 예시에서 컬렉션은 /members  
+
+— 파일 관리 시스템
+
+- API설계(PUT기반 등록)  
+    → 클라이언트가 리소스의 URI를 알고있고 직접 지정함.  
+    - 파일 목록 - /files → GET
+    - 파일 조회 - /files{filename} → GET
+    - 파일 등록 - /files{filename} → PUT → 기존 파일이 있다면 지우고 다시 올려야하기때문에 PUT을 사용. 단, 클라리언트가 리소스 URI를 알고있어야함
+    - 파일 삭제 - /files{filename} → DELETE
+    - 파일 대량 등록 - /files → POST
+
+> [!important]  
+> 스토어(Store)- 클라이언트가 관리하는 리소스 저장소- 클라이언트가 리소스의 URI를 알고 관리- 위 예시에서 스토어는 /files  
+
+실무에서는 거의 POST기반으로 사용함
+
+— HTML FORM 사용
+
+- HTML FORM는 GET, POST만 지원함 → 제약있음
+- AJAX같은 기술을 사용해서 해결 가능함. → 회원API 참고
+- 여기서는 순수 HTML, HTML FORM 이야기임
+- API 설계
+    - 회원 목록 - /members → GET
+    - 회원 등록 폼 - /members/new → GET
+    - 회원 등록 - /members/new, /members → POST
+    - 회원 조회 - /members/{id} → GET
+    - 회원 수정 폼 - /members/{id}/edit → GET
+    - 회원 수정 - /members/{id}/edit, /members/{id} → POST
+    - 회원 삭제 - /members/{id}/delete → POST  
+        — delete를 쓰지못함. 이럴때는 컨트롤 URI를 사용해야함  
+        
+
+> [!important]  
+> 컨트롤 URI, 컨트롤러(controller)- 문서, 컬렉션, 스토어로 해결하지 어려운 추가 프로세스 실행- 동사를 직접 사용- GET, POST만 지원하는 제약을 해결하기 위해 동사로된 리소스 경로를 사용함- POST의 /new, /edit, /delete가 컨트롤 URI임- HTTP 메소드로 해결하기 애매한 경우 사용함(HTTP API포함)  
+
+> [!info] REST API - URL Naming Conventions  
+> In REST, the primary data representation is called resource.  
+> [https://restfulapi.net/resource-naming/](https://restfulapi.net/resource-naming/)  
+
+위 사이트 참고
+
+> [!important]  
+> 문서(document)- 단일개념(파일 하나, 객체 인스턴스, 데이터페이스 row)- ex)/member/100, /file/star.jpg

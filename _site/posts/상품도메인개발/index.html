@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="[김영한 스프링 MVC 1] 상품 도메인 개발" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="description" content="entity ```java package hello.itemservice.domain.item;" />
-<meta property="og:description" content="entity ```java package hello.itemservice.domain.item;" />
+<meta name="description" content="entity" />
+<meta property="og:description" content="entity" />
 <link rel="canonical" href="http://localhost:4000/posts/%EC%83%81%ED%92%88%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B0%9C%EB%B0%9C/" />
 <meta property="og:url" content="http://localhost:4000/posts/%EC%83%81%ED%92%88%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B0%9C%EB%B0%9C/" />
 <meta property="og:site_name" content="히히" />
@@ -42,7 +42,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="[김영한 스프링 MVC 1] 상품 도메인 개발" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-15T00:00:00+09:00","datePublished":"2023-08-05T00:00:00+09:00","description":"entity ```java package hello.itemservice.domain.item;","headline":"[김영한 스프링 MVC 1] 상품 도메인 개발","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%EC%83%81%ED%92%88%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B0%9C%EB%B0%9C/"},"url":"http://localhost:4000/posts/%EC%83%81%ED%92%88%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B0%9C%EB%B0%9C/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-15T00:00:00+09:00","datePublished":"2023-08-05T00:00:00+09:00","description":"entity","headline":"[김영한 스프링 MVC 1] 상품 도메인 개발","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%EC%83%81%ED%92%88%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B0%9C%EB%B0%9C/"},"url":"http://localhost:4000/posts/%EC%83%81%ED%92%88%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B0%9C%EB%B0%9C/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -655,7 +655,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1593 단어"
+  title="1603 단어"
 >
   <em>8 분</em>읽는 시간</span>
 
@@ -666,28 +666,53 @@
 
   <div class="content">
     <ul>
-  <li>entity
-```java
-package hello.itemservice.domain.item;</li>
+  <li>entity</li>
 </ul>
 
-<p>import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;</p>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="복사되었습니다!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="kn">package</span> <span class="nn">hello.itemservice.domain.item</span><span class="o">;</span>
 
-<p>@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-public class Item {
-	private Long id;
-	private String itemName;
-	private Integer price;
-	private Integer quantity;
-}</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<span class="kn">import</span> <span class="nn">lombok.AllArgsConstructor</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Getter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">lombok.NoArgsConstructor</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">lombok.Setter</span><span class="o">;</span>
+
+<span class="nd">@Getter</span>
+<span class="nd">@Setter</span>
+<span class="nd">@AllArgsConstructor</span>
+<span class="nd">@NoArgsConstructor</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Item</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="nc">Long</span> <span class="n">id</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="nc">String</span> <span class="n">itemName</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="nc">Integer</span> <span class="n">price</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="nc">Integer</span> <span class="n">quantity</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>repository</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="복사되었습니다!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -728,54 +753,46 @@ public class Item {
 38
 39
 40
-41
-42
-43
-44
-</pre></td><td class="rouge-code"><pre>
-- repository
+</pre></td><td class="rouge-code"><pre><span class="kn">package</span> <span class="nn">hello.itemservice.domain.item</span><span class="o">;</span>
 
-```java
-package hello.itemservice.domain.item;
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Repository</span><span class="o">;</span>
 
-import org.springframework.stereotype.Repository;
+<span class="nd">@Repository</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ItemRepository</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">,</span> <span class="nc">Item</span><span class="o">&gt;</span> <span class="n">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="nc">Long</span> <span class="n">seq</span> <span class="o">=</span> <span class="mi">0L</span><span class="o">;</span>
 
-@Repository
-public class ItemRepository {
-	private static final Map&lt;Long, Item&gt; store = new HashMap&lt;&gt;();
-	private static Long seq = 0L;
+	<span class="kd">public</span> <span class="nc">Item</span> <span class="nf">save</span><span class="o">(</span><span class="nc">Item</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">item</span><span class="o">.</span><span class="na">setId</span><span class="o">(++</span><span class="n">seq</span><span class="o">);</span>
+		<span class="n">store</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">item</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">item</span><span class="o">;</span>
+	<span class="o">}</span>
 
-	public Item save(Item item) {
-		item.setId(++seq);
-		store.put(item.getId(), item);
-		return item;
-	}
+	<span class="kd">public</span> <span class="nc">Item</span> <span class="nf">findById</span><span class="o">(</span><span class="nc">Long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">store</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+	<span class="o">}</span>
 
-	public Item findById(Long id) {
-		return store.get(id);
-	}
+	<span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Item</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">store</span><span class="o">.</span><span class="na">values</span><span class="o">());</span>
+		<span class="c1">//반환타입을 Collection으로 해서 store.values(); 해도되는데 원본 훼손방지를 위해 감쌈</span>
+	<span class="o">}</span>
 
-	public List&lt;Item&gt; findAll() {
-		return new ArrayList&lt;&gt;(store.values());
-		//반환타입을 Collection으로 해서 store.values(); 해도되는데 원본 훼손방지를 위해 감쌈
-	}
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">update</span><span class="o">(</span><span class="nc">Long</span> <span class="n">itemId</span><span class="o">,</span> <span class="nc">Item</span> <span class="n">updateParam</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Item</span> <span class="n">findItem</span> <span class="o">=</span> <span class="n">findById</span><span class="o">(</span><span class="n">itemId</span><span class="o">);</span>
+		<span class="n">findItem</span><span class="o">.</span><span class="na">setItemName</span><span class="o">(</span><span class="n">updateParam</span><span class="o">.</span><span class="na">getItemName</span><span class="o">());</span>
+		<span class="n">findItem</span><span class="o">.</span><span class="na">setPrice</span><span class="o">(</span><span class="n">updateParam</span><span class="o">.</span><span class="na">getPrice</span><span class="o">());</span>
+		<span class="n">findItem</span><span class="o">.</span><span class="na">setQuantity</span><span class="o">(</span><span class="n">updateParam</span><span class="o">.</span><span class="na">getQuantity</span><span class="o">());</span>
+	<span class="o">}</span>
 
-	public void update(Long itemId, Item updateParam) {
-		Item findItem = findById(itemId);
-		findItem.setItemName(updateParam.getItemName());
-		findItem.setPrice(updateParam.getPrice());
-		findItem.setQuantity(updateParam.getQuantity());
-	}
-
-	public void clearStore() {
-		store.clear();
-	}
-}
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">clearStore</span><span class="o">()</span> <span class="o">{</span>
+		<span class="n">store</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+	<span class="o">}</span>
+<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>실무에선 HashMap말고 ConcurrnetHashMap써야한다고함. 멀티쓰레드 환경에서 사용가능함</p>
@@ -1545,13 +1562,6 @@ control"</span> <span class="na">th:value=</span><span class="s">"${item.quantit
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/">자바의 정석 강의 - 상속(Ingeritance)</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/">자바의 정석 강의 - 예외처리</a>
         </li>
       
@@ -1560,6 +1570,13 @@ control"</span> <span class="na">th:value=</span><span class="s">"${item.quantit
         
         <li class="text-truncate lh-lg">
           <a href="/posts/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&-%ED%98%95%EC%8B%9D%ED%99%94/">자바의 정석 강의 - 날짜와 시간 & 형식화</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/%EC%A7%80%EB%84%A4%EB%A6%AD%EC%8A%A4_%EC%97%B4%EA%B1%B0%ED%98%95_%EC%95%A0%EB%84%88%ED%85%8C%EC%9D%B4%EC%85%98/">자바의 정석 강의 - 지네릭스, 열거형, 애너테이션</a>
         </li>
       
     </ul>
@@ -1638,20 +1655,6 @@ control"</span> <span class="na">th:value=</span><span class="s">"${item.quantit
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1710,142 +1713,10 @@ control"</span> <span class="na">th:value=</span><span class="s">"${item.quantit
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1940,143 +1811,7 @@ control"</span> <span class="na">th:value=</span><span class="s">"${item.quantit
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2277,6 +2012,80 @@ control"</span> <span class="na">th:value=</span><span class="s">"${item.quantit
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2306,6 +2115,284 @@ control"</span> <span class="na">th:value=</span><span class="s">"${item.quantit
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     
@@ -3336,20 +3423,6 @@ import com.mvc1.servlet.web.fron...</p>
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3408,142 +3481,10 @@ import com.mvc1.servlet.web.fron...</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3638,143 +3579,7 @@ import com.mvc1.servlet.web.fron...</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -3975,6 +3780,80 @@ import com.mvc1.servlet.web.fron...</p>
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4004,6 +3883,284 @@ import com.mvc1.servlet.web.fron...</p>
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
   
     
     

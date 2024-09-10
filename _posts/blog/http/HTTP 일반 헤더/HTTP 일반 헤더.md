@@ -1,0 +1,277 @@
+---
+생성일: Invalid date
+태그:
+  - 모든 개발자를 위한 HTTP 웹 기본지식
+강사:
+  - 김영한
+---
+표현
+
+콘텐츠 협상(콘텐츠 네고시에이션)
+
+전송방식
+
+일반정보
+
+특별한 정보
+
+인증
+
+쿠키
+
+![[assets/images/HTTP 일반 헤더/IMG-20240910101943.png|IMG-20240910101943.png]]
+
+field-name은 대소문자 구문 없음
+
+- HTTP 전송에 필요한 모든 부가정보
+- 예) 메시지 바디의 내용, 메시지 바디의 크기, 압축, 인증, 요청 클라이언트, 서버 정보, 캐  
+    시 관리 정보...  
+    
+- 표준 헤더가 너무 많음
+    - [https://en.wikipedia.org/wiki/List_of_HTTP_header_fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+- 필요시 임의의 헤더 추가 가능
+    - helloworld: hihi
+
+- 과거 분류 방법(RFC2616) - 폐기
+    - 헤더 분류
+        - General 헤더: 메시지 전체에 적용되는 정보, 예) Connection: close
+        - Request 헤더: 요청 정보, 예) User-Agent: Mozilla/5.0 (Macintosh; ..)
+        - Response 헤더: 응답 정보, 예) Server: Apache
+        - Entity 헤더: 엔티티 바디 정보, 예) Content-Type: text/html, Content-Length: 3423
+    - HTTP BODY
+        - 메시지 본문(message body)은 엔티티 본문(entity body)을 전달하는데 사용함
+        - 엔티티 본문은 요청이나 응답에서 전달할 실제 데이터임
+        - 엔티티 헤더는 엔티티 본문의 데이터를 해석할 수 잇는 정보 제공
+            - 데이터 유형(HTML, JSON), 데이터 길이, 압축 정보
+
+  
+
+![[assets/images/HTTP 일반 헤더/IMG-20240910101943-1.png|IMG-20240910101943-1.png]]
+
+![[assets/images/HTTP 일반 헤더/IMG-20240910101943-2.png|IMG-20240910101943-2.png]]
+
+---
+
+- 2014년 RFC7230~7235 등장
+    - 엔티티(Entity) -> 표현(Representation)
+    - 표현 (Representation) = representation Metadata(표현 메타데이터) + Representation Data(표현 데이터)
+    - 메세지 본문
+        - 메시지 본문(message body)을 통해 표현 데이터 전달
+        - 메시지 본문 = 페이로드(payload)
+        - 표현은 요청이나 응답에서 전달할 실제 데이터
+        - 표현 헤더는 표현 데이터를 해석할 수 있는 정보 제공
+            - 데이터 유형(html, json), 데이터 길이, 압축 정보 등등
+        - 참고: 표현 헤더는 표현 메타데이터와, 페이로드 메시지를 구분해야 하지만, 여기서는 생략
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+![[assets/images/HTTP 일반 헤더/IMG-20240910101944.png|IMG-20240910101944.png]]
+
+  
+
+### 표현
+
+표현 헤더는 전송, 응답 둘다 사용함.
+
+- Content-Type: 표현 데이터의 형식
+    - 미디어 타입, 문자 인코딩
+        - text/html; charset=utf-8
+        - application/json
+        - image/png
+- Content-Encoding: 표현 데이터의 압축 방식
+    - 표현 데이터를 압축하기 위해 사용
+    - 데이터를 전달하는 곳에서 압축 후 인코딩 헤더 추가
+    - 데이터를 읽는 쪽에서 인코딩 헤더의 정보로 압축 해제
+        - gzip
+        - deflate
+        - identity
+- Content-Language: 표현 데이터의 자연 언어(ko, en, en-US 등)
+- Content-Length: 표현 데이터의 길이(바이트 단위). transfer-Encoding(전송 코딩)을 사용하면 Content-Length를 사용하면 안됨
+
+### 콘텐츠 협상(콘텐츠 네고시에이션)
+
+- Accept : 클라이언트가 선호하는 미디어 타입 전달
+- Accept-Charset : 클라이언트가 선호하는 문자 인코딩
+- Accept-Encoding : 클라이언트가 선호하는 압축 인코딩
+- Accept-Languge : 클라이언트가 선호하는 자연 언어
+
+**요청시에만 사용함!!**
+
+그니까 구글 기본언어가 영어인데 내가 한국어로 검색하면 한국어 검색결과가 나오는 원리라는거같음
+
+근데 독일 회사에서 기본언어가 독일어고 영어도 지원하는 서비스에서 한국어로 요청을 했을때 독일어로 결과가 나오면 좀;;차라리 영어가 나음  
+→ 우선순위 적용  
+
+- 협상과 우선순위(Quality Values(q))
+    
+    - Quality Values(q) 값 사용
+    - 0~1, 클수록 높은 우선순위
+    - 생략하면 1
+    - Accept-Language : ko-KR, ko;q=0.9, en-US;q=0.8,en;q=0.7
+        1. ko-KR;q=1(q=1은 생략해서 표시함)
+        2. ko;q=0.9
+        3. en-US;1=0
+        4. en;q=0.7
+    - 구체적인 것이 우선함
+    - Accept : text/*, text/plain, text/plain;format=flowed, _/_
+        1. text/plain;format=flowed
+        2. text/plain
+        3. text/*
+        4. _/_
+    - 구체적인 것을 기준으로 미디어 타입을 맞춤
+    - Accept: text/*;q=0.3, text/html;q=0.7, text/html;level=1,text/html;level=2;q=0.4, _/_;q=0.5
+        
+        ![[assets/images/HTTP 일반 헤더/IMG-20240910101945.png|IMG-20240910101945.png]]
+        
+    
+    물론 100프로 맞추지는 못하지만 최대한 맞춰서 제공해줌. 지원하지않는걸 제공할수는 없으니까
+    
+
+### 전송방식
+
+- 단순 전송 : 요청하면 content-Length를 지정해서 응답해줌.
+- 압축 전송 : 압축해서 보냄. 단, Content-Encoding으로 압축정보를 줘야함
+- 분할 전송 : 분할해서 보냄. Transfer-Encoding: chunked 로 보내줘야함
+    
+    ![[assets/images/HTTP 일반 헤더/IMG-20240910101946.png|IMG-20240910101946.png]]
+    
+    \r\n이 나오면 끝임.
+    
+- 범위 전송 : 요청할때 범위를 지정해서 요청함. 만약 다운로드 중 종료됐다면 종료된부분부터 범위를 시작하면되는 식임
+    
+    ![[assets/images/HTTP 일반 헤더/IMG-20240910101946-1.png|IMG-20240910101946-1.png]]
+    
+
+### 일반정보
+
+- Form : 유저 에이전트의 이메일 정보
+    - 일반적으로 잘 사용되지 않음
+    - 검색엔진 같은곳에서 주로 사용
+    - 요청에서 사용
+- Referer : 이전 웹 페이지 주소
+    - 현재 요청된 페이지의 이전 웹 페이지 주소
+    - A→B로 이동하는 경우 B를 요청할 떄 Referer: A를 포함해서 요청
+    - Referer를 사용해서 유입 경로 분석 가능
+    - 요청에서 사용
+    - 참고 : referer는 referrer를 오타낸거임
+- User-Agent : 유저 에이전트 애플리케이션 정보
+    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36
+    - 클리이언트의 애플리케이션 정보(웹 브라우저 정보, 등등)
+    - 통계 정보
+    - 어떤 종류의 브라우저에서 장애가 발생하는지 파악 가능 - 오류가 난 브라우저의 정보를 보고 문제 파악가능함. 특정 브라우저에서 문제가나는지 확인가능
+    - 요청에서 사용
+- Server : 요청을 처리하는 오리진 서버의 소프트웨어 정보
+    - Server: Apache/2.2.22 (Debian)
+    - server: nginx
+    - 응답에서 사용
+- Date : 메세지가 생성된 날짜
+
+### 특별한 정보
+
+- ==**HOST(요청한 호스트 정보-도메인)**==
+    
+    - 요청에서 사용
+    - 필수
+    - 하나의 서버가 여러 도메인 처리
+    - 하나의 IP주소에 여러 도메인이 적용되었을때
+    - 여러 도메인이 한번에 처리되고있을때(한 서버안에 여러 애플리케이션이 구동) GET HELLO라는 요청이 들어갔을때 어느 애플리케이션에게 한 요청인지 구분할 수 있는 방법이 필요함
+    
+    ![[IMG-20240910101946-2.png|IMG-20240910101946-2.png]]
+    
+- Location(페이지 리다이렉션)
+    - 웹 브라우저는 3xx 응답의 결과에 Location 헤더가 있으면, Location 위치로 자동 이동(리다이렉트)
+    - 응답코드 3xx에서 설명
+    - 201 (Created): Location 값은 요청에 의해 생성된 리소스 URI
+    - 3xx (Redirection): Location 값은 요청을 자동으로 리디렉션하기 위한 대상 리소스를 가리킴
+- Allow(허용 가능한 HTTP 메소드)
+    - 405(Method Not Allowed)에서 응답에 포함해야함
+    - Allow : GET, HEAD, PUT
+    - 별로 안씀
+- Retry-After(유저 에이전트가 다음요청을 하기까지 기다려야하는 시간)
+    - 503(Service Unavailable): 서비스가 언제까지 불능인지 알려줄 수 있음
+    - Retry-After: Fri, 31 Dec 1999 23:59:59 GMT (날짜 표기)
+    - Retry-After: 120 (초단위 표기)
+
+### 인증
+
+- Authorization : 클라이언트 인증 정보를 서버에 전달
+    - Authorization: Basic xxxxxxxxxxxxxxxx (인증과 관련된 값이 들어감)
+- WWW-Authenticate : 리소스 접근 시 필요한 인증 방법 정의
+    - 401 Unauthorized 응답과 함께 사용
+    - WWW-Authenticate: Newauth realm="apps", type=1, title="Login to \"apps\"", Basic realm="simple" (401오류가 나면 이걸 넣어줘야함)
+
+### 쿠키
+
+HTTP는 무상태(Stateless) 프로토콜임. 클라이언트와 서버가 요청과 응답을 주고받으면 연결이 끊어짐. 클라이언트가 재요청을 해도 서버는 이전 요청을 기억하지 못함!! → 클라이언트와 서버는 서로 상태를 유지하지 않음  
+— 대안 1  
+
+- 모든 정보에 사용자 정보를 포함함
+- GET /welcom?user=사용자 HTTP/1.1 이런식으로
+- 모은 요청과 링크에 사용자 정보가 포함되어야한다는 단점이 있음
+- 브라우저 완전 종료 후 재 실행하면 정보가 날아감
+
+— 대안2. 쿠키
+
+![[assets/images/HTTP 일반 헤더/IMG-20240910101947.png|IMG-20240910101947.png]]
+
+![[assets/images/HTTP 일반 헤더/IMG-20240910101947-1.png|IMG-20240910101947-1.png]]
+
+- Set-Cookie: 서버에서 클라이언트로 쿠키 전달(응답)
+- Cookie: 클라이언트가 서버에서 받은 쿠키를 저장하고, HTTP 요청시 서버로 전달
+- 모든 정보에 쿠키가 나온다면 보안에 문제가 있음
+- 사용처
+    - 사용자 로그인 세션 관리
+    - 광고 정보 트래킹
+- 쿠키 정보는 항상 서버에 전송됨
+    - 네트워크 트래픽 추가 유발
+    - 최소한의 정보만 사용(세션 id, 인증 토큰)
+    - 서버에 전송하지 않고, 웹 브라우저 내부에 데이터를 저장하고 싶으면 웹 스토리지 (localStorage, sessionStorage) 참고
+- 주의!
+    - 보안에 민감한 데이터는 저장하면 안됨(주민번호, 신용카드 번호 등등)
+- 예) set-cookie: sessionId=abcde1234; expires=Sat, 26-Dec-2020 00:00:00 GMT; path=/; [domain=.google.com](http://domain%3D.google.com/); Secure
+    - 쿠키 생명 주기
+        - Set-Cookie: **expires**=Sat, 26-Dec-2020 04:39:21 GMT - 만료일이 되면 쿠키 삭제
+        - Set-Cookie: **max-age**=3600 (3600초) - 0이나 음수를 지정하면 쿠키 삭제
+        - 세션 쿠키: 만료 날짜를 생략하면 브라우저 종료시 까지만 유지
+        - 영속 쿠키: 만료 날짜를 입력하면 해당 날짜까지 유지
+    - 쿠키 - 도메인
+        - Ex) [domain=example.org](http://domain%3Dexample.org/)
+        - 명시: 명시한 문서 기준 도메인 + 서브 도메인 포함
+            - domain=example.org를 지정해서 쿠키 생성
+                - example.org는 물론이고
+                - dev.example.org도 쿠키 접근
+        - 생략: 현재 문서 기준 도메인만 적용
+            - [example.org](http://example.org/) 에서 쿠키를 생성하고 domain 지정을 생략
+                - [example.org](http://example.org/) 에서만 쿠키 접근
+                - dev.example.org는 쿠키 미접근
+    - 쿠키 - 경로(Path)
+        - Ex) path=/home
+        - 이 경로를 포함한 하위 경로 페이지만 쿠키 접근
+        - 일반적으로 path=/ 루트로 지정
+        - Ex)
+            - path=/home 지정
+            - /home → 가능
+            - /home/level1 → 가능
+            - /home/level1/level2 → 가능
+            - /hello → 불가능
+    - 쿠키 - 보안
+        - Secure
+            - 원래 쿠키는 http, https를 구분하지 않고 전송하나 Secure를 적용하면 https인 경우에만 전송
+        - HttpOnly
+            - XSS 공격 방지
+            - 자바스크립트에서 접근 불가(document.cookie)
+            - HTTP 전송에만 사용
+        - SameSite
+            
+            - XSRF 공격 방지
+            - 요청 도메인과 쿠키에 설정된 도메인이 같은 경우만 쿠키 전송
