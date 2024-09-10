@@ -13,9 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
+                "file": "_posts/blog/http/2023-01-23-HTTP 일반 헤더.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "754b033840d2b300",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/http/Pastedimage20240910115008.png"
               }
             }
           },
@@ -209,7 +219,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
+                "file": "_posts/blog/http/2023-01-23-HTTP 일반 헤더.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -226,7 +236,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
+                "file": "_posts/blog/http/2023-01-23-HTTP 일반 헤더.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -249,7 +259,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md"
+                "file": "_posts/blog/http/2023-01-23-HTTP 일반 헤더.md"
               }
             }
           },
@@ -293,32 +303,34 @@
   },
   "active": "e1d716bb9ef7eb1f",
   "lastOpenFiles": [
+    "_site/posts/HTTP-일반-헤더/index.html",
+    "_site/posts/HTTP-일반-헤더",
+    "_site/assets/images/http/IMG-20240910115543.png",
+    "_site/assets/images/http/IMG-20240910115543-4.png",
+    "_site/assets/images/http/IMG-20240910115543-3.png",
+    "_site/assets/images/http/IMG-20240910115543-2.png",
+    "_site/assets/images/http/IMG-20240910115543-1.png",
+    "_site/assets/images/http/IMG-20240910115542.png",
+    "_site/assets/images/http/IMG-20240910115542-4.png",
+    "_site/assets/images/http/IMG-20240910115542-3.png",
+    "_site/assets/images/http/IMG-20240910115542-2.png",
+    "_site/assets/images/http/IMG-20240910115542-1.png",
+    "_posts/blog/http/2023-01-24-HTTP 헤더 - 캐시와 조건부 요청.md",
+    "_site/posts/HTTP-헤더-캐시와-조건부-요청/index.html",
+    "_site/posts/HTTP-헤더-캐시와-조건부-요청",
     "_posts/blog/http/2023-01-23-HTTP 상태코드.md",
+    "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
     "_site/posts/HTTP-상태코드/index.html",
     "_site/posts/HTTP-상태코드",
-    "_site/assets/images/http/IMG-20240910114022.png",
-    "_site/assets/images/http/IMG-20240910114021.png",
     "_site/page12/index.html",
     "_site/page12",
-    "_site/assets/images/http/IMG-20240910114012.png",
-    "_site/assets/images/http/IMG-20240910114012-1.png",
     "_posts/blog/http/2023-01-22-HTTP 메소드.md",
     "_site/posts/HTTP-메소드/index.html",
     "_site/posts/HTTP-메소드",
-    "_site/assets/images/http/IMG-20240910113607.png",
-    "_site/assets/images/http/IMG-20240910113607-1.png",
-    "_site/assets/images/http/IMG-20240910113554.png",
-    "_site/assets/images/http/IMG-20240910113554-1.png",
     "_posts/blog/http/2023-01-22-HTTP 메소드 활용.md",
     "_site/posts/HTTP-메소드-활용/index.html",
-    "_site/posts/HTTP-메소드-활용",
-    "_site/assets/images/http/IMG-20240910112914.png",
-    "_site/assets/images/http/IMG-20240910112914-1.png",
     "_posts/blog/http/2023-01-22-HTTP 기본.md",
-    "_site/posts/HTTP-기본/index.html",
-    "_site/posts/HTTP-기본",
     "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
-    "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
     "_posts/blog/http/2023-01-22-인터넷 네트워크.md",
     "node_modules/obsidian-callouts-markdown/README.md",
     "node_modules/loose-envify/README.md",
@@ -336,8 +348,6 @@
     "_site/Invalid date.md",
     "_posts/blog/spring/high/2024-01-01-디자인패턴_strategy.md",
     "_posts/blog/spring/high/2024-01-01-디자인패턴_templateMethod.md",
-    "_posts/blog/spring/high/2024-01-01-ThreadLocal.md",
-    "_posts/blog/spring/high/2024-01-07-디자인패턴_template_call_back.md",
-    "_posts/blog/spring/high/2024-02-05-실전예제.md"
+    "_posts/blog/spring/high/2024-01-01-ThreadLocal.md"
   ]
 }
