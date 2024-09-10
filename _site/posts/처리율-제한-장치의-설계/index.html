@@ -1,0 +1,4064 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="ko-KR" >
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+  ><!-- Setup Open Graph image -->
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 4장 처리율 제한 장치의 설계" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="description" content="처리율 제한 장치 클라이언트나 서비스가 보내는 트래픽의 처리율을 제어하기위한장치. HTTP를 예로들면 특정 기간 내 전송되는 클라이언트의 요청횟수를 제한함. api의 요청횟수가 임계치를 넘어서면 추가로 도달한 모든 호출은 block됨 토큰 버킷 지정된 용량을 갖는 컨테이너. 이 버킷에 사전 설정된 양의 토큰이 주기적으로 채워짐. 꽉차면 더 이상 추가는 안됨. 용량이 꽉찬 시점에서 추가된 토큰은 버려짐 요청이 처리될때마다 하나의 토큰을 사용 요청 처리를 위한 토큰이 없다면? -&gt; 요청 자체를 버림. 토큰이 다시 차도 버린 요청을 처리하지않음 2개의 인자를 받음 버킷 크기 : 버킷에 담을 수 있는 토큰의 최대 개수 토큰 공급률 : 초당 몇개의 토큰이 버킷에 공급되는가? 장점 구현이 쉬움 메모리 사용측면에서 효율적 짧은 시간에 집중되는 트래픽도 처리 가능 단점 버킷크기와 토큰공급률이라는 두개의 인자를 적절하게 튜닝하는것이 어려움 누출 버킷 토큰 버킷과 비슷하나 요청 처리율이 고정되어있음. 보통 FIFO(선입선출)로 구현함 요청이 도착하면 큐가 가득차있는지 확인. 빈자리가 있으면 큐에 요청 추가 큐가 가득 차면 새 요청은 버림 지정된 시간마다 큐에서 요청을 꺼내 처리 2개의 인자를 받음 버킷크기 : 큐사이즈와 같은 값. 처리율 : 지정된 시간동안 몇개의 항목을 처리할건지 지정하는 값 전자 상거래 기업 쇼피파이(shopify)가 사용중인 방법 장점 큐의 크기가 제한되어있어 메모리 사용량 측면에서 효율적 고정된 처리율을 가지고있어 안정적 출력이 필요한경우 적합 단점 단시간에 많은 트래픽이 몰리는 경우 큐에는 오래된 요청들이 쌓이게되고 요청을 처리하지못하면 최신요청은 모두 버려짐 2개의인자를 튜닝하기 까다로움 고정 윈도 카운터 타임라인을 고정된 간격의 윈도로 나누고 각 윈도마다 카운터를 붙임 요청이 접수될때마다 카운터의 값이 1씩 증가 카운터값이 사전에설정한 임계치를 넘어서면 새로운 요청 윈도가 열릴때까지 버려짐 예시 타임라인을 1초로 잡고, 임계치를 3으로 설정. == 시스템은 1초동안 3개의 요청만 처리함 매초마다 4번째 요청부터는 모두 버려짐 장점 메모리의 효율이 좋음 이해하기 쉬움 윈도가 닫히는 시점에 카운터를 초기화하는 방식이라 특정한 트래픽패턴을 처리하기 적합 단점 : 윈도의 경계 부근에 순간적으로 많은 트래픽이 몰리는경우 임계치보다 더 많은 양이 처리될수도있음!! 예시) 분당 임계치가 3개일경우 2:00:00~2:00:30 1개의 요청 2:00:30~2:01:00 2개의요청 2:01:00~2:01:30 2개의 요청 2:01:30~2:02:00 1개의 요청 위 예시에서보면 2:00:00~2:01:00까지는 분당 임계치 3개 내로 처리가됨. 그러나 2:00:30~2:01:30을 기준으로 보게되면 4개가 처리됨!! 1분동안 3개를 허용했는데 시간을 어떻게 나누냐에따라 임계치를 넘게 처리되기도함을 알수있음 이동 윈도 로그 고정윈도카운터의 문제를 해결하기위해 요청의 타임스탬프를 추적하는 방법 타임스탬프 터는 보통 레디스의 정렬집합같은 캐시에 보관함 새요청이 오면 만료된 타임스탬프는 제거, 만료된 타임 스탬프는 그 값이 현재 윈도 시작 시점보다 오래된 타임 스탬프를 말함 새 요청의 타임스탬프를 로그에 추가 로그의 크기가 허용치보다 크거나 같으면 요청을 시스템에 전달, 아니면 거부 장점 : 매우 정료한 메커니즘으로 요청의 갯수가 시스템 한도를 넘지 않음 거부된 요청의 타임스탬프도 보관하기때문에 다량의 메모리를 사용 예시) [!NOTE] 분당 2분의 요청만 허용 1 2 3 4 5 6 7 8 9 10 11 1. 1:00:01 요청 2. 1:00:30 요청&gt; 3. 1:00:50 요청 =&gt; 거절된 요청 4. 1:01:40 요청 위와 같이 4번의 요청이 들어왔을때, 요청이 들어온 시간(리눅스 타임스탬프)을 기록함. 1, 2번 요청은 첫 요청이라 처리 가능. 3번 요청이 들어왔을때 요청 들어온 시간부터 1분전까지(해당요청이 1:00:50이니 0:59:50까지 조회할거임)몇번의 요청이 들어왔는지 확인, 해당 문제에서는 2번을 처리했기때문에 요청 거부. 4번요청은 1:00:40~:1:01:40까지의 요청을 조회했을때 조회되는 로그는 3번이있으나 요청 처리된 건이 아니라 무시함! =&gt; 4번요청 성공 따라서 위의 4번의 요청중 처리거부된 요청은 3번뿐임 이동 윈도 카운터 고정윈도 카운터 알고리즘 + 이동윈도로그 알고리즘 두가지 접근법이있으나 책에서는 하나만 소개함 분당 7개의 요청처리가능할때, 직전 1분에 5개, 현재 1분에 3개 요청이 들어왔다 가정. 현재 1분의 30%지점에서 도착한 새 요청의 경우 현재 윈도에 몇개의 요청이왔는가? -&gt; 현재 1분간 요청 수 + 직전 1분간 요청 수 * 이동윈도와 직전 1분이 겹치는 비율 3 + 5 * 70% = 6.5 (올림, 내림은 상황에따라 다르나 이번 예제에서는 내림으로 계산함) 이번 1분동안 총 6개의 요청을 처리했으니 이번 요청도 처리가능(단 같은 시간대로 한번 더 요청이 들어오면 처리거부) 장점 이전 시간대의 평균 처리율에 따라 현재 윈도상태를 계산하므로 짧은 시간에 몰리는 트래픽에도 잘 대응 메모리 효율이 좋음 단점 직전 시간대에 도착한 요청이 균등하게 분포되어있다고 가정한 상태에서 추정치를 계산하기때문에 다소 느슨함. 그러나 그리 심각한 문제는 아님! 클라우드플레어가 실시한 실험에 따르면 40억개의 요청 중 시스템의 실제상태와 맞지않게 허용되거나 버려진 요청은 0.003%였음 개략적인 아키텍처 처리율 제한 알고리즘에서 얼마나 많은 요청이 접수되었는지 추적할수있는 카운터를 추적대상별로(사용자별/IP주소별/API엔드포인트별/서비스단위)두는데 이때 카운터는 어디에 보관할것인가? 메모리상에서 동작하는 캐시가 바람직할것인데 대표적으로 redis는 처리율 제한 장치를 구현할때 자주사용되는 메모리 기반 저장장치로서, INCR와 EXPIRE 두가지 명령어를 지원함 INCR : 메모리에 저장된 카운터의 값을 1만큼 증가 EXPIRE : 카운터에 타임아웃 값을 설정. 설정 시간이 지나면 카운터는 자동 삭제 클라이언트가 처리율 제한 미들웨어에게 요청을 보냄 처리율 제한 미들웨어는 레디스의 지정 버킷에서 카운터를 가져와 한도 도달여부 검사 도달했다면 요청 거부 도달하지않았다면 API서버로 요청 전송 미들웨어는 카운터의 값을 증가 시킨 후 다시 레디스에 저장 =&gt; 그렇다면 처리율 제한 규칙은 어떻게 만들어지고 어디에 저장되는가? 리프트(Lyft)는 처리율제한에 오픈소스를 사용함 =&gt; 처리가 제한된 요청은 어떻게 처리되는가? 한도제한이 걸리면 429응답을 클라에게 보냄" />
+<meta property="og:description" content="처리율 제한 장치 클라이언트나 서비스가 보내는 트래픽의 처리율을 제어하기위한장치. HTTP를 예로들면 특정 기간 내 전송되는 클라이언트의 요청횟수를 제한함. api의 요청횟수가 임계치를 넘어서면 추가로 도달한 모든 호출은 block됨 토큰 버킷 지정된 용량을 갖는 컨테이너. 이 버킷에 사전 설정된 양의 토큰이 주기적으로 채워짐. 꽉차면 더 이상 추가는 안됨. 용량이 꽉찬 시점에서 추가된 토큰은 버려짐 요청이 처리될때마다 하나의 토큰을 사용 요청 처리를 위한 토큰이 없다면? -&gt; 요청 자체를 버림. 토큰이 다시 차도 버린 요청을 처리하지않음 2개의 인자를 받음 버킷 크기 : 버킷에 담을 수 있는 토큰의 최대 개수 토큰 공급률 : 초당 몇개의 토큰이 버킷에 공급되는가? 장점 구현이 쉬움 메모리 사용측면에서 효율적 짧은 시간에 집중되는 트래픽도 처리 가능 단점 버킷크기와 토큰공급률이라는 두개의 인자를 적절하게 튜닝하는것이 어려움 누출 버킷 토큰 버킷과 비슷하나 요청 처리율이 고정되어있음. 보통 FIFO(선입선출)로 구현함 요청이 도착하면 큐가 가득차있는지 확인. 빈자리가 있으면 큐에 요청 추가 큐가 가득 차면 새 요청은 버림 지정된 시간마다 큐에서 요청을 꺼내 처리 2개의 인자를 받음 버킷크기 : 큐사이즈와 같은 값. 처리율 : 지정된 시간동안 몇개의 항목을 처리할건지 지정하는 값 전자 상거래 기업 쇼피파이(shopify)가 사용중인 방법 장점 큐의 크기가 제한되어있어 메모리 사용량 측면에서 효율적 고정된 처리율을 가지고있어 안정적 출력이 필요한경우 적합 단점 단시간에 많은 트래픽이 몰리는 경우 큐에는 오래된 요청들이 쌓이게되고 요청을 처리하지못하면 최신요청은 모두 버려짐 2개의인자를 튜닝하기 까다로움 고정 윈도 카운터 타임라인을 고정된 간격의 윈도로 나누고 각 윈도마다 카운터를 붙임 요청이 접수될때마다 카운터의 값이 1씩 증가 카운터값이 사전에설정한 임계치를 넘어서면 새로운 요청 윈도가 열릴때까지 버려짐 예시 타임라인을 1초로 잡고, 임계치를 3으로 설정. == 시스템은 1초동안 3개의 요청만 처리함 매초마다 4번째 요청부터는 모두 버려짐 장점 메모리의 효율이 좋음 이해하기 쉬움 윈도가 닫히는 시점에 카운터를 초기화하는 방식이라 특정한 트래픽패턴을 처리하기 적합 단점 : 윈도의 경계 부근에 순간적으로 많은 트래픽이 몰리는경우 임계치보다 더 많은 양이 처리될수도있음!! 예시) 분당 임계치가 3개일경우 2:00:00~2:00:30 1개의 요청 2:00:30~2:01:00 2개의요청 2:01:00~2:01:30 2개의 요청 2:01:30~2:02:00 1개의 요청 위 예시에서보면 2:00:00~2:01:00까지는 분당 임계치 3개 내로 처리가됨. 그러나 2:00:30~2:01:30을 기준으로 보게되면 4개가 처리됨!! 1분동안 3개를 허용했는데 시간을 어떻게 나누냐에따라 임계치를 넘게 처리되기도함을 알수있음 이동 윈도 로그 고정윈도카운터의 문제를 해결하기위해 요청의 타임스탬프를 추적하는 방법 타임스탬프 터는 보통 레디스의 정렬집합같은 캐시에 보관함 새요청이 오면 만료된 타임스탬프는 제거, 만료된 타임 스탬프는 그 값이 현재 윈도 시작 시점보다 오래된 타임 스탬프를 말함 새 요청의 타임스탬프를 로그에 추가 로그의 크기가 허용치보다 크거나 같으면 요청을 시스템에 전달, 아니면 거부 장점 : 매우 정료한 메커니즘으로 요청의 갯수가 시스템 한도를 넘지 않음 거부된 요청의 타임스탬프도 보관하기때문에 다량의 메모리를 사용 예시) [!NOTE] 분당 2분의 요청만 허용 1 2 3 4 5 6 7 8 9 10 11 1. 1:00:01 요청 2. 1:00:30 요청&gt; 3. 1:00:50 요청 =&gt; 거절된 요청 4. 1:01:40 요청 위와 같이 4번의 요청이 들어왔을때, 요청이 들어온 시간(리눅스 타임스탬프)을 기록함. 1, 2번 요청은 첫 요청이라 처리 가능. 3번 요청이 들어왔을때 요청 들어온 시간부터 1분전까지(해당요청이 1:00:50이니 0:59:50까지 조회할거임)몇번의 요청이 들어왔는지 확인, 해당 문제에서는 2번을 처리했기때문에 요청 거부. 4번요청은 1:00:40~:1:01:40까지의 요청을 조회했을때 조회되는 로그는 3번이있으나 요청 처리된 건이 아니라 무시함! =&gt; 4번요청 성공 따라서 위의 4번의 요청중 처리거부된 요청은 3번뿐임 이동 윈도 카운터 고정윈도 카운터 알고리즘 + 이동윈도로그 알고리즘 두가지 접근법이있으나 책에서는 하나만 소개함 분당 7개의 요청처리가능할때, 직전 1분에 5개, 현재 1분에 3개 요청이 들어왔다 가정. 현재 1분의 30%지점에서 도착한 새 요청의 경우 현재 윈도에 몇개의 요청이왔는가? -&gt; 현재 1분간 요청 수 + 직전 1분간 요청 수 * 이동윈도와 직전 1분이 겹치는 비율 3 + 5 * 70% = 6.5 (올림, 내림은 상황에따라 다르나 이번 예제에서는 내림으로 계산함) 이번 1분동안 총 6개의 요청을 처리했으니 이번 요청도 처리가능(단 같은 시간대로 한번 더 요청이 들어오면 처리거부) 장점 이전 시간대의 평균 처리율에 따라 현재 윈도상태를 계산하므로 짧은 시간에 몰리는 트래픽에도 잘 대응 메모리 효율이 좋음 단점 직전 시간대에 도착한 요청이 균등하게 분포되어있다고 가정한 상태에서 추정치를 계산하기때문에 다소 느슨함. 그러나 그리 심각한 문제는 아님! 클라우드플레어가 실시한 실험에 따르면 40억개의 요청 중 시스템의 실제상태와 맞지않게 허용되거나 버려진 요청은 0.003%였음 개략적인 아키텍처 처리율 제한 알고리즘에서 얼마나 많은 요청이 접수되었는지 추적할수있는 카운터를 추적대상별로(사용자별/IP주소별/API엔드포인트별/서비스단위)두는데 이때 카운터는 어디에 보관할것인가? 메모리상에서 동작하는 캐시가 바람직할것인데 대표적으로 redis는 처리율 제한 장치를 구현할때 자주사용되는 메모리 기반 저장장치로서, INCR와 EXPIRE 두가지 명령어를 지원함 INCR : 메모리에 저장된 카운터의 값을 1만큼 증가 EXPIRE : 카운터에 타임아웃 값을 설정. 설정 시간이 지나면 카운터는 자동 삭제 클라이언트가 처리율 제한 미들웨어에게 요청을 보냄 처리율 제한 미들웨어는 레디스의 지정 버킷에서 카운터를 가져와 한도 도달여부 검사 도달했다면 요청 거부 도달하지않았다면 API서버로 요청 전송 미들웨어는 카운터의 값을 증가 시킨 후 다시 레디스에 저장 =&gt; 그렇다면 처리율 제한 규칙은 어떻게 만들어지고 어디에 저장되는가? 리프트(Lyft)는 처리율제한에 오픈소스를 사용함 =&gt; 처리가 제한된 요청은 어떻게 처리되는가? 한도제한이 걸리면 429응답을 클라에게 보냄" />
+<link rel="canonical" href="http://localhost:4000/posts/%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98%EC%9D%98-%EC%84%A4%EA%B3%84/" />
+<meta property="og:url" content="http://localhost:4000/posts/%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98%EC%9D%98-%EC%84%A4%EA%B3%84/" />
+<meta property="og:site_name" content="히히" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-27T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 4장 처리율 제한 장치의 설계" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-27T00:00:00+09:00","datePublished":"2024-03-27T00:00:00+09:00","description":"처리율 제한 장치 클라이언트나 서비스가 보내는 트래픽의 처리율을 제어하기위한장치. HTTP를 예로들면 특정 기간 내 전송되는 클라이언트의 요청횟수를 제한함. api의 요청횟수가 임계치를 넘어서면 추가로 도달한 모든 호출은 block됨 토큰 버킷 지정된 용량을 갖는 컨테이너. 이 버킷에 사전 설정된 양의 토큰이 주기적으로 채워짐. 꽉차면 더 이상 추가는 안됨. 용량이 꽉찬 시점에서 추가된 토큰은 버려짐 요청이 처리될때마다 하나의 토큰을 사용 요청 처리를 위한 토큰이 없다면? -&gt; 요청 자체를 버림. 토큰이 다시 차도 버린 요청을 처리하지않음 2개의 인자를 받음 버킷 크기 : 버킷에 담을 수 있는 토큰의 최대 개수 토큰 공급률 : 초당 몇개의 토큰이 버킷에 공급되는가? 장점 구현이 쉬움 메모리 사용측면에서 효율적 짧은 시간에 집중되는 트래픽도 처리 가능 단점 버킷크기와 토큰공급률이라는 두개의 인자를 적절하게 튜닝하는것이 어려움 누출 버킷 토큰 버킷과 비슷하나 요청 처리율이 고정되어있음. 보통 FIFO(선입선출)로 구현함 요청이 도착하면 큐가 가득차있는지 확인. 빈자리가 있으면 큐에 요청 추가 큐가 가득 차면 새 요청은 버림 지정된 시간마다 큐에서 요청을 꺼내 처리 2개의 인자를 받음 버킷크기 : 큐사이즈와 같은 값. 처리율 : 지정된 시간동안 몇개의 항목을 처리할건지 지정하는 값 전자 상거래 기업 쇼피파이(shopify)가 사용중인 방법 장점 큐의 크기가 제한되어있어 메모리 사용량 측면에서 효율적 고정된 처리율을 가지고있어 안정적 출력이 필요한경우 적합 단점 단시간에 많은 트래픽이 몰리는 경우 큐에는 오래된 요청들이 쌓이게되고 요청을 처리하지못하면 최신요청은 모두 버려짐 2개의인자를 튜닝하기 까다로움 고정 윈도 카운터 타임라인을 고정된 간격의 윈도로 나누고 각 윈도마다 카운터를 붙임 요청이 접수될때마다 카운터의 값이 1씩 증가 카운터값이 사전에설정한 임계치를 넘어서면 새로운 요청 윈도가 열릴때까지 버려짐 예시 타임라인을 1초로 잡고, 임계치를 3으로 설정. == 시스템은 1초동안 3개의 요청만 처리함 매초마다 4번째 요청부터는 모두 버려짐 장점 메모리의 효율이 좋음 이해하기 쉬움 윈도가 닫히는 시점에 카운터를 초기화하는 방식이라 특정한 트래픽패턴을 처리하기 적합 단점 : 윈도의 경계 부근에 순간적으로 많은 트래픽이 몰리는경우 임계치보다 더 많은 양이 처리될수도있음!! 예시) 분당 임계치가 3개일경우 2:00:00~2:00:30 1개의 요청 2:00:30~2:01:00 2개의요청 2:01:00~2:01:30 2개의 요청 2:01:30~2:02:00 1개의 요청 위 예시에서보면 2:00:00~2:01:00까지는 분당 임계치 3개 내로 처리가됨. 그러나 2:00:30~2:01:30을 기준으로 보게되면 4개가 처리됨!! 1분동안 3개를 허용했는데 시간을 어떻게 나누냐에따라 임계치를 넘게 처리되기도함을 알수있음 이동 윈도 로그 고정윈도카운터의 문제를 해결하기위해 요청의 타임스탬프를 추적하는 방법 타임스탬프 터는 보통 레디스의 정렬집합같은 캐시에 보관함 새요청이 오면 만료된 타임스탬프는 제거, 만료된 타임 스탬프는 그 값이 현재 윈도 시작 시점보다 오래된 타임 스탬프를 말함 새 요청의 타임스탬프를 로그에 추가 로그의 크기가 허용치보다 크거나 같으면 요청을 시스템에 전달, 아니면 거부 장점 : 매우 정료한 메커니즘으로 요청의 갯수가 시스템 한도를 넘지 않음 거부된 요청의 타임스탬프도 보관하기때문에 다량의 메모리를 사용 예시) [!NOTE] 분당 2분의 요청만 허용 1 2 3 4 5 6 7 8 9 10 11 1. 1:00:01 요청 2. 1:00:30 요청&gt; 3. 1:00:50 요청 =&gt; 거절된 요청 4. 1:01:40 요청 위와 같이 4번의 요청이 들어왔을때, 요청이 들어온 시간(리눅스 타임스탬프)을 기록함. 1, 2번 요청은 첫 요청이라 처리 가능. 3번 요청이 들어왔을때 요청 들어온 시간부터 1분전까지(해당요청이 1:00:50이니 0:59:50까지 조회할거임)몇번의 요청이 들어왔는지 확인, 해당 문제에서는 2번을 처리했기때문에 요청 거부. 4번요청은 1:00:40~:1:01:40까지의 요청을 조회했을때 조회되는 로그는 3번이있으나 요청 처리된 건이 아니라 무시함! =&gt; 4번요청 성공 따라서 위의 4번의 요청중 처리거부된 요청은 3번뿐임 이동 윈도 카운터 고정윈도 카운터 알고리즘 + 이동윈도로그 알고리즘 두가지 접근법이있으나 책에서는 하나만 소개함 분당 7개의 요청처리가능할때, 직전 1분에 5개, 현재 1분에 3개 요청이 들어왔다 가정. 현재 1분의 30%지점에서 도착한 새 요청의 경우 현재 윈도에 몇개의 요청이왔는가? -&gt; 현재 1분간 요청 수 + 직전 1분간 요청 수 * 이동윈도와 직전 1분이 겹치는 비율 3 + 5 * 70% = 6.5 (올림, 내림은 상황에따라 다르나 이번 예제에서는 내림으로 계산함) 이번 1분동안 총 6개의 요청을 처리했으니 이번 요청도 처리가능(단 같은 시간대로 한번 더 요청이 들어오면 처리거부) 장점 이전 시간대의 평균 처리율에 따라 현재 윈도상태를 계산하므로 짧은 시간에 몰리는 트래픽에도 잘 대응 메모리 효율이 좋음 단점 직전 시간대에 도착한 요청이 균등하게 분포되어있다고 가정한 상태에서 추정치를 계산하기때문에 다소 느슨함. 그러나 그리 심각한 문제는 아님! 클라우드플레어가 실시한 실험에 따르면 40억개의 요청 중 시스템의 실제상태와 맞지않게 허용되거나 버려진 요청은 0.003%였음 개략적인 아키텍처 처리율 제한 알고리즘에서 얼마나 많은 요청이 접수되었는지 추적할수있는 카운터를 추적대상별로(사용자별/IP주소별/API엔드포인트별/서비스단위)두는데 이때 카운터는 어디에 보관할것인가? 메모리상에서 동작하는 캐시가 바람직할것인데 대표적으로 redis는 처리율 제한 장치를 구현할때 자주사용되는 메모리 기반 저장장치로서, INCR와 EXPIRE 두가지 명령어를 지원함 INCR : 메모리에 저장된 카운터의 값을 1만큼 증가 EXPIRE : 카운터에 타임아웃 값을 설정. 설정 시간이 지나면 카운터는 자동 삭제 클라이언트가 처리율 제한 미들웨어에게 요청을 보냄 처리율 제한 미들웨어는 레디스의 지정 버킷에서 카운터를 가져와 한도 도달여부 검사 도달했다면 요청 거부 도달하지않았다면 API서버로 요청 전송 미들웨어는 카운터의 값을 증가 시킨 후 다시 레디스에 저장 =&gt; 그렇다면 처리율 제한 규칙은 어떻게 만들어지고 어디에 저장되는가? 리프트(Lyft)는 처리율제한에 오픈소스를 사용함 =&gt; 처리가 제한된 요청은 어떻게 처리되는가? 한도제한이 걸리면 429응답을 클라에게 보냄","headline":"[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 4장 처리율 제한 장치의 설계","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98%EC%9D%98-%EC%84%A4%EA%B3%84/"},"url":"http://localhost:4000/posts/%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98%EC%9D%98-%EC%84%A4%EA%B3%84/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <title>[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 4장 처리율 제한 장치의 설계 | 히히
+  </title>
+
+  <!--
+  The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
+  Generated by: https://realfavicongenerator.net/
+-->
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+
+  <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="히히">
+<meta name="application-name" content="히히">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+  <!-- Resource Hints -->
+  
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com" >
+      
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+      
+    
+      
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" >
+      
+    
+      
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" >
+      
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
+      
+    
+  
+
+  <!-- Bootstrap -->
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
+
+  <!-- Web Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+
+  <!-- 3rd-party Dependencies -->
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.29.0/dist/tocbot.min.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  
+
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+  
+
+  <!-- JavaScript -->
+
+  
+    <!-- Switch the mode between dark and light. -->
+
+<script type="text/javascript">
+  class ModeToggle {
+    static get MODE_KEY() {
+      return 'mode';
+    }
+    static get MODE_ATTR() {
+      return 'data-mode';
+    }
+    static get DARK_MODE() {
+      return 'dark';
+    }
+    static get LIGHT_MODE() {
+      return 'light';
+    }
+    static get ID() {
+      return 'mode-toggle';
+    }
+
+    constructor() {
+      let self = this;this.sysDarkPrefers.addEventListener('change', () => {
+        if (self.hasMode) {
+          self.clearMode();
+        }
+        self.notify();
+      });
+
+      if (!this.hasMode) {
+        return;
+      }
+
+      if (this.isDarkMode) {
+        this.setDark();
+      } else {
+        this.setLight();
+      }
+    }
+
+    get sysDarkPrefers() {
+      return window.matchMedia('(prefers-color-scheme: dark)');
+    }
+
+    get isPreferDark() {
+      return this.sysDarkPrefers.matches;
+    }
+
+    get isDarkMode() {
+      return this.mode === ModeToggle.DARK_MODE;
+    }
+
+    get hasMode() {
+      return this.mode != null;
+    }
+
+    get mode() {
+      return sessionStorage.getItem(ModeToggle.MODE_KEY);
+    }get modeStatus() {
+      if (this.hasMode) {
+        return this.mode;
+      } else {
+        return this.isPreferDark ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE;
+      }
+    }
+
+    setDark() {
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+    }
+
+    setLight() {
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+    }
+
+    clearMode() {
+      document.documentElement.removeAttribute(ModeToggle.MODE_ATTR);
+      sessionStorage.removeItem(ModeToggle.MODE_KEY);
+    }notify() {
+      window.postMessage(
+        {
+          direction: ModeToggle.ID,
+          message: this.modeStatus
+        },
+        '*'
+      );
+    }
+
+    flipMode() {
+      if (this.hasMode) {
+        this.clearMode();
+      } else {
+        if (this.isPreferDark) {
+          this.setLight();
+        } else {
+          this.setDark();
+        }
+      }
+
+      this.notify();
+    }
+  }
+
+  const modeToggle = new ModeToggle();
+</script>
+
+  
+
+  <!-- A placeholder to allow defining custom metadata -->
+
+</head>
+
+
+  <body>
+    <!-- The Side Bar -->
+
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  <header class="profile-wrapper">
+    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/images/portfolio.jpeg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+
+    <h1 class="site-title">
+      <a href="/">히히</a>
+    </h1>
+    <p class="site-subtitle fst-italic mb-0">바보등장</p>
+  </header>
+  <!-- .profile-wrapper -->
+
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+      <!-- home -->
+      <li class="nav-item">
+        <a href="/" class="nav-link">
+          <i class="fa-fw fas fa-home"></i>
+          <span>홈</span>
+        </a>
+      </li>
+      <!-- the real tabs -->
+      
+        <li class="nav-item">
+          <a href="/categories/" class="nav-link">
+            <i class="fa-fw fas fa-stream"></i>
+            
+
+            <span>카테고리</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/tags/" class="nav-link">
+            <i class="fa-fw fas fa-tags"></i>
+            
+
+            <span>태그</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/archives/" class="nav-link">
+            <i class="fa-fw fas fa-archive"></i>
+            
+
+            <span>아카이브</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+        <li class="nav-item">
+          <a href="/about/" class="nav-link">
+            <i class="fa-fw fas fa-info-circle"></i>
+            
+
+            <span>정보</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      
+    </ul>
+  </nav>
+
+  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+    
+      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
+        <i class="fas fa-adjust"></i>
+      </button>
+
+      
+        <span class="icon-border"></span>
+      
+    
+
+    
+      
+
+      
+        <a
+          href="https://github.com/nunnunnu"
+          aria-label="github"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer"
+          
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="https://twitter.com/"
+          aria-label="twitter"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer"
+          
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="javascript:location.href = 'mailto:' + ['nod15277','gmail.com'].join('@')"
+          aria-label="email"
+          
+
+          
+
+          
+
+          
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="/feed.xml"
+          aria-label="rss"
+          
+
+          
+
+          
+
+          
+        >
+          <i class="fas fa-rss"></i>
+        </a>
+      
+    
+  </div>
+  <!-- .sidebar-bottom -->
+</aside>
+<!-- #sidebar -->
+
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+        <!-- The Top Bar -->
+
+<header id="topbar-wrapper" aria-label="Top Bar">
+  <div
+    id="topbar"
+    class="d-flex align-items-center justify-content-between px-lg-3 h-100"
+  >
+    <nav id="breadcrumb" aria-label="Breadcrumb">
+      
+
+      
+        
+          
+            <span>
+              <a href="/">홈</a>
+            </span>
+
+          
+        
+          
+        
+          
+            
+              <span>[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 4장 처리율 제한 장치의 설계</span>
+            
+
+          
+        
+      
+    </nav>
+    <!-- endof #breadcrumb -->
+
+    <button type="button" id="sidebar-trigger" class="btn btn-link">
+      <i class="fas fa-bars fa-fw"></i>
+    </button>
+
+    <div id="topbar-title">
+      포스트
+    </div>
+
+    <button type="button" id="search-trigger" class="btn btn-link">
+      <i class="fas fa-search fa-fw"></i>
+    </button>
+
+    <search id="search" class="align-items-center ms-3 ms-lg-0">
+      <i class="fas fa-search fa-fw"></i>
+      <input
+        class="form-control"
+        id="search-input"
+        type="search"
+        aria-label="search"
+        autocomplete="off"
+        placeholder="검색..."
+      >
+    </search>
+    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">취소</button>
+  </div>
+</header>
+
+
+        <div class="row flex-grow-1">
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+
+<!-- Handle images -->
+
+
+
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+
+
+
+<!-- return -->
+
+
+
+
+<article class="px-1">
+  <header>
+    <h1 data-toc-skip>[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 4장 처리율 제한 장치의 설계</h1>
+    
+
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        게시
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711465200"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2024/03/27
+</time>
+
+      </span>
+
+      <!-- lastmod date -->
+      
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711497600"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2024/03/27
+</time>
+
+        </span>
+      
+      
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
+
+          By
+
+          <em>
+            
+              <a href="https://github.com/username">jinny</a>
+            
+          </em>
+        </span>
+
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="3259 단어"
+>
+  <em>18 분</em>읽는 시간</span>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <h4 id="처리율-제한-장치"><span class="me-2">처리율 제한 장치</span><a href="#처리율-제한-장치" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<p>클라이언트나 서비스가 보내는 트래픽의 처리율을 제어하기위한장치. HTTP를 예로들면 특정 기간 내 전송되는 클라이언트의 요청횟수를 제한함. api의 요청횟수가 임계치를 넘어서면 추가로 도달한 모든 호출은 block됨</p>
+<ul>
+  <li>토큰 버킷
+    <ul>
+      <li>지정된 용량을 갖는 컨테이너. 이 버킷에 사전 설정된 양의 토큰이 주기적으로 채워짐. 꽉차면 더 이상 추가는 안됨. 용량이 꽉찬 시점에서 추가된 토큰은 버려짐</li>
+      <li>요청이 처리될때마다 하나의 토큰을 사용</li>
+      <li>요청 처리를 위한 토큰이 없다면? -&gt; 요청 자체를 버림. 토큰이 다시 차도 버린 요청을 처리하지않음</li>
+      <li>2개의 인자를 받음
+        <ul>
+          <li>버킷 크기 : 버킷에 담을 수 있는 토큰의 최대 개수</li>
+          <li>토큰 공급률 : 초당 몇개의 토큰이 버킷에 공급되는가?</li>
+        </ul>
+      </li>
+      <li>장점
+        <ul>
+          <li>구현이 쉬움</li>
+          <li>메모리 사용측면에서 효율적</li>
+          <li>짧은 시간에 집중되는 트래픽도 처리 가능</li>
+        </ul>
+      </li>
+      <li>단점
+        <ul>
+          <li>버킷크기와 토큰공급률이라는 두개의 인자를 적절하게 튜닝하는것이 어려움</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>누출 버킷
+    <ul>
+      <li>토큰 버킷과 비슷하나 요청 처리율이 고정되어있음. 보통 FIFO(선입선출)로 구현함</li>
+      <li>요청이 도착하면 큐가 가득차있는지 확인. 빈자리가 있으면 큐에 요청 추가</li>
+      <li>큐가 가득 차면 새 요청은 버림</li>
+      <li>지정된 시간마다 큐에서 요청을 꺼내 처리</li>
+      <li>2개의 인자를 받음
+        <ul>
+          <li>버킷크기 : 큐사이즈와 같은 값.</li>
+          <li>처리율 : 지정된 시간동안 몇개의 항목을 처리할건지 지정하는 값</li>
+        </ul>
+      </li>
+      <li>전자 상거래 기업 쇼피파이(shopify)가 사용중인 방법</li>
+      <li>장점
+        <ul>
+          <li>큐의 크기가 제한되어있어 메모리 사용량 측면에서 효율적</li>
+          <li>고정된 처리율을 가지고있어 안정적 출력이 필요한경우 적합</li>
+        </ul>
+      </li>
+      <li>단점
+        <ul>
+          <li>단시간에 많은 트래픽이 몰리는 경우 큐에는 오래된 요청들이 쌓이게되고 요청을 처리하지못하면 최신요청은 모두 버려짐</li>
+          <li>2개의인자를 튜닝하기 까다로움</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>고정 윈도 카운터
+    <ul>
+      <li>타임라인을 고정된 간격의 윈도로 나누고 각 윈도마다 카운터를 붙임</li>
+      <li>요청이 접수될때마다 카운터의 값이 1씩 증가</li>
+      <li>카운터값이 사전에설정한 임계치를 넘어서면 새로운 요청 윈도가 열릴때까지 버려짐</li>
+      <li>예시
+        <ol>
+          <li>타임라인을 1초로 잡고, 임계치를 3으로 설정. == 시스템은 1초동안 3개의 요청만 처리함</li>
+          <li>매초마다 4번째 요청부터는 모두 버려짐</li>
+        </ol>
+      </li>
+      <li>장점
+        <ul>
+          <li>메모리의 효율이 좋음</li>
+          <li>이해하기 쉬움</li>
+          <li>윈도가 닫히는 시점에 카운터를 초기화하는 방식이라 특정한 트래픽패턴을 처리하기 적합</li>
+        </ul>
+      </li>
+      <li>단점 : <mark style="background: #ABF7F7A6;">윈도의 경계 부근에 순간적으로 많은 트래픽이 몰리는경우 임계치보다 더 많은 양이 처리될수도있음!!</mark>
+        <ul>
+          <li>예시)
+            <ul>
+              <li>분당 임계치가 3개일경우</li>
+              <li>2:00:00~2:00:30 1개의 요청</li>
+              <li>2:00:30~2:01:00 2개의요청</li>
+              <li>2:01:00~2:01:30 2개의 요청</li>
+              <li>2:01:30~2:02:00 1개의 요청</li>
+            </ul>
+          </li>
+          <li>위 예시에서보면 2:00:00~2:01:00까지는 분당 임계치 3개 내로 처리가됨. 그러나 2:00:30~2:01:30을 기준으로 보게되면 4개가 처리됨!! 1분동안 3개를 허용했는데 <mark style="background: #ABF7F7A6;">시간을 어떻게 나누냐에따라 임계치를 넘게 처리되기도함을 알수있음</mark></li>
+          <li></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>이동 윈도 로그
+    <ul>
+      <li>고정윈도카운터의 문제를 해결하기위해 요청의 타임스탬프를 추적하는 방법</li>
+      <li>타임스탬프 터는 보통 레디스의 정렬집합같은 캐시에 보관함</li>
+      <li>새요청이 오면 만료된 타임스탬프는 제거, 만료된 타임 스탬프는 그 값이 현재 윈도 시작 시점보다 오래된 타임 스탬프를 말함</li>
+      <li>새 요청의 타임스탬프를 로그에 추가</li>
+      <li>로그의 크기가 허용치보다 크거나 같으면 요청을 시스템에 전달, 아니면 거부</li>
+      <li>장점 : 매우 정료한 메커니즘으로 요청의 갯수가 시스템 한도를 넘지 않음</li>
+      <li>거부된 요청의 타임스탬프도 보관하기때문에 다량의 메모리를 사용</li>
+      <li>예시)
+        <blockquote>
+          <p>[!NOTE]</p>
+
+          <p>분당 2분의 요청만 허용</p>
+
+          <div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="복사되었습니다!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>	1. 1:00:01 요청
+	2. 1:00:30 요청&gt; 		   
+	3. 1:00:50 요청 =&gt; 거절된 요청
+	4. 1:01:40 요청
+위와 같이 4번의 요청이 들어왔을때, 요청이 들어온 시간(리눅스 타임스탬프)을 기록함.
+
+1, 2번 요청은 첫 요청이라 처리 가능. 3번 요청이 들어왔을때 요청 들어온 시간부터 1분전까지(해당요청이 1:00:50이니 0:59:50까지 조회할거임)몇번의 요청이 들어왔는지 확인, 해당 문제에서는 2번을 처리했기때문에 요청 거부.
+
+4번요청은 1:00:40~:1:01:40까지의 요청을 조회했을때 조회되는 로그는 3번이있으나 요청 처리된 건이 아니라 무시함! =&gt; 4번요청 성공
+
+따라서 위의 4번의 요청중 처리거부된 요청은 3번뿐임
+</pre></td></tr></tbody></table></code></div>          </div>
+
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>이동 윈도 카운터
+    <ul>
+      <li>고정윈도 카운터 알고리즘 + 이동윈도로그 알고리즘</li>
+      <li>두가지 접근법이있으나 책에서는 하나만 소개함</li>
+      <li>분당 7개의 요청처리가능할때, 직전 1분에 5개, 현재 1분에 3개 요청이 들어왔다 가정. 현재 1분의 30%지점에서 도착한 새 요청의 경우 현재 윈도에 몇개의 요청이왔는가?
+-&gt; 현재 1분간 요청 수 + 직전 1분간 요청 수 * 이동윈도와 직전 1분이 겹치는 비율
+    3 + 5 * 70% = 6.5 (올림, 내림은 상황에따라 다르나 이번 예제에서는 내림으로 계산함)
+    이번 1분동안 총 6개의 요청을 처리했으니 이번 요청도 처리가능(단 같은 시간대로 한번 더 요청이 들어오면 처리거부)</li>
+      <li>장점
+        <ul>
+          <li>이전 시간대의 평균 처리율에 따라 현재 윈도상태를 계산하므로 짧은 시간에 몰리는 트래픽에도 잘 대응</li>
+          <li>메모리 효율이 좋음</li>
+        </ul>
+      </li>
+      <li>단점
+        <ul>
+          <li>직전 시간대에 도착한 요청이 균등하게 분포되어있다고 가정한 상태에서 추정치를 계산하기때문에 다소 느슨함.
+그러나 그리 심각한 문제는 아님! 클라우드플레어가 실시한 실험에 따르면 40억개의 요청 중 시스템의 실제상태와 맞지않게 허용되거나 버려진 요청은 0.003%였음
+            <h6 id="개략적인-아키텍처">개략적인 아키텍처</h6>
+            <p>처리율 제한 알고리즘에서 얼마나 많은 요청이 접수되었는지 추적할수있는 카운터를 추적대상별로(사용자별/IP주소별/API엔드포인트별/서비스단위)두는데 이때 <mark style="background: #ABF7F7A6;">카운터는 어디에 보관할것인가</mark>?
+메모리상에서 동작하는 캐시가 바람직할것인데 대표적으로 redis는 처리율 제한 장치를 구현할때 자주사용되는 메모리 기반 저장장치로서, INCR와 EXPIRE 두가지 명령어를 지원함</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>INCR : 메모리에 저장된 카운터의 값을 1만큼 증가</li>
+  <li>EXPIRE : 카운터에 타임아웃 값을 설정. 설정 시간이 지나면 카운터는 자동 삭제
+    <ol>
+      <li>클라이언트가 처리율 제한 미들웨어에게 요청을 보냄</li>
+      <li>처리율 제한 미들웨어는 레디스의 지정 버킷에서 카운터를 가져와 한도 도달여부 검사</li>
+    </ol>
+    <ul>
+      <li>도달했다면 요청 거부</li>
+      <li>도달하지않았다면 API서버로 요청 전송
+        <ol>
+          <li>미들웨어는 카운터의 값을 증가 시킨 후 다시 레디스에 저장
+=&gt; 그렇다면 처리율 제한 규칙은 어떻게 만들어지고 어디에 저장되는가?
+  리프트(Lyft)는 처리율제한에 오픈소스를 사용함
+=&gt; 처리가 제한된 요청은 어떻게 처리되는가?
+  한도제한이 걸리면 429응답을 클라에게 보냄</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>처리율 제한장치가 사용하는 HTTP헤더</strong>
+<a href="/assets/images/대규모/IMG-20240910172910.png" class="popup img-link  shimmer"><img src="/assets/images/대규모/IMG-20240910172910.png" alt="image" loading="lazy"></a></p>
+<h5 id="분산-환경에서의-처리율-제한-장치의-구현"><span class="me-2">분산 환경에서의 처리율 제한 장치의 구현</span><a href="#분산-환경에서의-처리율-제한-장치의-구현" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+<p>분산환경에서는 여러대의 서버와 병렬 스레드를 지원하도록 시스템을 확장하는 것이 또다른 문제임</p>
+<ul>
+  <li>경쟁조건(race confition)
+    <ul>
+      <li>처리율 제한 장치의 동작법
+        <ol>
+          <li>레디스에서 카운터의 값을 읽음</li>
+          <li>카운터 + 1이 임계치를 넘는지 확인 -&gt; <strong><mark style="background: #ABF7F7A6;">문제발생 지점</mark></strong></li>
+          <li>넘지않는다면 레디스의 보관된 카운터의 값을 1만큼 증가</li>
+        </ol>
+      </li>
+      <li>A요청과 B요청이 연속으로 들어왔을때, A요청의 3번이 처리되지않은상태에서 B요청의 1번이 실행된다면? <strong><mark style="background: #ABF7F7A6;">A요청과 B요청의 1번 작업결과는 동일함</mark></strong></li>
+      <li>해결방법
+        <ul>
+          <li>LOCK: 가장 대표적인 방법이나 시스템성능을 상당히 떨어뜨린다는 문제가 있음</li>
+          <li>루아 스크립트</li>
+          <li>정렬집합(레디스 자료구조)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>동기화(synchronization)
+    <ul>
+      <li>처리율 제한장치가 2개라면? 둘 사이의 동기화가 제대로 이루어지지 않는다면 올바르게 처리율 제한을 할 수 없을것임</li>
+      <li>해결방법
+        <ul>
+          <li>고정세션(sticky session): 같은 클라이언트로부터 들어온 요청은 항상 같은 처리율제한장치로 보낼수있도록 하는것이나 확장불가, 유연하지못함으로 추천하지않음.</li>
+          <li>중앙집중형 데이터 저장소 사용 : 대표적으로 레디스. 처리율 제한장치가 카운터를 읽어올때 레디스에서 읽어온다면 문제가 해결됨
+            <h6 id="성능-최적화">성능 최적화</h6>
+            <p>여러 데이터 센터를 지원하면서 멀리떨어진 사용자를 지원하려하면 지연시간이 증가함.
+제한장치간의 데이터를 동기화할때 최종 일관성모델을 사용. -&gt; 6장 키-값 저장소 설계의 데이터 일관성 항목 참조</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>모니터링
+    <ul>
+      <li>처리율 제한장치 설계 후 효과적으로 동작(채택한 처리율제한 알고리즘/규칙이 효과적?)하는지 확인해보기위해 사용</li>
+      <li>깜짝세일같은 이벤트때문에 트래픽이 급증할때 처리율제한장치가 비효율적이라면 트래픽패턴을 파악해 잘 처리할 수 있도록 알고리즘을 바꾸는 것을 고려</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>[!NOTE]
+추가적으로 확인하면 좋은 내용</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="복사되었습니다!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>- 경성 또는 연성 처리율 제한
+	- 경성(hard)처리율 제한 : 요청 개수는 임계치를 절대 넘을 수 없음
+	- 연성(soft)처리율 제한 : 요청 개수가 임계치를 잠시동안은 넘을 수 있음
+- 다양한 계층에서의 처리율 제한
+	- 책에서는 애플리케이션계층(HTTP: OSI 네트워크 계층도 기준으로 7번)에서의 처리율 제한만 설명했으나 다른계층에서의 제한도 가능함
+	- 예를들어 Iptables를 사용한다면 IP(3번계층)주소에서 처리율 제한도 가능
+- 처리율 제한 회피
+	- 클라이언트 측 캐시를 사용해 api호출횟수 감소
+	- 처리율 제한 임계치를 이해하고 너무 짧은시간동안 너무 많은 메세지를 보내지 말것
+	- 예외나 에러를 처리하는 코드를 도입해 클라이언트가 예외적 상황으로 우아하게(gracefully) 복구되도록할것
+	- 재시도 로직을 구현할때는 충분한 백오프(back-off)시간을 두기
+</pre></td></tr></tbody></table></code></div>  </div>
+</blockquote>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
+    
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        
+          <a href="/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EB%B0%A9%EB%B2%95/">프로그래밍 방법</a>
+      </div>
+    
+
+    <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/%EC%84%A4%EA%B3%84/"
+            class="post-tag no-text-decoration"
+          >설계</a>
+        
+      </div>
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">공유하기</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+
+      <a href="https://twitter.com/intent/tweet?text=[%EC%B1%85]%20%EA%B0%80%EC%83%81%20%EB%A9%B4%EC%A0%91%20%EC%82%AC%EB%A1%80%EB%A1%9C%20%EB%B0%B0%EC%9A%B0%EB%8A%94%20%EB%8C%80%EA%B7%9C%EB%AA%A8%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%84%A4%EA%B3%84%20%EA%B8%B0%EC%B4%88%20-%204%EC%9E%A5%20%EC%B2%98%EB%A6%AC%EC%9C%A8%20%EC%A0%9C%ED%95%9C%20%EC%9E%A5%EC%B9%98%EC%9D%98%20%EC%84%A4%EA%B3%84%20-%20%ED%9E%88%ED%9E%88&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25EC%25B2%2598%25EB%25A6%25AC%25EC%259C%25A8-%25EC%25A0%259C%25ED%2595%259C-%25EC%259E%25A5%25EC%25B9%2598%25EC%259D%2598-%25EC%2584%25A4%25EA%25B3%2584%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+
+      
+
+      <a href="https://www.facebook.com/sharer/sharer.php?title=[%EC%B1%85]%20%EA%B0%80%EC%83%81%20%EB%A9%B4%EC%A0%91%20%EC%82%AC%EB%A1%80%EB%A1%9C%20%EB%B0%B0%EC%9A%B0%EB%8A%94%20%EB%8C%80%EA%B7%9C%EB%AA%A8%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%84%A4%EA%B3%84%20%EA%B8%B0%EC%B4%88%20-%204%EC%9E%A5%20%EC%B2%98%EB%A6%AC%EC%9C%A8%20%EC%A0%9C%ED%95%9C%20%EC%9E%A5%EC%B9%98%EC%9D%98%20%EC%84%A4%EA%B3%84%20-%20%ED%9E%88%ED%9E%88&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25EC%25B2%2598%25EB%25A6%25AC%25EC%259C%25A8-%25EC%25A0%259C%25ED%2595%259C-%25EC%259E%25A5%25EC%25B9%2598%25EC%259D%2598-%25EC%2584%25A4%25EA%25B3%2584%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25EC%25B2%2598%25EB%25A6%25AC%25EC%259C%25A8-%25EC%25A0%259C%25ED%2595%259C-%25EC%259E%25A5%25EC%25B9%2598%25EC%259D%2598-%25EC%2584%25A4%25EA%25B3%2584%2F&text=[%EC%B1%85]%20%EA%B0%80%EC%83%81%20%EB%A9%B4%EC%A0%91%20%EC%82%AC%EB%A1%80%EB%A1%9C%20%EB%B0%B0%EC%9A%B0%EB%8A%94%20%EB%8C%80%EA%B7%9C%EB%AA%A8%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%84%A4%EA%B3%84%20%EA%B8%B0%EC%B4%88%20-%204%EC%9E%A5%20%EC%B2%98%EB%A6%AC%EC%9C%A8%20%EC%A0%9C%ED%95%9C%20%EC%9E%A5%EC%B9%98%EC%9D%98%20%EC%84%A4%EA%B3%84%20-%20%ED%9E%88%ED%9E%88" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="링크 복사하기"
+      data-title-succeed="링크가 복사되었습니다!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
+</div>
+
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
+</article>
+<div id="giscus">
+    <script src="https://giscus.app/client.js"
+            data-repo="nunnunnu/nunnunnu.github.io"
+            data-repo-id="R_kgDOMWEGow"
+            data-category="Comments"
+            data-category-id="DIC_kwDOMWEGo84ChY2C"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="noborder_light"
+            data-lang="ko"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
+
+
+            
+          </main>
+
+          <!-- panel -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
+            <div class="access">
+              <!-- Get 5 last posted/updated posts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="access-lastmod">
+    <h2 class="panel-heading">최근 업데이트</h2>
+    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/SQL-%EA%B8%B0%EB%B3%B8-%ED%99%9C%EC%9A%A9/">[SQLD 시험 준비] SQL 기본 - 활용</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/%EC%8A%A4%ED%94%84%EB%A7%81MVC%EA%B8%B0%EB%B3%B8%EA%B8%B0%EB%8A%A5/">[김영한 스프링 MVC 1] 스프링 MVC 기본기능</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/green_jpa/">[국비교육학원-수업내용정리] JPA</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80%EC%83%9D%EC%84%B1/">[국비교육학원-수업내용정리] 웹페이지 생성</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/">자바의 정석 강의 - 상속(Ingeritance)</a>
+        </li>
+      
+    </ul>
+  </section>
+  <!-- #access-lastmod -->
+
+
+              <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <section>
+    <h2 class="panel-heading">인기 태그</h2>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/spring/">spring</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/java/">java</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/jpa/">jpa</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/orm/">ORM</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D/">자바의정석</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B5%AD%EB%B9%84%EA%B5%90%EC%9C%A1/">국비교육</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%BD%94%ED%8B%80%EB%A6%B0%EC%BF%A1%EB%B6%81/">코틀린쿡북</a>
+      
+    </div>
+  </section>
+
+
+            </div>
+
+            
+              
+              
+
+
+
+
+            
+          </aside>
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">관련된 글</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/%EC%95%88%EC%A0%95-%ED%95%B4%EC%8B%9C-%EC%84%A4%EA%B3%84/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711465200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/27
+</time>
+
+              <h4 class="pt-0 my-2">[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 5장 안정 해시 설계</h4>
+              <div class="text-muted">
+                <p>책정보
+
+
+해시 키 재배치 문제
+N개의 캐시서버가 있다고 가정, 이 서버들의 부하를 나누려면
+serverindex = hash(key)%N(N이 서버의 개수)
+위 계산공식으로
+
+
+  
+    
+      키
+      해시
+      해시%4(서버인덱스)[실제값아님!귀찮아서 대충함]
+    
+  
+  
+    
+      key0
+      13414...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%88%98%EC%97%90-%EB%94%B0%EB%A5%B8-%EA%B7%9C%EB%AA%A8-%ED%99%95%EC%9E%A5%EC%84%B1/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1710601200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/17
+</time>
+
+              <h4 class="pt-0 my-2">[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 1장 사용자 수에 따른 규모 확장성</h4>
+              <div class="text-muted">
+                <p>책정보
+
+웹 계층과 데이터 계층
+
+웹 서버와 데이터베이스의 서버가 각각 1개씩인 구조
+여기서 서버를 확장(스케일업)한다는 것은 수직적 규모 확장, 수평적 규모 확장 2가지로 나뉜다
+
+  수직적 규모 확장(vertical scaling) : 고사향자원을 추가하는 행위
+    
+      한계가 있음. 한대의 서버에 CPU나 메모리를 무한대로 증설할 수는...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%A3%BC%EB%8F%84-%EC%84%A4%EA%B3%84-%EC%B2%A0%EC%A0%80-%EC%9E%85%EB%AC%B8/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1699714800"
+  data-df="YYYY/MM/DD"
+  
+>
+  2023/11/12
+</time>
+
+              <h4 class="pt-0 my-2">[책] 도메인 주도 설계 철저 입문</h4>
+              <div class="text-muted">
+                <p>책 정보
+
+
+값 객체
+
+public class User {
+	@Id
+	@Column(name = &quot;user_id&quot;)
+	private Long userId;
+	@Column(name = &quot;first_name&quot;)
+	private String firstName;
+	@Column(name = &quot;last_name&quot;)
+	private String lastName...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
+
+
+            
+              
+              <!-- Navigation buttons at the bottom of the post. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  
+  
+
+  
+    <a
+      href="/posts/%EC%95%88%EC%A0%95-%ED%95%B4%EC%8B%9C-%EC%84%A4%EA%B3%84/"
+      class="btn btn-outline-primary"
+      aria-label="이전 글"
+    >
+      <p>[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 5장 안정 해시 설계</p>
+    </a>
+  
+
+  
+    <div class="btn btn-outline-primary disabled" aria-label="다음 글">
+      <p>-</p>
+    </div>
+  
+</nav>
+
+            
+              
+              <!-- The comments switcher -->
+
+
+            
+
+            <!-- The Footer -->
+
+<footer
+  aria-label="Site Info"
+  class="
+    d-flex flex-column justify-content-center text-muted
+    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
+  "
+>
+  <p>©
+    <time>2024</time>
+
+    
+      <a href="https://github.com/username">jinny</a>.
+    
+
+    
+  </p>
+
+  <p>
+  </p>
+</footer>
+
+          </div>
+        </div>
+
+        <!-- The Search results -->
+
+<div id="search-result-wrapper" class="d-flex justify-content-center d-none">
+  <div class="col-11 content">
+    <div id="search-hints">
+      <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <section>
+    <h2 class="panel-heading">인기 태그</h2>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/spring/">spring</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/java/">java</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/jpa/">jpa</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/orm/">ORM</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D/">자바의정석</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B5%AD%EB%B9%84%EA%B5%90%EC%9C%A1/">국비교육</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%BD%94%ED%8B%80%EB%A6%B0%EC%BF%A1%EB%B6%81/">코틀린쿡북</a>
+      
+    </div>
+  </section>
+
+
+    </div>
+    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+  </div>
+</div>
+
+      </div>
+
+      <aside aria-label="Scroll to Top">
+        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </aside>
+    </div>
+
+    <div id="mask"></div>
+
+    
+      <aside
+  id="notification"
+  class="toast"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  data-bs-animation="true"
+  data-bs-autohide="false"
+>
+  <div class="toast-header">
+    <button
+      type="button"
+      class="btn-close ms-auto"
+      data-bs-dismiss="toast"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="toast-body text-center pt-0">
+    <p class="px-2 mb-3">새 버전의 콘텐츠를 사용할 수 있습니다.</p>
+    <button type="button" class="btn btn-primary" aria-label="Update">
+      업데이트
+    </button>
+  </div>
+</aside>
+
+    
+
+    <!-- JavaScripts -->
+    <!-- JS selector for site. -->
+
+<!-- commons -->
+
+
+
+<!-- layout specified -->
+
+
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/ko.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js"></script>
+
+
+
+
+
+
+
+<script src="/assets/js/dist/post.min.js"></script>
+
+
+
+<!-- Pageviews -->
+
+  
+
+  
+
+
+
+
+
+
+
+    <!--
+  Jekyll Simple Search loader
+  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+-->
+
+
+
+
+
+<script>SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/assets/js/data/search.json',
+    searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{snippet}</p>  </article>',
+    noResultsText: '<p class="mt-5">검색 결과가 없습니다.</p>',
+    templateMiddleware: function(prop, value, template) {
+      if (prop === 'categories') {
+        if (value === '') {
+          return `${value}`;
+        } else {
+          return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+        }
+      }
+
+      if (prop === 'tags') {
+        if (value === '') {
+          return `${value}`;
+        } else {
+          return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+        }
+      }
+    }
+  });
+</script>
+
+  </body>
+</html>
+
