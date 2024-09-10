@@ -88,40 +88,71 @@ img {
   }
 }
 
-blockquote {
-  border-left: 0.125rem solid var(--blockquote-border-color);
-  padding-left: 1rem;
+blockquote{
+  
+  display:block;
+  background: var(--blockquote-background-color);
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.2;
   color: var(--blockquote-text-color);
-  margin-top: 0.5rem;
 
-  > p:last-child {
-    margin-bottom: 0;
-  }
+  /*Box Shadow - (Optional)*/
+  // -moz-box-shadow: 2px 2px 15px #ccc;
+  // -webkit-box-shadow: 2px 2px 15px #ccc;
+  // box-shadow: 2px 2px 15px #ccc;
 
-  &[class^='prompt-'] {
-    border-left: 0;
-    position: relative;
-    padding: 1rem 1rem 1rem 3rem;
-    color: var(--prompt-text-color);
-
-    @extend %rounded;
-
-    &::before {
-      text-align: center;
-      width: 3rem;
-      position: absolute;
-      left: 0.25rem;
-      margin-top: 0.4rem;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-    }
-  }
-
-  @include prompt('tip', '\f0eb', $fa-style: 'regular');
-  @include prompt('info', '\f06a', $rotate: 180);
-  @include prompt('warning', '\f06a');
-  @include prompt('danger', '\f071');
+  /*Borders - (Optional)*/
+  border-left-style: solid;
+  border-left-width: 15px;
+  border-right-style: solid;
+  border-right-width: 2px;    
+  border-left-color: #bddbf5;
+  border-right-color: #bddbf5;
 }
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #f0f7fd;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+  
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover{
+ color: #666;
+}
+
+blockquote em{
+  font-style: italic;
+}
+
 
 kbd {
   font-family: Lato, sans-serif;
