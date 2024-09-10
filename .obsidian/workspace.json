@@ -13,9 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/RDBMS/sqld/2022-10-24-SQL 기본-활용.md",
+                "file": "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "e52c26e342b50490",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/book/Pastedimage20240910165641.png"
               }
             }
           },
@@ -219,7 +229,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/RDBMS/sqld/2022-10-24-SQL 기본-활용.md",
+                "file": "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -236,7 +246,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/RDBMS/sqld/2022-10-24-SQL 기본-활용.md",
+                "file": "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -259,7 +269,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/RDBMS/sqld/2022-10-24-SQL 기본-활용.md"
+                "file": "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md"
               }
             }
           },
@@ -303,29 +313,40 @@
   },
   "active": "e1d716bb9ef7eb1f",
   "lastOpenFiles": [
-    "_site/posts/SQL-기본-활용/index.html",
-    "_site/posts/SQL-기본-활용",
-    "_site/assets/images/sqld/IMG-20240910155532.png",
-    "_site/assets/images/sqld/IMG-20240910155531.png",
-    "_site/assets/images/sqld/IMG-20240910155531-2.png",
-    "_site/assets/images/sqld/IMG-20240910155531-1.png",
-    "_site/assets/images/sqld/IMG-20240910155213.png",
-    "_site/assets/images/sqld/IMG-20240910155214.png",
-    "_site/assets/images/sqld/IMG-20240910155214-1.png",
-    "_site/assets/images/sqld/IMG-20240910155213-1.png",
-    "_site/assets/images/sqld",
-    "assets/images/sqld",
+    "_site/assets/images/book/Pastedimage20240910165641.png",
+    "_site/assets/images/book",
+    "assets/images/book/Pastedimage20240910165641.png",
+    "assets/images/book",
+    "_site/assets/images/Pasted image 20240910165641.png",
+    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
+    "_site/categories/프로그래밍-방법/index.html",
+    "_site/categories/프로그래밍-방법",
+    "_site/categories/프로그래밍개발방법/index.html",
+    "_site/categories/프로그래밍개발방법",
+    "_site/posts/도메인-주도-설계-철저-입문/index.html",
+    "_site/posts/도메인-주도-설계-철저-입문",
+    "_site/categories/ddd/index.html",
+    "_site/categories/ddd",
+    "_posts/blog/algo/권오흠/2022-11-21-정렬.md",
+    "_posts/blog/algo/권오흠/2022-10-11-Recursion -멱집합.md",
+    "_posts/blog/algo/권오흠/2022-12-13-트리와 이진트리.md",
+    "_site/assets/images/권오흠/IMG-20240910163802.png",
+    "_site/assets/images/권오흠/IMG-20240910163802-2.png",
+    "_site/assets/images/권오흠/IMG-20240910163802-1.png",
+    "_site/assets/images/권오흠/IMG-20240910163801.png",
+    "_site/assets/images/권오흠/IMG-20240910163801-5.png",
+    "_site/assets/images/권오흠/IMG-20240910163801-4.png",
+    "_site/assets/images/권오흠/IMG-20240910163801-3.png",
+    "_site/assets/images/권오흠/IMG-20240910163801-2.png",
+    "_posts/blog/algo/권오흠/2022-10-06-Recursion의 응용 - n queens problem.md",
+    "_posts/blog/algo/권오흠/2022-10-04-Recursion의 응용 (Maze).md",
+    "_posts/blog/algo/권오흠/2022-10-05-Recursion의 응용 - counting cell in a blob.md",
+    "_posts/blog/algo/권오흠/2022-09-29-Recursion의 기본 개념과 기본 예제.md",
+    "_posts/blog/RDBMS/sqld/2022-11-05-최종 정리본.md",
+    "_posts/blog/RDBMS/sqld/2022-11-04-스피드퀴즈.md",
+    "_posts/blog/RDBMS/sqld/2022-10-24-SQL 기본-활용.md",
     "_posts/blog/RDBMS/sqld/2022-10-23-데이터 모델링의 이해.md",
-    "_site/posts/데이터-모델링의-이해/index.html",
-    "_site/posts/데이터-모델링의-이해",
-    "_site/categories/rdbms/index.html",
-    "_site/categories/rdbms",
-    "_site/tags/sqld/index.html",
-    "_site/tags/sqld",
-    "_site/tags/rdbms/index.html",
     "_posts/blog/kotlin/2023-10-28-코루틴.md",
-    "_site/assets/images/SQL 기본-활용/IMG-20240910154948.png",
-    "_site/assets/images/SQL 기본-활용/IMG-20240910154948-3.png",
     "_posts/blog/kotlin/2023-09-10-그 밖의 코틀린 기능.md",
     "_posts/blog/kotlin/2023-10-28-테스트.md",
     "_posts/blog/kotlin/2023-10-28-스프링 프레임워크.md",
@@ -337,17 +358,6 @@
     "_posts/blog/kotlin/2023-10-28-시퀀스.md",
     "_posts/blog/kotlin/2023-09-10-함수형 프로그래밍.md",
     "_posts/blog/kotlin/2023-09-10-객체지향.md",
-    "_posts/blog/kotlin/2023-09-10-기초.md",
-    "_posts/blog/http/2023-01-23-HTTP 일반 헤더.md",
-    "_posts/blog/http/2023-01-24-HTTP 헤더 - 캐시와 조건부 요청.md",
-    "_posts/blog/http/2023-01-23-HTTP 상태코드.md",
-    "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
-    "_posts/blog/http/2023-01-22-HTTP 메소드.md",
-    "_posts/blog/http/2023-01-22-HTTP 메소드 활용.md",
-    "_posts/blog/http/2023-01-22-HTTP 기본.md",
-    "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
-    "_posts/blog/http/2023-01-22-인터넷 네트워크.md",
-    "node_modules/obsidian-callouts-markdown/README.md",
-    "node_modules/loose-envify/README.md"
+    "_posts/blog/kotlin/2023-09-10-기초.md"
   ]
 }
