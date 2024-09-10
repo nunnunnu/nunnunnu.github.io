@@ -546,28 +546,30 @@
 <div id="post-list" class="flex-grow-1 px-xl-1">
   
     <article class="card-wrapper card">
-      <a href="/posts/%EC%9E%90%EB%B0%94%EC%9D%98%EC%A0%95%EC%84%9D_%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C_7%EC%9E%A5_%EC%83%81%EC%86%8D_2/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EA%B7%B8%EB%A6%B0_%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A52/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문자 7장 - 상속 2</h1>
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 객체지향언어 2</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>[7-17] 예제코드의 세 클래스에서 공통부분을 뽑아 Unit 클래스를 만들고 이 클래스를 상속받도록 코드를 변경
+              <p>상속 : 클래스의 확장. 프레임워크를 개발할때 많이사용함. 그외에는 잘안씀
 
-  예제
-    class Marine{
-  int x,y;
-  void move(int x, int y){}
-  void stop(){}
-  void changeMode(){}
-}
-class Tank{
-  int x, y;
-  void...</p>
+해당 클래스를 아무도 상속받지못하게하려면 final을 사용하면됨
+
+포함 : 클래스안에 클래스. 대표적으로 String
+
+
+  
+    도형
+
+      public class Point {
+    int x,y;
+    public Point(){}
+    public Poi...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -584,11 +586,11 @@ class Tank{
 
 <time
   
-  data-ts="1665327600"
+  data-ts="1667401200"
   data-df="YYYY/MM/DD"
   
 >
-  2022/10/10
+  2022/11/03
 </time>
 
 
@@ -612,26 +614,25 @@ class Tank{
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/7%EC%9E%A5_%EC%83%81%EC%86%8D_1/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EC%BB%AC%EB%A0%89%EC%85%98-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문자 7장 - 상속 1</h1>
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 컬렉션 프레임워크</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>[7-1] SutdaCard 배열을 초기화하는 문제. 숫자가 1,3,8인경우 isKwang이 true여야함.
+              <p>list
 
-package _2javajungsuktestEx7;
-
-class SutdaDeck{
-	final int CARD_NUM=20;
-	SutdaCard cards[] = new SutdaCard[CARD_NUM];
-	
-	SutdaDeck() {
-...</p>
+public class WrapperEx {
+  public static void main(String[] args) {
+    //wrapper Class
+    Integer value =10;
+    int value2= 20;
+    value = null; //Integer가 클래스타입이라서 null가능. 
+    // value2...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -648,11 +649,11 @@ class SutdaDeck{
 
 <time
   
-  data-ts="1665068400"
+  data-ts="1667228400"
   data-df="YYYY/MM/DD"
   
 >
-  2022/10/07
+  2022/11/01
 </time>
 
 
@@ -676,427 +677,292 @@ class SutdaDeck{
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_3/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%96%B8%EC%96%B4/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 6장 - 객체 3</h1>
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 객체지향언어</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>[6-20] 메소드 shuffle을 정의해 배열을 섞기
-
-package _2javajungsuktestEx6;
-
-import java.util.Arrays;
-
-public class ex6_20 {
-
-	static int[] shuffle(int arr[]) {
-		if(arr==null || arr.length==0) return arr;
-		int...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664982000"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/06
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_2/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 6장 - 객체 2</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[6-8] 다음 코드에 정의된 변수들을 종류별로 구분해서 적기
-
-class PlayingCard{
-	int kind;
-	int num;
-
-	static int width;
-	static int height;
-
-	PlayingCard(int k, int n){
-		kind = k;
-		num = n;
-	}
-	public static void main(S...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664982000"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/06
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/6%EC%9E%A5_%EA%B0%9D%EC%B2%B4_1/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 6장 - 객체 1</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[6-1~6-2] SutdaCard클래스를 정의하고 두개의 생성자와 info()를 추가
-
-package _2javajungsuktestEx6;
-class SutdaCard{
-	int num=3 ;
-	boolean isKwang=true;
-	
-	SutdaCard(){
-		this(1,true);
-	}
-	
-	SutdaCard(int num, boolean...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664895600"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/05
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/5%EC%9E%A5_%EB%B0%B0%EC%97%B4/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 5장 - 배열</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[5-1] 잘못된것을 고르시오
-
-a. int[] arr[];
-b. int[] arr = {1,2,3,};
-c. int[] arr = new int[5];
-d. int[] arr = new int[5]{1,2,3,4,5}; - new int[5]나 {1,2,3,4,5} 둘중 하나를 지워야 함.
-e. int arr[5]; 선언하면서 크기지정 불가
-f. i...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664722800"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/03
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/4%EC%9E%A5_%EC%A1%B0%EA%B1%B4%EB%AC%B8_%EB%B0%98%EB%B3%B5%EB%AC%B8/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 4장 - 조건문, 반복문</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[4-1] 다음의 문장들을 조건식으로 표현하라.
-
-package _2javajungsuktestEx4;
-
-public class ex4_1 {
-
-	public static void main(String[] args) {
-//		1. int형 변수 x가 10보다 크고 20 보다 작을 때 true인 조건식
-		int x=10;
-		System.out.pr...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664636400"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/02
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/3%EC%9E%A5_%EC%97%B0%EC%82%B0%EC%9E%90/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 3장 - 연산자</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>3-1 출력값을 적어라
-class Exercise3_1 {
-public static void main(String[] args) {
-int x = 2;
-int y = 5;
-char c = &#39;A&#39;; // &#39;A&#39; 65 의 문자코드는
-System.out.println(1 + x &amp;lt;&amp;lt; 33);
-System.out.println(y &amp;gt;= 5 |...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1664636400"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/10/02
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/2%EC%9E%A5_%EB%B3%80%EC%88%98/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 2장 - 변수</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[2-1] 기본형 8개를 알맞은 자리에 적으시요
+              <p>객체≥인스턴스, 객체가 상위개념이나 거의 동일하게 사용함
 
 
   
+    마우스
+
+      package JAVA_221028;
     
-      종류/크기
-      1byte
-      2byte
-      4byte
-      8byte
+  public class Mouse {
+    
+    //클래스 상수
+    final static int VALUE = 100;
+    
+    //클래스변수
+    //static - 정적메모리(프로그램 실...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1666882800"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/10/28
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      JAVA
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EB%B3%80%EC%88%98%EC%99%80-%EB%A9%94%EC%86%8C%EB%93%9C/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 변수와 메소드</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>인스턴스변수 : 대표적으로 String str = new String(0);
+
+지역변수 : 메소드내에서 변수선언문 
+수행 시
+
+메소드 : 명령문의 집합. 값을 입력받아처리 후 결과를 돌려줌(결과 안돌려줄수도있음 - void[공허]), ()붙은건 전부 메소드임. - 정보은닉, 캡슐화
+
+
+  cmd로 args값 받는 법
+
+
+
+
+M누르고 탭누르면 해당 자바...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1666796400"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/10/27
+</time>
+
+
+                <!-- categories -->
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EB%B0%B0%EC%97%B42/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 배열2</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>회원가입
+
+package JAVA_221026;
+
+import java.util.Scanner;
+
+public class Ex01 {
+    public static void main(String[] args) {
+        String user_id = &quot;&quot;;
+        String user_pw = &quot;&quot;;
+        String user...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1666710000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/10/26
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      JAVA
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/SQL-%EA%B8%B0%EB%B3%B8-%ED%99%9C%EC%9A%A9/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[SQLD 시험 준비] SQL 기본 - 활용</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>SQL문장 종류
+
+
+  DML : 데이터 조작어 (사용자가 무슨데이터를 원하는지. 사용자가 실질적으로 접근하는데 사용, 호스트 프로그램속에 사용되는 DML명령어를 데이터 부속어라고도 함)
+    
+      insert : 입력
+      delete : 삭제
+      select : 조회
+      update : 수정
+      merge : 존...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1666537200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/10/24
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      RDBMS
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8%EB%A7%81%EC%9D%98-%EC%9D%B4%ED%95%B4/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[SQLD 시험 준비] 데이터 모델링의 이해</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>데이터 모델링
+
+: 정보 시스템 구축을 위한 데이터관점, 프로세스관점의 업무 분석/ 데이터베이스 구축을 위한 분석 및 설계하는 과정
+
+
+  특징
+    
+      추상화
+      단순화
+      명확화(정확화)
     
   
-  
+  필요한 이유
     
-      논리형
-      boolean
-       
-       
-       
-    
-    
-      문자형
-       
-      ch...</p>
+      업무 정보를 구성하는 기초가 되는 정보들에 대해 일정한 표기법에 의해 표현
+      ...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1113,11 +979,128 @@ System.out.println(y &amp;gt;= 5 |...</p>
 
 <time
   
-  data-ts="1664636400"
+  data-ts="1666450800"
   data-df="YYYY/MM/DD"
   
 >
-  2022/10/02
+  2022/10/23
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      RDBMS
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EA%B7%B8%EB%A6%B0_%EC%A0%95%EB%A6%AC/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 중간정리(변수~배열)</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>public class Variables {
+    public static void main(String[] args) {
+    //     //정수
+    //     // byte val1 = 10000;
+    //     // short val2 = 100000;
+    //     // int val3 = 10000000000; 
+    ...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1666278000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/10/21
+</time>
+
+
+                <!-- categories -->
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EA%B7%B8%EB%A6%B0_%EB%B0%B0%EC%97%B4/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 배열</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>배열 - 레퍼런스 타입
+
+public class ArrayEx {
+    public static void main(String[] args) {
+        int arr[] = new int[5];
+        //배열 요소의 초기화
+        System.out.println(arr);
+        for(int i=0;i&amp;lt;arr....</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1666191600"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/10/20
 </time>
 
 
@@ -1141,23 +1124,24 @@ System.out.println(y &amp;gt;= 5 |...</p>
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EB%9E%8C%EB%8B%A4%EC%99%80-%EC%8A%A4%ED%8A%B8%EB%A6%BC(Lambda&Stream)/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EC%A1%B0%EA%B1%B4%EB%AC%B8%EA%B3%BC_%EB%B0%98%EB%B3%B5%EB%AC%B8/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 강의 - 람다와 스트림(Lambda & Stream)</h1>
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 조건문과 반복문</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>람다식(Lambda Experssion)
+              <p>조건문
 
-: 함수(메소드)를 간단한 식으로 표현하는 법 (ex. (a, b) → a &amp;gt; b ? a : b )
+import java.util.Scanner;
 
-
-  익명함수(이름이 없는 함수, anonymous function) : 반환타입, 이름을 지우고 사이에 →를 붙인다
-  함수와 메소드는 근본적으로 동일하나 함수는 일반적 용어, 메소드는 객체지향개념 용...</p>
+public class ConditionalCheck01 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print(&quot;점수를 입력하세요 &amp;gt; &quot;...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1174,11 +1158,11 @@ System.out.println(y &amp;gt;= 5 |...</p>
 
 <time
   
-  data-ts="1662044400"
+  data-ts="1666105200"
   data-df="YYYY/MM/DD"
   
 >
-  2022/09/02
+  2022/10/19
 </time>
 
 
@@ -1400,12 +1384,30 @@ System.out.println(y &amp;gt;= 5 |...</p>
       
 
       
+        <!-- hide number -->
+        
+          <li class="page-item disabled">
+            <span class="page-link">...</span>
+          </li>
+          
+        
+      
+    
+      
+      
+      
+      
+      
+
+      
+
+      
         <!-- show number -->
         <li class="page-item ">
           <a
             class="page-link"
-            href="/page12"
-          >12</a>
+            href="/page13"
+          >13</a>
         </li>
       
     
@@ -1413,7 +1415,7 @@ System.out.println(y &amp;gt;= 5 |...</p>
     <!-- mobile pagination -->
     <li class="page-index align-middle">
       <span>10</span>
-      <span class="text-muted">/ 12</span>
+      <span class="text-muted">/ 13</span>
     </li>
 
     <!-- right arrow -->
@@ -1481,14 +1483,14 @@ System.out.println(y &amp;gt;= 5 |...</p>
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%EB%9E%8C%EB%8B%A4%EC%99%80-%EC%8A%A4%ED%8A%B8%EB%A6%BC(Lambda&Stream)/">자바의 정석 강의 - 람다와 스트림(Lambda & Stream)</a>
+          <a href="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/">자바의 정석 강의 - 상속(Ingeritance)</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/">자바의 정석 강의 - 상속(Ingeritance)</a>
+          <a href="/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/">자바의 정석 강의 - 예외처리</a>
         </li>
       
     </ul>
@@ -1572,20 +1574,6 @@ System.out.println(y &amp;gt;= 5 |...</p>
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1600,60 +1588,6 @@ System.out.println(y &amp;gt;= 5 |...</p>
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1703,103 +1637,10 @@ System.out.println(y &amp;gt;= 5 |...</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -1904,148 +1745,7 @@ System.out.println(y &amp;gt;= 5 |...</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2281,6 +1981,110 @@ System.out.println(y &amp;gt;= 5 |...</p>
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2300,6 +2104,430 @@ System.out.println(y &amp;gt;= 5 |...</p>
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2347,13 +2575,13 @@ System.out.println(y &amp;gt;= 5 |...</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%9E%90%EB%B0%94orm%ED%91%9C%EC%A4%80jpa/">김영한자바ORM표준JPA</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/http/">HTTP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%BD%94%ED%8B%80%EB%A6%B0%EC%BF%A1%EB%B6%81/">코틀린쿡북</a>
       
     </div>
   </section>
@@ -2477,20 +2705,6 @@ System.out.println(y &amp;gt;= 5 |...</p>
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2505,60 +2719,6 @@ System.out.println(y &amp;gt;= 5 |...</p>
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2608,103 +2768,10 @@ System.out.println(y &amp;gt;= 5 |...</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -2809,148 +2876,7 @@ System.out.println(y &amp;gt;= 5 |...</p>
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -3186,6 +3112,110 @@ System.out.println(y &amp;gt;= 5 |...</p>
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3205,6 +3235,430 @@ System.out.println(y &amp;gt;= 5 |...</p>
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3252,13 +3706,13 @@ System.out.println(y &amp;gt;= 5 |...</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%9E%90%EB%B0%94orm%ED%91%9C%EC%A4%80jpa/">김영한자바ORM표준JPA</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/http/">HTTP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%BD%94%ED%8B%80%EB%A6%B0%EC%BF%A1%EB%B6%81/">코틀린쿡북</a>
       
     </div>
   </section>

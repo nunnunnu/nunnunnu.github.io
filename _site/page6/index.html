@@ -546,23 +546,25 @@
 <div id="post-list" class="flex-grow-1 px-xl-1">
   
     <article class="card-wrapper card">
-      <a href="/posts/%EC%BF%BC%EB%A6%AC%EC%96%B8%EC%96%B4_%EC%A4%91%EA%B8%89-%EB%AC%B8%EB%B2%95/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/OSIV%EC%99%80_%EC%84%B1%EB%8A%A5_%EC%B5%9C%EC%A0%81%ED%99%94/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 쿼리언어 - 중급 문법</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 부트와 JPA 활용2] OSIV와 성능 최적화</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>경로 표현식
+              <p>Open Session In View : 하이버네이트
+  Open EntityManage In View : JPA
+  spring.jpa.open-in-view : true 기본값 - OSIV ON 상태
 
-.(점)을 찍어서 객체 그래프를 탐색함
 
 
-  [!important]
-select m.username -&amp;gt; 상태 필드from Member mjoin m.team t -&amp;gt; 단일 값 연관 필드(엔티티로 넘어감. ManyToOne or OneToOne)join m.orders o -&amp;gt; 컬렉션 값 연관 필드(양방향 관계. 컬렉션...</p>
+
+트랜젝션 범위를 벗어나도 영속성 컨텍스트가 살아있음. 모든 작업이 끝날때까지 살아있다고 이해하면될거같음.
+실시간 트래픽이 중요한 애플리케이션에...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -579,11 +581,11 @@ select m.username -&amp;gt; 상태 필드from Member mjoin m.team t -&amp;gt; �
 
 <time
   
-  data-ts="1672412400"
+  data-ts="1673622000"
   data-df="YYYY/MM/DD"
   
 >
-  2022/12/31
+  2023/01/14
 </time>
 
 
@@ -607,21 +609,27 @@ select m.username -&amp;gt; 상태 필드from Member mjoin m.team t -&amp;gt; �
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EC%BF%BC%EB%A6%AC%EC%96%B8%EC%96%B4_%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EA%B3%B5%ED%86%B5%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4-%EC%BF%BC%EB%A6%AC_%EB%A9%94%EC%86%8C%EB%93%9C/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 쿼리언어 기본문법</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 데이터 JPA] 공통 인터페이스 - 쿼리 메소드</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>JPAFactoryQuery query = new JPAQueryFactory(em);
-QMember m = QMember.member;
+              <p>@Autowired MemberJpaRepository memberJpaRepository;
 
-JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 검색쿼리. 검색을 할때도 테이블이 아닌 객체를 대상으로 검색을 함. 모든 DB데이터를 객체로 변환해서 검색을 하는 것은 불가능함
-에플리케이션이 필요한 데...</p>
+세상에 이거 프록시였다………………………………………….! sysout으로 getclass찍었는데,,,,, 프록시 니가 왜 거기서나와..?상태됨
+
+
+
+JpaRepository는 JPA에 특화된 기능만 모아놓은 인터페이스임.
+
+  주요 메서드
+    
+      ...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -638,11 +646,11 @@ JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 �
 
 <time
   
-  data-ts="1672412400"
+  data-ts="1673622000"
   data-df="YYYY/MM/DD"
   
 >
-  2022/12/31
+  2023/01/14
 </time>
 
 
@@ -666,28 +674,20 @@ JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 �
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EA%B0%92%ED%83%80%EC%9E%85/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EA%B3%A0%EA%B8%89_%EC%BB%AC%EB%A0%89%EC%85%98_%EC%A1%B0%ED%9A%8C_%EC%B5%9C%EC%A0%81%ED%99%94/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 값 타입</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 부트와 JPA 활용2] 고급 - 컬렉션 조회 최적화</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>JPA의 데이터 타입 분류
-
-  엔티티타입
-    
-      @Entity로 정의하는 객체
-      데이터가 변해도 식별자로 지속해서 추적 가능(회원 엔티티의 키나 나이값을 변경해도 식별자로 인식 가능)
-    
-  
-  값 타입
-    
-      int, Integer, String 처럼 단순히 값으로 사용하는 기본타입이나 객체
-      식별...</p>
+              <p>@GetMapping(&quot;/api/v2/orders&quot;)
+    public List&amp;lt;OrderDto&amp;gt; orderV2(){
+        List&amp;lt;Order&amp;gt; orders = orderRepository.findAllByString(new OrderSearch());
+        List&amp;lt;OrderDto&amp;gt; collect ...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -704,11 +704,11 @@ JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 �
 
 <time
   
-  data-ts="1672412400"
+  data-ts="1673190000"
   data-df="YYYY/MM/DD"
   
 >
-  2022/12/31
+  2023/01/09
 </time>
 
 
@@ -732,30 +732,25 @@ JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 �
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%ED%94%84%EB%A1%9D%EC%8B%9C%EC%99%80_%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84_%EA%B4%80%EB%A6%AC/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EA%B8%B0%EB%B3%B8/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 프록시와 연관관계 관리</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 부트와 JPA 활용2] 기본</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>FK가 걸린 다른 객체를 각 상황에따라 같이조회할때도있고 조회하지않을때도 있을때, 조회하지 않을때 프록시와 지연로딩을 사용.
+              <p>패키지는 API(JSON)와 템플릿 엔진(HTML)을 사용하는 컨트롤러를 분리할것. 공통으로 예외처리를 할때 패키지나 구성단위로 많이함.
 
+회원가입
 
+package com.jpabook.jpashop.api;
 
-프록시
+import javax.validation.Valid;
 
-
-  em.find() : 데이터 베이스를 통해 실제 엔티티 객체 조회
-  
-    em.getReference() : 데이터 베이스 조회를 미루는 가짜(프록시)엔티티 객체 조회
-
-    
-
-    위 코드 아래에...</p>
+import org.springframework.web.bind.annotation....</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -772,11 +767,11 @@ JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 �
 
 <time
   
-  data-ts="1672326000"
+  data-ts="1673017200"
   data-df="YYYY/MM/DD"
   
 >
-  2022/12/30
+  2023/01/07
 </time>
 
 
@@ -800,26 +795,24 @@ JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 �
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EA%B3%A0%EA%B8%89%EB%A7%A4%ED%95%91/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EA%B3%A0%EA%B8%89_%EC%A7%80%EC%97%B0%EB%A1%9C%EB%94%A9,-%EC%A1%B0%ED%9A%8C%EC%84%B1%EB%8A%A5_%EC%B5%9C%EC%A0%81%ED%99%94/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 고급매핑</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 부트와 JPA 활용2] 고급 - 지연로딩, 조회성능 최적화</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>DB에는 상속이라는 개념이 없음. 상속을 DB에서는 각각의 테이블로 변환(조인), 통합테이블 변환(단일테이블), 서브타입 테이블(구현클래스마다 테이블)로 변환 3가지가 있음
+              <p>@Component : 개발자가 직접 만든 객체를 bean으로 만드는 것.
+  @PostConstruct : 스프링이 bean을 초기화 한 후에 딱 한번만 실행함
+  선생님께서 저번에 뭘 만들어도 마스터 계정 하나는 만들고 시작해야한다고 하셨는데 그럴때 사용하는 것 같다.
 
 
+package com.jpabook.jpashop;
 
-
-  주요 어노테이션
-    
-      @Inheritance(strategy= InheritanceType.XXX)
-        
-          JOINED : 조인...</p>
+import javax...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -836,11 +829,11 @@ JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 �
 
 <time
   
-  data-ts="1672239600"
+  data-ts="1673017200"
   data-df="YYYY/MM/DD"
   
 >
-  2022/12/29
+  2023/01/07
 </time>
 
 
@@ -864,28 +857,29 @@ JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 �
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84_%EB%A7%A4%ED%95%91/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/jsp/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 연관관계 매핑</h1>
+            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] JSP</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>방향(Direction)
-    
-      
-        단방향
+              <p>jar : java application runtime
 
-          package com.kyhJPA.practice;
-        
-  import javax.persistence.*;
-  @Entity
-  public class Member {
-      @Id @GeneratedValue
-      @Column(name =...</p>
+war : web archive runtime
+
+프로젝트 생성시 빼먹은 패키지가있다면 메이븐에서 추가해도됨
+
+
+  [!info]
+
+  https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper/10.1.4
+
+
+이거...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -902,74 +896,11 @@ JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 �
 
 <time
   
-  data-ts="1672066800"
+  data-ts="1672758000"
   data-df="YYYY/MM/DD"
   
 >
-  2022/12/27
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JPA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/MVC/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] MVC패턴 실습</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>클라이언트사이드 렌더링(CSR) : 사용자의 컴퓨터 성능에따라 달라짐. (지금까지 한 방법)
-
-서버사이드 렌더링(SSR) : 서버의 성능에 따라 움직임?(새로 시도할 방법)
-
-jdk버전 17.0.4.1로 업데이트함
-
-환경변수 JAVA_HOME 경로 변경해주기. vscode에서도 자바버전 확인해보기
-
-스프링 프로젝트 생성시 자바 3.0.1, 17버전으로...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1671980400"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/12/26
+  2023/01/04
 </time>
 
 
@@ -993,27 +924,30 @@ jdk버전 17.0.4.1로 업데이트함
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EC%97%94%ED%8B%B0%ED%8B%B0_%EB%A7%A4%ED%95%91/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EC%9B%B9_%EA%B3%84%EC%B8%B5_%EA%B0%9C%EB%B0%9C/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 엔티티 매핑</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 부트와 JPA 활용1] 웹 계층 개발</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>객체와 테이블 매핑
+              <p>https://getbootstrap.com/docs/5.1/getting-started/download/
+
+다운받아서 resources의 static폴더 안에 넣으면됨
 
 
-  객체와 테이블 매핑
-    
-      @Entity
-        
-          JPA가 관리
-          기본 생성자 필수(파라미터가 없는 public 또는 protected생성자)
-          final 클래스, enum, interface, inner 클래스 사용 x
-          저장할 필드에 f...</p>
+
+버전문제로 잘 안되는듯 쌤이랑 같은버전까니까 됨
+
+
+
+회원 가입
+@NotEmpty - 필수값 표시
+
+스프링 부트 버전이 2.3 이상이라면 build.gredle에 implemen...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1030,11 +964,11 @@ jdk버전 17.0.4.1로 업데이트함
 
 <time
   
-  data-ts="1671980400"
+  data-ts="1672758000"
   data-df="YYYY/MM/DD"
   
 >
-  2022/12/26
+  2023/01/04
 </time>
 
 
@@ -1058,27 +992,34 @@ jdk버전 17.0.4.1로 업데이트함
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EC%98%81%EC%86%8D%EC%84%B1_%EA%B4%80%EB%A6%AC/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EC%A3%BC%EB%AC%B8_%EB%8F%84%EB%A9%94%EC%9D%B8/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 영속성 관리</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 부트와 JPA 활용1] 주문 도메인 개발</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>영속성 컨텍스트
+              <p>구현기능
+
+  상품주문
+  주문내역 조회
+  주문 취소
 
 
-  JPA를 이해하는데 가장 중요한 용어
-  “엔티티를 영구 저장하는 환경”
-  EntityManager.persist(entity) - DB에 저장하는 것이 아니라 영속성 컨텍스트에 저장함
-  논리적인 개념(눈에보이지 않음)
-  엔티티 메니저를 통해서 영속성 컨텍스트에 접근
-  엔티티의 생명주기
+개발 순서
+
+  
+    주문 엔티티, 주문상품 엔티티 개발
+
+     package com.jpabook.jpashop.domain;
     
-      비영속(new/...</p>
+    
+ import java.time.LocalDateTime;
+ import java.util.ArrayList;
+ import java.uti...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1095,11 +1036,11 @@ jdk버전 17.0.4.1로 업데이트함
 
 <time
   
-  data-ts="1671894000"
+  data-ts="1672671600"
   data-df="YYYY/MM/DD"
   
 >
-  2022/12/25
+  2023/01/03
 </time>
 
 
@@ -1123,21 +1064,26 @@ jdk버전 17.0.4.1로 업데이트함
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EC%84%A4%EC%A0%95/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EC%83%81%ED%92%88_%EB%8F%84%EB%A9%94%EC%9D%B8_%EA%B0%9C%EB%B0%9C/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 설정</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 부트와 JPA 활용1] 상품 도메인 개발</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>maven을 이용한 강의.
+              <p>setter를 이용하지 않고 재고 변경
 
-수업시간에 gradle을 사용하였으나 강사님의 댓글을 보니 실무에서는 maven도 활용할 줄 아는 것이 더 좋다고 해서 (gradle로 설정하기엔 너무 까다롭고, spring이 들어오면 다 해결될 문제라고 하심)일단 maven으로 따라해보려고 한다.
 
-&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?...</p>
+package com.jpabook.jpashop.exception;
+
+public class NotEnoughStockException extends RuntimeException{
+    public NotEnoughStockException(){
+        super();
+    }
+    publi...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1154,11 +1100,70 @@ jdk버전 17.0.4.1로 업데이트함
 
 <time
   
-  data-ts="1671721200"
+  data-ts="1672671600"
   data-df="YYYY/MM/DD"
   
 >
-  2022/12/23
+  2023/01/03
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      JPA
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%ED%9A%8C%EC%9B%90_%EB%8F%84%EB%A9%94%EC%9D%B8_%EA%B0%9C%EB%B0%9C/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 부트와 JPA 활용1] 회원 도메인 개발</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>repository
+@PersistenceContext
+스프링에서 영속성 관리를 위해 Entity Manager가 존재한다.
+그래서 스프링이 처음 시작할 때, entity manager를 만들어서 빈으로 등록을 해둔다.
+entity manager는 @Autowired가 아니고 특별하게 @PersistenceContext라는 어노테이션으로 주입을 해줄 ...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1672585200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2023/01/02
 </time>
 
 
@@ -1385,12 +1390,25 @@ jdk버전 17.0.4.1로 업데이트함
       
 
       
+        <!-- hide number -->
+        
+      
+    
+      
+      
+      
+      
+      
+
+      
+
+      
         <!-- show number -->
         <li class="page-item ">
           <a
             class="page-link"
-            href="/page12"
-          >12</a>
+            href="/page13"
+          >13</a>
         </li>
       
     
@@ -1398,7 +1416,7 @@ jdk버전 17.0.4.1로 업데이트함
     <!-- mobile pagination -->
     <li class="page-index align-middle">
       <span>6</span>
-      <span class="text-muted">/ 12</span>
+      <span class="text-muted">/ 13</span>
     </li>
 
     <!-- right arrow -->
@@ -1466,14 +1484,14 @@ jdk버전 17.0.4.1로 업데이트함
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%EB%9E%8C%EB%8B%A4%EC%99%80-%EC%8A%A4%ED%8A%B8%EB%A6%BC(Lambda&Stream)/">자바의 정석 강의 - 람다와 스트림(Lambda & Stream)</a>
+          <a href="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/">자바의 정석 강의 - 상속(Ingeritance)</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/">자바의 정석 강의 - 상속(Ingeritance)</a>
+          <a href="/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/">자바의 정석 강의 - 예외처리</a>
         </li>
       
     </ul>
@@ -1557,20 +1575,6 @@ jdk버전 17.0.4.1로 업데이트함
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1585,60 +1589,6 @@ jdk버전 17.0.4.1로 업데이트함
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1688,103 +1638,10 @@ jdk버전 17.0.4.1로 업데이트함
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -1889,148 +1746,7 @@ jdk버전 17.0.4.1로 업데이트함
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2266,6 +1982,110 @@ jdk버전 17.0.4.1로 업데이트함
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2285,6 +2105,430 @@ jdk버전 17.0.4.1로 업데이트함
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2332,13 +2576,13 @@ jdk버전 17.0.4.1로 업데이트함
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%9E%90%EB%B0%94orm%ED%91%9C%EC%A4%80jpa/">김영한자바ORM표준JPA</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/http/">HTTP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%BD%94%ED%8B%80%EB%A6%B0%EC%BF%A1%EB%B6%81/">코틀린쿡북</a>
       
     </div>
   </section>
@@ -2462,20 +2706,6 @@ jdk버전 17.0.4.1로 업데이트함
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2490,60 +2720,6 @@ jdk버전 17.0.4.1로 업데이트함
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2593,103 +2769,10 @@ jdk버전 17.0.4.1로 업데이트함
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -2794,148 +2877,7 @@ jdk버전 17.0.4.1로 업데이트함
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -3171,6 +3113,110 @@ jdk버전 17.0.4.1로 업데이트함
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3190,6 +3236,430 @@ jdk버전 17.0.4.1로 업데이트함
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3237,13 +3707,13 @@ jdk버전 17.0.4.1로 업데이트함
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%9E%90%EB%B0%94orm%ED%91%9C%EC%A4%80jpa/">김영한자바ORM표준JPA</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/http/">HTTP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%BD%94%ED%8B%80%EB%A6%B0%EC%BF%A1%EB%B6%81/">코틀린쿡북</a>
       
     </div>
   </section>

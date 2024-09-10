@@ -546,27 +546,26 @@
 <div id="post-list" class="flex-grow-1 px-xl-1">
   
     <article class="card-wrapper card">
-      <a href="/posts/Querydsl_%EA%B8%B0%EB%8A%A5/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EC%BD%94%ED%8B%80%EB%A6%B0-%EB%8C%80%EB%A6%AC%EC%9E%90/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 Querydsl] QueryDsl 기능</h1>
+            <h1 class="card-title my-2 mt-md-0">[코틀린 쿡북] 8장 - 코틀린 대리자</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>[!important]
-제약사항이 많아서 실무에서는 사용하기 부족한 기능들을 모아놓음
+              <p>대리자를 이용한 합성
 
-
-인터페이스 지원 QuerydslPredicateExecutor
-
-package com.kyh.querydsl2.repository;
-
-import java.util.List;
-
-import org.springframework.data.jpa.repository.J...</p>
+interface Dialable {
+    fun dial(number: String) :String
+}
+class Phone : Dialable {
+    override fun dial(number: String): String = &quot;dialing&quot;
+}
+interface Snappable {
+    fun takePictu...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -583,11 +582,11 @@ import org.springframework.data.jpa.repository.J...</p>
 
 <time
   
-  data-ts="1681657200"
+  data-ts="1695826800"
   data-df="YYYY/MM/DD"
   
 >
-  2023/04/17
+  2023/09/28
 </time>
 
 
@@ -596,7 +595,7 @@ import org.springframework.data.jpa.repository.J...</p>
                   <i class="far fa-folder-open fa-fw me-1"></i>
                   <span class="categories">
                     
-                      JPA
+                      Kotlin
                   </span>
                 
               </div>
@@ -611,39 +610,26 @@ import org.springframework.data.jpa.repository.J...</p>
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EC%8A%A4%ED%94%84%EB%A7%81%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 스프링 시큐리티</h1>
+            <h1 class="card-title my-2 mt-md-0">[코틀린 쿡북] 4장 - 함수형 프로그래밍</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>로그아웃은 프론트일임!!!!
+              <p>fold
 
-마찬가지로 sns로그인은 프론트일임
+시퀀스나 컬렉션을 하나의 값으로 축약시키고싶을때 사용
 
-세션, 모델을 사용할거면 안쓰는게 맞음
-
-토큰은 임의로 만료불가
-
-로그아웃은 프론트에서 브라우저 메모리에서 삭제
-
-아니면 백에서 레디스 이용
+fun sum(vararg nums: Int) = nums.fold(0) { acc, n-&amp;gt; acc+n}
 
 
+가변인자 nums를 받아서 반환값의 초기값을 0으로 설정, 반환값 acc와 파라미터로 밭은 nums의 값을 n에 넣어서 acc+n 실행, acc에 값 누적됨
 
-찾아보면 테이블을 분리하는경우가 많은데 회원 권한이 하나라면 하나로 통합해도됨
-
-
-
-이거임
-
-plugins {
-	id &#39;java&#39;
-	id ...</p>
+fun sum...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -660,11 +646,276 @@ plugins {
 
 <time
   
-  data-ts="1677164400"
+  data-ts="1694271600"
   data-df="YYYY/MM/DD"
   
 >
-  2023/02/24
+  2023/09/10
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Kotlin
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EA%B8%B0%EC%B4%88/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[코틀린 쿡북] 2장 - 기초</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>널 허용 타입
+
+val name: String
+name = &quot;test&quot;
+//    name = null //컴파일 에러남
+
+val nullName: String? //?로 null가능 설정함
+nullName = null;
+
+
+
+  class
+
+
+class Person(
+    val first: String,
+    val middle: String?...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1694271600"
+  data-df="YYYY/MM/DD"
+  
+>
+  2023/09/10
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Kotlin
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EA%B7%B8-%EB%B0%96%EC%9D%98-%EC%BD%94%ED%8B%80%EB%A6%B0-%EA%B8%B0%EB%8A%A5/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[코틀린 쿡북] 11장 - 그 밖의 코틀린 기능</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>코틀린 버전 알아보기
+
+println(KotlinVersion.CURRENT)
+println(KotlinVersion(1,3,41) &amp;lt; KotlinVersion.CURRENT) //true
+println(KotlinVersion.CURRENT.isAtLeast(major = 1, minor = 3, patch = 40)) //true
+
+
+코틀린 ...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1694271600"
+  data-df="YYYY/MM/DD"
+  
+>
+  2023/09/10
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Kotlin
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[코틀린 쿡북] 3장 - 코틀린 객체 지향 프로그래밍</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>const - val 차이
+
+둘다 수정 불가능한건 동일함
+
+
+  const : 컴파일 타임 상수. 컴파일 시점에 값을 할당
+  = 컴파일러는 해당 상수가 어떤 값을 가지고 있는지 미리 알수 있음
+    
+      const val TEST = validPriority(10) 이런거 안됨
+      const 단독 사용, const var는 안되는듯함...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1694271600"
+  data-df="YYYY/MM/DD"
+  
+>
+  2023/09/10
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Kotlin
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EC%83%81%ED%92%88%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B0%9C%EB%B0%9C/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 MVC 1] 상품 도메인 개발</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>entity
+
+
+package hello.itemservice.domain.item;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1691161200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2023/08/05
 </time>
 
 
@@ -688,25 +939,23 @@ plugins {
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/springdatajpa%EC%99%80querydsl/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EC%8A%A4%ED%94%84%EB%A7%81_MVC_%EA%B5%AC%EC%A1%B0/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 Querydsl] Spring Data Jpa와 QueryDsl</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 MVC 1] 스프링 MVC 구조</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>StringUtils.hasText → null과 “” 둘다 체크하는 방법!!!!!!!! 값이있으면 true, 없으면 false 반환
+              <p>DispatcherServlet
 
-사용자 정의 repository
+DIspatcherServlet도 부모클래스가 HttpServlet을 상속받고있음. → 모든경로에대해 매핑을 해놓음
 
-package com.kyh.querydsl2.repository;
+(자세한 경로가 우선순위가 높아서 기존에 등록한 서블릿도 동작함)
 
-import java.util.List;
-
-import com.kyh.querydsl2.dto.MemberSear...</p>
+protected void doDispatch(HttpServletRequest request, HttpServletResponse ...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -723,136 +972,11 @@ import com.kyh.querydsl2.dto.MemberSear...</p>
 
 <time
   
-  data-ts="1675782000"
+  data-ts="1687618800"
   data-df="YYYY/MM/DD"
   
 >
-  2023/02/08
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JPA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%A4%91%EA%B8%89%EB%AC%B8%EB%B2%95/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 Querydsl] 중급문법</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>프로젝션 결과 반환 - 기본
-프로젝션 : select 대상 지정
-
-— 프로젝션 대상이 하나일때
-List&amp;lt;String&amp;gt; result = queryFactory.select(member.username).from(member).fetch();
-
-
-— 프로젝션 대상이 둘 이상
-
-  튜플
-
-
-@Test
-    public void testQuery...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1675609200"
-  data-df="YYYY/MM/DD"
-  
->
-  2023/02/06
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JPA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%9B%B9%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%B4%ED%95%B4/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 MVC 1] 웹 애플리케이션 이해</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>웹서버 : HTTP기반으로 동작. 정적 리소스 제공, 기타 부가기능. ex) NGINX, APACHE
-
-웹 애플리케이션 서버(WAS) : HTTP기반으로 동작, 웹 서버 기능 포함+(정적 리소스 제공 기능), 프로그램코드를 실행해서 애플리케이션 로직을 수행(동적 HTML, HTTP API[JSON], 서블릿, JSP, 스프링 MVC), ex)톰캣 Je...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1675522800"
-  data-df="YYYY/MM/DD"
-  
->
-  2023/02/05
+  2023/06/25
 </time>
 
 
@@ -876,21 +1000,26 @@ List&amp;lt;String&amp;gt; result = queryFactory.select(member.username).from(me
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/%EC%8A%A4%ED%94%84%EB%A7%81_%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%99%80_%EB%B9%88/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EC%8A%A4%ED%94%84%EB%A7%81MVC%EA%B8%B0%EB%B3%B8%EA%B8%B0%EB%8A%A5/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 핵심원리 기본편] 스프링 컨테이너와 빈</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 MVC 1] 스프링 MVC 기본기능</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>스프링 컨테이너 생성
+              <p>기본적인 내용이 많아서 좀 생략함
 
-ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Appconfig.class);
+  war : 톰캣 별도 설치(내장도되긴함), servlet, jsp에도 배포가능함
+  jar : 내장톰캣 사용. 내장서버사용에 최적화됨
 
-ApplicationContext(인터페이스임)를 스프링 컨테이너라고 부름 - 정확히는 BeanFactory, ApplicationContext로 구분해서...</p>
+
+— 로깅
+운영시스템에서는 sout안씀. SLF4J와 Logback 두 라이브러리가있는데 대부분 Logback사용함(스프링부트 기본제공)
+
+package com.hello.spr...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -907,11 +1036,11 @@ ApplicationContext(인터페이스임)를 스프링 컨테이너라고 부름 - 
 
 <time
   
-  data-ts="1674918000"
+  data-ts="1687618800"
   data-df="YYYY/MM/DD"
   
 >
-  2023/01/29
+  2023/06/25
 </time>
 
 
@@ -935,35 +1064,25 @@ ApplicationContext(인터페이스임)를 스프링 컨테이너라고 부름 - 
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/HTTP-%ED%97%A4%EB%8D%94-%EC%BA%90%EC%8B%9C%EC%99%80-%EC%A1%B0%EA%B1%B4%EB%B6%80-%EC%9A%94%EC%B2%AD/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/MVC_%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 모든 개발자를 위한 HTTP 웹 기본 지식] - HTTP 헤더 - 캐시와 조건부 요청</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 MVC 1] MVC 프레임워크</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>캐시 기본 동작
+              <p>프론트 컨트롤러 도입
 
+프론트 컨트롤러 서블릿 하나로 클라이언트의 요청을 받아 요청에맞는 컨트롤러를 호출(컨트롤러는 서블릿필요없음)
 
+package com.mvc1.servlet.web.frontController.v1.controller;
 
-60초동안 캐시가 유효함
+import java.io.IOException;
 
-
-
-2번째 요청 시 유효기간 이내라면 다운로드 없이 캐시의 이미지를 가져옴
-
-
-
-유효기간 초과 시 재 다운로드 함(네트와크 다운로드 발생)
-
-
-
-재 다운한걸 캐시에 저장(캐시 갱신)
-
-❗근데 데이터에 변경이 없는데 유효기간이 지났다면 재다운로드를 받을 필요가 있는가? → 검증 요청 필요(클라이언트와 서버...</p>
+import com.mvc1.servlet.web.fron...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -980,11 +1099,11 @@ ApplicationContext(인터페이스임)를 스프링 컨테이너라고 부름 - 
 
 <time
   
-  data-ts="1674486000"
+  data-ts="1686409200"
   data-df="YYYY/MM/DD"
   
 >
-  2023/01/24
+  2023/06/11
 </time>
 
 
@@ -993,7 +1112,7 @@ ApplicationContext(인터페이스임)를 스프링 컨테이너라고 부름 - 
                   <i class="far fa-folder-open fa-fw me-1"></i>
                   <span class="categories">
                     
-                      HTTP
+                      Spring
                   </span>
                 
               </div>
@@ -1008,27 +1127,26 @@ ApplicationContext(인터페이스임)를 스프링 컨테이너라고 부름 - 
     </article>
   
     <article class="card-wrapper card">
-      <a href="/posts/HTTP-%EC%9D%BC%EB%B0%98-%ED%97%A4%EB%8D%94/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/%EC%84%9C%EB%B8%94%EB%A6%BF_mvc_jsp/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 모든 개발자를 위한 HTTP 웹 기본 지식] - HTTP 일반헤더</h1>
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 MVC 1] 서블릿, MVC, JSP</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>field-name은 대소문자 구문 없음
+              <p>동시성 문제 고려안하고 진행(고려시 ConcurrentHashMap, AtomicLong사용을 고려해야함)
 
+package com.mvc1.servlet.domain;
 
-  HTTP 전송에 필요한 모든 부가정보
-  
-    예) 메시지 바디의 내용, 메시지 바디의 크기, 압축, 인증, 요청 클라이언트, 서버 정보, 캐
-  시 관리 정보…
-  
-  표준 헤더가 너무 많음
-    
-      https://en.wikipedia.org/wiki/List_of_HTTP_heade...</p>
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgs...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
@@ -1045,11 +1163,11 @@ ApplicationContext(인터페이스임)를 스프링 컨테이너라고 부름 - 
 
 <time
   
-  data-ts="1674399600"
+  data-ts="1685286000"
   data-df="YYYY/MM/DD"
   
 >
-  2023/01/23
+  2023/05/29
 </time>
 
 
@@ -1058,143 +1176,7 @@ ApplicationContext(인터페이스임)를 스프링 컨테이너라고 부름 - 
                   <i class="far fa-folder-open fa-fw me-1"></i>
                   <span class="categories">
                     
-                      HTTP
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/HTTP-%EC%83%81%ED%83%9C%EC%BD%94%EB%93%9C/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 모든 개발자를 위한 HTTP 웹 기본 지식] - HTTP 상태코드</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>상태 코드
-
-: 클라이언트가 보낸 요청의 처리 상태를 응답에서 알려주는 기능
-
-
-  1xx (Informational): 요청이 수신되어 처리중 - 거의 안씀
-  2xx (Successful): 요청 정상 처리
-    
-      200 OK - 요청 성공
-      201 created - 요청 성공, 새로운 리소스 생성됨(생성된 리소스는 응답의 L...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1674399600"
-  data-df="YYYY/MM/DD"
-  
->
-  2023/01/23
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      HTTP
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%9D%B8%ED%84%B0%EB%84%B7-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 모든 개발자를 위한 HTTP 웹 기본 지식] - 인터넷 네트워크</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>인터넷 통신
-
-클라이언트와 서버 컴퓨터가 인터넷으로 통신할때 인터넷 망을 통해 통신을함.
-
-
-
-그럼 통신 시 필요한 규칙은? → IP(인터텟 프로토콜)
-
-IP(인터텟 프로토콜)
-
-클라이언트와 서버 컴퓨터의 아이피 주소를 이용해 통신을 함.
-
-
-  역할
-    
-      지정한 IP주소(IP Address)에 데이터를 전달
-      
-        ...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1674313200"
-  data-df="YYYY/MM/DD"
-  
->
-  2023/01/22
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      HTTP
+                      Spring
                   </span>
                 
               </div>
@@ -1407,12 +1389,25 @@ IP(인터텟 프로토콜)
       
 
       
+        <!-- hide number -->
+        
+      
+    
+      
+      
+      
+      
+      
+
+      
+
+      
         <!-- show number -->
         <li class="page-item ">
           <a
             class="page-link"
-            href="/page12"
-          >12</a>
+            href="/page13"
+          >13</a>
         </li>
       
     
@@ -1420,7 +1415,7 @@ IP(인터텟 프로토콜)
     <!-- mobile pagination -->
     <li class="page-index align-middle">
       <span>3</span>
-      <span class="text-muted">/ 12</span>
+      <span class="text-muted">/ 13</span>
     </li>
 
     <!-- right arrow -->
@@ -1488,14 +1483,14 @@ IP(인터텟 프로토콜)
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%EB%9E%8C%EB%8B%A4%EC%99%80-%EC%8A%A4%ED%8A%B8%EB%A6%BC(Lambda&Stream)/">자바의 정석 강의 - 람다와 스트림(Lambda & Stream)</a>
+          <a href="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/">자바의 정석 강의 - 상속(Ingeritance)</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/">자바의 정석 강의 - 상속(Ingeritance)</a>
+          <a href="/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/">자바의 정석 강의 - 예외처리</a>
         </li>
       
     </ul>
@@ -1579,20 +1574,6 @@ IP(인터텟 프로토콜)
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1607,60 +1588,6 @@ IP(인터텟 프로토콜)
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1710,103 +1637,10 @@ IP(인터텟 프로토콜)
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -1911,148 +1745,7 @@ IP(인터텟 프로토콜)
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2288,6 +1981,110 @@ IP(인터텟 프로토콜)
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2307,6 +2104,430 @@ IP(인터텟 프로토콜)
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2354,13 +2575,13 @@ IP(인터텟 프로토콜)
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%9E%90%EB%B0%94orm%ED%91%9C%EC%A4%80jpa/">김영한자바ORM표준JPA</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/http/">HTTP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%BD%94%ED%8B%80%EB%A6%B0%EC%BF%A1%EB%B6%81/">코틀린쿡북</a>
       
     </div>
   </section>
@@ -2484,20 +2705,6 @@ IP(인터텟 프로토콜)
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2512,60 +2719,6 @@ IP(인터텟 프로토콜)
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2615,103 +2768,10 @@ IP(인터텟 프로토콜)
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -2816,148 +2876,7 @@ IP(인터텟 프로토콜)
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -3193,6 +3112,110 @@ IP(인터텟 프로토콜)
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3212,6 +3235,430 @@ IP(인터텟 프로토콜)
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3259,13 +3706,13 @@ IP(인터텟 프로토콜)
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%9E%90%EB%B0%94orm%ED%91%9C%EC%A4%80jpa/">김영한자바ORM표준JPA</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/http/">HTTP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%BD%94%ED%8B%80%EB%A6%B0%EC%BF%A1%EB%B6%81/">코틀린쿡북</a>
       
     </div>
   </section>
