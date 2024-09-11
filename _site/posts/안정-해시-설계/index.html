@@ -1148,7 +1148,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="964 단어"
+  title="963 단어"
 >
   <em>5 분</em>읽는 시간</span>
 
@@ -1254,8 +1254,6 @@
 결과적으로 이때 <mark style="background: #ABF7F7A6;">죽은 server1의 키만 재배치되는게아니라 모든 키가 재배치됨</mark>
 <strong>결국 캐시 클라이언트는 데이터가없는 엉뚱한 서버에 접속하게될 가능성이 있음</strong></p>
 <h4 id="안정-해시"><span class="me-2">안정 해시</span><a href="#안정-해시" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-
-<p>^cabc4d</p>
 
 <p>위의 문제에서(해시테이블의 크기가 조정될때) 평균적으로 오직 k(key개수)/n(slot개수)개의 키만 재배치하는 기술</p>
 <ul>
@@ -2758,6 +2756,18 @@ key0이 가상노드 서버1_1을 만나 서버1에 저장됨
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2771,6 +2781,37 @@ key0이 가상노드 서버1_1을 만나 서버1에 저장됨
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">관련된 글</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/%ED%82%A4_%EA%B0%92-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%84%A4%EA%B3%84/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711465200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/27
+</time>
+
+              <h4 class="pt-0 my-2">[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 6장 키-값 저장소 설계</h4>
+              <div class="text-muted">
+                <p>키-값 데이터베이스라고도 불리는 비 관계형 데이터베이스. 성능상의 이유로 키는 짧을 수록 좋음
+값 저장소 중 유명한 것으로는 아마존 다이나모, memcached, redis 등이 있음
+
+서버가 한대 일 경우 구현은 간단함. 그러나 모든 데이터를 메모리안에 두는 것이 불가능할수도 있다는 약점을 가짐 -&amp;gt; 데이터 압축 or 자주쓰는 데이터만 메모리에...</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98%EC%9D%98-%EC%84%A4%EA%B3%84/" class="post-preview card h-100">
@@ -2837,46 +2878,6 @@ key0이 가상노드 서버1_1을 만나 서버1에 저장됨
   수직적 규모 확장(vertical scaling) : 고사향자원을 추가하는 행위
     
       한계가 있음. 한대의 서버에 CPU나 메모리를 무한대로 증설할 수는...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%A3%BC%EB%8F%84-%EC%84%A4%EA%B3%84-%EC%B2%A0%EC%A0%80-%EC%9E%85%EB%AC%B8/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1699714800"
-  data-df="YYYY/MM/DD"
-  
->
-  2023/11/12
-</time>
-
-              <h4 class="pt-0 my-2">[책] 도메인 주도 설계 철저 입문</h4>
-              <div class="text-muted">
-                <p>책 정보
-
-
-값 객체
-
-public class User {
-	@Id
-	@Column(name = &quot;user_id&quot;)
-	private Long userId;
-	@Column(name = &quot;first_name&quot;)
-	private String firstName;
-	@Column(name = &quot;last_name&quot;)
-	private String lastName...</p>
               </div>
             </div>
           </a>

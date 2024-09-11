@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7e16bf1618136ea7",
+            "id": "e594e07443b307f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -16,6 +16,36 @@
                 "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "302f2b1fd50a546e",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-23 17.48.41.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "7536c47711891f0f",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-23 17.40.09.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "d1385072b0bd017b",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-23 11.44.43.excalidraw.md"
               }
             }
           },
@@ -391,8 +421,25 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "7e16bf1618136ea7",
+  "active": "e594e07443b307f7",
   "lastOpenFiles": [
+    "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
+    "_site/posts/키_값-저장소-설계/index.html",
+    "_site/posts/키_값-저장소-설계",
+    "_site/assets/images/book/2024-03-23.17.48.41.png",
+    "_site/assets/images/book/2024-03-23.17.40.09.png",
+    "_site/assets/images/book/2024-03-23.16.55.40.png",
+    "_site/assets/images/book/2024-03-23.11.44.43.png",
+    "_site/page15/index.html",
+    "_site/page15",
+    "_posts/Excalidraw/Drawing 2024-03-23 17.48.41.excalidraw.md",
+    "assets/images/book/2024-03-23.17.48.41.png",
+    "_posts/Excalidraw/Drawing 2024-03-23 17.40.09.excalidraw.md",
+    "assets/images/book/2024-03-23.17.40.09.png",
+    "_posts/Excalidraw/Drawing 2024-03-23 16.55.40.excalidraw.md",
+    "assets/images/book/2024-03-23.16.55.40.png",
+    "_posts/Excalidraw/Drawing 2024-03-23 11.44.43.excalidraw.md",
+    "assets/images/book/2024-03-23.11.44.43.png",
     "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
     "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
     "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
@@ -400,23 +447,12 @@
     "_site/posts/안정-해시-설계",
     "_site/assets/images/대규모/IMG-20240910173710.png",
     "_site/assets/images/대규모/IMG-20240910173710-2.png",
-    "_site/assets/images/대규모/IMG-20240910173710-1.png",
-    "_site/assets/images/대규모/IMG-20240910173709.png",
-    "_site/assets/images/대규모/IMG-20240910173709-1.png",
-    "assets/images/대규모/IMG-20240910173709.png",
     "_posts/코딩/개발 학습/관련도서/가상 면접 사례로 배우는 대규모 시스템 설계 기초/가상 면접 사례로 배우는 대규모 시스템 설계 기초.md",
     "_site/posts/처리율-제한-장치의-설계/index.html",
     "_site/posts/처리율-제한-장치의-설계",
-    "_site/assets/images/대규모/IMG-20240910172910.png",
     "_posts/Excalidraw/Drawing 2024-03-17 15.25.21.excalidraw.md",
-    "_site/assets/images/book/2024-03-17.15.25.21.png",
-    "assets/images/대규모/IMG-20240910172910.png",
     "_site/posts/사용자-수에-따른-규모-확장성/index.html",
     "_site/posts/사용자-수에-따른-규모-확장성",
-    "_site/assets/images/대규모/IMG-20240910172137.png",
-    "_site/tags/설계/index.html",
-    "_site/tags/설계",
-    "_site/assets/images/대규모",
     "_posts/blog/book/대규모/검색어 자동완성 시스템&유투브설계.md",
     "_posts/Excalidraw/Drawing 2024-03-17 12.15.23.excalidraw.md",
     "_posts/Excalidraw/Drawing 2024-03-17 12.00.35.excalidraw.md",
@@ -424,7 +460,6 @@
     "_posts/이미지/가상 면접 사례로 배우는 대규모 시스템 설계 기초 2024-03-17 11.41.03.excalidraw.md",
     "_posts/Excalidraw/Drawing 2024-03-17 10.52.18.excalidraw.md",
     "_posts/Excalidraw/Drawing 2024-03-17 10.43.42.excalidraw.md",
-    "assets/images/대규모",
     "_posts/blog/book/무제 파일.md",
     "_posts/코딩/개발 학습/관련도서/프로그래밍 가이드북.md",
     "_posts/코딩/개발 학습/관련도서/자바 성능 튜닝 이야기.md",
@@ -432,11 +467,6 @@
     "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
     "_posts/blog/algo/권오흠/2022-11-21-정렬.md",
     "_posts/blog/algo/권오흠/2022-10-11-Recursion -멱집합.md",
-    "_posts/blog/algo/권오흠/2022-12-13-트리와 이진트리.md",
-    "_posts/blog/algo/권오흠/2022-10-06-Recursion의 응용 - n queens problem.md",
-    "_posts/blog/algo/권오흠/2022-10-04-Recursion의 응용 (Maze).md",
-    "_posts/blog/algo/권오흠/2022-10-05-Recursion의 응용 - counting cell in a blob.md",
-    "_posts/blog/algo/권오흠/2022-09-29-Recursion의 기본 개념과 기본 예제.md",
-    "_posts/blog/RDBMS/sqld/2022-11-05-최종 정리본.md"
+    "_posts/blog/algo/권오흠/2022-12-13-트리와 이진트리.md"
   ]
 }
