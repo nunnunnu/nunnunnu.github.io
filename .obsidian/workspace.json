@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+                "file": "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
                 "mode": "source",
                 "source": false
               }
@@ -339,7 +339,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+                "file": "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -356,7 +356,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+                "file": "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -379,7 +379,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md"
+                "file": "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md"
               }
             }
           },
@@ -423,6 +423,7 @@
   },
   "active": "e594e07443b307f7",
   "lastOpenFiles": [
+    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
     "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
     "_site/posts/키_값-저장소-설계/index.html",
     "_site/posts/키_값-저장소-설계",
@@ -441,7 +442,6 @@
     "_posts/Excalidraw/Drawing 2024-03-23 11.44.43.excalidraw.md",
     "assets/images/book/2024-03-23.11.44.43.png",
     "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
-    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
     "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
     "_site/posts/안정-해시-설계/index.html",
     "_site/posts/안정-해시-설계",
