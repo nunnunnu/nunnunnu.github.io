@@ -30,24 +30,23 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="히히" />
+<meta property="og:title" content="[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 8장 URL 단축키 설계" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="description" content="-" />
-<meta property="og:description" content="-" />
-<link rel="canonical" href="http://localhost:4000/page10/" />
-<meta property="og:url" content="http://localhost:4000/page10/" />
+<meta name="description" content="https://www.webservice.com/q-chatsystem&amp;c-loggedin&amp;v=v3&amp;l=long 같은 URL을 https://tinyurl.com/y7kes-eos 이런식으로 단축하는 것을 뜻함 조건 + 추정 매일 1억개의 단축 url생성가능 초당 쓰기연산 : 1억/24/3,600 = 1,160 읽기연산 : 읽기, 쓰기연산 비율은 10:1이라 가정. -&gt; 11,600 url단축 서비스를 10년간 운영한다 가정. 1억 * 365 * 10 = 365,000,000,000 축약 전 url의 평균 길이는 100 10년동안 필요한 저장 용량은 365,000,000,000 * 100바이트 = 36.5TB API 엔드포인트 URL단축키는 기본적으로 두개의 엔드포인트를 필요로함 URL 단축용 엔드포인트 : 새 단축 URL을 생성하고자 하는 클라이언트는 엔드포인트에 단축할 URL을 인자로 실어서 POST요청 인자 : {longUrl: longUrlString} 반환 : 단축된 URL URL 리디렉션용 엔드포인트 : 단축 URL에 대해 HTTP요청이 오면 원래 URL로 보내주기위한 용도의 GetMapping 엔드포인트 반환 : HTTP리디렉션 목적지가 될 원래 URL 단축 URL을 받은 서버는 그 URL을 원래 URL로 바꾸어 301 응답의 Location 헤더에 넣어 반환." />
+<meta property="og:description" content="https://www.webservice.com/q-chatsystem&amp;c-loggedin&amp;v=v3&amp;l=long 같은 URL을 https://tinyurl.com/y7kes-eos 이런식으로 단축하는 것을 뜻함 조건 + 추정 매일 1억개의 단축 url생성가능 초당 쓰기연산 : 1억/24/3,600 = 1,160 읽기연산 : 읽기, 쓰기연산 비율은 10:1이라 가정. -&gt; 11,600 url단축 서비스를 10년간 운영한다 가정. 1억 * 365 * 10 = 365,000,000,000 축약 전 url의 평균 길이는 100 10년동안 필요한 저장 용량은 365,000,000,000 * 100바이트 = 36.5TB API 엔드포인트 URL단축키는 기본적으로 두개의 엔드포인트를 필요로함 URL 단축용 엔드포인트 : 새 단축 URL을 생성하고자 하는 클라이언트는 엔드포인트에 단축할 URL을 인자로 실어서 POST요청 인자 : {longUrl: longUrlString} 반환 : 단축된 URL URL 리디렉션용 엔드포인트 : 단축 URL에 대해 HTTP요청이 오면 원래 URL로 보내주기위한 용도의 GetMapping 엔드포인트 반환 : HTTP리디렉션 목적지가 될 원래 URL 단축 URL을 받은 서버는 그 URL을 원래 URL로 바꾸어 301 응답의 Location 헤더에 넣어 반환." />
+<link rel="canonical" href="http://localhost:4000/posts/URL-%EB%8B%A8%EC%B6%95%EA%B8%B0-%EC%84%A4%EA%B3%84/" />
+<meta property="og:url" content="http://localhost:4000/posts/URL-%EB%8B%A8%EC%B6%95%EA%B8%B0-%EC%84%A4%EA%B3%84/" />
 <meta property="og:site_name" content="히히" />
-<meta property="og:type" content="website" />
-<link rel="prev" href="http://localhost:4000/page9" />
-<link rel="next" href="http://localhost:4000/page11" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-28T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="히히" />
+<meta property="twitter:title" content="[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 8장 URL 단축키 설계" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"-","headline":"히히","url":"http://localhost:4000/page10/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-28T00:00:00+09:00","datePublished":"2024-03-28T00:00:00+09:00","description":"https://www.webservice.com/q-chatsystem&amp;c-loggedin&amp;v=v3&amp;l=long 같은 URL을 https://tinyurl.com/y7kes-eos 이런식으로 단축하는 것을 뜻함 조건 + 추정 매일 1억개의 단축 url생성가능 초당 쓰기연산 : 1억/24/3,600 = 1,160 읽기연산 : 읽기, 쓰기연산 비율은 10:1이라 가정. -&gt; 11,600 url단축 서비스를 10년간 운영한다 가정. 1억 * 365 * 10 = 365,000,000,000 축약 전 url의 평균 길이는 100 10년동안 필요한 저장 용량은 365,000,000,000 * 100바이트 = 36.5TB API 엔드포인트 URL단축키는 기본적으로 두개의 엔드포인트를 필요로함 URL 단축용 엔드포인트 : 새 단축 URL을 생성하고자 하는 클라이언트는 엔드포인트에 단축할 URL을 인자로 실어서 POST요청 인자 : {longUrl: longUrlString} 반환 : 단축된 URL URL 리디렉션용 엔드포인트 : 단축 URL에 대해 HTTP요청이 오면 원래 URL로 보내주기위한 용도의 GetMapping 엔드포인트 반환 : HTTP리디렉션 목적지가 될 원래 URL 단축 URL을 받은 서버는 그 URL을 원래 URL로 바꾸어 301 응답의 Location 헤더에 넣어 반환.","headline":"[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 8장 URL 단축키 설계","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/URL-%EB%8B%A8%EC%B6%95%EA%B8%B0-%EC%84%A4%EA%B3%84/"},"url":"http://localhost:4000/posts/URL-%EB%8B%A8%EC%B6%95%EA%B8%B0-%EC%84%A4%EA%B3%84/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>히히
+  <title>[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 8장 URL 단축키 설계 | 히히
   </title>
 
   <!--
@@ -111,11 +110,16 @@
   <!-- 3rd-party Dependencies -->
 
   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.29.0/dist/tocbot.min.css">
+  
 
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
   
 
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
   
 
   <!-- JavaScript -->
@@ -251,7 +255,7 @@
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
       <!-- home -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a href="/" class="nav-link">
           <i class="fa-fw fas fa-home"></i>
           <span>홈</span>
@@ -415,9 +419,23 @@
       
 
       
-        <!-- index page -->
-        <span>홈</span>
+        
+          
+            <span>
+              <a href="/">홈</a>
+            </span>
 
+          
+        
+          
+        
+          
+            
+              <span>[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 8장 URL 단축키 설계</span>
+            
+
+          
+        
       
     </nav>
     <!-- endof #breadcrumb -->
@@ -427,7 +445,7 @@
     </button>
 
     <div id="topbar-title">
-      히히
+      포스트
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link">
@@ -481,6 +499,79 @@
 
 
 
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
 
 <!-- Add header for code snippets -->
 
@@ -506,10 +597,52 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
 
@@ -520,63 +653,16 @@
 
 
 
+<article class="px-1">
+  <header>
+    <h1 data-toc-skip>[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 8장 URL 단축키 설계</h1>
+    
 
-
-
-
-
-<!-- Get pinned posts -->
-
-
-
-
-
-
-<!-- Get default posts -->
-
-
-
-
-
-
-
-
-
-
-<div id="post-list" class="flex-grow-1 px-xl-1">
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%9B%B9_%ED%8E%98%EC%9D%B4%EC%A7%80_%EC%83%9D%EC%84%B12/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 웹페이지 생성 2</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>DI : 객체간의 관계 설정
-
-IOC : 제어 역전. 실행의 주체가 바뀜.
-
-AOP : 상속등의 개념을 적극활용 . 파편화위험있음
-
-GoF : 디자인 패턴
-
-package com.greenart.practice3;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import org.springframework....</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        게시
+        <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -586,69 +672,22 @@ import org.springframework....</p>
 
 <time
   
-  data-ts="1670338800"
+  data-ts="1711551600"
   data-df="YYYY/MM/DD"
   
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
 >
-  2022/12/07
+  2024/03/28
 </time>
 
+      </span>
 
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Spring
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%ED%9A%8C%EC%9B%90%EA%B4%80%EB%A6%AC/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 입문] 회원관리</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>비지니스 요구사항 정리
-
-    
-      데이터 : 회원id, 이름
-      기능 : 회원등록, 조회
-      아직 테이터 저장소가 선정되지 않음.(가상 시나리오)
-    
-
-    
-
-    
-  
-  
-    회원 도메인과 리포지토리 만들기
-
-      package com.greenart.practice.domain;
-    
-  impo...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
+      <!-- lastmod date -->
+      
+        <span>
+          업데이트
+          <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -658,809 +697,290 @@ import org.springframework....</p>
 
 <time
   
-  data-ts="1670252400"
+  data-ts="1711584000"
   data-df="YYYY/MM/DD"
   
->
-  2022/12/06
-</time>
-
-
-                <!-- categories -->
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80%EC%83%9D%EC%84%B1/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 웹페이지 생성</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>!하고 탭
-
-
-
-@Controller, getTest 추가 후
-
-http://localhost:8081/test에 들어가면
-
-Hello World 뜸
-
-package com.greenart.demo.controller;
-
-import org.springframework.stereotype.Controller;
-import org.springframew...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1670252400"
-  data-df="YYYY/MM/DD"
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2022/12/06
+  2024/03/28
 </time>
 
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Spring
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%9B%B9%EA%B0%9C%EB%B0%9C_%EB%B0%A9%EB%B2%95/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 입문] 웹개발 방법</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>웹개발 방법
-
-
-  
-    정적 컨텐츠 : 파일을 웹브라우저에 그대로 내려줌
-  resources안의 static폴더안에 html을 지정해주면 메소드를 만들지않고
-  http://localhost:8081/test2.html 처럼 파일명을 그대로 써주면 접속 가능함.
-
-    
-  
-  
-    MVC와 템플릿 엔진 : jsp 등 서버에서 프로그래밍...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1670166000"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/12/05
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Spring
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EA%B7%B8%EB%A6%B0_%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] Spring 환경설정</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>vscode에서 해도됨
-
-
-  [!info] Spring Initializr
-Initializr generates spring boot project with just what you need to start quickly!
-https://start.spring.io/
-
-
-
-
-Dependencies에서 사진의 3가지 추가 +lombok
-
-위 설정으로 ...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1670166000"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/12/05
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Spring
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%A0%95%EB%A0%AC/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[권오흠 영리한 프로그래밍을 위한 알고리즘 강좌] 정렬</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>정렬 알고리즘의 유형
-
-
-  Comparison sort
-    
-      데이터 간의 상태적 크기관계만을 이용해서 정렬 → 데이터간의 크기관계가 정의되어있으면 어떤 데이터에든 적용가능(문자열, 알파벳, 사용자 정의 객체)
-      
-        버블소트, 삽입정렬, 합병정렬, 퀵소트, 힙정렬 등
-
-        — 간단하지만 효율적이지는 않음
-...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1668956400"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/11/21
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      알고리즘
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EA%B7%B8%EB%A6%B0_%EB%82%A0%EC%A7%9C/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 날짜</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>substring, split
-
-public class UtilitiesEx {
-  public static void main(String[] args) {
-    String str = &quot;Hello world&quot;;
-    System.out.println(str.substring(0,5));
-    System.out.println(str.substr...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1667919600"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/11/09
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC_%ED%8C%8C%EC%9D%BC%EC%9E%85%EC%B6%9C%EB%A0%A5/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[국비교육학원-수업내용정리] 예외처리 - 파일입출력</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>예외처리
-
-public class ExceptionEx {
-  public static void main(String[] args) {
-    int a=10;
-    int b=0;
-    int[] arr={10,20};
-    try {
-      //예외가 발생할 수도 있는 명령문은 try안에
-      System.out.println(a/b...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1667833200"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/11/08
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/9%EC%9E%A5/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">자바의 정석 연습문제 9장 - java.lang패키지와 유용한 클래스</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>[9-1] equals를 맴버변수인 num과 isKwang을 비교하도록 오버라이딩
-
-public class Ex9_1{
-    public static void main(String[] args) {
-        SutdaCard c1 = new SutdaCard(3, true);
-        SutdaCard c2 = new SutdaCard(3...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1667746800"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/11/07
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JAVA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%B5%9C%EC%A2%85-%EC%A0%95%EB%A6%AC%EB%B3%B8/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[SQLD 시험 준비] 최종 정리본</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>성능 데이터모델링 : 분석 및 설계단계부터 성능과 관련한 데이터모델링을 수행함(정규화/반정규화, 테이블분할/병합/추가, 칼럼추가, PK/FK조정, 슈퍼타입/서브타입 조정 등)
-    
-      데이터 증가가 빠를수록 성능개선비용 증가 → 테이블분할을 하게되는경우 할일이 많아짐
-      성능을 튜닝하면서 변경되는 특징이 있음
-      분석/설계단계...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1667574000"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/11/05
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      RDBMS
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-</div>
-<!-- #post-list -->
-
-
-  <!-- The paginator for post list on HomgPage. -->
-
-<nav aria-label="Page Navigation">
-  <ul class="pagination align-items-center mt-4 mb-0">
-    <!-- left arrow -->
-    
-
-    <li class="page-item ">
-      <a class="page-link" href="/page9" aria-label="previous-page">
-        <i class="fas fa-angle-left"></i>
-      </a>
-    </li>
-
-    <!-- page numbers -->
-    
-    
-
-    
-      
-      
-      
+        </span>
       
       
 
-      
-
-      
-        <!-- show number -->
-        <li class="page-item ">
-          <a
-            class="page-link"
-            href="/"
-          >1</a>
-        </li>
-      
-    
-      
-      
-      
-      
-      
-
-      
-
-      
-        <!-- hide number -->
-        
-          <li class="page-item disabled">
-            <span class="page-link">...</span>
-          </li>
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
           
-        
-      
-    
-      
-      
-      
-      
-      
 
-      
+          By
 
-      
-        <!-- hide number -->
-        
-      
-    
-      
-      
-      
-      
-      
+          <em>
+            
+              <a href="https://github.com/username">jinny</a>
+            
+          </em>
+        </span>
 
-      
-
-      
-        <!-- hide number -->
-        
-      
-    
-      
-      
-      
-      
-      
-
-      
-
-      
-        <!-- hide number -->
-        
-      
-    
-      
-      
-      
-      
-      
-
-      
-
-      
-        <!-- hide number -->
-        
-      
-    
-      
-      
-      
-      
-      
-
-      
-
-      
-        <!-- hide number -->
-        
-      
-    
-      
-      
-      
-      
-      
-
-      
-
-      
-        <!-- hide number -->
-        
-      
-    
-      
-      
-      
-      
-      
-
-      
-
-      
-        <!-- show number -->
-        <li class="page-item ">
-          <a
-            class="page-link"
-            href="/page9"
-          >9</a>
-        </li>
-      
-    
-      
-      
-      
-      
-      
-
-      
-
-      
-        <!-- show number -->
-        <li class="page-item  active">
-          <a
-            class="page-link"
-            href="/page10"
-          >10</a>
-        </li>
-      
-    
-      
-      
-      
-      
-      
-
-      
-
-      
-        <!-- show number -->
-        <li class="page-item ">
-          <a
-            class="page-link"
-            href="/page11"
-          >11</a>
-        </li>
-      
-    
-      
-      
-      
-      
-      
-
-      
-
-      
-        <!-- hide number -->
-        
-          <li class="page-item disabled">
-            <span class="page-link">...</span>
-          </li>
+        <div>
+          <!-- pageviews -->
           
-        
-      
-    
-      
-      
-      
-      
-      
 
-      
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
 
-      
-        <!-- hide number -->
-        
-      
-    
-      
-      
-      
-      
-      
 
-      
 
-      
-        <!-- hide number -->
-        
-      
-    
-      
-      
-      
-      
-      
+<!-- words per minute -->
 
-      
 
-      
-        <!-- show number -->
-        <li class="page-item ">
-          <a
-            class="page-link"
-            href="/page15"
-          >15</a>
-        </li>
-      
-    
 
-    <!-- mobile pagination -->
-    <li class="page-index align-middle">
-      <span>10</span>
-      <span class="text-muted">/ 15</span>
-    </li>
 
-    <!-- right arrow -->
-    
 
-    <li class="page-item ">
-      <a class="page-link" href="/page11" aria-label="next-page">
-        <i class="fas fa-angle-right"></i>
-      </a>
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="1273 단어"
+>
+  <em>7 분</em>읽는 시간</span>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <p>https://www.webservice.com/q-chatsystem&amp;c-loggedin&amp;v=v3&amp;l=long 
+같은 URL을 https://tinyurl.com/y7kes-eos
+이런식으로 단축하는 것을 뜻함</p>
+<ul>
+  <li>조건 + 추정
+    <ul>
+      <li>매일 1억개의 단축 url생성가능</li>
+      <li>초당 쓰기연산 : 1억/24/3,600 = 1,160</li>
+      <li>읽기연산 : 읽기, 쓰기연산 비율은 10:1이라 가정. -&gt; 11,600</li>
+      <li>url단축 서비스를 10년간 운영한다 가정. 1억 * 365 * 10 = 365,000,000,000</li>
+      <li>축약 전 url의 평균 길이는 100</li>
+      <li>10년동안 필요한 저장 용량은 365,000,000,000 * 100바이트 = 36.5TB
+        <h4 id="api-엔드포인트"><span class="me-2">API 엔드포인트</span><a href="#api-엔드포인트" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+        <p>URL단축키는 기본적으로 두개의 엔드포인트를 필요로함</p>
+        <ol>
+          <li>URL 단축용 엔드포인트 : 새 단축 URL을 생성하고자 하는 클라이언트는 엔드포인트에 단축할 URL을 인자로 실어서 POST요청</li>
+        </ol>
+      </li>
+      <li>인자 : {longUrl: longUrlString}</li>
+      <li>반환 : 단축된 URL
+        <ol>
+          <li>URL 리디렉션용 엔드포인트 : 단축 URL에 대해 HTTP요청이 오면 원래 URL로 보내주기위한 용도의 GetMapping 엔드포인트</li>
+        </ol>
+      </li>
+      <li>반환 : HTTP리디렉션 목적지가 될 원래 URL
+단축 URL을 받은 서버는 그 URL을 원래 URL로 바꾸어 301 응답의 Location 헤더에 넣어 반환.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>301응답과 302응답의 차이</p>
+  <ul>
+    <li>301 Permanently Moved : 이 응답은 해당 URL에 대한 HTTP요청의 처리 책임이 영구적으로 Location헤더에 반환된 URL로 이전되었다는 응답. <strong>브라우저는 이 응답을 캐시함.</strong> -&gt; 추후 단축 URL에 요청을 보낼 필요가있으면 캐시된 원래 URL로 요청을 보냄</li>
+    <li>
+      <p>302 Found : 주어진 URL로의 요청이 일시적으로 Location헤더가 지정하는 URL에 의해 처리되어야한다는 응답. 요청은 언제나 단축 URL서버에 먼저 보내진 후 원래 URL로 리디렉션되어야함</p>
+
+      <p>서버 부하를 줄여야한다면 301을, 트래픽 분석이 중요하다면 302를 사용하는것이 유리. 301은 첫번째요청만 서버를 거치기때문임</p>
     </li>
   </ul>
-</nav>
-<!-- .pagination -->
+</blockquote>
 
+<p>단축 URL이 www.tinyurl.com/{hashValue} 의 형태라고 가정. 중요한것은 hashValue를 어떻게 찾을 것이냐가 될것임. 입력으로 주어지는 긴 URL이 다른값이면 해시도 다른값이 나와야하며 계산된 해시값은 원래 입력으로 주어진 긴 URL로 복원가능해야함</p>
+<ul>
+  <li>데이터 모델 : &lt;단축URL, 원래 URL&gt;의 순서쌍을 관계형 데이터베이스에 저장하는것이 좋음
+    <h5 id="해시함수"><span class="me-2">해시함수</span><a href="#해시함수" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+  </li>
+  <li>해시 값 길이 : 0-9, A-Z, a-z로 이루어짐 -&gt; 총 사용가능한 문자는 62개</li>
+  <li>해당 시스템은 3,650억개의 url을 만들어야하니 7자리(62^7은 총 3.5조개 생성가능)로 hash Value지정
+    <h6 id="해시충돌-해소-방법">해시충돌 해소 방법</h6>
+  </li>
+  <li>유명한 해시 함수인 CRC32, MD5, SHA-1을 사용가능하나 모두 7자리보다 긴 결과가 나옴
+-&gt; 앞의 7자리만 잘라서 사용. 그러나 충돌 가능성 증가</li>
+</ul>
 
+<pre><code class="language-mermaid">  
+flowchart TD     
+
+시작--&gt;입력:longURL--&gt;해시함수;    
+  
+해시함수--&gt;shortURL;       
+  
+shortURL--&gt;DB유무확인;   
+
+DB유무확인--&gt;없음;
+DB유무확인--&gt;있음;
+
+없음--&gt;DB에저장;
+있음--&gt;longURL뒤에사전에정한문자열추가;
+
+longURL뒤에사전에정한문자열추가--&gt;입력:longURL;
+DB에저장--&gt; 종료
+  
+</code></pre>
+
+<p>충돌이 해소될때까지 위의 로직을 반복함.
+생성할때마다 한번 이상의 쿼리를 날려야함. 오버헤드가 큼
+대신 블룸필터를 사용하면 성능을 높일 수 있음</p>
+<h6 id="base-62변환">base-62변환</h6>
+<p>진법 변환은 URL단축기를 구현할때 흔히사용하는 방법임
+해시키에서 사용할 수 있는 문자 개수가 62개라서 62진법을 사용
+10진수의 ID를 62진수로 변환하는방법</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>해시 후 충돌 해소 전략</th>
+      <th>base-62 변환</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>단축 후 URL길이가 고정됨</td>
+      <td>단축 후 URL 길이가 가변적. ID값이 커지면 같이 길어짐</td>
+    </tr>
+    <tr>
+      <td>유일성이 보장되는 ID생성기가 필요치 않음</td>
+      <td>유일성 보장 ID생성기가 필요</td>
+    </tr>
+    <tr>
+      <td>충돌이 가능해서 해소 전략이 필요</td>
+      <td>ID유일성이 보장된 후에 적용하기 때문에 충돌은 아예 불가능</td>
+    </tr>
+    <tr>
+      <td>ID로부터 단축 URL을 계산하는 방식이 아니라 다음에 쓸수있는 URL을 알아내는기는 불가능</td>
+      <td>ID가 1씩 증가하는 값이라고 가정하면 다음에 쓸수있는 단축 URL이 뭔지 알아낼수있어 보안상 문제가 있음</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<pre><code class="language-mermaid">
+flowchart TD
+
+1.입력:longURL--&gt;2.입력된URL이ID가있나?--&gt;예--&gt;3.DB에서찾은단축URL반환;
+
+2.입력된URL이ID가있나?--&gt;아니오--&gt;4.새로운ID생성--&gt;5.생성된ID를단축URL로변환-62진법변환사용--&gt;ID,단축URL,원래URL을DB에저장;
+</code></pre>
+<p><a href="/assets/images/대규모/2024-09-10.오후3.17.19.png" class="popup img-link  shimmer"><img src="/assets/images/대규모/2024-09-10.오후3.17.19.png" alt="images" loading="lazy"></a></p>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
+    
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        
+          <a href="/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EB%B0%A9%EB%B2%95/">프로그래밍 방법</a>
+      </div>
+    
+
+    <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/%EC%84%A4%EA%B3%84/"
+            class="post-tag no-text-decoration"
+          >설계</a>
+        
+      </div>
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">공유하기</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+
+      <a href="https://twitter.com/intent/tweet?text=[%EC%B1%85]%20%EA%B0%80%EC%83%81%20%EB%A9%B4%EC%A0%91%20%EC%82%AC%EB%A1%80%EB%A1%9C%20%EB%B0%B0%EC%9A%B0%EB%8A%94%20%EB%8C%80%EA%B7%9C%EB%AA%A8%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%84%A4%EA%B3%84%20%EA%B8%B0%EC%B4%88%20-%208%EC%9E%A5%20http%3A%2F%2Flocalhost%3A4000%2Fposts%2FURL-%25EB%258B%25A8%25EC%25B6%2595%25EA%25B8%25B0-%25EC%2584%25A4%25EA%25B3%2584%2F%20%EB%8B%A8%EC%B6%95%ED%82%A4%20%EC%84%A4%EA%B3%84%20-%20%ED%9E%88%ED%9E%88&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FURL-%25EB%258B%25A8%25EC%25B6%2595%25EA%25B8%25B0-%25EC%2584%25A4%25EA%25B3%2584%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+
+      
+
+      <a href="https://www.facebook.com/sharer/sharer.php?title=[%EC%B1%85]%20%EA%B0%80%EC%83%81%20%EB%A9%B4%EC%A0%91%20%EC%82%AC%EB%A1%80%EB%A1%9C%20%EB%B0%B0%EC%9A%B0%EB%8A%94%20%EB%8C%80%EA%B7%9C%EB%AA%A8%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%84%A4%EA%B3%84%20%EA%B8%B0%EC%B4%88%20-%208%EC%9E%A5%20http%3A%2F%2Flocalhost%3A4000%2Fposts%2FURL-%25EB%258B%25A8%25EC%25B6%2595%25EA%25B8%25B0-%25EC%2584%25A4%25EA%25B3%2584%2F%20%EB%8B%A8%EC%B6%95%ED%82%A4%20%EC%84%A4%EA%B3%84%20-%20%ED%9E%88%ED%9E%88&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FURL-%25EB%258B%25A8%25EC%25B6%2595%25EA%25B8%25B0-%25EC%2584%25A4%25EA%25B3%2584%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FURL-%25EB%258B%25A8%25EC%25B6%2595%25EA%25B8%25B0-%25EC%2584%25A4%25EA%25B3%2584%2F&text=[%EC%B1%85]%20%EA%B0%80%EC%83%81%20%EB%A9%B4%EC%A0%91%20%EC%82%AC%EB%A1%80%EB%A1%9C%20%EB%B0%B0%EC%9A%B0%EB%8A%94%20%EB%8C%80%EA%B7%9C%EB%AA%A8%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%84%A4%EA%B3%84%20%EA%B8%B0%EC%B4%88%20-%208%EC%9E%A5%20http%3A%2F%2Flocalhost%3A4000%2Fposts%2FURL-%25EB%258B%25A8%25EC%25B6%2595%25EA%25B8%25B0-%25EC%2584%25A4%25EA%25B3%2584%2F%20%EB%8B%A8%EC%B6%95%ED%82%A4%20%EC%84%A4%EA%B3%84%20-%20%ED%9E%88%ED%9E%88" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="링크 복사하기"
+      data-title-succeed="링크가 복사되었습니다!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
+</div>
+
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
+</article>
+<div id="giscus">
+    <script src="https://giscus.app/client.js"
+            data-repo="nunnunnu/nunnunnu.github.io"
+            data-repo-id="R_kgDOMWEGow"
+            data-category="Comments"
+            data-category-id="DIC_kwDOMWEGo84ChY2C"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="noborder_light"
+            data-lang="ko"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>
 
 
             
@@ -2720,12 +2240,284 @@ public class Ex9_1{
             </div>
 
             
+              
+              
+
+
+
+
+            
           </aside>
         </div>
 
         <div class="row">
           <!-- tail -->
           <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">관련된 글</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/%EB%B6%84%EC%82%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%9C%A0%EC%9D%BC-ID-%EC%83%9D%EC%84%B1%EA%B8%B0-%EC%84%A4%EA%B3%84/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711551600"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/28
+</time>
+
+              <h4 class="pt-0 my-2">[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 7장 분산 시스템을 위한 유일 ID 생성기 설계</h4>
+              <div class="text-muted">
+                <p>[!NOTE]
+auto_increment 속성이 설정된 관계형데이터베이스의 기본키를 쓰면 되지않나? -&amp;gt; 데이터베이스 서버 여러대일때는 불가능함
+
+
+선택지로는 다중마스터 복제, UUID, 티켓 서버, 트위터 스노플레이크 접근법 등이 있음
+다중 마스터 복제(multi-master replication)
+DB의 auto_increment 기능을 활용...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/%ED%82%A4_%EA%B0%92-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%84%A4%EA%B3%84/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711465200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/27
+</time>
+
+              <h4 class="pt-0 my-2">[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 6장 키-값 저장소 설계</h4>
+              <div class="text-muted">
+                <p>키-값 데이터베이스라고도 불리는 비 관계형 데이터베이스. 성능상의 이유로 키는 짧을 수록 좋음
+값 저장소 중 유명한 것으로는 아마존 다이나모, memcached, redis 등이 있음
+
+서버가 한대 일 경우 구현은 간단함. 그러나 모든 데이터를 메모리안에 두는 것이 불가능할수도 있다는 약점을 가짐 -&amp;gt; 데이터 압축 or 자주쓰는 데이터만 메모리에...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98%EC%9D%98-%EC%84%A4%EA%B3%84/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711465200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/27
+</time>
+
+              <h4 class="pt-0 my-2">[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 4장 처리율 제한 장치의 설계</h4>
+              <div class="text-muted">
+                <p>처리율 제한 장치
+클라이언트나 서비스가 보내는 트래픽의 처리율을 제어하기위한장치. HTTP를 예로들면 특정 기간 내 전송되는 클라이언트의 요청횟수를 제한함. api의 요청횟수가 임계치를 넘어서면 추가로 도달한 모든 호출은 block됨
+
+  토큰 버킷
+    
+      지정된 용량을 갖는 컨테이너. 이 버킷에 사전 설정된 양의 토큰이 주기적으로 채워짐...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
+
+
+            
+              
+              <!-- Navigation buttons at the bottom of the post. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  
+  
+
+  
+    <a
+      href="/posts/%ED%82%A4_%EA%B0%92-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%84%A4%EA%B3%84/"
+      class="btn btn-outline-primary"
+      aria-label="이전 글"
+    >
+      <p>[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 6장 키-값 저장소 설계</p>
+    </a>
+  
+
+  
+    <a
+      href="/posts/%EB%B6%84%EC%82%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%9C%A0%EC%9D%BC-ID-%EC%83%9D%EC%84%B1%EA%B8%B0-%EC%84%A4%EA%B3%84/"
+      class="btn btn-outline-primary"
+      aria-label="다음 글"
+    >
+      <p>[책] 가상 면접 사례로 배우는 대규모 시스템 설계 기초 - 7장 분산 시스템을 위한 유일 ID 생성기 설계</p>
+    </a>
+  
+</nav>
+
+            
+              
+              <!-- The comments switcher -->
+
+
             
 
             <!-- The Footer -->
@@ -4005,6 +3797,9 @@ public class Ex9_1{
   
 
   
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
 
 
 
@@ -4062,9 +3857,30 @@ public class Ex9_1{
 
   
 
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/ko.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/ko.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js,npm/mermaid@11.0.2/dist/mermaid.min.js"></script>
 
 
 
@@ -4072,12 +3888,69 @@ public class Ex9_1{
 
 
 
-<script src="/assets/js/dist/home.min.js"></script>
+<script src="/assets/js/dist/post.min.js"></script>
 
 
 
 <!-- Pageviews -->
 
+  
+
+  
+
+
+
+  <!-- mermaid-js loader -->
+<script type="text/javascript">
+  function updateMermaid(event) {
+    if (event.source === window && event.data && event.data.direction === ModeToggle.ID) {
+      const mode = event.data.message;
+
+      if (typeof mermaid === 'undefined') {
+        return;
+      }
+
+      let expectedTheme = mode === ModeToggle.DARK_MODE ? 'dark' : 'default';
+      let config = { theme: expectedTheme };const mermaidList = document.getElementsByClassName('mermaid');
+
+      [...mermaidList].forEach((elem) => {
+        const svgCode = elem.previousSibling.children.item(0).innerHTML;
+        elem.innerHTML = svgCode;
+        elem.removeAttribute('data-processed');
+      });
+
+      mermaid.initialize(config);
+      mermaid.init(undefined, '.mermaid');
+    }
+  }
+
+  (function () {
+    let initTheme = 'default';
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') && html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = 'dark';
+    }
+
+    let mermaidConf = {
+      theme: initTheme};const basicList = document.getElementsByClassName('language-mermaid');
+    [...basicList].forEach((elem) => {
+      const svgCode = elem.textContent;
+      const backup = elem.parentElement;
+      backup.classList.add('d-none');let mermaid = document.createElement('pre');
+      mermaid.classList.add('mermaid');
+      const text = document.createTextNode(svgCode);
+      mermaid.appendChild(text);
+      backup.after(mermaid);
+    });
+
+    mermaid.initialize(mermaidConf);
+    window.addEventListener('message', updateMermaid);
+  })();
+</script>
 
 
 

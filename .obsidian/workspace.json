@@ -4,272 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "e70e77d10c63ce94",
+        "id": "1de1f6a8be1d1466",
         "type": "tabs",
         "children": [
           {
-            "id": "e594e07443b307f7",
+            "id": "3823b565bc0dadd7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
+                "file": "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "302f2b1fd50a546e",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-23 17.48.41.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "7536c47711891f0f",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-23 17.40.09.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "d1385072b0bd017b",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-23 11.44.43.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "c613ee5749cfea81",
+            "id": "73d4d6d3be4b65a9",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "assets/images/대규모/IMG-20240910173709.png"
-              }
-            }
-          },
-          {
-            "id": "a4ef7baab9e91c9f",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-17 15.25.21.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "da22b62990998467",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-17 12.15.23.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "b5b3f5da8ad100a6",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-17 12.00.35.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "3a9124504768b7df",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-17 11.48.52.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "c237197fa6f9f095",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/이미지/가상 면접 사례로 배우는 대규모 시스템 설계 기초 2024-03-17 11.41.03.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "b476dbc94c4cffc3",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/대규모/IMG-20240910172136.png"
-              }
-            }
-          },
-          {
-            "id": "658b73dbde1c9ab4",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/book/Pastedimage20240910170430.png"
-              }
-            }
-          },
-          {
-            "id": "e52c26e342b50490",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/book/Pastedimage20240910165641.png"
-              }
-            }
-          },
-          {
-            "id": "754b033840d2b300",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/http/Pastedimage20240910115008.png"
-              }
-            }
-          },
-          {
-            "id": "5b57938452104821",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/high/Pastedimage20240909151547.png"
-              }
-            }
-          },
-          {
-            "id": "1a2c64f3cd615ed3",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/mvc1/IMG-20240909121230-1.png"
-              }
-            }
-          },
-          {
-            "id": "af512f61448c65e1",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/mvc1/IMG-20240909120922.png"
-              }
-            }
-          },
-          {
-            "id": "7f3ee57c25dfedf4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/blog/spring/mvc1/2023-06-25-스프링_MVC_구조.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c22935a688316392",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/mvc1/Pastedimage20240909115005.png"
-              }
-            }
-          },
-          {
-            "id": "d3dbd488d8283c60",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/mvc1/IMG-20240909114444-1.png"
-              }
-            }
-          },
-          {
-            "id": "4bd7c9bca77f6d73",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/mvc1/Pastedimage20240909113629.png"
-              }
-            }
-          },
-          {
-            "id": "5e5811ad07ee63b9",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/mvc1/Pastedimage20240909113523.png"
-              }
-            }
-          },
-          {
-            "id": "63565e657dead49f",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/querydsl/Pastedimage20240909112235.png"
-              }
-            }
-          },
-          {
-            "id": "e733b8dda12483c7",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/querydsl/Pastedimage20240909111456.png"
-              }
-            }
-          },
-          {
-            "id": "713036451e3ed646",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/usejpa2/IMG-20240909105222.png"
-              }
-            }
-          },
-          {
-            "id": "7210c5f5a0e974c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IMG-20240909104958.png|IMG-20240909104958.png.md",
-                "mode": "source",
-                "source": false
+                "file": "assets/images/대규모/2024-09-10.오후3.17.19.png"
               }
             }
           }
@@ -339,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
+                "file": "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -356,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
+                "file": "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -379,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md"
+                "file": "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md"
               }
             }
           },
@@ -421,10 +177,25 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "e594e07443b307f7",
+  "active": "3823b565bc0dadd7",
   "lastOpenFiles": [
-    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+    "_site/posts/URL-단축기-설계/index.html",
+    "_site/posts/URL-단축기-설계",
+    "_site/assets/images/대규모/2024-09-10.오후3.17.19.png",
+    "assets/images/대규모/2024-09-10.오후3.17.19.png",
+    "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.md",
+    "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
+    "_posts/blog/book/대규모/2024-03-28-분산 시스템을 위한 유일 ID 생성기 설계.md",
+    "_posts/Excalidraw/Drawing 2024-03-17 12.15.23.excalidraw.png",
+    "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.png",
+    "_posts/코딩/개발 학습/관련도서/가상 면접 사례로 배우는 대규모 시스템 설계 기초/가상 면접 사례로 배우는 대규모 시스템 설계 기초.md",
+    "_posts/blog/book/대규모/검색어 자동완성 시스템&유투브설계.md",
+    "_site/posts/분산-시스템을-위한-유일-ID-생성기-설계/index.html",
+    "_site/posts/분산-시스템을-위한-유일-ID-생성기-설계",
     "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
+    "_posts/코딩/개발 학습/관련도서/프로그래밍 가이드북.md",
+    "_posts/코딩/개발 학습/관련도서/자바 성능 튜닝 이야기.md",
+    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
     "_site/posts/키_값-저장소-설계/index.html",
     "_site/posts/키_값-저장소-설계",
     "_site/assets/images/book/2024-03-23.17.48.41.png",
@@ -438,22 +209,13 @@
     "_posts/Excalidraw/Drawing 2024-03-23 17.40.09.excalidraw.md",
     "assets/images/book/2024-03-23.17.40.09.png",
     "_posts/Excalidraw/Drawing 2024-03-23 16.55.40.excalidraw.md",
-    "assets/images/book/2024-03-23.16.55.40.png",
     "_posts/Excalidraw/Drawing 2024-03-23 11.44.43.excalidraw.md",
-    "assets/images/book/2024-03-23.11.44.43.png",
     "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
     "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
     "_site/posts/안정-해시-설계/index.html",
     "_site/posts/안정-해시-설계",
-    "_site/assets/images/대규모/IMG-20240910173710.png",
-    "_site/assets/images/대규모/IMG-20240910173710-2.png",
-    "_posts/코딩/개발 학습/관련도서/가상 면접 사례로 배우는 대규모 시스템 설계 기초/가상 면접 사례로 배우는 대규모 시스템 설계 기초.md",
     "_site/posts/처리율-제한-장치의-설계/index.html",
-    "_site/posts/처리율-제한-장치의-설계",
     "_posts/Excalidraw/Drawing 2024-03-17 15.25.21.excalidraw.md",
-    "_site/posts/사용자-수에-따른-규모-확장성/index.html",
-    "_site/posts/사용자-수에-따른-규모-확장성",
-    "_posts/blog/book/대규모/검색어 자동완성 시스템&유투브설계.md",
     "_posts/Excalidraw/Drawing 2024-03-17 12.15.23.excalidraw.md",
     "_posts/Excalidraw/Drawing 2024-03-17 12.00.35.excalidraw.md",
     "_posts/Excalidraw/Drawing 2024-03-17 11.48.52.excalidraw.md",
@@ -461,12 +223,7 @@
     "_posts/Excalidraw/Drawing 2024-03-17 10.52.18.excalidraw.md",
     "_posts/Excalidraw/Drawing 2024-03-17 10.43.42.excalidraw.md",
     "_posts/blog/book/무제 파일.md",
-    "_posts/코딩/개발 학습/관련도서/프로그래밍 가이드북.md",
-    "_posts/코딩/개발 학습/관련도서/자바 성능 튜닝 이야기.md",
     "_posts/blog/book/2023-11-12-DDD START! 도메인 주도 설계 구현과 핵심 개념 익히기.md",
-    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
-    "_posts/blog/algo/권오흠/2022-11-21-정렬.md",
-    "_posts/blog/algo/권오흠/2022-10-11-Recursion -멱집합.md",
-    "_posts/blog/algo/권오흠/2022-12-13-트리와 이진트리.md"
+    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md"
   ]
 }

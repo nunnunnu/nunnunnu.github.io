@@ -546,6 +546,127 @@
 <div id="post-list" class="flex-grow-1 px-xl-1">
   
     <article class="card-wrapper card">
+      <a href="/posts/%EA%B3%A0%EA%B8%89_%EC%BB%AC%EB%A0%89%EC%85%98_%EC%A1%B0%ED%9A%8C_%EC%B5%9C%EC%A0%81%ED%99%94/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 부트와 JPA 활용2] 고급 - 컬렉션 조회 최적화</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>@GetMapping(&quot;/api/v2/orders&quot;)
+    public List&amp;lt;OrderDto&amp;gt; orderV2(){
+        List&amp;lt;Order&amp;gt; orders = orderRepository.findAllByString(new OrderSearch());
+        List&amp;lt;OrderDto&amp;gt; collect ...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1673190000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2023/01/09
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      JPA
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EA%B8%B0%EB%B3%B8/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 실전! 스프링 부트와 JPA 활용2] 기본</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>패키지는 API(JSON)와 템플릿 엔진(HTML)을 사용하는 컨트롤러를 분리할것. 공통으로 예외처리를 할때 패키지나 구성단위로 많이함.
+
+회원가입
+
+package com.jpabook.jpashop.api;
+
+import javax.validation.Valid;
+
+import org.springframework.web.bind.annotation....</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1673017200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2023/01/07
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      JPA
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
       <a href="/posts/%EA%B3%A0%EA%B8%89_%EC%A7%80%EC%97%B0%EB%A1%9C%EB%94%A9,-%EC%A1%B0%ED%9A%8C%EC%84%B1%EB%8A%A5_%EC%B5%9C%EC%A0%81%ED%99%94/" class="post-preview row g-0 flex-md-row-reverse">
         
 
@@ -1017,131 +1138,6 @@ application.properties에 spring.jpa.hibernate.ddl-auto=create 추가해주면 �
 
   [!important]
 select m.username -&amp;gt; 상태 필드from Member mjoin m.team t -&amp;gt; 단일 값 연관 필드(엔티티로 넘어감. ManyToOne or OneToOne)join m.orders o -&amp;gt; 컬렉션 값 연관 필드(양방향 관계. 컬렉션...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1672412400"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/12/31
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JPA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%BF%BC%EB%A6%AC%EC%96%B8%EC%96%B4_%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 쿼리언어 기본문법</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>JPAFactoryQuery query = new JPAQueryFactory(em);
-QMember m = QMember.member;
-
-JPA를 사용하면 엔티티 객체를 중심으로 개발을 함. 문제는 검색쿼리. 검색을 할때도 테이블이 아닌 객체를 대상으로 검색을 함. 모든 DB데이터를 객체로 변환해서 검색을 하는 것은 불가능함
-에플리케이션이 필요한 데...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1672412400"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/12/31
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      JPA
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EA%B0%92%ED%83%80%EC%9E%85/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 자바 ORM 표준 JPA] 값 타입</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>JPA의 데이터 타입 분류
-
-  엔티티타입
-    
-      @Entity로 정의하는 객체
-      데이터가 변해도 식별자로 지속해서 추적 가능(회원 엔티티의 키나 나이값을 변경해도 식별자로 인식 가능)
-    
-  
-  값 타입
-    
-      int, Integer, String 처럼 단순히 값으로 사용하는 기본타입이나 객체
-      식별...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
