@@ -13,9 +13,115 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
+                "file": "_posts/코딩/개발 학습/관련도서/가상 면접 사례로 배우는 대규모 시스템 설계 기초/가상 면접 사례로 배우는 대규모 시스템 설계 기초.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "a07a3c7bba453598",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cc1cdba384747a3b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "336e894dfb87d6d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bd1b9e3c82b1fc91",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-31 14.25.43.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "64761fe6780a7752",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-31 14.10.58.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "fb097881563d0390",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-31 13.32.24.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "7833a55c55a4f3f9",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-31 12.11.25.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "ebb5f9a370f37715",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-31 11.32.13.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "9f6813433902515f",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-30 18.26.04.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "ea8a6f6af8006ef2",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-24 13.51.36.excalidraw.md"
               }
             }
           },
@@ -29,7 +135,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
+                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +219,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
+                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +242,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md"
+                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md"
               }
             }
           },
@@ -177,53 +284,53 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "3823b565bc0dadd7",
+  "active": "a07a3c7bba453598",
   "lastOpenFiles": [
-    "_site/posts/URL-단축기-설계/index.html",
-    "_site/posts/URL-단축기-설계",
-    "_site/assets/images/대규모/2024-09-10.오후3.17.19.png",
-    "assets/images/대규모/2024-09-10.오후3.17.19.png",
-    "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.md",
-    "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
-    "_posts/blog/book/대규모/2024-03-28-분산 시스템을 위한 유일 ID 생성기 설계.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 12.15.23.excalidraw.png",
-    "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.png",
+    "_site/posts/구글드라이브-설계/index.html",
+    "_site/posts/구글드라이브-설계",
+    "_site/assets/images/대규모/2024-03-31.14.25.43.png",
     "_posts/코딩/개발 학습/관련도서/가상 면접 사례로 배우는 대규모 시스템 설계 기초/가상 면접 사례로 배우는 대규모 시스템 설계 기초.md",
-    "_posts/blog/book/대규모/검색어 자동완성 시스템&유투브설계.md",
-    "_site/posts/분산-시스템을-위한-유일-ID-생성기-설계/index.html",
-    "_site/posts/분산-시스템을-위한-유일-ID-생성기-설계",
+    "assets/images/대규모/2024-03-31.14.25.43.png",
+    "_posts/Excalidraw/Drawing 2024-03-31 14.25.43.excalidraw.md",
+    "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
+    "_posts/blog/book/대규모/2024-03-30-검색어 자동완성 시스템&유투브설계.md",
+    "_posts/blog/book/대규모/2024-03-29-알림 시스템&뉴스 피드 시스템&채팅 시스템.md",
+    "_site/tags/가상면접사례로배우는대규모시스템설계기초/index.html",
+    "_site/tags/가상면접사례로배우는대규모시스템설계기초",
+    "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
+    "_posts/blog/book/대규모/2024-03-28-웹 크롤러 설계.md",
+    "_posts/blog/book/대규모/2024-03-28-분산 시스템을 위한 유일 ID 생성기 설계.md",
     "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
+    "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
+    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+    "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
+    "_site/assets/images/대규모/2024-03-31_14.10.58.png",
+    "_site/assets/images/대규모/2024-03-31.13.32.24.png",
+    "_posts/Excalidraw/Drawing 2024-03-31 14.10.58.excalidraw.md",
+    "assets/images/대규모/2024-03-31_14.10.58.png",
+    "_posts/Excalidraw/Drawing 2024-03-31 13.32.24.excalidraw.md",
+    "assets/images/대규모/2024-03-31.13.32.24.png",
+    "_site/posts/검색어-자동완성-시스템&유투브설계/index.html",
+    "_site/posts/검색어-자동완성-시스템&유투브설계",
+    "_site/assets/images/대규모/2024-03-31.12.11.25.png",
+    "_site/assets/images/대규모/2024-03-31.11.32.13.png",
+    "_site/assets/images/대규모/2024-03-30.18.26.04.png",
+    "_posts/Excalidraw/Drawing 2024-03-31 12.11.25.excalidraw.md",
+    "assets/images/대규모/2024-03-31.12.11.25.png",
+    "_posts/Excalidraw/Drawing 2024-03-31 11.32.13.excalidraw.md",
+    "_posts/Excalidraw/Drawing 2024-03-30 18.26.04.excalidraw.md",
+    "_site/posts/알림-시스템&뉴스-피드-시스템&채팅-시스템/index.html",
+    "_site/posts/알림-시스템&뉴스-피드-시스템&채팅-시스템",
+    "_site/posts/웹-크롤러-설계/index.html",
+    "_site/posts/웹-크롤러-설계",
+    "_posts/Excalidraw/Drawing 2024-03-24 13.51.36.excalidraw.md",
+    "_site/posts/URL-단축기-설계/index.html",
+    "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.md",
     "_posts/코딩/개발 학습/관련도서/프로그래밍 가이드북.md",
     "_posts/코딩/개발 학습/관련도서/자바 성능 튜닝 이야기.md",
-    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
-    "_site/posts/키_값-저장소-설계/index.html",
-    "_site/posts/키_값-저장소-설계",
-    "_site/assets/images/book/2024-03-23.17.48.41.png",
-    "_site/assets/images/book/2024-03-23.17.40.09.png",
-    "_site/assets/images/book/2024-03-23.16.55.40.png",
-    "_site/assets/images/book/2024-03-23.11.44.43.png",
-    "_site/page15/index.html",
-    "_site/page15",
     "_posts/Excalidraw/Drawing 2024-03-23 17.48.41.excalidraw.md",
-    "assets/images/book/2024-03-23.17.48.41.png",
     "_posts/Excalidraw/Drawing 2024-03-23 17.40.09.excalidraw.md",
-    "assets/images/book/2024-03-23.17.40.09.png",
     "_posts/Excalidraw/Drawing 2024-03-23 16.55.40.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-23 11.44.43.excalidraw.md",
-    "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
-    "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
-    "_site/posts/안정-해시-설계/index.html",
-    "_site/posts/안정-해시-설계",
-    "_site/posts/처리율-제한-장치의-설계/index.html",
-    "_posts/Excalidraw/Drawing 2024-03-17 15.25.21.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 12.15.23.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 12.00.35.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 11.48.52.excalidraw.md",
-    "_posts/이미지/가상 면접 사례로 배우는 대규모 시스템 설계 기초 2024-03-17 11.41.03.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 10.52.18.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 10.43.42.excalidraw.md",
-    "_posts/blog/book/무제 파일.md",
-    "_posts/blog/book/2023-11-12-DDD START! 도메인 주도 설계 구현과 핵심 개념 익히기.md",
-    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md"
+    "_posts/Excalidraw/Drawing 2024-03-23 11.44.43.excalidraw.md"
   ]
 }
