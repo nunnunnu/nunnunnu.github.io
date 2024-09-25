@@ -8,135 +8,58 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3823b565bc0dadd7",
+            "id": "1b5bad37731c2194",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/코딩/개발 학습/관련도서/가상 면접 사례로 배우는 대규모 시스템 설계 기초/가상 면접 사례로 배우는 대규모 시스템 설계 기초.md",
+                "file": "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "a07a3c7bba453598",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cc1cdba384747a3b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "336e894dfb87d6d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bd1b9e3c82b1fc91",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-31 14.25.43.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "64761fe6780a7752",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-31 14.10.58.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "fb097881563d0390",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-31 13.32.24.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "7833a55c55a4f3f9",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-31 12.11.25.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "ebb5f9a370f37715",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-31 11.32.13.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "9f6813433902515f",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-30 18.26.04.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "ea8a6f6af8006ef2",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-24 13.51.36.excalidraw.md"
-              }
-            }
-          },
-          {
-            "id": "73d4d6d3be4b65a9",
+            "id": "e4354dbd23746aab",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "assets/images/대규모/2024-09-10.오후3.17.19.png"
+                "file": "assets/images/alone/IMG-20240925132202-6.png"
+              }
+            }
+          },
+          {
+            "id": "ee14b18a896d9faa",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/alone/IMG-20240925142227-5.png"
+              }
+            }
+          },
+          {
+            "id": "3fe39e7693a64e10",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/alone/IMG-20240925142227-3.png"
+              }
+            }
+          },
+          {
+            "id": "12e079b8c06130e6",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/alone/IMG-20240925142227-1.png"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -165,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SQL anti",
+                "query": "스프링 부트와 AWS로 혼자 구현하는 웹 서비스",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -186,7 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 371.5
+    "width": 345.5
   },
   "right": {
     "id": "6ee3a94f67d83ffe",
@@ -202,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
+                "file": "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
+                "file": "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -242,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md"
+                "file": "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md"
               }
             }
           },
@@ -284,53 +207,52 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "a07a3c7bba453598",
+  "active": "1b5bad37731c2194",
   "lastOpenFiles": [
-    "_site/posts/구글드라이브-설계/index.html",
-    "_site/posts/구글드라이브-설계",
-    "_site/assets/images/대규모/2024-03-31.14.25.43.png",
-    "_posts/코딩/개발 학습/관련도서/가상 면접 사례로 배우는 대규모 시스템 설계 기초/가상 면접 사례로 배우는 대규모 시스템 설계 기초.md",
-    "assets/images/대규모/2024-03-31.14.25.43.png",
-    "_posts/Excalidraw/Drawing 2024-03-31 14.25.43.excalidraw.md",
-    "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
-    "_posts/blog/book/대규모/2024-03-30-검색어 자동완성 시스템&유투브설계.md",
-    "_posts/blog/book/대규모/2024-03-29-알림 시스템&뉴스 피드 시스템&채팅 시스템.md",
-    "_site/tags/가상면접사례로배우는대규모시스템설계기초/index.html",
-    "_site/tags/가상면접사례로배우는대규모시스템설계기초",
-    "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
-    "_posts/blog/book/대규모/2024-03-28-웹 크롤러 설계.md",
-    "_posts/blog/book/대규모/2024-03-28-분산 시스템을 위한 유일 ID 생성기 설계.md",
-    "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
-    "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
-    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+    "_posts/blog/book/alone/2024-03-02-spring-aws_ec2.md",
+    "_posts/blog/book/alone/2024-03-02-spring-aws-rds.md",
+    "_posts/blog/book/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
+    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
+    "_site/posts/spring_aws_ec2_2/index.html",
+    "_site/posts/spring_aws_ec2_2",
+    "_site/page16/index.html",
+    "_site/page16",
+    "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
+    "_site/categories/aws/index.html",
+    "_site/categories/aws",
+    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
+    "assets/images/alone/IMG-20240925132202-6.png",
+    "assets/images/alone/IMG-20240925132201-2.png",
+    "_site/posts/spring-aws-rds/index.html",
+    "_site/posts/spring-aws-rds",
+    "_site/tags/스프링부트와aws로혼자구현하는웹서비스/index.html",
+    "_site/tags/스프링부트와aws로혼자구현하는웹서비스",
     "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
-    "_site/assets/images/대규모/2024-03-31_14.10.58.png",
-    "_site/assets/images/대규모/2024-03-31.13.32.24.png",
-    "_posts/Excalidraw/Drawing 2024-03-31 14.10.58.excalidraw.md",
-    "assets/images/대규모/2024-03-31_14.10.58.png",
-    "_posts/Excalidraw/Drawing 2024-03-31 13.32.24.excalidraw.md",
-    "assets/images/대규모/2024-03-31.13.32.24.png",
-    "_site/posts/검색어-자동완성-시스템&유투브설계/index.html",
-    "_site/posts/검색어-자동완성-시스템&유투브설계",
-    "_site/assets/images/대규모/2024-03-31.12.11.25.png",
-    "_site/assets/images/대규모/2024-03-31.11.32.13.png",
-    "_site/assets/images/대규모/2024-03-30.18.26.04.png",
-    "_posts/Excalidraw/Drawing 2024-03-31 12.11.25.excalidraw.md",
-    "assets/images/대규모/2024-03-31.12.11.25.png",
-    "_posts/Excalidraw/Drawing 2024-03-31 11.32.13.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-30 18.26.04.excalidraw.md",
-    "_site/posts/알림-시스템&뉴스-피드-시스템&채팅-시스템/index.html",
-    "_site/posts/알림-시스템&뉴스-피드-시스템&채팅-시스템",
-    "_site/posts/웹-크롤러-설계/index.html",
-    "_site/posts/웹-크롤러-설계",
-    "_posts/Excalidraw/Drawing 2024-03-24 13.51.36.excalidraw.md",
-    "_site/posts/URL-단축기-설계/index.html",
-    "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.md",
-    "_posts/코딩/개발 학습/관련도서/프로그래밍 가이드북.md",
-    "_posts/코딩/개발 학습/관련도서/자바 성능 튜닝 이야기.md",
-    "_posts/Excalidraw/Drawing 2024-03-23 17.48.41.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-23 17.40.09.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-23 16.55.40.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-23 11.44.43.excalidraw.md"
+    "assets/images/alone/IMG-20240925142228-2.png",
+    "_site/assets/images/alone/IMG-20240925142228.png",
+    "_site/assets/images/alone/IMG-20240925142228-2.png",
+    "_site/assets/images/alone/IMG-20240925142228-1.png",
+    "_site/assets/images/alone/IMG-20240925142227.png",
+    "_site/assets/images/alone/IMG-20240925142227-6.png",
+    "_site/assets/images/alone/IMG-20240925142227-5.png",
+    "_site/assets/images/alone/IMG-20240925142227-4.png",
+    "assets/images/alone/alone/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
+    "_site/assets/images/alone/alone/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
+    "_posts/blog/book/0ea5eaad-f614-47f7-9c44-9f3a52e92c4f_Export-66ae7961-a93e-4358-b243-6e48e5477f01/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
+    "_posts/코딩/프로젝트/목표+자산관리 - superbe/2024-04-06 작업일지.md",
+    "_posts/blog/java/2022-07-28-변수(Variable).md",
+    "_posts/blog/java/2022-10-02-2장_변수.md",
+    "_posts/blog/java/2022-08-26-지네릭스_열거형_애너테이션.md",
+    "_posts/blog/java/2022-07-31-배열.md",
+    "_posts/blog/java/2022-10-02-3장_연산자.md",
+    "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md",
+    "_posts/blog/spring/mvc1/2023-02-05-웹애플리케이션이해.md",
+    "assets/images/java/2024-09-25_13.00.33.md",
+    "_posts/blog/java/2022-08-14-예외처리.md",
+    "_posts/blog/java/2022-10-07-7장_상속_1.md",
+    "_posts/blog/java/2022-08-28-쓰레드(thread).md",
+    "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
+    "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
+    "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md"
   ]
 }
