@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2024-09-25T17:22:22+09:00</updated>
+  <updated>2024-09-25T17:29:32+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -43,16 +43,18 @@
 사이드 프로젝트의 비용절감을 위해 무료로 도메인을 발급받을 수 있는 내도메인한국에서 도메인을 발급받음
 
 등록하기로 뜨는 test-domain.kro.kr 이 등록가능한 도메인임
+
 등록하기를 누르면 보안코드를 입력하고 도메인 관리에 선택한 도메인이 들어온걸 확인가능함
+
 EC2의 퍼플릭 IP를 이미 발급받은 상태이기때문에 
 
 IP연결에 예시 한국 IP가 적힌 쪽에 퍼블릭 IP를 입력하고 저장해줌.
+
 이까지만해줘도 도메인으로 접속하면 api호출이 가능하나 http로 접속이된다는 문제가있음
 aws 사용 (최종 사용하지 않았음)
 인증서 발급
 
-AWS Certificate Manager에서 인증서 먼저 발급(단 클라우드 프론트(CDN)는 https를 적용하려면 미국 동부 버지니아북부에서 발급받아야함)
-...</summary>
+AWS Certificate Manager에서 인증서 먼저 발급(단 클라우드 프론트(CDN)는 https를 적용하려면 미국 동부 버지니아북부에서 발급받아야...</summary>
 
   </entry>
 

@@ -20,6 +20,16 @@
             }
           },
           {
+            "id": "693bd5ebc8db73b5",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/aws/IMG-20240925160330-1.png"
+              }
+            }
+          },
+          {
             "id": "4c1dff68f267953c",
             "type": "leaf",
             "state": {
@@ -259,6 +269,10 @@
   },
   "active": "01bd06f68cdbb5cd",
   "lastOpenFiles": [
+    "assets/images/aws/IMG-20240925160330-1.png",
+    "assets/images/aws/IMG-20240925160330-1.png.sb-6ab4fd92-qipRTD",
+    "_posts/blog/aws/2024-04-20-domain_https.md",
+    "assets/images/aws/IMG-20240925160330.png",
     "_site/posts/domain_https/index.html",
     "_site/posts/domain_https",
     "_site/assets/images/aws/Pastedimage20240925165403.png",
@@ -270,17 +284,13 @@
     "_site/assets/images/aws/IMG-20240925160330-4.png",
     "_site/assets/images/aws/IMG-20240925160330-3.png",
     "_site/assets/images/aws/IMG-20240925160330-2.png",
-    "_site/assets/images/aws/IMG-20240925160330-1.png",
     "_site/assets/images/aws",
     "_site/page16/index.html",
     "_site/page16",
     "_site/tags/https/index.html",
     "_site/tags/https",
-    "_posts/blog/aws/2024-04-20-domain_https.md",
     "assets/images/aws/IMG-20240925160330-6.png.sb-6ab4fd92-m9ZLHq",
     "assets/images/aws/IMG-20240925160330-5.png.sb-6ab4fd92-lQ2EBC",
-    "assets/images/aws/IMG-20240925160330-5.png.sb-6ab4fd92-nyQr0J",
-    "assets/images/aws/IMG-20240925160330-4.png.sb-6ab4fd92-OlEWLN",
     "_posts/코딩/프로젝트/목표+자산관리 - superbe/2024-04-06 작업일지.md",
     "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
     "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
