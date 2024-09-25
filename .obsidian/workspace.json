@@ -13,9 +13,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
+                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "17ef87a6268c9b79",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/대규모/2024-09-10_오후3.17.192.png"
+              }
+            }
+          },
+          {
+            "id": "02b9a1856f83c54f",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/대규모/2024-09-10_오후3.17.192.png"
               }
             }
           },
@@ -125,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
+                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +162,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
+                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +185,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md"
+                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md"
               }
             }
           },
@@ -209,15 +229,18 @@
   },
   "active": "1b5bad37731c2194",
   "lastOpenFiles": [
+    "_site/assets/images/대규모/2024-09-10_오후3.17.192.png",
+    "assets/images/대규모/2024-09-10_오후3.17.192.png",
+    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+    "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
+    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
     "_posts/blog/book/alone/2024-03-02-spring-aws_ec2.md",
     "_posts/blog/book/alone/2024-03-02-spring-aws-rds.md",
     "_posts/blog/book/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
     "_site/posts/spring_aws_ec2_2/index.html",
     "_site/posts/spring_aws_ec2_2",
     "_site/page16/index.html",
     "_site/page16",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
     "_site/categories/aws/index.html",
     "_site/categories/aws",
     "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
@@ -235,7 +258,6 @@
     "_site/assets/images/alone/IMG-20240925142227.png",
     "_site/assets/images/alone/IMG-20240925142227-6.png",
     "_site/assets/images/alone/IMG-20240925142227-5.png",
-    "_site/assets/images/alone/IMG-20240925142227-4.png",
     "assets/images/alone/alone/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
     "_site/assets/images/alone/alone/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
     "_posts/blog/book/0ea5eaad-f614-47f7-9c44-9f3a52e92c4f_Export-66ae7961-a93e-4358-b243-6e48e5477f01/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
@@ -252,7 +274,6 @@
     "_posts/blog/java/2022-10-07-7장_상속_1.md",
     "_posts/blog/java/2022-08-28-쓰레드(thread).md",
     "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
-    "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md",
-    "_posts/blog/java/2022-08-15-java.lang패키지와_유용한_클래스.md"
+    "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md"
   ]
 }

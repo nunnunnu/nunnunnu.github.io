@@ -42,7 +42,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 9장 웹 크롤러 설계" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-28T00:00:00+09:00","datePublished":"2024-03-28T00:00:00+09:00","description":"책정보 웹크롤러(로봇, 스파이더라고도 불림) 이용 방법 검색 엔진 인덱싱(search engine indexing) : 크롤러의 가장 보편적인 용례로 웹 페이지를 모아 검색 엔진을 위한 로컬 인덱스를 만든다. googlebot은 구글검색엔진이 사용하는 웹 크롤러임 웹 아카이빙(web archiving) : 나중에 사용할 목적으로 장기보관하기 위해 웹 정보를 모으는 절차. 대표적으로 미국 국회 도서관, EU웹아카이브가 있음 웹 마이닝(web mining) : 인터넷의 유용한 지식을 도출해낼수있음. 유명 금융기업에서는 크롤러를 사용해 주주총회 자료나 연차보고서를 다운받아 기업의 핵심사업방향을 알아내기도함 웹 모니터링(web monitoring) : 인터넷의 저작권/상표권 침해 사례를 모니터링 가능. 디지마크사는 웹크롤러를 사용해 해적판 저작물을 찾아 보고함 기본 알고리즘 URL이 집합으로 주어지면 해당 URL이 가르키는 모든 웹 페이지를 다운 다운받은 웹페이지에서 URL 추출 추출된 URL들을 다운할 목록에 추가, 위의 과정을 처음부터 반복 웹 크롤러 만족 속성 규모확장성 : 뱡행성을 활용하면 더 효과적으로 크롤링 가능 안정성 : 잘못작성된 HTML, 반응이없는 서버, 장애, 악성코드 등 비정상적 입력/환경에 대응가능해야함 예절 : 수집대상이되는 웹 사이트에 짧은 시간동안 너무 많은 요청을 날리면 안됨 확장성 : 새로운 형태의 콘텐츠를 지원하기 쉬워야함. (이미지를 추가 크롤링해야할때 전체시스템을 새로설계하는 일이 없도록 구현) 작업 흐름","headline":"[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 9장 웹 크롤러 설계","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/"},"url":"http://localhost:4000/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-09-25T15:11:20+09:00","datePublished":"2024-03-28T00:00:00+09:00","description":"책정보 웹크롤러(로봇, 스파이더라고도 불림) 이용 방법 검색 엔진 인덱싱(search engine indexing) : 크롤러의 가장 보편적인 용례로 웹 페이지를 모아 검색 엔진을 위한 로컬 인덱스를 만든다. googlebot은 구글검색엔진이 사용하는 웹 크롤러임 웹 아카이빙(web archiving) : 나중에 사용할 목적으로 장기보관하기 위해 웹 정보를 모으는 절차. 대표적으로 미국 국회 도서관, EU웹아카이브가 있음 웹 마이닝(web mining) : 인터넷의 유용한 지식을 도출해낼수있음. 유명 금융기업에서는 크롤러를 사용해 주주총회 자료나 연차보고서를 다운받아 기업의 핵심사업방향을 알아내기도함 웹 모니터링(web monitoring) : 인터넷의 저작권/상표권 침해 사례를 모니터링 가능. 디지마크사는 웹크롤러를 사용해 해적판 저작물을 찾아 보고함 기본 알고리즘 URL이 집합으로 주어지면 해당 URL이 가르키는 모든 웹 페이지를 다운 다운받은 웹페이지에서 URL 추출 추출된 URL들을 다운할 목록에 추가, 위의 과정을 처음부터 반복 웹 크롤러 만족 속성 규모확장성 : 뱡행성을 활용하면 더 효과적으로 크롤링 가능 안정성 : 잘못작성된 HTML, 반응이없는 서버, 장애, 악성코드 등 비정상적 입력/환경에 대응가능해야함 예절 : 수집대상이되는 웹 사이트에 짧은 시간동안 너무 많은 요청을 날리면 안됨 확장성 : 새로운 형태의 콘텐츠를 지원하기 쉬워야함. (이미지를 추가 크롤링해야할때 전체시스템을 새로설계하는 일이 없도록 구현) 작업 흐름","headline":"[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 9장 웹 크롤러 설계","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/"},"url":"http://localhost:4000/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -706,6 +706,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          업데이트
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1727244680"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2024/09/25
+</time>
+
+        </span>
+      
       
 
       <div class="d-flex justify-content-between">
@@ -1025,7 +1048,14 @@ HTML다운로더--&gt;도메인이름변환기;
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/spring-aws_ec2/">[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 6장 AWS 서버 환경을 만들어보자 - AWS EC2</a>
+          <a href="/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 9장 웹 크롤러 설계</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EB%89%B4%EC%8A%A4-%ED%94%BC%EB%93%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EC%B1%84%ED%8C%85-%EC%8B%9C%EC%8A%A4%ED%85%9C/">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 10장 알림 시스템 & 뉴스 피드 시스템 & 채팅 시스템</a>
         </li>
       
         
@@ -1046,14 +1076,7 @@ HTML다운로더--&gt;도메인이름변환기;
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EB%89%B4%EC%8A%A4-%ED%94%BC%EB%93%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EC%B1%84%ED%8C%85-%EC%8B%9C%EC%8A%A4%ED%85%9C/">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 10장 알림 시스템 & 뉴스 피드 시스템 & 채팅 시스템</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/URL-%EB%8B%A8%EC%B6%95%EA%B8%B0-%EC%84%A4%EA%B3%84/">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 8장 URL 단축키 설계</a>
+          <a href="/posts/spring-aws_ec2/">[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 6장 AWS 서버 환경을 만들어보자 - AWS EC2</a>
         </li>
       
     </ul>

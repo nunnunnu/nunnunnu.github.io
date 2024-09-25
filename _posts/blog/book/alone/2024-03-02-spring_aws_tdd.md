@@ -1,6 +1,6 @@
 ---
 title: "[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 2장 스프링 부트에서 테스트 코드를 작성하자"
-category: AWS
+category: Spring
 tags:
   - spring
   - aws
