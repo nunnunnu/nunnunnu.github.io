@@ -499,6 +499,142 @@
 
 
 
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
 
 <!-- Add header for code snippets -->
 
@@ -634,7 +770,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="624 단어"
+  title="644 단어"
 >
   <em>3 분</em>읽는 시간</span>
 
@@ -663,15 +799,26 @@
 
     <p>이 두 명령어를 실행했는데! 안됨..</p>
 
-    <p>결국 스왑메모리 설정을 해보기로 결정..
-  <code class="language-plaintext highlighter-rouge">sudo dd if=/dev/zero of=/swapfile bs=128M count=16</code> 권장크기가 2기가라서 count=16을 지정
-  <code class="language-plaintext highlighter-rouge">sudo chmod 600 /swapfile</code> 권한 설정
-  <code class="language-plaintext highlighter-rouge">sudo mkswap /swapfile</code> 
-  <code class="language-plaintext highlighter-rouge">sudo swapon /swapfile</code>
-  <code class="language-plaintext highlighter-rouge">sudo swapon -s</code>
-  <code class="language-plaintext highlighter-rouge">sudo vi /etc/fstab</code> 명령어로 fstab파일을 열어 <code class="language-plaintext highlighter-rouge">/swapfile swap swap defaults 0 0</code> 를 마지막줄에 추가</p>
+    <p>결국 스왑메모리 설정을 해보기로 결정..</p>
 
-    <p>스왑메모리 설정후 프로젝트를 <code class="language-plaintext highlighter-rouge">./gradlew test</code> 로 재빌드해보니 빌드가 완료됨!</p>
+    <p>참고로 스왑메모리는 ram이 부족하면 SSD나 HDD의 공간을 ram처럼 사용할수있는 메모리라고함!</p>
+
+    <ol>
+      <li>하드디스크 용량 확인
+ <code class="language-plaintext highlighter-rouge">df -h</code></li>
+      <li>스왑메모리 확인 <code class="language-plaintext highlighter-rouge">free</code></li>
+      <li>스왑 파일 생성 <code class="language-plaintext highlighter-rouge">sudo fallocate -l 2G /swapfile</code></li>
+      <li>스왑 권한 설정 <code class="language-plaintext highlighter-rouge">sudo chmod 600 /swapfile</code></li>
+      <li>파일적용 <code class="language-plaintext highlighter-rouge">sudo mkswap /swapfile</code> <code class="language-plaintext highlighter-rouge">sudo swapon /swapfile</code></li>
+      <li>부팅시 스왑파일 활성화 <code class="language-plaintext highlighter-rouge">sudo nano /etc/fstab</code>
+        <ul>
+          <li>할당 전 메모리
+ <a href="/assets/images/alone/Pastedimage20240406224840.png" class="popup img-link  shimmer"><img src="/assets/images/alone/Pastedimage20240406224840.png" alt="image" loading="lazy"></a></li>
+          <li>할당 후 메모리
+ <a href="/assets/images/alone/Pastedimage20240406224827.png" class="popup img-link  shimmer"><img src="/assets/images/alone/Pastedimage20240406224827.png" alt="image" loading="lazy"></a></li>
+        </ul>
+      </li>
+    </ol>
   </li>
 </ul>
 
@@ -819,6 +966,16 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
             class="post-tag no-text-decoration"
           >스프링부트와AWS로혼자구현하는웹서비스</a>
         
+          <a
+            href="/tags/ec2/"
+            class="post-tag no-text-decoration"
+          >ec2</a>
+        
+          <a
+            href="/tags/%EB%B0%B0%ED%8F%AC/"
+            class="post-tag no-text-decoration"
+          >배포</a>
+        
       </div>
     
 
@@ -959,7 +1116,7 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/spring-aws_ec2/">[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 6장 AWS 서버 환경을 만들어보자 - AWS EC2</a>
+          <a href="/posts/domain_https/">[사이드프로젝트 aws배포] DNS발급/연결 & HTTPS 설정</a>
         </li>
       
     </ul>
@@ -1063,25 +1220,6 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1101,65 +1239,6 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1249,118 +1328,10 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -1435,6 +1406,153 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1669,136 +1787,10 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2008,7 +2000,342 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2976,6 +3303,18 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
 
   
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2989,45 +3328,6 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">관련된 글</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        <article class="col">
-          <a href="/posts/spring_aws_tdd/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1709305200"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/02
-</time>
-
-              <h4 class="pt-0 my-2">[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 2장 스프링 부트에서 테스트 코드를 작성하자</h4>
-              <div class="text-muted">
-                <p>레드 그린 사이클
-
-    
-      항상 실패하는 테스트를 먼저 작성(red)
-      테스트가 통과하하는 프로덕션 코드를 작성(green)
-      테스트가 통과하면 프로덕션 코드를 리팩토링(Refactor)
-    
-  
-  테스트 코드 작성 이유
-    
-      단위 테스트는 개발단계 초기에 문서를 발견하게 도와줌
-      단위 테스...</p>
-              </div>
-            </div>
-          </a>
-        </article>
       
         <article class="col">
           <a href="/posts/spring-aws_ec2/" class="post-preview card h-100">
@@ -3065,6 +3365,45 @@ nohup java -jar $REPOSITORY/$JAR_NAME 2&gt;&amp;1 &amp;
 프리티어유형인 t2.micro를 선택
 t2는 요금제, micro는 사양을 의미
 t2외에 t3도 있는데 이들을 T시...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/spring_aws_tdd/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1709305200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/02
+</time>
+
+              <h4 class="pt-0 my-2">[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 2장 스프링 부트에서 테스트 코드를 작성하자</h4>
+              <div class="text-muted">
+                <p>레드 그린 사이클
+
+    
+      항상 실패하는 테스트를 먼저 작성(red)
+      테스트가 통과하하는 프로덕션 코드를 작성(green)
+      테스트가 통과하면 프로덕션 코드를 리팩토링(Refactor)
+    
+  
+  테스트 코드 작성 이유
+    
+      단위 테스트는 개발단계 초기에 문서를 발견하게 도와줌
+      단위 테스...</p>
               </div>
             </div>
           </a>
@@ -3285,25 +3624,6 @@ mariaDB를 사용할것임
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3323,65 +3643,6 @@ mariaDB를 사용할것임
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3471,118 +3732,10 @@ mariaDB를 사용할것임
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -3657,6 +3810,153 @@ mariaDB를 사용할것임
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3891,136 +4191,10 @@ mariaDB를 사용할것임
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4230,7 +4404,342 @@ mariaDB를 사용할것임
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     

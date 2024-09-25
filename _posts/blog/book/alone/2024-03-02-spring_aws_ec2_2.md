@@ -5,6 +5,8 @@ tags:
   - spring
   - aws
   - 스프링부트와AWS로혼자구현하는웹서비스
+  - ec2
+  - 배포
 last_modified_at: 2024-03-02
 ---
 `sudo yum install git` 으로 git 먼저 설치
@@ -25,14 +27,20 @@ last_modified_at: 2024-03-02
 	이 두 명령어를 실행했는데! 안됨..
 	
 	결국 스왑메모리 설정을 해보기로 결정..
-	`sudo dd if=/dev/zero of=/swapfile bs=128M count=16` 권장크기가 2기가라서 count=16을 지정
-	`sudo chmod 600 /swapfile` 권한 설정
-	`sudo mkswap /swapfile` 
-	`sudo swapon /swapfile`
-	`sudo swapon -s`
-	`sudo vi /etc/fstab` 명령어로 fstab파일을 열어 `/swapfile swap swap defaults 0 0` 를 마지막줄에 추가
 
-	스왑메모리 설정후 프로젝트를 `./gradlew test` 로 재빌드해보니 빌드가 완료됨!
+	참고로 스왑메모리는 ram이 부족하면 SSD나 HDD의 공간을 ram처럼 사용할수있는 메모리라고함!
+	
+	1. 하드디스크 용량 확인
+		`df -h`
+	2. 스왑메모리 확인 `free`
+	3. 스왑 파일 생성 `sudo fallocate -l 2G /swapfile`
+	4. 스왑 권한 설정 `sudo chmod 600 /swapfile`
+	5. 파일적용 `sudo mkswap /swapfile` `sudo swapon /swapfile`
+	6. 부팅시 스왑파일 활성화 `sudo nano /etc/fstab`
+	- 할당 전 메모리
+		![image](/assets/images/alone/Pastedimage20240406224840.png)
+	- 할당 후 메모리
+		![image](/assets/images/alone/Pastedimage20240406224827.png)
 
 만약 프로젝트에 push했다면 pull로 땡겨서 하면됨
 

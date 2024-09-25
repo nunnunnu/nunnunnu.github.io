@@ -4,78 +4,108 @@
     "type": "split",
     "children": [
       {
-        "id": "1de1f6a8be1d1466",
+        "id": "d41e6d9750ef0c37",
         "type": "tabs",
         "children": [
           {
-            "id": "1b5bad37731c2194",
+            "id": "01bd06f68cdbb5cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+                "file": "_posts/blog/aws/2024-04-20-domain_https.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "17ef87a6268c9b79",
+            "id": "4c1dff68f267953c",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "assets/images/대규모/2024-09-10_오후3.17.192.png"
+                "file": "assets/images/aws/Pastedimage20240925165403.png"
               }
             }
           },
           {
-            "id": "02b9a1856f83c54f",
+            "id": "38f2a9da875ff3a2",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "assets/images/대규모/2024-09-10_오후3.17.192.png"
+                "file": "assets/images/aws/Pastedimage20240925164440.png"
               }
             }
           },
           {
-            "id": "e4354dbd23746aab",
+            "id": "ced3276b1b1ad36b",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "assets/images/alone/IMG-20240925132202-6.png"
+                "file": "assets/images/aws/Pastedimage20240925164947.png"
               }
             }
           },
           {
-            "id": "ee14b18a896d9faa",
+            "id": "3d2f18e548459f34",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "assets/images/alone/IMG-20240925142227-5.png"
+                "file": "assets/images/aws/Pastedimage20240925164440.png"
               }
             }
           },
           {
-            "id": "3fe39e7693a64e10",
+            "id": "6df6f24ce1e51010",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "assets/images/alone/IMG-20240925142227-3.png"
+                "file": "assets/images/aws/IMG-20240925160330-5.png"
               }
             }
           },
           {
-            "id": "12e079b8c06130e6",
+            "id": "3bdbb94a5ce3051c",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "assets/images/alone/IMG-20240925142227-1.png"
+                "file": "assets/images/aws/IMG-20240925160330-4.png"
+              }
+            }
+          },
+          {
+            "id": "effc6745ac13f802",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/aws/IMG-20240925160330-3.png"
+              }
+            }
+          },
+          {
+            "id": "2d9d41956b4c4751",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/aws/IMG-20240925160330-2.png"
+              }
+            }
+          },
+          {
+            "id": "f2b96974d299af8f",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/aws/IMG-20240925160329.png"
               }
             }
           }
@@ -145,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+                "file": "_posts/blog/aws/2024-04-20-domain_https.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -162,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+                "file": "_posts/blog/aws/2024-04-20-domain_https.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -185,7 +215,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md"
+                "file": "_posts/blog/aws/2024-04-20-domain_https.md"
               }
             }
           },
@@ -227,53 +257,53 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "1b5bad37731c2194",
+  "active": "01bd06f68cdbb5cd",
   "lastOpenFiles": [
-    "_site/assets/images/대규모/2024-09-10_오후3.17.192.png",
-    "assets/images/대규모/2024-09-10_오후3.17.192.png",
-    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
-    "_posts/blog/book/alone/2024-03-02-spring-aws_ec2.md",
-    "_posts/blog/book/alone/2024-03-02-spring-aws-rds.md",
-    "_posts/blog/book/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
-    "_site/posts/spring_aws_ec2_2/index.html",
-    "_site/posts/spring_aws_ec2_2",
+    "_site/posts/domain_https/index.html",
+    "_site/posts/domain_https",
+    "_site/assets/images/aws/Pastedimage20240925165403.png",
+    "_site/assets/images/aws/Pastedimage20240925164947.png",
+    "_site/assets/images/aws/Pastedimage20240925164440.png",
+    "_site/assets/images/aws/IMG-20240925160330.png",
+    "_site/assets/images/aws/IMG-20240925160330-6.png",
+    "_site/assets/images/aws/IMG-20240925160330-5.png",
+    "_site/assets/images/aws/IMG-20240925160330-4.png",
+    "_site/assets/images/aws/IMG-20240925160330-3.png",
+    "_site/assets/images/aws/IMG-20240925160330-2.png",
+    "_site/assets/images/aws/IMG-20240925160330-1.png",
+    "_site/assets/images/aws",
     "_site/page16/index.html",
     "_site/page16",
-    "_site/categories/aws/index.html",
-    "_site/categories/aws",
-    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
-    "assets/images/alone/IMG-20240925132202-6.png",
-    "assets/images/alone/IMG-20240925132201-2.png",
-    "_site/posts/spring-aws-rds/index.html",
-    "_site/posts/spring-aws-rds",
-    "_site/tags/스프링부트와aws로혼자구현하는웹서비스/index.html",
-    "_site/tags/스프링부트와aws로혼자구현하는웹서비스",
-    "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
-    "assets/images/alone/IMG-20240925142228-2.png",
-    "_site/assets/images/alone/IMG-20240925142228.png",
-    "_site/assets/images/alone/IMG-20240925142228-2.png",
-    "_site/assets/images/alone/IMG-20240925142228-1.png",
-    "_site/assets/images/alone/IMG-20240925142227.png",
-    "_site/assets/images/alone/IMG-20240925142227-6.png",
-    "_site/assets/images/alone/IMG-20240925142227-5.png",
-    "assets/images/alone/alone/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
-    "_site/assets/images/alone/alone/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
-    "_posts/blog/book/0ea5eaad-f614-47f7-9c44-9f3a52e92c4f_Export-66ae7961-a93e-4358-b243-6e48e5477f01/스프링 부트와 AWS로 혼자 구현하는 웹 서비스 c87161e19e2543ee891e044c25ae2656.md",
+    "_site/tags/https/index.html",
+    "_site/tags/https",
+    "_posts/blog/aws/2024-04-20-domain_https.md",
+    "assets/images/aws/IMG-20240925160330-6.png.sb-6ab4fd92-m9ZLHq",
+    "assets/images/aws/IMG-20240925160330-5.png.sb-6ab4fd92-lQ2EBC",
+    "assets/images/aws/IMG-20240925160330-5.png.sb-6ab4fd92-nyQr0J",
+    "assets/images/aws/IMG-20240925160330-4.png.sb-6ab4fd92-OlEWLN",
     "_posts/코딩/프로젝트/목표+자산관리 - superbe/2024-04-06 작업일지.md",
-    "_posts/blog/java/2022-07-28-변수(Variable).md",
-    "_posts/blog/java/2022-10-02-2장_변수.md",
-    "_posts/blog/java/2022-08-26-지네릭스_열거형_애너테이션.md",
-    "_posts/blog/java/2022-07-31-배열.md",
-    "_posts/blog/java/2022-10-02-3장_연산자.md",
-    "_posts/blog/java/2022-09-02-람다와 스트림(Lambda&Stream).md",
-    "_posts/blog/spring/mvc1/2023-02-05-웹애플리케이션이해.md",
-    "assets/images/java/2024-09-25_13.00.33.md",
-    "_posts/blog/java/2022-08-14-예외처리.md",
-    "_posts/blog/java/2022-10-07-7장_상속_1.md",
-    "_posts/blog/java/2022-08-28-쓰레드(thread).md",
-    "_posts/blog/java/2022-08-21-컬렉션_프레임웍(collections_framework).md",
-    "_posts/blog/java/2022-08-21-날짜와 시간 & 형식화.md"
+    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
+    "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
+    "_posts/blog/book/alone/2024-03-02-spring-aws-rds.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/가계부 서비스 - 나의 텅장.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/테이블 명세서 파일/테이블 명세서 파일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 10일/2023년 2월 10일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 15일/2023년 2월 15일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 16일/2023년 2월 16일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 27일/2023년 2월 27일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 7일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 8일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 9일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 17일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 20일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 21일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 22일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 23일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 24일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 28일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 3월 2일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 14일/2023년 2월 14일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 13일/2023년 2월 13일.md",
+    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/구현 기능/구현 기능.md"
   ]
 }
