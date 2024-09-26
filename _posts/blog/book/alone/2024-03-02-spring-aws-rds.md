@@ -6,6 +6,7 @@ tags:
   - spring
   - 스프링부트와AWS로혼자구현하는웹서비스
   - RDS
+  - 책요약
 last_modified_at: 2024-03-02
 ---
 ### 설정

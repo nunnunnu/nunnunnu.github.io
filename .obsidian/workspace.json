@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/aws/2024-04-20-domain_https.md",
+                "file": "_posts/blog/kotlin/2023-10-28-테스트.md",
                 "mode": "source",
                 "source": false
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "스프링 부트와 AWS로 혼자 구현하는 웹 서비스",
+                "query": "정처기",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -185,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/aws/2024-04-20-domain_https.md",
+                "file": "_posts/blog/kotlin/2023-10-28-테스트.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,7 +202,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/aws/2024-04-20-domain_https.md",
+                "file": "_posts/blog/kotlin/2023-10-28-테스트.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,7 +225,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/aws/2024-04-20-domain_https.md"
+                "file": "_posts/blog/kotlin/2023-10-28-테스트.md"
               }
             }
           },
@@ -269,11 +269,44 @@
   },
   "active": "01bd06f68cdbb5cd",
   "lastOpenFiles": [
+    "_posts/blog/kotlin/2023-10-28-코루틴.md",
+    "_posts/blog/kotlin/2023-10-28-컬렉션.md",
+    "_posts/blog/kotlin/2023-10-28-영역함수.md",
+    "_posts/blog/kotlin/2023-10-28-시퀀스.md",
+    "_posts/blog/kotlin/2023-10-28-스프링 프레임워크.md",
+    "_posts/blog/kotlin/2023-09-28-코틀린 대리자.md",
+    "_posts/blog/kotlin/2023-09-10-함수형 프로그래밍.md",
+    "_posts/blog/kotlin/2023-09-10-기초.md",
+    "_posts/blog/kotlin/2023-09-10-그 밖의 코틀린 기능.md",
+    "_posts/blog/kotlin/2023-09-10-객체지향.md",
+    "_posts/코딩/개발 학습/기술/백엔드/Kotlin/코틀린 쿡북/코틀린 쿡북.md",
+    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
+    "_posts/blog/book/2023-12-03-자바성능튜닝이야기.md",
+    "_site/posts/자바성능튜닝이야기/index.html",
+    "_site/posts/자바성능튜닝이야기",
+    "_site/assets/images/book/IMG-20240926171950.png",
+    "_site/tags/책요약/index.html",
+    "_site/tags/책요약",
+    "_posts/blog/book/2023-11-12DDD START! 도메인 주도 설계 구현과 핵심 개념 익히기.md",
+    "_posts/blog/book/alone/2024-03-02-spring-aws-rds.md",
+    "_posts/blog/book/alone/2024-03-02-spring-aws_ec2.md",
+    "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
+    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
+    "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
+    "_posts/blog/book/대규모/2024-03-30-검색어 자동완성 시스템&유투브설계.md",
+    "_posts/blog/book/대규모/2024-03-29-알림 시스템&뉴스 피드 시스템&채팅 시스템.md",
+    "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
+    "_posts/blog/book/대규모/2024-03-28-웹 크롤러 설계.md",
+    "_posts/blog/book/대규모/2024-03-28-분산 시스템을 위한 유일 ID 생성기 설계.md",
+    "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
+    "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
+    "assets/images/blog",
+    "assets/images/관련도서",
+    "assets/images/book/IMG-20240926171950.png",
     "_site/assets/images/sidebar-background-black2.png",
     "assets/images/sidebar-background-black2.png",
     "assets/images/aws/IMG-20240925160330-1.png",
     "assets/images/aws/IMG-20240925160330-1.png.sb-6ab4fd92-qipRTD",
-    "_posts/blog/aws/2024-04-20-domain_https.md",
     "assets/images/aws/IMG-20240925160330.png",
     "_site/posts/domain_https/index.html",
     "_site/posts/domain_https",
@@ -281,39 +314,6 @@
     "_site/assets/images/aws/Pastedimage20240925164947.png",
     "_site/assets/images/aws/Pastedimage20240925164440.png",
     "_site/assets/images/aws/IMG-20240925160330.png",
-    "_site/assets/images/aws/IMG-20240925160330-6.png",
-    "_site/assets/images/aws/IMG-20240925160330-5.png",
-    "_site/assets/images/aws/IMG-20240925160330-4.png",
-    "_site/assets/images/aws",
-    "_site/page16/index.html",
-    "_site/page16",
-    "_site/tags/https/index.html",
-    "_site/tags/https",
-    "assets/images/aws/IMG-20240925160330-6.png.sb-6ab4fd92-m9ZLHq",
-    "assets/images/aws/IMG-20240925160330-5.png.sb-6ab4fd92-lQ2EBC",
-    "_posts/코딩/프로젝트/목표+자산관리 - superbe/2024-04-06 작업일지.md",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
-    "_posts/blog/book/alone/2024-03-02-spring-aws-rds.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/가계부 서비스 - 나의 텅장.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/테이블 명세서 파일/테이블 명세서 파일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 10일/2023년 2월 10일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 15일/2023년 2월 15일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 16일/2023년 2월 16일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 27일/2023년 2월 27일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 7일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 8일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 9일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 17일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 20일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 21일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 22일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 23일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 24일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 28일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 3월 2일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 14일/2023년 2월 14일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/작업일지/2023년 2월 13일/2023년 2월 13일.md",
-    "_posts/코딩/프로젝트/가계부 서비스 - 나의 텅장/구현 기능/구현 기능.md"
+    "_site/assets/images/aws"
   ]
 }

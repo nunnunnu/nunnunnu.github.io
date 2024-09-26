@@ -4,7 +4,7 @@
     "title": "[사이드프로젝트 aws배포] DNS발급/연결 & HTTPS 설정",
     "url": "/posts/domain_https/",
     "categories": "AWS",
-    "tags": "aws, https, 배포",
+    "tags": "aws, https, 배포, 책요약",
     "date": "2024-04-20 00:00:00 +0900",
     
 
@@ -21,7 +21,7 @@
     "title": "[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 15장 구글드라이브 설계",
     "url": "/posts/%EA%B5%AC%EA%B8%80%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C-%EC%84%A4%EA%B3%84/",
     "categories": "프로그래밍 방법",
-    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초",
+    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초, 책요약",
     "date": "2024-03-30 00:00:00 +0900",
     
 
@@ -38,7 +38,7 @@
     "title": "[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 13장 검색어 자동완성 시스템&유투브 설계",
     "url": "/posts/%EA%B2%80%EC%83%89%EC%96%B4-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EC%9C%A0%ED%88%AC%EB%B8%8C%EC%84%A4%EA%B3%84/",
     "categories": "프로그래밍 방법",
-    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초",
+    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초, 책요약",
     "date": "2024-03-30 00:00:00 +0900",
     
 
@@ -55,7 +55,7 @@
     "title": "[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 10장 알림 시스템 & 뉴스 피드 시스템 & 채팅 시스템",
     "url": "/posts/%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EB%89%B4%EC%8A%A4-%ED%94%BC%EB%93%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EC%B1%84%ED%8C%85-%EC%8B%9C%EC%8A%A4%ED%85%9C/",
     "categories": "프로그래밍 방법",
-    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초",
+    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초, 책요약",
     "date": "2024-03-29 00:00:00 +0900",
     
 
@@ -72,7 +72,7 @@
     "title": "[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 9장 웹 크롤러 설계",
     "url": "/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/",
     "categories": "프로그래밍 방법",
-    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초",
+    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초, 책요약",
     "date": "2024-03-28 00:00:00 +0900",
     
 
@@ -89,7 +89,7 @@
     "title": "[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 7장 분산 시스템을 위한 유일 ID 생성기 설계",
     "url": "/posts/%EB%B6%84%EC%82%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%9C%A0%EC%9D%BC-ID-%EC%83%9D%EC%84%B1%EA%B8%B0-%EC%84%A4%EA%B3%84/",
     "categories": "프로그래밍 방법",
-    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초",
+    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초, 책요약",
     "date": "2024-03-28 00:00:00 +0900",
     
 
@@ -106,7 +106,7 @@
     "title": "[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 8장 URL 단축키 설계",
     "url": "/posts/URL-%EB%8B%A8%EC%B6%95%EA%B8%B0-%EC%84%A4%EA%B3%84/",
     "categories": "프로그래밍 방법",
-    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초",
+    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초, 책요약",
     "date": "2024-03-28 00:00:00 +0900",
     
 
@@ -123,7 +123,7 @@
     "title": "[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 6장 키-값 저장소 설계",
     "url": "/posts/%ED%82%A4_%EA%B0%92-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%84%A4%EA%B3%84/",
     "categories": "프로그래밍 방법",
-    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초",
+    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초, 책요약",
     "date": "2024-03-27 00:00:00 +0900",
     
 
@@ -140,7 +140,7 @@
     "title": "[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 4장 처리율 제한 장치의 설계",
     "url": "/posts/%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98%EC%9D%98-%EC%84%A4%EA%B3%84/",
     "categories": "프로그래밍 방법",
-    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초",
+    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초, 책요약",
     "date": "2024-03-27 00:00:00 +0900",
     
 
@@ -157,7 +157,7 @@
     "title": "[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 5장 안정 해시 설계",
     "url": "/posts/%EC%95%88%EC%A0%95-%ED%95%B4%EC%8B%9C-%EC%84%A4%EA%B3%84/",
     "categories": "프로그래밍 방법",
-    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초",
+    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초, 책요약",
     "date": "2024-03-27 00:00:00 +0900",
     
 
@@ -174,7 +174,7 @@
     "title": "[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 1장 사용자 수에 따른 규모 확장성",
     "url": "/posts/%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%88%98%EC%97%90-%EB%94%B0%EB%A5%B8-%EA%B7%9C%EB%AA%A8-%ED%99%95%EC%9E%A5%EC%84%B1/",
     "categories": "프로그래밍 방법",
-    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초",
+    "tags": "설계, 가상면접사례로배우는대규모시스템설계기초, 책요약",
     "date": "2024-03-17 00:00:00 +0900",
     
 
@@ -208,7 +208,7 @@
     "title": "[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 2장 스프링 부트에서 테스트 코드를 작성하자",
     "url": "/posts/spring_aws_tdd/",
     "categories": "Spring",
-    "tags": "spring, aws, 스프링부트와AWS로혼자구현하는웹서비스, tdd",
+    "tags": "spring, aws, 스프링부트와AWS로혼자구현하는웹서비스, tdd, 책요약",
     "date": "2024-03-02 00:00:00 +0900",
     
 
@@ -225,7 +225,7 @@
     "title": "[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 8장 EC2 서버에 프로젝트를 배포해 보자",
     "url": "/posts/spring_aws_ec2_2/",
     "categories": "AWS",
-    "tags": "spring, aws, 스프링부트와AWS로혼자구현하는웹서비스, ec2, 배포",
+    "tags": "spring, aws, 스프링부트와AWS로혼자구현하는웹서비스, ec2, 배포, 책요약",
     "date": "2024-03-02 00:00:00 +0900",
     
 
@@ -242,7 +242,7 @@
     "title": "[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 6장 AWS 서버 환경을 만들어보자 - AWS EC2",
     "url": "/posts/spring-aws_ec2/",
     "categories": "AWS",
-    "tags": "spring, aws, 스프링부트와AWS로혼자구현하는웹서비스, ec2",
+    "tags": "spring, aws, 스프링부트와AWS로혼자구현하는웹서비스, ec2, 책요약",
     "date": "2024-03-02 00:00:00 +0900",
     
 
@@ -259,7 +259,7 @@
     "title": "[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 7장 AWS에 데이터베이스 환경을 만들어보자 - AWS RDS",
     "url": "/posts/spring-aws-rds/",
     "categories": "AWS",
-    "tags": "aws, spring, 스프링부트와AWS로혼자구현하는웹서비스, RDS",
+    "tags": "aws, spring, 스프링부트와AWS로혼자구현하는웹서비스, RDS, 책요약",
     "date": "2024-03-02 00:00:00 +0900",
     
 
@@ -494,10 +494,27 @@
   },
   
   {
+    "title": "자바성능튜닝이야기",
+    "url": "/posts/%EC%9E%90%EB%B0%94%EC%84%B1%EB%8A%A5%ED%8A%9C%EB%8B%9D%EC%9D%B4%EC%95%BC%EA%B8%B0/",
+    "categories": "JAVA",
+    "tags": "java, 책요약",
+    "date": "2023-12-03 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "책정보늘 그랬듯이 아는건 넘어가고 모르는거위주로만 정리함이번엔 가볍게 정리해서 빠진내용이많음.. 도서관 오늘까지 반납인데 나한테 남은시간은 1시간이기때문에다음에 다시 대여해서 정리하는걸로staticstatic 변수는 다른 JVM에서는 다른주소나 다른 값을 참조하나 같은 JVM나 WAS에서는 같은 주소에 존재하는 인스턴스 값을 참조함. 그리고 GC의 대...",
+    "content": "책정보늘 그랬듯이 아는건 넘어가고 모르는거위주로만 정리함이번엔 가볍게 정리해서 빠진내용이많음.. 도서관 오늘까지 반납인데 나한테 남은시간은 1시간이기때문에다음에 다시 대여해서 정리하는걸로staticstatic 변수는 다른 JVM에서는 다른주소나 다른 값을 참조하나 같은 JVM나 WAS에서는 같은 주소에 존재하는 인스턴스 값을 참조함. 그리고 GC의 대상도 되지않음특히 웹 환경에서는 여러 쓰레드에서 하나의 변수에 접근 가능해서 데이터가 꼬일수도있음또한 메모리에 반드시 올라가며 객체를 다시 생성한다고해서 초기화가 되지않음. 잘모르면서 남용하는거보단 안쓰는게 나을수도synchronizedThread 클래스 상속 vs Runnable 인터페이스 구현둘다 큰 차이는 없으나 Runnble를 구현하면 원하는 기능을 추가할수있다는 장점이있음. 그러나 해당 클래스를 수행할때 별도의 스레드 객체를 생성해야한다는 단점이있음.java에서 다중상속이 안된다는 점 고려하면 runnable구현을 더 많이사용하게될 가능성이큼synchronized여러 고객이 하나의 기부처에 1원씩 1000번 기부하는 경우 → 하나의 객체에 여러 스레드가 접근하게됨      코드      public static class A {  \t\tint money;      \t\tpublic synchronized void donate() {  \t\t\tmoney++;  \t\t}  \t}      \t@Getter  \tpublic static class B extends Thread {  \t\tprivate A myA;  \t\tprivate String myName;  \t\tpublic B(A a, String name) {  \t\t\tmyA = a;  \t\t\tmyName = name;  \t\t}      \t\tpublic void run() {  \t\t\tfor (int i = 0; i&lt;1000; i++) {  \t\t\t\tmyA.donate();  \t\t\t}  \t\t\tSystem.out.println(myName + \": \" + myA.getMoney());  \t\t}  \t}      \tpublic static void main(String[] args) {  \t\tB[] crs = new B[10];  \t\tA group = new A();      \t\tfor (int i = 0;i &lt; 10; i++) {  \t\t\tcrs[i] = new B(group, \"name\"+i);  \t\t}      \t\tfor (int i = 0;i &lt; 10; i++) {  \t\t\tcrs[i].run();  \t\t}  \t}      ⇒ 기부처의 최종 금액이 일정하지않고 실행할때마다 다르게나옴이럴때는 synchronized를 사용해서 메소드에 동기화 식별자를 추가해야함(예시코드에선 donate)그러나 동기화를 사용하면 성능이 나빠지기때문에 꼭 필요할때만 사용해야함또한 static 변수의 값을 변경하는데 동기화를 사용한다면 메소드도 static 메소드로 사용해야 원하는 결과가 나옴서버세팅  StartServers : 서버 띄울때 프로세스 개수  MaxClients: 최대처리 가능한 클라이언트 수  MinSpareThread : 최소 여유 스레드 수  MaxSpareThread : 최대여유 스레드 수  ThreadsPerChild: 프로세스 당 스레드 수  MaxRequestsPerChild : 최대 요청 개수. 가급적 기본값인 0으로 하기를 권장. 0이면 제한없음이라는 의미  keepAlive(필수 설정은 아님) : 연결 유지 설정. 매번 서버에 재접속하는것을 막아줌. 단, keepAliveTimeout 설정을 꼭 함께해야함  DB connection Pool  WAS 인스턴수 개수 : 절대값은 없음  session TimeoutGC 수행 모니터링jstat를 사용  [!info] Garbage Collection 모니터링 방법책에서 소개한 링크 내용 참조https://d2.naver.com/helloworld/6043책이랑 완전 동일한 내용이라 생각했는데 저자가 동일했군어쨌든 자바의 메모리릭은 거의 안일어난다고보면됨. 저자 경험 기준으로는 1%도안된다고함.또한 GC 튜닝은 하는것이 좋으나 이것도 서버 상황에따라 효과적인 세팅이 다름  GC튜닝          GC 상황 보니터링      모니터링 결과 분석 후 GC 튜닝여부 결정(GC수행 시간이 얼마안된다면 굳이 할필요없음)      GC방식, 메모리 크기 지정 - GC옵션에 따른 차이를 확인해야함                  GC 방식은 운영중인 서버가 6대라면 2대씩 각 옵션을 동일하게 지정하고 -verbosegc 옵션을 추가하고 결과분석하는 방법을 추천          메모리크기가 크면 - GC발생횟수 감소, 수행시간 증가 작가는 보통 500MB로 설정하나 정답은 아님 Full GC가 발생한 이후 남아있는 메모리의 크리를 확인햐아함                                          ex                Full GC 후 남은 메모리가 300MB정도라면  300MB(기본사용) + 500MB(old영역용 최소) + 200MB(여유메모리) 로 old영역만 1GB로 지정하는것이 좋음. 서버가 여러대라면 각각 1GB, 1.5GB, 2GB 로 지정하고 결과를 지켜보는것도 괜찮음                                              메모리 크기 지정시에는 newRatio(new, old영역 비율 지정)도 설정해야함. new영역이 작으면 old로 넘어가는 양이 많아서 full GC 빈도도 잦아지고 시간도 오래걸림.                    결과 분석 - 쌓인 로그로 분석함.                  Full GC 수행시간          Full GC 수행간격          Full GC 수행횟수          전체 Full GC 수행시간          Minor GC 수행시간          Minor GC 수행간격          Minor GC 수행횟수          전체 Minor GC 수행시간          전체 GC 수행시간                    결과 반영      모니터링 api JMXJDK 5.0 버전 이상의 서버에서는 필수로 제공MBean  표준 MBean(Standard MBean) : 변경이 많지 않은 시스템을 관리하기 위한 MBean이 필요한 경우 사용한다.  동적 MBean(Dynamic MBean) : 애플리케이션이 자주 변경되는 시스템을 관리하기 위한 MBean이 필요한 경우 사용한다.  모델 MBean(Model MBean) : 어떤 리소스나 동적으로 설치가 가능한 MBean이 필요한 경우 사용한다.  오픈 MBean(Open MBean) : 실행 중에 발견되는 객체의 정보를 확인하기 위한 MBean이 필요할 때 사용한다. JMX의 스펙에 지정된 타입만 리턴해야 한다.각각의 MBean은 에이전트 서비스를 통해 MBean 서버에 데이터를 전달하게 됨이 MBean 서버를 통해서 클라이언트에서 서버의 상황을 모니터링 가능  현재 서버에 있는 MBean의 다음 기능들을 관리. MBean의 속성값을 얻고 변경. MBean의 메서드를 수행.  모든 MBean에서 수행된 정보를 받음  기존 클래스나 새로 다운로드된 클래스의 새로운 MBean을 초기화하고 등록  기존 MBean들의 구현과 관련된 관리 정책을 처리하기 위해서 에이전트 서비스를 사용필요에 따라 에이전트 서비스를 통해서 서버의 메서드 수행, 값 변경가능웹 로그 분석  Analog  AWStats  Webalizer이 3개가 무료툴임애플리케이션 점검 대상각 항목별로 성능 튜닝 전 생각해봐야할 질문을 정리함패턴과 아키텍처  너무많은 패턴을 사용하고있지는 않은가?  데이터 리턴 시 TO(VO)패턴을 사용했는가?  서비스로케이터 패턴은 적용이되었는가?애플리케이션 코딩  명명규칙  예외처리는 필요한부분에 되어있는가?  예외화면은 지정됐는가?  예외정보를 e.printStackTrace로만 해두지는 않았는가?  System.gc()가 소스에 포함되어있는가? → 지울것  sout 모두 삭제했는가?웹 코딩  jsp include는 동적으로했는가?  자바빈즈를 너무 많이사용하지않았나?  태크라이브러리는 적절히사용했나?  EJB는 적절히 사용했나?  이미지서버를 사용할수있는환경인가?  사용중인프레임워크는 검증되었는가?DB  적절한 JBDC 드라이버?  DB connection, Statement, ResultSet은 잘 닫았나?  DB connection pool 은 잘 사용중인가?  자동커밋보드를 고려했는가?  ResultSet.last()를 사용했는가? - 삭제해야함  preparedStatements를 사용했는가?서버설정  자바 VM 옵션 설정은 제대로되었나?  메모리는 몇 MB?  GC설정?  서버가 운영모드인지 개발모드인지 확인했는지?  WAS의 인스턴스가 몇개 기동?  JSP precomplie 옵션 지정?  DB connection pool, 스레드 개수 적절한가?  세션타임아웃 시간은?  검색서버 설정, 성능테스트 진행했는지?모니터링  웹로그 남기는중?  verbosegc 옵션 남기는중?  로그파일 규칙이 있는지?  서버의 시스템 사용률은 로그로 남기는지?  모니터링 툴, 모니터링 툴 설정은?  서버가 코어덤프를 발생시키지는 않는지?          10,000건 이상 조회하는것이 있는지 확인      메모리 릭 확인        응답시간이 적절한지?"
+  },
+  
+  {
     "title": "[책] 도메인 주도 설계 철저 입문",
     "url": "/posts/%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%A3%BC%EB%8F%84-%EC%84%A4%EA%B3%84-%EC%B2%A0%EC%A0%80-%EC%9E%85%EB%AC%B8/",
     "categories": "프로그래밍 방법",
-    "tags": "DDD, jpa",
+    "tags": "DDD, jpa, 책요약",
     "date": "2023-11-12 00:00:00 +0900",
     
 
@@ -514,7 +531,7 @@
     "title": "[코틀린 쿡북] 9장 - 테스트",
     "url": "/posts/%ED%85%8C%EC%8A%A4%ED%8A%B8/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-10-28 00:00:00 +0900",
     
 
@@ -531,7 +548,7 @@
     "title": "[코틀린 쿡북] 13장 - 코루틴",
     "url": "/posts/%EC%BD%94%EB%A3%A8%ED%8B%B4/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-10-28 00:00:00 +0900",
     
 
@@ -548,7 +565,7 @@
     "title": "[코틀린 쿡북] 5장 - 컬렉션",
     "url": "/posts/%EC%BB%AC%EB%A0%89%EC%85%98/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-10-28 00:00:00 +0900",
     
 
@@ -565,7 +582,7 @@
     "title": "[코틀린 쿡북] 7장 - 영역함수",
     "url": "/posts/%EC%98%81%EC%97%AD%ED%95%A8%EC%88%98/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-10-28 00:00:00 +0900",
     
 
@@ -582,7 +599,7 @@
     "title": "[코틀린 쿡북] 6장 - 시퀀스",
     "url": "/posts/%EC%8B%9C%ED%80%80%EC%8A%A4/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-10-28 00:00:00 +0900",
     
 
@@ -599,7 +616,7 @@
     "title": "[코틀린 쿡북] 12장 - 스프링 프레임워크",
     "url": "/posts/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-10-28 00:00:00 +0900",
     
 
@@ -616,7 +633,7 @@
     "title": "[코틀린 쿡북] 8장 - 코틀린 대리자",
     "url": "/posts/%EC%BD%94%ED%8B%80%EB%A6%B0-%EB%8C%80%EB%A6%AC%EC%9E%90/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-09-28 00:00:00 +0900",
     
 
@@ -633,7 +650,7 @@
     "title": "[코틀린 쿡북] 4장 - 함수형 프로그래밍",
     "url": "/posts/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-09-10 00:00:00 +0900",
     
 
@@ -650,7 +667,7 @@
     "title": "[코틀린 쿡북] 2장 - 기초",
     "url": "/posts/%EA%B8%B0%EC%B4%88/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-09-10 00:00:00 +0900",
     
 
@@ -667,7 +684,7 @@
     "title": "[코틀린 쿡북] 11장 - 그 밖의 코틀린 기능",
     "url": "/posts/%EA%B7%B8-%EB%B0%96%EC%9D%98-%EC%BD%94%ED%8B%80%EB%A6%B0-%EA%B8%B0%EB%8A%A5/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-09-10 00:00:00 +0900",
     
 
@@ -684,7 +701,7 @@
     "title": "[코틀린 쿡북] 3장 - 코틀린 객체 지향 프로그래밍",
     "url": "/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5/",
     "categories": "Kotlin",
-    "tags": "kotlin, 코틀린쿡북",
+    "tags": "kotlin, 코틀린쿡북, 책요약",
     "date": "2023-09-10 00:00:00 +0900",
     
 

@@ -42,7 +42,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 9장 웹 크롤러 설계" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-09-25T15:11:20+09:00","datePublished":"2024-03-28T00:00:00+09:00","description":"책정보 웹크롤러(로봇, 스파이더라고도 불림) 이용 방법 검색 엔진 인덱싱(search engine indexing) : 크롤러의 가장 보편적인 용례로 웹 페이지를 모아 검색 엔진을 위한 로컬 인덱스를 만든다. googlebot은 구글검색엔진이 사용하는 웹 크롤러임 웹 아카이빙(web archiving) : 나중에 사용할 목적으로 장기보관하기 위해 웹 정보를 모으는 절차. 대표적으로 미국 국회 도서관, EU웹아카이브가 있음 웹 마이닝(web mining) : 인터넷의 유용한 지식을 도출해낼수있음. 유명 금융기업에서는 크롤러를 사용해 주주총회 자료나 연차보고서를 다운받아 기업의 핵심사업방향을 알아내기도함 웹 모니터링(web monitoring) : 인터넷의 저작권/상표권 침해 사례를 모니터링 가능. 디지마크사는 웹크롤러를 사용해 해적판 저작물을 찾아 보고함 기본 알고리즘 URL이 집합으로 주어지면 해당 URL이 가르키는 모든 웹 페이지를 다운 다운받은 웹페이지에서 URL 추출 추출된 URL들을 다운할 목록에 추가, 위의 과정을 처음부터 반복 웹 크롤러 만족 속성 규모확장성 : 뱡행성을 활용하면 더 효과적으로 크롤링 가능 안정성 : 잘못작성된 HTML, 반응이없는 서버, 장애, 악성코드 등 비정상적 입력/환경에 대응가능해야함 예절 : 수집대상이되는 웹 사이트에 짧은 시간동안 너무 많은 요청을 날리면 안됨 확장성 : 새로운 형태의 콘텐츠를 지원하기 쉬워야함. (이미지를 추가 크롤링해야할때 전체시스템을 새로설계하는 일이 없도록 구현) 작업 흐름","headline":"[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 9장 웹 크롤러 설계","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/"},"url":"http://localhost:4000/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-28T00:00:00+09:00","datePublished":"2024-03-28T00:00:00+09:00","description":"책정보 웹크롤러(로봇, 스파이더라고도 불림) 이용 방법 검색 엔진 인덱싱(search engine indexing) : 크롤러의 가장 보편적인 용례로 웹 페이지를 모아 검색 엔진을 위한 로컬 인덱스를 만든다. googlebot은 구글검색엔진이 사용하는 웹 크롤러임 웹 아카이빙(web archiving) : 나중에 사용할 목적으로 장기보관하기 위해 웹 정보를 모으는 절차. 대표적으로 미국 국회 도서관, EU웹아카이브가 있음 웹 마이닝(web mining) : 인터넷의 유용한 지식을 도출해낼수있음. 유명 금융기업에서는 크롤러를 사용해 주주총회 자료나 연차보고서를 다운받아 기업의 핵심사업방향을 알아내기도함 웹 모니터링(web monitoring) : 인터넷의 저작권/상표권 침해 사례를 모니터링 가능. 디지마크사는 웹크롤러를 사용해 해적판 저작물을 찾아 보고함 기본 알고리즘 URL이 집합으로 주어지면 해당 URL이 가르키는 모든 웹 페이지를 다운 다운받은 웹페이지에서 URL 추출 추출된 URL들을 다운할 목록에 추가, 위의 과정을 처음부터 반복 웹 크롤러 만족 속성 규모확장성 : 뱡행성을 활용하면 더 효과적으로 크롤링 가능 안정성 : 잘못작성된 HTML, 반응이없는 서버, 장애, 악성코드 등 비정상적 입력/환경에 대응가능해야함 예절 : 수집대상이되는 웹 사이트에 짧은 시간동안 너무 많은 요청을 날리면 안됨 확장성 : 새로운 형태의 콘텐츠를 지원하기 쉬워야함. (이미지를 추가 크롤링해야할때 전체시스템을 새로설계하는 일이 없도록 구현) 작업 흐름","headline":"[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 9장 웹 크롤러 설계","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/"},"url":"http://localhost:4000/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -718,13 +718,13 @@
 
 <time
   
-  data-ts="1727244680"
+  data-ts="1711584000"
   data-df="YYYY/MM/DD"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2024/09/25
+  2024/03/28
 </time>
 
         </span>
@@ -936,6 +936,11 @@ HTML다운로더--&gt;도메인이름변환기;
             class="post-tag no-text-decoration"
           >가상면접사례로배우는대규모시스템설계기초</a>
         
+          <a
+            href="/tags/%EC%B1%85%EC%9A%94%EC%95%BD/"
+            class="post-tag no-text-decoration"
+          >책요약</a>
+        
       </div>
     
 
@@ -1048,14 +1053,14 @@ HTML다운로더--&gt;도메인이름변환기;
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 9장 웹 크롤러 설계</a>
+          <a href="/posts/domain_https/">[사이드프로젝트 aws배포] DNS발급/연결 & HTTPS 설정</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EB%89%B4%EC%8A%A4-%ED%94%BC%EB%93%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EC%B1%84%ED%8C%85-%EC%8B%9C%EC%8A%A4%ED%85%9C/">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 10장 알림 시스템 & 뉴스 피드 시스템 & 채팅 시스템</a>
+          <a href="/posts/spring-aws_ec2/">[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 6장 AWS 서버 환경을 만들어보자 - AWS EC2</a>
         </li>
       
         
@@ -1076,7 +1081,7 @@ HTML다운로더--&gt;도메인이름변환기;
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/domain_https/">[사이드프로젝트 aws배포] DNS발급/연결 & HTTPS 설정</a>
+          <a href="/posts/%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EB%89%B4%EC%8A%A4-%ED%94%BC%EB%93%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EC%B1%84%ED%8C%85-%EC%8B%9C%EC%8A%A4%ED%85%9C/">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 10장 알림 시스템 & 뉴스 피드 시스템 & 채팅 시스템</a>
         </li>
       
     </ul>
@@ -1362,6 +1367,275 @@ HTML다운로더--&gt;도메인이름변환기;
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2190,279 +2464,6 @@ HTML다운로더--&gt;도메인이름변환기;
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2509,6 +2510,9 @@ HTML다운로더--&gt;도메인이름변환기;
         <a class="post-tag btn btn-outline-primary" href="/tags/jpa/">jpa</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%B1%85%EC%9A%94%EC%95%BD/">책요약</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/orm/">ORM</a>
       
         
@@ -2525,9 +2529,6 @@ HTML다운로더--&gt;도메인이름변환기;
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%BD%94%ED%8B%80%EB%A6%B0%EC%BF%A1%EB%B6%81/">코틀린쿡북</a>
       
     </div>
   </section>
@@ -2574,6 +2575,210 @@ HTML다운로더--&gt;도메인이름변환기;
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -2714,6 +2919,44 @@ HTML다운로더--&gt;도메인이름변환기;
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
+          <a href="/posts/%EA%B5%AC%EA%B8%80%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C-%EC%84%A4%EA%B3%84/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711724400"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/30
+</time>
+
+              <h4 class="pt-0 my-2">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 15장 구글드라이브 설계</h4>
+              <div class="text-muted">
+                <p>책정보
+
+
+필요한 api는 단순업로드/이어올리기(네트워크중단가능성높음)/다운로드/갱신 임
+
+
+  블록저장소 서버 : 파일블록을 클라우드 저장소에 저장하는 서버. 파일을 여러 블록으로 나누고 각 블록에 고유 해시값이 할당됨.
+    
+      최적화 방법
+        
+          델타 동기화 : 파일 수정시 전체파일이아닌 수정된 블록만 동기화...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
           <a href="/posts/%EA%B2%80%EC%83%89%EC%96%B4-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EC%9C%A0%ED%88%AC%EB%B8%8C%EC%84%A4%EA%B3%84/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -2790,44 +3033,6 @@ HTML다운로더--&gt;도메인이름변환기;
           단말토큰 : 알림 요청을 보내는 데 필요한 고유 식별자
           페이로드 : 알림내용을 담은 JSON딕셔너리
           APNS: 애플이 제공하는 원격 서비스. 푸...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/%EB%B6%84%EC%82%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%9C%A0%EC%9D%BC-ID-%EC%83%9D%EC%84%B1%EA%B8%B0-%EC%84%A4%EA%B3%84/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1711551600"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/28
-</time>
-
-              <h4 class="pt-0 my-2">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 7장 분산 시스템을 위한 유일 ID 생성기 설계</h4>
-              <div class="text-muted">
-                <p>책정보
-
-
-
-  [!NOTE]
-auto_increment 속성이 설정된 관계형데이터베이스의 기본키를 쓰면 되지않나? -&amp;gt; 데이터베이스 서버 여러대일때는 불가능함
-
-
-선택지로는 다중마스터 복제, UUID, 티켓 서버, 트위터 스노플레이크 접근법 등이 있음
-다중 마스터 복제(multi-master replication)
-DB의 auto_increme...</p>
               </div>
             </div>
           </a>
@@ -3183,6 +3388,275 @@ DB의 auto_increme...</p>
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -4011,279 +4485,6 @@ DB의 auto_increme...</p>
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -4330,6 +4531,9 @@ DB의 auto_increme...</p>
         <a class="post-tag btn btn-outline-primary" href="/tags/jpa/">jpa</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%B1%85%EC%9A%94%EC%95%BD/">책요약</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/orm/">ORM</a>
       
         
@@ -4346,9 +4550,6 @@ DB의 auto_increme...</p>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EC%BD%94%ED%8B%80%EB%A6%B0%EC%BF%A1%EB%B6%81/">코틀린쿡북</a>
       
     </div>
   </section>
