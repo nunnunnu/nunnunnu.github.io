@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2024-09-25T17:29:32+09:00</updated>
+  <updated>2024-09-26T17:07:31+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -48,7 +48,7 @@
 
 EC2의 퍼플릭 IP를 이미 발급받은 상태이기때문에 
 
-IP연결에 예시 한국 IP가 적힌 쪽에 퍼블릭 IP를 입력하고 저장해줌.
+IP연결에 예시로 로컬IP가 적힌 쪽에 퍼블릭 IP를 입력하고 저장해줌.
 
 이까지만해줘도 도메인으로 접속하면 api호출이 가능하나 http로 접속이된다는 문제가있음
 aws 사용 (최종 사용하지 않았음)

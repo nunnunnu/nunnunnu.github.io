@@ -721,9 +721,11 @@ $btn-mb: 0.5rem;
   width: $sidebar-width;
   z-index: 99;
   // background: var(--sidebar-bg);
-  background: url('/assets/images/sidebar-background.png');
-  background-size: 100% 65%;
+  background: var(--sidebar-background-image-path);
+  background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat; /* 이미지 반복을 방지 */
+  background-color: var(--sidebar-background-color);
   border-right: 1px solid var(--sidebar-border-color);
 
   /* Hide scrollbar for IE, Edge and Firefox */

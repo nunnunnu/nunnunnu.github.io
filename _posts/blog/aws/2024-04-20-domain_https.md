@@ -17,7 +17,7 @@ last_modified_at: 2024-04-20
 
 EC2의 퍼플릭 IP를 이미 발급받은 상태이기때문에 
 ![images](/assets/images/aws/Pastedimage20240925165403.png)
-IP연결에 예시 한국 IP가 적힌 쪽에 퍼블릭 IP를 입력하고 저장해줌.
+IP연결에 예시로 로컬IP가 적힌 쪽에 퍼블릭 IP를 입력하고 저장해줌.
 
 이까지만해줘도 도메인으로 접속하면 api호출이 가능하나 http로 접속이된다는 문제가있음
 ## aws 사용 (최종 사용하지 않았음)
