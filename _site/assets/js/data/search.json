@@ -1703,7 +1703,7 @@
   {
     "title": "[김영한 스프링 입문] 회원관리",
     "url": "/posts/%ED%9A%8C%EC%9B%90%EA%B4%80%EB%A6%AC/",
-    "categories": "",
+    "categories": "Spring",
     "tags": "spring, 김영한스프링입문",
     "date": "2022-12-06 00:00:00 +0900",
     
@@ -1941,7 +1941,7 @@
   {
     "title": "[국비교육학원-수업내용정리] 변수와 메소드",
     "url": "/posts/%EB%B3%80%EC%88%98%EC%99%80-%EB%A9%94%EC%86%8C%EB%93%9C/",
-    "categories": "",
+    "categories": "JAVA",
     "tags": "java, 국비교육, 변수",
     "date": "2022-10-27 00:00:00 +0900",
     
@@ -2009,7 +2009,7 @@
   {
     "title": "[국비교육학원-수업내용정리] 중간정리(변수~배열)",
     "url": "/posts/%EA%B7%B8%EB%A6%B0_%EC%A0%95%EB%A6%AC/",
-    "categories": "",
+    "categories": "JAVA",
     "tags": "",
     "date": "2022-10-21 00:00:00 +0900",
     
@@ -2094,7 +2094,7 @@
   {
     "title": "자바의 정석 연습문제 8장 - 예외",
     "url": "/posts/8%EC%9E%A5/",
-    "categories": "",
+    "categories": "JAVA",
     "tags": "java, 자바의정석, 연습문제, 예외",
     "date": "2022-10-16 00:00:00 +0900",
     

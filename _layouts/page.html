@@ -8,8 +8,13 @@ layout: default
   {% if page.layout == 'page' or page.collection == 'tabs' %}
     {% assign tab_key = page.title | downcase %}
     {% assign title = site.data.locales[lang].tabs[tab_key] | default: page.title %}
+    {% assign total_post_count = site.posts | size %}
     <h1 class="dynamic-title">
-      {{ title }}
+      {{ title }} 
+      {% if title == '카테고리' %}
+        <span>({{ total_post_count }})</span>
+      {% endif %}
+
     </h1>
     <div class="content">
       {{ content }}

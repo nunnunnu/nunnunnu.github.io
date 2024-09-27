@@ -242,6 +242,7 @@
     <!-- The Side Bar -->
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/images/portfolio.jpeg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
@@ -269,6 +270,9 @@
             
 
             <span>카테고리</span>
+            
+              <span>(152)</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -279,6 +283,7 @@
             
 
             <span>태그</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -289,6 +294,7 @@
             
 
             <span>아카이브</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -299,6 +305,7 @@
             
 
             <span>정보</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -5335,31 +5342,43 @@ ArrayList vs Linked List데이터를 순차적 추가/삭제 - ArrayList데이�
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -5675,7 +5694,7 @@ ArrayList vs Linked List데이터를 순차적 추가/삭제 - ArrayList데이�
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/8%EC%9E%A5/" class="post-preview card h-100">
+          <a href="/posts/%EB%82%A0%EC%A7%9C%EC%99%80-%EC%8B%9C%EA%B0%84-&-%ED%98%95%EC%8B%9D%ED%99%94/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -5687,27 +5706,67 @@ ArrayList vs Linked List데이터를 순차적 추가/삭제 - ArrayList데이�
 
 <time
   
-  data-ts="1665846000"
+  data-ts="1661007600"
   data-df="YYYY/MM/DD"
   
 >
-  2022/10/16
+  2022/08/21
 </time>
 
-              <h4 class="pt-0 my-2">자바의 정석 연습문제 8장 - 예외</h4>
+              <h4 class="pt-0 my-2">자바의 정석 강의 - 날짜와 시간 & 형식화</h4>
               <div class="text-muted">
-                <p>[8-1] 예외처리의 정의와 목적
-
-정의 : 발생할 수 있는 예외(에러아님)를 미리 대비해놓는 것
-
-목적 : 이미 일어날 것을 예상한 예외를 무시하고 정삭적인 실행상태를 유지시키기위해 사용
+                <p>날짜와 시간
 
 
-[8-2] 실행도중 예외가 발생하여 화면에 출력된 내용. 옳지않은것은?
+  
+    java.util.Date : 날짜와 시간을 다룰 목적으로 만들어진 클래스(JDK1.0)
+  date의 메소드는 거의 사용되지 않지만(deprecated), 여전히 쓰이고 잇다.
+  
+  java.util.Calendar :Date클래스를 개선한 새로운 클래스(JDK1.1), 여전히 단점이 있다 (실무에는 아직 쓰이는 곳이...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/java.lang%ED%8C%A8%ED%82%A4%EC%A7%80%EC%99%80_%EC%9C%A0%EC%9A%A9%ED%95%9C_%ED%81%B4%EB%9E%98%EC%8A%A4/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
 
 
-  [!important]
-java.lang.ArithmeticException : ...</p>
+
+
+<time
+  
+  data-ts="1660489200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/08/15
+</time>
+
+              <h4 class="pt-0 my-2">자바의 정석 강의 - java.lang 패키지와 유용한 클래스</h4>
+              <div class="text-muted">
+                <p>Object 클래스
+
+: 모든 클래스의 최고 조상. 오직 11개의 메소드만을 가지고 있다.
+
+nitity(), wait() 등은 쓰레드(13장)와 관련된 메소드이다
+
+
+  
+    
+      Object클래스의 메소드
+      설명
+    
+  
+  
+    
+      protected Object clone()
+      객체 자신의 복사본을 ...</p>
               </div>
             </div>
           </a>
@@ -5744,43 +5803,6 @@ System.out.println(args[0]); //런타임 에러 : 실행중 발생하는 에러.
 
   논리적에러(logical error) : 작성 의도와 다르게 동작
   컴파일러에러(compile-time error) : ...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/%EC%83%81%EC%86%8D-(Ingeritance)/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1659625200"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/08/05
-</time>
-
-              <h4 class="pt-0 my-2">자바의 정석 강의 - 상속(Ingeritance)</h4>
-              <div class="text-muted">
-                <p>상속
-
-~는 ~이다 (is - a) - ex.원(circle)은 점(point)다. (x)
-
-class 자식클래스 extends 부모클래스
-
-
-  기존의 클래스로 새로운 클래스를 작성(코드 재사용)
-  두 클래스를 부모와 자식 관계로 이어줌
-  자손은 조상의 모든 멤버를 상속받는다 (생성자, 초기화 블럭 제외 (자식클래스에 멤버가 안적혀있어도 있는거임...</p>
               </div>
             </div>
           </a>

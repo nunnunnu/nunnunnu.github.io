@@ -242,6 +242,7 @@
     <!-- The Side Bar -->
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/images/portfolio.jpeg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
@@ -269,6 +270,9 @@
             
 
             <span>카테고리</span>
+            
+              <span>(152)</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -279,6 +283,7 @@
             
 
             <span>태그</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -289,6 +294,7 @@
             
 
             <span>아카이브</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -299,6 +305,7 @@
             
 
             <span>정보</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -4129,51 +4136,6 @@ spring.jpa.hibernate.ddl-auto=none</p>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/%ED%9A%8C%EC%9B%90%EA%B4%80%EB%A6%AC/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1670252400"
-  data-df="YYYY/MM/DD"
-  
->
-  2022/12/06
-</time>
-
-              <h4 class="pt-0 my-2">[김영한 스프링 입문] 회원관리</h4>
-              <div class="text-muted">
-                <p>비지니스 요구사항 정리
-
-    
-      데이터 : 회원id, 이름
-      기능 : 회원등록, 조회
-      아직 테이터 저장소가 선정되지 않음.(가상 시나리오)
-    
-
-    
-
-    
-  
-  
-    회원 도메인과 리포지토리 만들기
-
-      package com.greenart.practice.domain;
-    
-  impo...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/posts/AOP/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -4289,6 +4251,46 @@ package com.greenart.practice.controller;
 import java.util.List;
 
 import ...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/%EC%8A%A4%ED%94%84%EB%A7%81_%EB%B9%88%EA%B3%BC_%EC%9D%98%EC%A1%B4%EA%B4%80%EA%B3%84/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1670425200"
+  data-df="YYYY/MM/DD"
+  
+>
+  2022/12/08
+</time>
+
+              <h4 class="pt-0 my-2">[김영한 스프링 입문] 스프링 빈과 의존관계</h4>
+              <div class="text-muted">
+                <p>controller가 service를 이용해서 데이터 추가, 조회 등을 실행할 수 있어야함(=의존관계가 있어야함).
+
+Acontroller만 Aservice를 사용할 수 있어야함. Bcontroller는 Bservice만 사용가능. Aservice는 사용불가능.→
+
+
+
+— 스프링 빈 등록하는 방법
+
+
+  컴포넌트 스캔과 자동 의존관계 설정
+
+
+pack...</p>
               </div>
             </div>
           </a>

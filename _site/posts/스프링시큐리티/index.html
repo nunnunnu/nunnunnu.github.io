@@ -242,6 +242,7 @@
     <!-- The Side Bar -->
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/images/portfolio.jpeg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
@@ -269,6 +270,9 @@
             
 
             <span>카테고리</span>
+            
+              <span>(152)</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -279,6 +283,7 @@
             
 
             <span>태그</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -289,6 +294,7 @@
             
 
             <span>아카이브</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -299,6 +305,7 @@
             
 
             <span>정보</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -3715,6 +3722,37 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
+          <a href="/posts/%EA%B3%A0%EA%B8%89_%EC%BB%AC%EB%A0%89%EC%85%98_%EC%A1%B0%ED%9A%8C_%EC%B5%9C%EC%A0%81%ED%99%94/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1673190000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2023/01/09
+</time>
+
+              <h4 class="pt-0 my-2">[김영한 실전! 스프링 부트와 JPA 활용2] 고급 - 컬렉션 조회 최적화</h4>
+              <div class="text-muted">
+                <p>@GetMapping(&quot;/api/v2/orders&quot;)
+    public List&amp;lt;OrderDto&amp;gt; orderV2(){
+        List&amp;lt;Order&amp;gt; orders = orderRepository.findAllByString(new OrderSearch());
+        List&amp;lt;OrderDto&amp;gt; collect ...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
           <a href="/posts/%EA%B8%B0%EB%B3%B8/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -3780,47 +3818,6 @@ import org.springframework.web.bind.annotation....</p>
 package com.jpabook.jpashop;
 
 import javax...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/%EC%9B%B9_%EA%B3%84%EC%B8%B5_%EA%B0%9C%EB%B0%9C/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1672758000"
-  data-df="YYYY/MM/DD"
-  
->
-  2023/01/04
-</time>
-
-              <h4 class="pt-0 my-2">[김영한 실전! 스프링 부트와 JPA 활용1] 웹 계층 개발</h4>
-              <div class="text-muted">
-                <p>https://getbootstrap.com/docs/5.1/getting-started/download/
-
-다운받아서 resources의 static폴더 안에 넣으면됨
-
-
-
-버전문제로 잘 안되는듯 쌤이랑 같은버전까니까 됨
-
-
-
-회원 가입
-@NotEmpty - 필수값 표시
-
-스프링 부트 버전이 2.3 이상이라면 build.gredle에 implemen...</p>
               </div>
             </div>
           </a>

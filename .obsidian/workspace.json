@@ -8,24 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "01bd06f68cdbb5cd",
+            "id": "693bd5ebc8db73b5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
+                "file": "_posts/blog/spring/김영한스프링입문/2022-12-06-회원관리.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "693bd5ebc8db73b5",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/aws/IMG-20240925160330-1.png"
               }
             }
           },
@@ -185,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
+                "file": "_posts/blog/spring/김영한스프링입문/2022-12-06-회원관리.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
+                "file": "_posts/blog/spring/김영한스프링입문/2022-12-06-회원관리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,7 +215,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md"
+                "file": "_posts/blog/spring/김영한스프링입문/2022-12-06-회원관리.md"
               }
             }
           },
@@ -267,34 +257,35 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "01bd06f68cdbb5cd",
+  "active": "693bd5ebc8db73b5",
   "lastOpenFiles": [
-    "_posts/blog/http/2023-01-24-HTTP 헤더 - 캐시와 조건부 요청.md",
-    "_posts/blog/kotlin/2023-09-10-객체지향.md",
-    "_posts/blog/kotlin/2023-09-10-그 밖의 코틀린 기능.md",
-    "_posts/blog/http/2023-01-23-HTTP 일반 헤더.md",
-    "_posts/blog/http/2023-01-23-HTTP 상태코드.md",
-    "_posts/blog/http/2023-01-22-URI와 웹 브라우저의 요청 흐름.md",
-    "_posts/blog/http/2023-01-22-HTTP 메소드 활용.md",
-    "_posts/blog/http/2023-01-22-HTTP 메소드.md",
-    "_posts/blog/http/2023-01-22-HTTP 기본.md",
-    "_posts/blog/http/2023-01-22-인터넷 네트워크.md",
-    "_posts/blog/book/2023-12-03-자바성능튜닝이야기.md",
-    "_posts/blog/book/2023-11-12DDD START! 도메인 주도 설계 구현과 핵심 개념 익히기.md",
-    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
-    "_posts/blog/book/alone/2024-03-02-spring-aws-rds.md",
-    "_posts/blog/book/alone/2024-03-02-spring-aws_ec2.md",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
-    "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
-    "_posts/blog/book/대규모/2024-03-30-검색어 자동완성 시스템&유투브설계.md",
-    "_posts/blog/book/대규모/2024-03-29-알림 시스템&뉴스 피드 시스템&채팅 시스템.md",
-    "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
-    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
-    "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
-    "_posts/blog/book/대규모/2024-03-28-웹 크롤러 설계.md",
-    "_posts/blog/book/대규모/2024-03-28-분산 시스템을 위한 유일 ID 생성기 설계.md",
-    "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
+    "_posts/blog/spring/김영한스프링입문/2022-12-08-스프링_빈과_의존관계.md",
+    "_posts/blog/spring/김영한스프링입문/2022-12-06-회원관리.md",
+    "_posts/blog/java/그린/2022-10-21-그린_정리.md",
+    "_posts/blog/java/그린/2022-10-27-변수와 메소드.md",
+    "_posts/blog/java/2022-10-16-8장.md",
+    "_posts/코딩/프로젝트/목표+자산관리 - superbe/2024-04-06 작업일지.md",
+    "_posts/코딩/프로젝트/목표+자산관리 - superbe/목표+자산관리 - superbe.md",
+    "_posts/코딩/프로젝트/프로젝트.md",
+    "_posts/코딩/코딩.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 4월 5일/2023년 4월 5일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 4월 4일/2023년 4월 4일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 30일/2023년 3월 30일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 29일/2023년 3월 29일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 28일/2023년 3월 28일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 27일/2023년 3월 27일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 23일/2023년 3월 23일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 22일/2023년 3월 22일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 21일/2023년 3월 21일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 20일/2023년 3월 20일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 17일/2023년 3월 17일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 16일/2023년 3월 16일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 15일/2023년 3월 15일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 14일/2023년 3월 14일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 13일/2023년 3월 13일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 10일/2023년 3월 10일.md",
+    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 3월 09일/2023년 3월 09일.md",
+    "assets/images/aws/IMG-20240925160330-1.png",
     "_javascript/modules/components/blockquote.js",
     "_site/assets/js/blockquote.js",
     "assets/js/blockquote.js",
@@ -309,7 +300,6 @@
     "assets/images/book/IMG-20240926171950.png",
     "_site/assets/images/sidebar-background-black2.png",
     "assets/images/sidebar-background-black2.png",
-    "assets/images/aws/IMG-20240925160330-1.png",
     "assets/images/aws/IMG-20240925160330.png",
     "_site/assets/images/aws/Pastedimage20240925165403.png",
     "_site/assets/images/aws/Pastedimage20240925164947.png",

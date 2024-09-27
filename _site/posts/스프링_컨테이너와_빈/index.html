@@ -242,6 +242,7 @@
     <!-- The Side Bar -->
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="/assets/images/portfolio.jpeg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
@@ -269,6 +270,9 @@
             
 
             <span>카테고리</span>
+            
+              <span>(152)</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -279,6 +283,7 @@
             
 
             <span>태그</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -289,6 +294,7 @@
             
 
             <span>아카이브</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -299,6 +305,7 @@
             
 
             <span>정보</span>
+            
           </a>
         </li>
         <!-- .nav-item -->
@@ -3870,7 +3877,7 @@
         </article>
       
         <article class="col">
-          <a href="/posts/%EA%B8%B0%EB%B3%B8/" class="post-preview card h-100">
+          <a href="/posts/%EA%B3%A0%EA%B8%89_%EC%BB%AC%EB%A0%89%EC%85%98_%EC%A1%B0%ED%9A%8C_%EC%B5%9C%EC%A0%81%ED%99%94/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3882,24 +3889,19 @@
 
 <time
   
-  data-ts="1673017200"
+  data-ts="1673190000"
   data-df="YYYY/MM/DD"
   
 >
-  2023/01/07
+  2023/01/09
 </time>
 
-              <h4 class="pt-0 my-2">[김영한 실전! 스프링 부트와 JPA 활용2] 기본</h4>
+              <h4 class="pt-0 my-2">[김영한 실전! 스프링 부트와 JPA 활용2] 고급 - 컬렉션 조회 최적화</h4>
               <div class="text-muted">
-                <p>패키지는 API(JSON)와 템플릿 엔진(HTML)을 사용하는 컨트롤러를 분리할것. 공통으로 예외처리를 할때 패키지나 구성단위로 많이함.
-
-회원가입
-
-package com.jpabook.jpashop.api;
-
-import javax.validation.Valid;
-
-import org.springframework.web.bind.annotation....</p>
+                <p>@GetMapping(&quot;/api/v2/orders&quot;)
+    public List&amp;lt;OrderDto&amp;gt; orderV2(){
+        List&amp;lt;Order&amp;gt; orders = orderRepository.findAllByString(new OrderSearch());
+        List&amp;lt;OrderDto&amp;gt; collect ...</p>
               </div>
             </div>
           </a>
