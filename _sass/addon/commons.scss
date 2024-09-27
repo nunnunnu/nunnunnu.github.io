@@ -98,14 +98,14 @@ blockquote{
   
   /*Font*/
   font-family: 'RIDIBatang';
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2;
   color: var(--blockquote-text-color);
 
   /*Box Shadow - (Optional)*/
-  // -moz-box-shadow: 2px 2px 15px #ccc;
-  // -webkit-box-shadow: 2px 2px 15px #ccc;
-  // box-shadow: 2px 2px 15px #ccc;
+  -moz-box-shadow: 2px 2px 15px var(--blockquote-shadow-color);
+  -webkit-box-shadow: 2px 2px 15px var(--blockquote-shadow-color);
+  box-shadow: 2px 2px 15px var(--blockquote-shadow-color);
 
   /*Borders - (Optional)*/
   border-left-style: solid;
@@ -120,7 +120,7 @@ blockquote::before{
   content: "\201C"; /*Unicode for Left Double Quote*/
   
   /*Font*/
-  font-family: Georgia, serif;
+  font-family: 'RIDIBatang';
   font-size: 50px;
   font-weight: bold;
   color: #f0f7fd;
@@ -150,12 +150,11 @@ blockquote a:hover{
 }
 
 blockquote em{
-  font-style: italic;
+  font-family: 'RIDIBatang';
 }
 
-
 kbd {
-  font-family: Lato, sans-serif;
+  font-family: 'RIDIBatang';
   display: inline-block;
   vertical-align: middle;
   line-height: 1.3rem;
