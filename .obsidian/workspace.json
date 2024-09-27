@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/kotlin/2023-10-28-테스트.md",
+                "file": "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
                 "mode": "source",
                 "source": false
               }
@@ -185,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/kotlin/2023-10-28-테스트.md",
+                "file": "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,7 +202,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/kotlin/2023-10-28-테스트.md",
+                "file": "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,7 +225,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/kotlin/2023-10-28-테스트.md"
+                "file": "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md"
               }
             }
           },
@@ -269,6 +269,7 @@
   },
   "active": "01bd06f68cdbb5cd",
   "lastOpenFiles": [
+    "_posts/blog/kotlin/2023-10-28-테스트.md",
     "_posts/blog/kotlin/2023-10-28-코루틴.md",
     "_posts/blog/kotlin/2023-10-28-컬렉션.md",
     "_posts/blog/kotlin/2023-10-28-영역함수.md",
@@ -299,7 +300,6 @@
     "_posts/blog/book/대규모/2024-03-28-웹 크롤러 설계.md",
     "_posts/blog/book/대규모/2024-03-28-분산 시스템을 위한 유일 ID 생성기 설계.md",
     "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
-    "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
     "assets/images/blog",
     "assets/images/관련도서",
     "assets/images/book/IMG-20240926171950.png",
