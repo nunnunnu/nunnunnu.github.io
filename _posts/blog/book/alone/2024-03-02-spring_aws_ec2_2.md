@@ -14,36 +14,8 @@ last_modified_at: 2024-03-02
 
 `mkdir ~/app && mkdir ~/app/step1` → `cd ~/app/step1` 먼저 git clone 할 경로 먼저 만들어주고 git clone 
 
-`./gradlew test`로 빌드되는지 확인
-
-- 빌드 중 멈춤 현상 발생
-
-	구글링해보니 메모리 부족이슈라는 답을 얻었음..
-	프리티어로안되나? 연습용으로 간단한 api 하나 만든 스프링프로젝트라 그럴리가 없는데?
- 
-	하던 도중 스택플로우에서 본 
-	`sudo apt-get install lib32stdc++6`
-	`sudo apt-get install lib32z1`
-	
-	이 두 명령어를 실행했는데! 안됨..
-	
-	결국 스왑메모리 설정을 해보기로 결정..
-
-	참고로 스왑메모리는 ram이 부족하면 SSD나 HDD의 공간을 ram처럼 사용할수있는 메모리라고함!
-	
-	1. 하드디스크 용량 확인
-		`df -h`
-	2. 스왑메모리 확인 `free`
-	3. 스왑 파일 생성 `sudo fallocate -l 2G /swapfile`
-	4. 스왑 권한 설정 `sudo chmod 600 /swapfile`
-	5. 파일적용 `sudo mkswap /swapfile` `sudo swapon /swapfile`
-	6. 부팅시 스왑파일 활성화 `sudo nano /etc/fstab`
-	- 할당 전 메모리
-		![image](/assets/images/alone/Pastedimage20240406224840.png)
-	- 할당 후 메모리
-		![image](/assets/images/alone/Pastedimage20240406224827.png)
-
-만약 프로젝트에 push했다면 pull로 땡겨서 하면됨
+`./gradlew test`로 빌드되는지 확인	
+=> 빌드 중 멈춤 현상 발생하여 스왑 메모리 설정으로 해결하였다. (자세한 내용은 [[EC2] Spring boot 프로젝트 Gradle 빌드 멈춤 현상 해결](https://nunnunnu.github.io/swap%EB%A9%94%EB%AA%A8%EB%A6%AC/) 참고)
 
 만약 권한없다는 permission denied 에러가 뜬다면 
 

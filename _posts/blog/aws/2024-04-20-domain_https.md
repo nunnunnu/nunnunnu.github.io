@@ -203,4 +203,4 @@ getMapping으로 /가 path인 api를 생성하니 성공함!
 ---
 ***참고한 블로그***
 
-- [https://steady-coding.tistory.com/629](https://steady-coding.tistory.com/629)
+- [제이온님의 # [AWS에 Spring 초간단 배포하기]시리즈](https://steady-coding.tistory.com/629)
