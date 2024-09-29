@@ -30,23 +30,23 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Spring boot 2.x의 IdClass의 복합키 연관관계 에러 해결" />
+<meta property="og:title" content="[Spring boot] 스프링 부트 2.x의 IdClass의 복합키 연관관계 에러 해결" />
 <meta property="og:locale" content="ko_KR" />
-<meta name="description" content="구조 Parent" />
-<meta property="og:description" content="구조 Parent" />
+<meta name="description" content="문제" />
+<meta property="og:description" content="문제" />
 <link rel="canonical" href="http://localhost:4000/posts/%EB%B3%B5%ED%95%A9%ED%82%A4-idclass-%EC%97%90%EB%9F%AC/" />
 <meta property="og:url" content="http://localhost:4000/posts/%EB%B3%B5%ED%95%A9%ED%82%A4-idclass-%EC%97%90%EB%9F%AC/" />
 <meta property="og:site_name" content="히히" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-07-23T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Spring boot 2.x의 IdClass의 복합키 연관관계 에러 해결" />
+<meta property="twitter:title" content="[Spring boot] 스프링 부트 2.x의 IdClass의 복합키 연관관계 에러 해결" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-15T00:00:00+09:00","datePublished":"2023-07-23T00:00:00+09:00","description":"구조 Parent","headline":"Spring boot 2.x의 IdClass의 복합키 연관관계 에러 해결","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%EB%B3%B5%ED%95%A9%ED%82%A4-idclass-%EC%97%90%EB%9F%AC/"},"url":"http://localhost:4000/posts/%EB%B3%B5%ED%95%A9%ED%82%A4-idclass-%EC%97%90%EB%9F%AC/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-15T00:00:00+09:00","datePublished":"2023-07-23T00:00:00+09:00","description":"문제","headline":"[Spring boot] 스프링 부트 2.x의 IdClass의 복합키 연관관계 에러 해결","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%EB%B3%B5%ED%95%A9%ED%82%A4-idclass-%EC%97%90%EB%9F%AC/"},"url":"http://localhost:4000/posts/%EB%B3%B5%ED%95%A9%ED%82%A4-idclass-%EC%97%90%EB%9F%AC/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Spring boot 2.x의 IdClass의 복합키 연관관계 에러 해결 | 히히
+  <title>[Spring boot] 스프링 부트 2.x의 IdClass의 복합키 연관관계 에러 해결 | 히히
   </title>
 
   <!--
@@ -438,7 +438,7 @@
         
           
             
-              <span>Spring boot 2.x의 IdClass의 복합키 연관관계 에러 해결</span>
+              <span>[Spring boot] 스프링 부트 2.x의 IdClass의 복합키 연관관계 에러 해결</span>
             
 
           
@@ -555,17 +555,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -581,6 +570,28 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -633,7 +644,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Spring boot 2.x의 IdClass의 복합키 연관관계 에러 해결</h1>
+    <h1 data-toc-skip>[Spring boot] 스프링 부트 2.x의 IdClass의 복합키 연관관계 에러 해결</h1>
     
 
     <div class="post-meta text-muted">
@@ -727,9 +738,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2100 단어"
+  title="2278 단어"
 >
-  <em>11 분</em>읽는 시간</span>
+  <em>12 분</em>읽는 시간</span>
 
         </div>
       </div>
@@ -737,7 +748,25 @@
   </header>
 
   <div class="content">
-    <h3 id="구조"><span class="me-2">구조</span><a href="#구조" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <h3 id="문제"><span class="me-2">문제</span><a href="#문제" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><code class="language-plaintext highlighter-rouge">Caused by: java.lang.IllegalStateException: Cannot convert value of type 'java.lang.Long' to required type 'com.example.demo.test.Parent' for property 'parent': no matching editors or conversion strategy found</code></p>
+
+<p>테이블의 PK가 복합키로 결정 됨. 복합키를 처음 쓰는 지라 연습용으로 프로젝트를 개설해서 문제없이 CRUD 테스트를 진행함</p>
+
+<p>동일한 구조로 생성한 실전 프로젝트에서 객체 저장 시 Cannot convert value of type 에러가 발생함</p>
+
+<p>실전 프로젝트의 코드를 연습용 프로젝트로 복붙 했더니 또 된다..?</p>
+
+<p>두 프로젝트의 차이점을 찾아 본 결과 <strong>스프링 부트의 버전문제</strong>………였음</p>
+
+<p>연습용 프로젝트 -  스프링부트 버전 3.x</p>
+
+<p>실전 프로젝트 - 스프링부트 버전 2.x</p>
+
+<p>실전 프로젝트의 스프링부트 버전을 올릴수 없어 해결방법을 찾아보게됨</p>
+
+<h4 id="구조"><span class="me-2">구조</span><a href="#구조" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 <ul>
   <li>Parent</li>
 </ul>
@@ -915,7 +944,7 @@
 	<span class="nd">@EqualsAndHashCode</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">ChildId</span> <span class="kd">implements</span> <span class="nc">Serializable</span> <span class="o">{</span>
 		<span class="nd">@ManyToOne</span>
-		<span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"p_seq"</span><span class="o">)</span>
+		<span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"p_seq"</span><span class="o">)</span> <span class="c1">//문제발생지점</span>
 		<span class="kd">private</span> <span class="nc">Parent</span> <span class="n">parent</span><span class="o">;</span>
 		<span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"c_seq"</span><span class="o">)</span>
 		<span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">GenerationType</span><span class="o">.</span><span class="na">IDENTITY</span><span class="o">)</span>
@@ -1036,7 +1065,7 @@
 	<span class="nd">@Data</span>
 	<span class="nd">@EqualsAndHashCode</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">GrandChildId</span> <span class="kd">implements</span> <span class="nc">Serializable</span> <span class="o">{</span>
-		<span class="nd">@ManyToOne</span><span class="o">(</span><span class="n">fetch</span> <span class="o">=</span> <span class="nc">FetchType</span><span class="o">.</span><span class="na">LAZY</span><span class="o">)</span>
+		<span class="nd">@ManyToOne</span><span class="o">(</span><span class="n">fetch</span> <span class="o">=</span> <span class="nc">FetchType</span><span class="o">.</span><span class="na">LAZY</span><span class="o">)</span> 
 		<span class="nd">@JoinColumns</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">{</span>
 			<span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"c_seq"</span><span class="o">),</span>
 			<span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"p_seq"</span><span class="o">)</span>
@@ -1047,6 +1076,8 @@
 	<span class="o">}</span>
 <span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
+
+<p>Entity와 Entity의 IdClass 모두 FK를 간접참조로 사용</p>
 
 <ul>
   <li>최종 테스트 코드</li>
@@ -1080,52 +1111,52 @@
 	<span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="발단"><span class="me-2">발단</span><a href="#발단" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>Child객체에 Parent 객체를, GrandChild에 Child객체를 생성자로 넣어준 후 insert 테스트를 진행</p>
 
-<p>insert 테스트를 했는데</p>
+<p>문제는 insert 쿼리가 실행 되었을때 스트링부트 버전 2.x.x 에서 Parent를 PK인 pSeq컬럼으로 변환 매핑이되지않아 발생하는 문제로 파악됨</p>
 
-<p><code class="language-plaintext highlighter-rouge">Caused by: java.lang.IllegalStateException: Cannot convert value of type 'java.lang.Long' to required type 'com.example.demo.test.Parent' for property 'parent': no matching editors or conversion strategy found</code></p>
-
-<p>와 같은 에러가 나타남</p>
-
-<p>업무 프로젝트에서 복합키 구조를 처음 사용해봐서 미리 연습을했을때는 insert 테스트가 잘 되었는데</p>
-
-<p>동일한 구조로 생성한 업무 프로젝트에서 왜 갑자기 이런 에러가 나는지 이해가 되지않아</p>
-
-<p>프로젝트의 코드를 잘 작동했던 연습용 프로젝트로 옮겨서 작업을 했더니 잘 작동하는것을 확인했음..</p>
-
-<p>회사 프로젝트랑 데모 프로젝트의 차이점을 찾아 본 결과 <strong>스프링 부트의 버전문제</strong>………였음</p>
-
-<p>아무생각없이 연습용 프로젝트를 스프링부트 버전 3으로 만들어서 테스트를 했는데 
-회사 프로젝트는 스프링부트 버전이 2였던..</p>
-
-<p>회사 프로젝트의 기본키 채번방식이 결정되지않아 테스트없이 코드를 작성하다가 뒤늦게 문제를 발견한것이었음</p>
-
-<p>회사 프로젝트의 스프링부트 버전 변경이 불가능한 상황이라 방법을 찾아야했음</p>
+<p>스프링 부트 3.x.x에서는 변환 매핑이 가능하다 (동일한 코드에서 버전만 바꾸면 3.x.x에서는 insert테스트가 성공함)</p>
 
 <h3 id="해결-방법"><span class="me-2">해결 방법</span><a href="#해결-방법" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-<h4 id="idclass의-매핑을-entityid클래스로-변경-생성자-생성fetchtype을-eager로-변경"><span class="me-2">idClass의 매핑을 EntityId클래스로 변경+ 생성자 생성+FetchType을 EAGER로 변경</span><a href="#idclass의-매핑을-entityid클래스로-변경-생성자-생성fetchtype을-eager로-변경" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<h4 id="manytoone을-사용한-간접참조를-제거하고-직접참조로-변경"><span class="me-2">ManyToOne을 사용한 간접참조를 제거하고 직접참조로 변경</span><a href="#manytoone을-사용한-간접참조를-제거하고-직접참조로-변경" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ul>
-  <li>장점 : X</li>
-  <li>단점 : <mark class="hltr-cyan">즉시로딩(EAGER)로 사용한다는거 자체가 문제</mark>
-  자식 entity를 조회할때 연관관계 매핑된 부모 entity를 무조건 join해서 조회하기 때문에 n+1 문제가 발생함</li>
+  <li>장점 : 도메인 모델의 명확성/응집도를 유지하고 의존성을 관리하기 쉬움. DDD에서는 애그리거트 간의 관계를 매핑하는 것을 지양함</li>
+  <li>단점 : JPA에서 제공하는 fetch join같은 최적화 기술을 사용할 수 없음</li>
 </ul>
+
+<h4 id="idclass의-매핑을-entity-id클래스로-변경-생성자-생성fetchtype을-eager로-변경"><span class="me-2">idClass의 매핑을 Entity Id클래스로 변경+ 생성자 생성+FetchType을 EAGER로 변경</span><a href="#idclass의-매핑을-entity-id클래스로-변경-생성자-생성fetchtype을-eager로-변경" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<ul>
+  <li>장점 : 연관된 Entity를 한번에 모두 가져올 수 있음 - 가져온 객체는 프록시 객체가 아님</li>
+  <li>단점 : 즉시로딩(EAGER)의 단점이 모두 적용됨
+    <ul>
+      <li>N+1 문제가 발생해 심각한 성능 저하가 발생할 수 있음. 가급적이면 지연로딩(LAZY) 사용을 권장함</li>
+    </ul>
+  </li>
+</ul>
+
+<p>이 방법은 사실상 사용할 수 없는 방법으로 판단된다.</p>
 
 <h4 id="복합키를-보유한-entity를-연관관계로-매핑해야할-경우에만-해당-entity를-단일키로-구조-변경"><span class="me-2">복합키를 보유한 entity를 연관관계로 매핑해야할 경우에만 해당 entity를 단일키로 구조 변경</span><a href="#복합키를-보유한-entity를-연관관계로-매핑해야할-경우에만-해당-entity를-단일키로-구조-변경" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ul>
   <li>장점: 복합키를 사용하며 생기는 단점을 모두 회피가능(일반적으로 JPA는 단일키를 권장)
     <ul>
-      <li>FK를 맺을 때 복합키를 모두 컬럼으로 보유하거나 연결용 테이블을 생성해야함</li>
-      <li>성능에 불리함. 인덱스에 좋은 영향을 끼치지 못함</li>
-      <li>유니크 조건변경 시, PK전체를 수정</li>
+      <li>복합키 사용 시 단점
+        <ul>
+          <li>FK를 맺을 때 복합키를 모두 컬럼으로 보유하거나 연결용 테이블을 생성해야함</li>
+          <li>성능에 불리함. 인덱스에 좋은 영향을 끼치지 못함</li>
+          <li>유니크 조건변경 시, PK전체를 수정</li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>단점
     <ul>
       <li>프로젝트의 entity 구조를 변경해야함</li>
-      <li>유니크 키를 추가해야함</li>
+      <li>데이터 무결성을 위해서는 유니크 키를 추가해야함</li>
     </ul>
   </li>
 </ul>
@@ -1474,26 +1505,22 @@
 <span class="o">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>기존의 pk에 설정한 연관관계를 제거하고, update와 insert가 불가능한 기본키와 관계없는 조회용 연관관계 entity를 추가해주었음</p>
+<p>id로 선언한 필드는 직접참조로 선언하고 동일한 DB의 컬럼을 @ManyToOne 어노테이션을 사용하여 재 선언해줌</p>
 
-<p>특정 칼럼을 두번 선언해주었으나 update와 insert를 불가능하도록 설정해두었기때문에 문제없이 동작함</p>
+<p>이렇게 한 컬럼을 2개의 필드에서 매핑을 하면 MappingException이 발생함.</p>
+
+<p>그러나 위 구조에서 간접 참조 시 updatable = false, insertable = false 를 설정했기때문에 매핑에러를 회피가능함</p>
 
 <ul>
   <li>장점 (단일키 구조에서도 적용되는 장점임)
     <ul>
-      <li>
-        <p>자식객체 사용 시 부모객체의 <strong>기본키</strong>만 사용할 때 불필요한 join/select 쿼리를 방지할 수 있음</p>
-
-        <p>ex) 파라미터로 받은 부모 객체의 ID로 자식객체를 조회할때 불필요하게 부모객체를 먼저 조회할 필요없음</p>
-      </li>
-      <li>
-        <p>불필요한 쿼리를 줄이면서 연관관계를 사용가능(fetch join 등 기능 사용 가능)</p>
-      </li>
+      <li>직접참조의 장점(불필요한 연관관계 쿼리 제거)과 간접참조(fetch join 등 최적화 기능 사용 가능)의 장점을 복합 사용 가능</li>
     </ul>
   </li>
   <li>단점
     <ul>
       <li>jpa의 더티 체킹(dirty checking) 기능 사용 불가</li>
+      <li>불필요한 Entity 크기 증가</li>
       <li>
         <p>(2023/08/15 단점 추가) 기본키 생성 전략을 IDENTITY로 설정한다면 DB저장 전에 해당 객체의 기본키를 알수없음.</p>
 
@@ -1513,11 +1540,12 @@
         <p>따라서 저장 전에 FK를 미리 set해주어야하는 코드가 필요함</p>
 
         <p>물론 기본키 생성 전략으로 IDENTITY를 사용하지않으면 해당 문제는 발생하지않음.
-  아직 업무 프로젝트의 기본키 생성전략이 결정되지 않아 해당 구조를 유지하기로 결정함</p>
+  아직 실전 프로젝트의 기본키 생성전략이 결정되지 않아 해당 구조를 유지하기로 결정함</p>
       </li>
     </ul>
   </li>
 </ul>
+
 
     <script type="module" src="/assets/js/blockquote.js"></script>
   </div>
@@ -1583,21 +1611,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Spring%20boot%202.x%EC%9D%98%20IdClass%EC%9D%98%20%EB%B3%B5%ED%95%A9%ED%82%A4%20%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84%20%EC%97%90%EB%9F%AC%20%ED%95%B4%EA%B2%B0%20-%20%ED%9E%88%ED%9E%88&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25EB%25B3%25B5%25ED%2595%25A9%25ED%2582%25A4-idclass-%25EC%2597%2590%25EB%259F%25AC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=[Spring%20boot]%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B6%80%ED%8A%B8%202.x%EC%9D%98%20IdClass%EC%9D%98%20%EB%B3%B5%ED%95%A9%ED%82%A4%20%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84%20%EC%97%90%EB%9F%AC%20%ED%95%B4%EA%B2%B0%20-%20%ED%9E%88%ED%9E%88&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25EB%25B3%25B5%25ED%2595%25A9%25ED%2582%25A4-idclass-%25EC%2597%2590%25EB%259F%25AC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Spring%20boot%202.x%EC%9D%98%20IdClass%EC%9D%98%20%EB%B3%B5%ED%95%A9%ED%82%A4%20%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84%20%EC%97%90%EB%9F%AC%20%ED%95%B4%EA%B2%B0%20-%20%ED%9E%88%ED%9E%88&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25EB%25B3%25B5%25ED%2595%25A9%25ED%2582%25A4-idclass-%25EC%2597%2590%25EB%259F%25AC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=[Spring%20boot]%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B6%80%ED%8A%B8%202.x%EC%9D%98%20IdClass%EC%9D%98%20%EB%B3%B5%ED%95%A9%ED%82%A4%20%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84%20%EC%97%90%EB%9F%AC%20%ED%95%B4%EA%B2%B0%20-%20%ED%9E%88%ED%9E%88&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25EB%25B3%25B5%25ED%2595%25A9%25ED%2582%25A4-idclass-%25EC%2597%2590%25EB%259F%25AC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25EB%25B3%25B5%25ED%2595%25A9%25ED%2582%25A4-idclass-%25EC%2597%2590%25EB%259F%25AC%2F&text=Spring%20boot%202.x%EC%9D%98%20IdClass%EC%9D%98%20%EB%B3%B5%ED%95%A9%ED%82%A4%20%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84%20%EC%97%90%EB%9F%AC%20%ED%95%B4%EA%B2%B0%20-%20%ED%9E%88%ED%9E%88" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25EB%25B3%25B5%25ED%2595%25A9%25ED%2582%25A4-idclass-%25EC%2597%2590%25EB%259F%25AC%2F&text=[Spring%20boot]%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B6%80%ED%8A%B8%202.x%EC%9D%98%20IdClass%EC%9D%98%20%EB%B3%B5%ED%95%A9%ED%82%A4%20%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84%20%EC%97%90%EB%9F%AC%20%ED%95%B4%EA%B2%B0%20-%20%ED%9E%88%ED%9E%88" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     

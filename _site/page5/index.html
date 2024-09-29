@@ -889,21 +889,12 @@ import lombok.Setter;
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Spring boot 2.x의 IdClass의 복합키 연관관계 에러 해결</h1>
+            <h1 class="card-title my-2 mt-md-0">[Spring boot] 스프링 부트 2.x의 IdClass의 복합키 연관관계 에러 해결</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>구조
+              <p>문제
 
-  Parent
-
-
-package com.example.demo.test;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-im...</p>
+Caused by: java.lang.IllegalStateException: Cannot convert value of type &#39;java.lang.Long&#39; to required type &#39;com.example.demo.test.Parent&#39; for property &#39;parent&#39;: no matching editors or conversio...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
