@@ -4,108 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "d41e6d9750ef0c37",
+        "id": "ecd08cdb873a8581",
         "type": "tabs",
         "children": [
           {
-            "id": "693bd5ebc8db73b5",
+            "id": "85507fe5c464dbca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/spring/2023-07-23-복합키-idclass 에러.md",
+                "file": "_posts/blog/RDBMS/oracle/2023-12-17-PROCEDURE.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "4c1dff68f267953c",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/aws/Pastedimage20240925165403.png"
-              }
-            }
-          },
-          {
-            "id": "38f2a9da875ff3a2",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/aws/Pastedimage20240925164440.png"
-              }
-            }
-          },
-          {
-            "id": "ced3276b1b1ad36b",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/aws/Pastedimage20240925164947.png"
-              }
-            }
-          },
-          {
-            "id": "3d2f18e548459f34",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/aws/Pastedimage20240925164440.png"
-              }
-            }
-          },
-          {
-            "id": "6df6f24ce1e51010",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/aws/IMG-20240925160330-5.png"
-              }
-            }
-          },
-          {
-            "id": "3bdbb94a5ce3051c",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/aws/IMG-20240925160330-4.png"
-              }
-            }
-          },
-          {
-            "id": "effc6745ac13f802",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/aws/IMG-20240925160330-3.png"
-              }
-            }
-          },
-          {
-            "id": "2d9d41956b4c4751",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/aws/IMG-20240925160330-2.png"
-              }
-            }
-          },
-          {
-            "id": "f2b96974d299af8f",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/aws/IMG-20240925160329.png"
               }
             }
           }
@@ -138,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "interceptor",
+                "query": "프로시저",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -175,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/spring/2023-07-23-복합키-idclass 에러.md",
+                "file": "_posts/blog/RDBMS/oracle/2023-12-17-PROCEDURE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/spring/2023-07-23-복합키-idclass 에러.md",
+                "file": "_posts/blog/RDBMS/oracle/2023-12-17-PROCEDURE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -215,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/spring/2023-07-23-복합키-idclass 에러.md"
+                "file": "_posts/blog/RDBMS/oracle/2023-12-17-PROCEDURE.md"
               }
             }
           },
@@ -240,8 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -257,11 +166,21 @@
       "obsidian-kanban:새 보드 만들기": false
     }
   },
-  "active": "693bd5ebc8db73b5",
+  "active": "85507fe5c464dbca",
   "lastOpenFiles": [
+    "_site/tags/프로시저/index.html",
+    "_site/tags/프로시저",
+    "_site/tags/oracle/index.html",
+    "_site/tags/oracle",
+    "_site/posts/PROCEDURE/index.html",
+    "_site/posts/PROCEDURE",
+    "_posts/잡동사니/할거목록화.md",
+    "_posts/다이어리/일기/DIARY(2021.7.10-2022-12-04)/난 널 사랑이라불러/널 기다렸어/널 기다렸어.md",
+    "_posts/blog/RDBMS/oracle/2023-12-17-PROCEDURE.md",
+    "_posts/blog/RDBMS/sqld/2022-10-23-데이터 모델링의 이해.md",
+    "_posts/blog/RDBMS/oracle",
     "_posts/blog/spring/2023-10-30-interceptor&filter_차이점.md",
     "_posts/blog/spring/2023-07-23-복합키-idclass 에러.md",
-    "_posts/잡동사니/할거목록화.md",
     "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
     "_posts/blog/aws/2024-03-02-swap메모리.md",
     "_posts/blog/aws/2024-04-20-domain_https.md",
@@ -280,12 +199,6 @@
     "_posts/잡동사니/PARA.md",
     "_posts/blog/java/그린/2022-10-21-그린_정리.md",
     "_posts/blog/kotlin/2023-09-10-기초.md",
-    "_site/posts/복합키-idclass-에러/index.html",
-    "_site/posts/복합키-idclass-에러",
-    "_site/tags/에러해결/index.html",
-    "_site/tags/에러해결",
-    "_site/tags/복합키/index.html",
-    "_site/tags/복합키",
     "_posts/코딩/개발 학습/기술/백엔드/Spring/김영한 스프링 입문 로드맵/스프링MVC2/서블릿 필터 - 스프링 인터셉터/서블릿 필터 - 스프링 인터셉터.md",
     "2023-10-03.md",
     "_site/assets/images/spring/IMG-20240927162741.png",
@@ -300,9 +213,6 @@
     "_posts/blog/java/그린/2022-10-27-변수와 메소드.md",
     "_posts/blog/java/2022-10-16-8장.md",
     "_posts/코딩/프로젝트/목표+자산관리 - superbe/목표+자산관리 - superbe.md",
-    "_posts/코딩/프로젝트/프로젝트.md",
-    "_posts/코딩/코딩.md",
-    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 4월 5일/2023년 4월 5일.md",
-    "_posts/코딩/프로젝트/LMS 시스템 프로젝트 - NCT 학습관리시스템/작업일지/2023년 4월 4일/2023년 4월 4일.md"
+    "_posts/코딩/프로젝트/프로젝트.md"
   ]
 }
