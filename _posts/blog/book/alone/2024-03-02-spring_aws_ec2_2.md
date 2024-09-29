@@ -15,7 +15,7 @@ last_modified_at: 2024-03-02
 `mkdir ~/app && mkdir ~/app/step1` → `cd ~/app/step1` 먼저 git clone 할 경로 먼저 만들어주고 git clone 
 
 `./gradlew test`로 빌드되는지 확인	
-=> 빌드 중 멈춤 현상 발생하여 스왑 메모리 설정으로 해결하였다. (자세한 내용은 [[EC2] Spring boot 프로젝트 Gradle 빌드 멈춤 현상 해결](https://nunnunnu.github.io/swap%EB%A9%94%EB%AA%A8%EB%A6%AC/) 참고)
+=> 빌드 중 멈춤 현상 발생하여 스왑 메모리 설정으로 해결하였다. (자세한 내용은 [[EC2] Spring boot 프로젝트 Gradle 빌드 멈춤 현상 해결](https://nunnunnu.github.io/posts/swap%EB%A9%94%EB%AA%A8%EB%A6%AC//) 참고)
 
 만약 권한없다는 permission denied 에러가 뜬다면 
 

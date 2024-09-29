@@ -13,9 +13,39 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/RDBMS/oracle/2023-12-17-PROCEDURE.md",
+                "file": "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "7818ce095545e1bc",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "assets/images/java/2024-09-29_15.35.59.md"
+              }
+            }
+          },
+          {
+            "id": "1271fa250085da93",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "assets/images/java/2024-09-29_14.56.32.md"
+              }
+            }
+          },
+          {
+            "id": "2d73053202702ad4",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.md"
               }
             }
           }
@@ -48,7 +78,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "프로시저",
+                "query": "로드밸",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +95,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/RDBMS/oracle/2023-12-17-PROCEDURE.md",
+                "file": "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/RDBMS/oracle/2023-12-17-PROCEDURE.md",
+                "file": "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/RDBMS/oracle/2023-12-17-PROCEDURE.md"
+                "file": "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md"
               }
             }
           },
@@ -146,7 +177,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -168,51 +199,51 @@
   },
   "active": "85507fe5c464dbca",
   "lastOpenFiles": [
-    "_site/tags/프로시저/index.html",
-    "_site/tags/프로시저",
-    "_site/tags/oracle/index.html",
-    "_site/tags/oracle",
-    "_site/posts/PROCEDURE/index.html",
-    "_site/posts/PROCEDURE",
-    "_posts/잡동사니/할거목록화.md",
-    "_posts/다이어리/일기/DIARY(2021.7.10-2022-12-04)/난 널 사랑이라불러/널 기다렸어/널 기다렸어.md",
-    "_posts/blog/RDBMS/oracle/2023-12-17-PROCEDURE.md",
-    "_posts/blog/RDBMS/sqld/2022-10-23-데이터 모델링의 이해.md",
-    "_posts/blog/RDBMS/oracle",
-    "_posts/blog/spring/2023-10-30-interceptor&filter_차이점.md",
-    "_posts/blog/spring/2023-07-23-복합키-idclass 에러.md",
+    "_site/posts/REDIS_pub_sub/index.html",
+    "_site/posts/REDIS_pub_sub",
+    "_site/assets/images/redis/IMG-20240929153847.png",
+    "_site/assets/images/redis/IMG-20240929153819.png",
+    "_site/assets/images/redis/IMG-20240929152147.png",
+    "_site/assets/images/redis/IMG-20240929150657.png",
+    "_site/assets/images/redis",
+    "_site/categories/redis/index.html",
+    "_site/categories/redis",
+    "_site/tags/pub-sub/index.html",
+    "_site/tags/pub-sub",
+    "_site/tags/redis/index.html",
+    "_site/tags/redis",
+    "_site/assets/images/java/2024-09-29_15.35.59.html",
+    "_site/assets/images/java/2024-09-29_14.56.32.html",
+    "assets/images/redis/IMG-20240929153847.png",
+    "assets/images/java/2024-09-29_15.35.59.md",
+    "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md",
+    "assets/images/redis/IMG-20240929153819.png",
+    "assets/images/java/2024-09-29_14.56.32.md",
+    "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.md",
+    "assets/images/redis/IMG-20240929152147.png",
+    "_posts/Excalidraw/Drawing 2024-03-31 12.11.25.excalidraw.md",
+    "_posts/Excalidraw/Drawing 2024-03-31 13.32.24.excalidraw.md",
+    "_posts/Excalidraw/Drawing 2024-03-31 14.25.43.excalidraw.md",
+    "_posts/Excalidraw/Drawing 2024-03-17 12.15.23.excalidraw.md",
+    "_posts/Excalidraw/Drawing 2024-03-17 12.00.35.excalidraw.md",
+    "_posts/Excalidraw/Drawing 2024-03-17 11.48.52.excalidraw.md",
+    "_posts/Excalidraw/Drawing 2024-03-17 10.52.18.excalidraw.md",
+    "_posts/이미지/가상 면접 사례로 배우는 대규모 시스템 설계 기초 2024-03-17 11.41.03.excalidraw.md",
+    "_posts/blog/aws/2024-04-20-domain_https.md",
+    "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
+    "_posts/blog/book/대규모/2024-03-29-알림 시스템&뉴스 피드 시스템&채팅 시스템.md",
+    "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
+    "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
+    "_posts/blog/book/대규모/2024-03-30-검색어 자동완성 시스템&유투브설계.md",
+    "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
+    "_posts/blog/book/대규모/2024-03-28-웹 크롤러 설계.md",
+    "_posts/blog/book/대규모/2024-03-28-분산 시스템을 위한 유일 ID 생성기 설계.md",
+    "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
+    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
+    "assets/images/redis/IMG-20240929150657.png",
     "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
     "_posts/blog/aws/2024-03-02-swap메모리.md",
-    "_posts/blog/aws/2024-04-20-domain_https.md",
     "_site/assets/images/aws/IMG-20240928145400.png",
-    "_site/assets/images/aws/IMG-20240928145400-1.png",
-    "_site/tags/gradle/index.html",
-    "_site/tags/gradle",
-    "_site/posts/swap메모리/index.html",
-    "_site/posts/swap메모리",
-    "_site/assets/images/aws/IMG-20240928145330.png",
-    "_site/assets/images/aws/IMG-20240928145330-1.png",
-    "_posts/코딩/프로젝트/목표+자산관리 - superbe/2024-04-06 작업일지.md",
-    "_posts/blog/book/alone/2024-03-02-spring-aws_ec2.md",
-    "assets/images/sidebar-background.png",
-    "assets/images/sidebar-background-black2.png",
-    "_posts/잡동사니/PARA.md",
-    "_posts/blog/java/그린/2022-10-21-그린_정리.md",
-    "_posts/blog/kotlin/2023-09-10-기초.md",
-    "_posts/코딩/개발 학습/기술/백엔드/Spring/김영한 스프링 입문 로드맵/스프링MVC2/서블릿 필터 - 스프링 인터셉터/서블릿 필터 - 스프링 인터셉터.md",
-    "2023-10-03.md",
-    "_site/assets/images/spring/IMG-20240927162741.png",
-    "_site/assets/images/spring/IMG-20240927162741-1.png",
-    "_site/assets/images/spring/IMG-20240927162719.png",
-    "_site/assets/images/spring/IMG-20240927162719-1.png",
-    "_posts/blog/java/2023-05-12-heap메모리.md",
-    "_posts/blog/java/interceptor & filter 차이점 2ea16bb1f1ec4597b8f8ad9a8b9e7fb7.md",
-    "_posts/blog/jpa/김영한ORM/2022-12-31-값타입.md",
-    "_posts/blog/spring/김영한스프링입문/2022-12-06-회원관리.md",
-    "_posts/blog/spring/김영한스프링입문/2022-12-08-스프링_빈과_의존관계.md",
-    "_posts/blog/java/그린/2022-10-27-변수와 메소드.md",
-    "_posts/blog/java/2022-10-16-8장.md",
-    "_posts/코딩/프로젝트/목표+자산관리 - superbe/목표+자산관리 - superbe.md",
-    "_posts/코딩/프로젝트/프로젝트.md"
+    "_site/assets/images/aws/IMG-20240928145400-1.png"
   ]
 }
