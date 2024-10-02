@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md",
+                "file": "_posts/blog/spring/2024-02-08-스프링_Async.md",
                 "mode": "source",
                 "source": false
               }
@@ -78,10 +78,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "로드밸",
+                "query": "Async",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -95,8 +95,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -116,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md",
+                "file": "_posts/blog/spring/2024-02-08-스프링_Async.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md",
+                "file": "_posts/blog/spring/2024-02-08-스프링_Async.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md"
+                "file": "_posts/blog/spring/2024-02-08-스프링_Async.md"
               }
             }
           },
@@ -199,12 +198,36 @@
   },
   "active": "85507fe5c464dbca",
   "lastOpenFiles": [
+    "assets/images/Pasted image 20241002220429.png",
+    "assets/images/Pasted image 20241002220314.png",
+    "assets/images/Pasted image 20241002215146.png",
+    "assets/images/Pasted image 20241002215144.png",
+    "assets/images/spring/IMG-20241002214716.png",
+    "assets/images/spring/IMG-20241002214315.png",
+    "assets/images/spring/IMG-20241002213836.png",
+    "assets/images/spring/IMG-20241002213809.png",
+    "assets/images/spring/IMG-20240927162741.png",
+    "assets/images/spring/IMG-20240927162741-1.png",
+    "assets/images/spring/IMG-20241002212447.png",
+    "_posts/blog/spring/2024-02-08-스프링_Async.md",
+    "_posts/blog/kotlin/2023-10-28-코루틴.md",
+    "_posts/코딩/개발 학습/기술/기타 툴 사용법/swagger/swagger.md",
+    "_posts/코딩/개발 학습/기술/CS/기초 CS(기술면접)/java.md",
+    "_posts/잡동사니/할거목록화.md",
+    "_posts/코딩/개발 학습/기술/백엔드/Spring/그린컴퓨터학원 수업과정 - Spring/연습-플로/연습-플로.md",
+    "_posts/blog/book/대규모/2024-03-29-알림 시스템&뉴스 피드 시스템&채팅 시스템.md",
+    "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
+    "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
+    "_posts/blog/book/2023-11-12DDD START! 도메인 주도 설계 구현과 핵심 개념 익히기.md",
+    "_posts/blog/spring/mvc1/2023-02-05-웹애플리케이션이해.md",
+    "node_modules/rxjs/CHANGELOG.md",
+    "node_modules/terser/CHANGELOG.md",
+    "node_modules/npm/node_modules/postcss-selector-parser/API.md",
+    "assets/images/java/2024-09-29_21.21.41.md",
+    "_posts/코딩/개발 학습/관련도서/시작하세요 도커／쿠버네티스 친절한 설명으로 쉽게 이해하는 컨테이너 관리/시작하세요 도커／쿠버네티스 친절한 설명으로 쉽게 이해하는 컨테이너 관리.md",
+    "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md",
     "_site/posts/REDIS_pub_sub/index.html",
     "_site/posts/REDIS_pub_sub",
-    "_site/assets/images/redis/IMG-20240929153847.png",
-    "_site/assets/images/redis/IMG-20240929153819.png",
-    "_site/assets/images/redis/IMG-20240929152147.png",
-    "_site/assets/images/redis/IMG-20240929150657.png",
     "_site/assets/images/redis",
     "_site/categories/redis/index.html",
     "_site/categories/redis",
@@ -213,37 +236,13 @@
     "_site/tags/redis/index.html",
     "_site/tags/redis",
     "_site/assets/images/java/2024-09-29_15.35.59.html",
-    "_site/assets/images/java/2024-09-29_14.56.32.html",
-    "assets/images/redis/IMG-20240929153847.png",
     "assets/images/java/2024-09-29_15.35.59.md",
-    "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md",
-    "assets/images/redis/IMG-20240929153819.png",
     "assets/images/java/2024-09-29_14.56.32.md",
     "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.md",
-    "assets/images/redis/IMG-20240929152147.png",
     "_posts/Excalidraw/Drawing 2024-03-31 12.11.25.excalidraw.md",
     "_posts/Excalidraw/Drawing 2024-03-31 13.32.24.excalidraw.md",
     "_posts/Excalidraw/Drawing 2024-03-31 14.25.43.excalidraw.md",
     "_posts/Excalidraw/Drawing 2024-03-17 12.15.23.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 12.00.35.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 11.48.52.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 10.52.18.excalidraw.md",
-    "_posts/이미지/가상 면접 사례로 배우는 대규모 시스템 설계 기초 2024-03-17 11.41.03.excalidraw.md",
-    "_posts/blog/aws/2024-04-20-domain_https.md",
-    "_posts/blog/book/대규모/2024-03-30-구글드라이브 설계.md",
-    "_posts/blog/book/대규모/2024-03-29-알림 시스템&뉴스 피드 시스템&채팅 시스템.md",
-    "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
-    "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
-    "_posts/blog/book/대규모/2024-03-30-검색어 자동완성 시스템&유투브설계.md",
-    "_posts/blog/book/대규모/2024-03-28-URL 단축기 설계.md",
-    "_posts/blog/book/대규모/2024-03-28-웹 크롤러 설계.md",
-    "_posts/blog/book/대규모/2024-03-28-분산 시스템을 위한 유일 ID 생성기 설계.md",
-    "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
-    "_posts/blog/book/대규모/2024-03-27-안정 해시 설계.md",
-    "assets/images/redis/IMG-20240929150657.png",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
-    "_posts/blog/aws/2024-03-02-swap메모리.md",
-    "_site/assets/images/aws/IMG-20240928145400.png",
-    "_site/assets/images/aws/IMG-20240928145400-1.png"
+    "_posts/Excalidraw/Drawing 2024-03-17 12.00.35.excalidraw.md"
   ]
 }
