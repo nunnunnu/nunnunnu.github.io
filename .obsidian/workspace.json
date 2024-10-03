@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/spring/2024-02-08-스프링_Async.md",
+                "file": "_posts/blog/spring/2024-02-08-spring_Async.md",
                 "mode": "source",
                 "source": false
               }
@@ -78,10 +78,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Async",
+                "query": "AOP",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/spring/2024-02-08-스프링_Async.md",
+                "file": "_posts/blog/spring/2024-02-08-spring_Async.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/spring/2024-02-08-스프링_Async.md",
+                "file": "_posts/blog/spring/2024-02-08-spring_Async.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/spring/2024-02-08-스프링_Async.md"
+                "file": "_posts/blog/spring/2024-02-08-spring_Async.md"
               }
             }
           },
@@ -198,18 +198,29 @@
   },
   "active": "85507fe5c464dbca",
   "lastOpenFiles": [
-    "assets/images/Pasted image 20241002220429.png",
-    "assets/images/Pasted image 20241002220314.png",
-    "assets/images/Pasted image 20241002215146.png",
-    "assets/images/Pasted image 20241002215144.png",
-    "assets/images/spring/IMG-20241002214716.png",
-    "assets/images/spring/IMG-20241002214315.png",
-    "assets/images/spring/IMG-20241002213836.png",
-    "assets/images/spring/IMG-20241002213809.png",
-    "assets/images/spring/IMG-20240927162741.png",
-    "assets/images/spring/IMG-20240927162741-1.png",
-    "assets/images/spring/IMG-20241002212447.png",
-    "_posts/blog/spring/2024-02-08-스프링_Async.md",
+    "_site/tags/비동기/index.html",
+    "_site/tags/비동기",
+    "_site/posts/spring_Async/index.html",
+    "_site/posts/spring_Async",
+    "_site/assets/images/spring/IMG-20241003170302.png",
+    "_site/assets/images/spring/IMG-20241003170302-2.png",
+    "_site/assets/images/spring/IMG-20241003170302-1.png",
+    "_site/assets/images/spring/IMG-20241003170301.png",
+    "_site/assets/images/spring/IMG-20241003170301-2.png",
+    "_site/assets/images/spring/IMG-20241003170301-1.png",
+    "_site/assets/images/Pasted image 20241002220314.png",
+    "_site/assets/images/Pasted image 20241002215144.png",
+    "_site/assets/images/Pasted Image 20240929213936_080.png",
+    "_site/assets/images/Pasted Image 20240929213520_046.png",
+    "_site/assets/images/java/2024-09-29_21.21.41.html",
+    "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
+    "_posts/blog/spring/high/2024-02-25-포인트컷지시자.md",
+    "_posts/blog/spring/high/2024-02-17-스프링AOP구현.md",
+    "_posts/blog/spring/high/2024-02-17-@AspectAOP+스프링AOP개념.md",
+    "_posts/blog/spring/high/2024-02-05-실전예제.md",
+    "_posts/blog/spring/high/2024-03-02-프록시기술과한계.md",
+    "_posts/blog/spring/김영한스프링입문/2022-12-12-AOP.md",
+    "_posts/blog/spring/2024-02-08-spring_Async.md",
     "_posts/blog/kotlin/2023-10-28-코루틴.md",
     "_posts/코딩/개발 학습/기술/기타 툴 사용법/swagger/swagger.md",
     "_posts/코딩/개발 학습/기술/CS/기초 CS(기술면접)/java.md",
@@ -232,17 +243,6 @@
     "_site/categories/redis/index.html",
     "_site/categories/redis",
     "_site/tags/pub-sub/index.html",
-    "_site/tags/pub-sub",
-    "_site/tags/redis/index.html",
-    "_site/tags/redis",
-    "_site/assets/images/java/2024-09-29_15.35.59.html",
-    "assets/images/java/2024-09-29_15.35.59.md",
-    "assets/images/java/2024-09-29_14.56.32.md",
-    "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-31 12.11.25.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-31 13.32.24.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-31 14.25.43.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 12.15.23.excalidraw.md",
-    "_posts/Excalidraw/Drawing 2024-03-17 12.00.35.excalidraw.md"
+    "assets/images/java/2024-09-29_15.35.59.md"
   ]
 }

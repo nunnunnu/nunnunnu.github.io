@@ -271,7 +271,7 @@
 
             <span>카테고리</span>
             
-              <span>(158)</span>
+              <span>(159)</span>
             
           </a>
         </li>
@@ -771,7 +771,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="800 단어"
+  title="847 단어"
 >
   <em>4 분</em>읽는 시간</span>
 
@@ -831,7 +831,12 @@
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>1 2사이에 지연있음</p>
+<ul>
+  <li>출력결과</li>
+</ul>
+<font color="#bfbfbf">1</font>
+<font color="#bfbfbf">..(지연)</font>
+<font color="#bfbfbf">2</font>
 
 <h3 id="launch"><span class="me-2">launch</span><a href="#launch" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -905,6 +910,14 @@
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
+<ul>
+  <li>출력결과</li>
+</ul>
+<font color="#bfbfbf">DefaultDispatcher-worker-1 </font>
+<font color="#bfbfbf">	~~~~ </font>
+<font color="#bfbfbf">	DefaultDispatcher-worker-2 </font>
+<font color="#bfbfbf">	11</font>
+
 <h3 id="coroutinescope"><span class="me-2">coroutineScope</span><a href="#coroutinescope" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>종료 전에 모든 코루틴이 종료될때까지 기다림</p>
@@ -928,6 +941,20 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>출력결과</li>
+</ul>
+<font color="#bfbfbf">@8 </font>
+<font color="#bfbfbf">@5 </font>
+<font color="#bfbfbf">@1 </font>
+<font color="#bfbfbf">@9 </font>
+<font color="#bfbfbf">@7 </font>
+<font color="#bfbfbf">@6 </font>
+<font color="#bfbfbf">@3 </font>
+<font color="#bfbfbf">@2 </font>
+<font color="#bfbfbf">@4 </font>
+<font color="#bfbfbf">@0</font>
 
 <h3 id="asycn-await--wuthcontext"><span class="me-2">asycn/ await → wuthContext</span><a href="#asycn-await--wuthcontext" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -974,6 +1001,14 @@
     <span class="nf">println</span><span class="p">(</span><span class="nf">retrieve2</span><span class="p">(</span><span class="s">"www.mysite.com"</span><span class="p">))</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>출력 결과</li>
+</ul>
+<font color="#bfbfbf">DefaultDispatcher-worker-1 </font>
+<font color="#bfbfbf">asyncResults </font>
+<font color="#bfbfbf">DefaultDispatcher-worker-1 </font>
+<font color="#bfbfbf">withContextResults</font>
 
 <h3 id="디스패처"><span class="me-2">디스패처</span><a href="#디스패처" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1022,6 +1057,13 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
+<ul>
+  <li>출력결과</li>
+</ul>
+<font color="#bfbfbf">dispatcherIO </font>
+<font color="#bfbfbf">DefaultDispatcher-worker-1 </font>
+<font color="#bfbfbf">launchWithDefault </font>
+<font color="#bfbfbf">DefaultDispatcher-worker-1</font>
 
 <blockquote>
   <p>[!important]<br />
@@ -1102,6 +1144,16 @@
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
+<ul>
+  <li>출력결과</li>
+</ul>
+<font color="#bfbfbf">job: I'm waiting 0 </font>
+<font color="#bfbfbf">job: I'm waiting 1 </font>
+<font color="#bfbfbf">job: I'm waiting 2 </font>
+<font color="#bfbfbf">job: I'm waiting 3 </font>
+<font color="#bfbfbf">job: I'm waiting 4 </font>
+<font color="#bfbfbf">main:Thread waiting main: done</font>
+
 <p>main에서 job을 중간에 취소시킴</p>
 
 <p>잡을 취소하는 이유가 시간때문에면 withTimeOut함수를 써도됨</p>
@@ -1125,8 +1177,6 @@
         <span class="p">}</span>
     <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
-
-<p>책에선 마지막에 예외가 발생한다는데 난 안되네</p>
 
 <blockquote>
   <p>[!important]<br />
@@ -1911,95 +1961,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2100,117 +2061,9 @@
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -2302,9 +2155,57 @@
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2619,6 +2520,165 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2808,6 +2868,11 @@
     
     
       
+    
+  
+    
+    
+    
     
   
     
@@ -4227,95 +4292,6 @@ val boox = Book(&quot;?&quot;)
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4416,117 +4392,9 @@ val boox = Book(&quot;?&quot;)
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -4618,9 +4486,57 @@ val boox = Book(&quot;?&quot;)
     
     
       
-        
-        
-
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4935,6 +4851,165 @@ val boox = Book(&quot;?&quot;)
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5124,6 +5199,11 @@ val boox = Book(&quot;?&quot;)
     
     
       
+    
+  
+    
+    
+    
     
   
     
