@@ -1,5 +1,6 @@
 {
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "assets/images",
-  "promptDelete": false
+  "promptDelete": false,
+  "showUnsupportedFiles": true
 }

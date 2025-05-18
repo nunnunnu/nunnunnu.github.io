@@ -88,6 +88,10 @@ getMapping으로 /가 path인 api를 생성하니 성공함!
 
 그러나 사이드 프로젝트 정식 배포 후 백엔드 도메인을 정식으로 발급받게된다면 aws에서 인증서를 받아 다시 설정하게될수도있으나 지금은 해당 방법으로 배포를 진행하였다
 
+일단 http 80포트와 https를 인바운드 보안규칙에 추가해준 후 시작한다
+![images](/assets/images/aws/IMG-20250331163436.png)
+![image](/assets/images/aws/IMG-20250331165945.png)
+
 1. nignx 설치
 
 	`sudo apt-get install -y nginx nginx-common nginx-full`
@@ -155,7 +159,7 @@ getMapping으로 /가 path인 api를 생성하니 성공함!
 	
 		내도메인 한국으로 돌아가서
 		![images](/assets/images/aws/Pastedimage20240925164440.png)
-		ec2에 접속한 콘솔에서 축하메세지가 뜬다면 성공한것!
+		ec2에 접속한 콘솔에서 축하메세지가 뜬다면 성공한것!(약간 시간이 걸리니 1~2분정도 기다려야함)
 6. 포워딩 코드 수정
 	
 	`sudo vi /etc/nginx/nginx.conf`
@@ -194,8 +198,10 @@ getMapping으로 /가 path인 api를 생성하니 성공함!
 	}
 	```
 	그리고 인스턴스의 보안그룹-인바운드 규칙에서 HTTPS의 포트번호 443을 열어주어야함
+
+	nginx재시작 명령어	`sudo service nginx restart` 다시 입력해주면
 	
-	이까지하면 http.domain.com 으로 접속하여도 https.domain.com으로 변경되는것을 확인할 수 있음
+	 http.domain.com 으로 접속하여도 https.domain.com으로 변경되는것을 확인할 수 있음
 
 만약 도메인이 만료되어 갱신하여야한다면
 5-4와 6번 포워딩 코드의 {domain URL} 만 수정하면될것같다

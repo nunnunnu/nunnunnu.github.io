@@ -8,48 +8,207 @@
         "type": "tabs",
         "children": [
           {
-            "id": "85507fe5c464dbca",
+            "id": "a915849621803124",
+            "type": "leaf",
+            "state": {
+              "type": "planner-weekly",
+              "state": {},
+              "icon": "table-2",
+              "title": "5월, 4–5월, 6"
+            }
+          },
+          {
+            "id": "09a51190b961e628",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/spring/2024-02-08-spring_Async.md",
+                "file": "_posts/코딩/프로젝트/잼얘/작업일지/all-open.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "all-open"
             }
           },
           {
-            "id": "7818ce095545e1bc",
+            "id": "5e72b52ca31373e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/코딩/프로젝트/잼얘/작업일지/event listener.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "event listener"
+            }
+          },
+          {
+            "id": "ea152bb464889f96",
+            "type": "leaf",
+            "state": {
+              "type": "full-calendar-view",
+              "state": {},
+              "icon": "calendar-glyph",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "31f947c3f20fb6d1",
+            "type": "leaf",
+            "state": {
+              "type": "planner-weekly",
+              "state": {},
+              "icon": "table-2",
+              "title": "5월, 6–5월, 8"
+            }
+          },
+          {
+            "id": "5d9657319d7ff081",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "assets/images/java/2024-09-29_15.35.59.md"
-              }
+                "file": "assets/images/java/2025-05-04_15.31.48.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "2025-05-04_15.31.48"
             }
           },
           {
-            "id": "1271fa250085da93",
+            "id": "02889f0712dcbaf0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/코딩/프로젝트/잼얘/잼얘 readme.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "잼얘 readme"
+            }
+          },
+          {
+            "id": "293641627233fbb6",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/images/잼얘/IMG-20250504151116.png"
+              },
+              "icon": "lucide-image",
+              "title": "IMG-20250504151116"
+            }
+          },
+          {
+            "id": "92236994c35c6e51",
+            "type": "leaf",
+            "state": {
+              "type": "planner-weekly",
+              "state": {},
+              "icon": "table-2",
+              "title": "5월, 10–5월, 12"
+            }
+          },
+          {
+            "id": "1d86207436092f89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/다이어리/일기/2025/5월/2025-05-18.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-05-18"
+            }
+          },
+          {
+            "id": "a503319ce4c022ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/코딩/프로젝트/잼얘/작업일지/docker.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "docker"
+            }
+          },
+          {
+            "id": "53971938a62adc4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/코딩/개발 학습/관련도서/기술면접 대비 CS전공 핵심 요약집/알고리즘.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "알고리즘"
+            }
+          },
+          {
+            "id": "fe69ab485874b51f",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "assets/images/java/2024-09-29_14.56.32.md"
-              }
+                "file": "assets/images/java/2025-05-11_19.01.52.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "2025-05-11_19.01.52"
             }
           },
           {
-            "id": "2d73053202702ad4",
+            "id": "de6992ef95f77edc",
             "type": "leaf",
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "_posts/Excalidraw/Drawing 2024-03-24 12.53.47.excalidraw.md"
-              }
+                "file": "assets/images/java/2025-05-10_13.36.11.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "2025-05-10_13.36.11"
+            }
+          },
+          {
+            "id": "2b807d62316b5e2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/코딩/프로젝트/잼얘/작업일지/무중단배포.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "무중단배포"
+            }
+          },
+          {
+            "id": "f451389534a5ef4c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/코딩/프로젝트/잼얘/작업일지/무중단배포.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "무중단배포"
             }
           }
-        ]
+        ],
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -68,8 +227,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
             }
           },
           {
@@ -78,13 +240,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "AOP",
+                "query": "nginx",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "검색"
             }
           },
           {
@@ -92,14 +256,17 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 345.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "6ee3a94f67d83ffe",
@@ -108,6 +275,7 @@
       {
         "id": "c7d91c0a61c05bab",
         "type": "tabs",
+        "dimension": 76.71711292200233,
         "children": [
           {
             "id": "12d05c75103e58a8",
@@ -115,7 +283,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/blog/spring/2024-02-08-spring_Async.md",
+                "file": "_pages/categories/category-JAVA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +291,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "category-JAVA의 백링크"
             }
           },
           {
@@ -132,10 +302,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/blog/spring/2024-02-08-spring_Async.md",
+                "file": "_pages/categories/category-JAVA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "category-JAVA의 나가는 링크"
             }
           },
           {
@@ -146,7 +318,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -155,16 +329,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/blog/spring/2024-02-08-spring_Async.md"
-              }
-            }
-          },
-          {
-            "id": "32457a362b458252",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
+                "file": "_posts/코딩/프로젝트/잼얘/작업일지/quartz.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "quartz 의 개요"
             }
           },
           {
@@ -172,77 +343,124 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "2d3c61c7cc95a0c5",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "star",
+              "title": "Timeline"
+            }
+          },
+          {
+            "id": "4b73197664a501b6",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
+      },
+      {
+        "id": "2ad67fb6d1ec6f4e",
+        "type": "tabs",
+        "dimension": 23.28288707799767,
+        "children": [
+          {
+            "id": "32457a362b458252",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 496.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:퀵 스위처 열기": false,
+      "switcher:빠른 전환기 열기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
-      "obsidian-kanban:새 보드 만들기": false
+      "obsidian-kanban:새 보드 만들기": false,
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false,
+      "copilot:Open Copilot Chat": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false,
+      "remotely-save:Remotely Save": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "85507fe5c464dbca",
+  "active": "a503319ce4c022ca",
   "lastOpenFiles": [
-    "_site/tags/비동기/index.html",
-    "_site/tags/비동기",
-    "_site/posts/spring_Async/index.html",
-    "_site/posts/spring_Async",
-    "_site/assets/images/spring/IMG-20241003170302.png",
-    "_site/assets/images/spring/IMG-20241003170302-2.png",
-    "_site/assets/images/spring/IMG-20241003170302-1.png",
-    "_site/assets/images/spring/IMG-20241003170301.png",
-    "_site/assets/images/spring/IMG-20241003170301-2.png",
-    "_site/assets/images/spring/IMG-20241003170301-1.png",
-    "_site/assets/images/Pasted image 20241002220314.png",
-    "_site/assets/images/Pasted image 20241002215144.png",
-    "_site/assets/images/Pasted Image 20240929213936_080.png",
-    "_site/assets/images/Pasted Image 20240929213520_046.png",
-    "_site/assets/images/java/2024-09-29_21.21.41.html",
-    "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
-    "_posts/blog/spring/high/2024-02-25-포인트컷지시자.md",
-    "_posts/blog/spring/high/2024-02-17-스프링AOP구현.md",
-    "_posts/blog/spring/high/2024-02-17-@AspectAOP+스프링AOP개념.md",
-    "_posts/blog/spring/high/2024-02-05-실전예제.md",
-    "_posts/blog/spring/high/2024-03-02-프록시기술과한계.md",
-    "_posts/blog/spring/김영한스프링입문/2022-12-12-AOP.md",
-    "_posts/blog/spring/2024-02-08-spring_Async.md",
-    "_posts/blog/kotlin/2023-10-28-코루틴.md",
-    "_posts/코딩/개발 학습/기술/기타 툴 사용법/swagger/swagger.md",
-    "_posts/코딩/개발 학습/기술/CS/기초 CS(기술면접)/java.md",
-    "_posts/잡동사니/할거목록화.md",
-    "_posts/코딩/개발 학습/기술/백엔드/Spring/그린컴퓨터학원 수업과정 - Spring/연습-플로/연습-플로.md",
-    "_posts/blog/book/대규모/2024-03-29-알림 시스템&뉴스 피드 시스템&채팅 시스템.md",
-    "_posts/blog/book/대규모/2024-03-27-키_값 저장소 설계.md",
-    "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
-    "_posts/blog/book/2023-11-12DDD START! 도메인 주도 설계 구현과 핵심 개념 익히기.md",
-    "_posts/blog/spring/mvc1/2023-02-05-웹애플리케이션이해.md",
-    "node_modules/rxjs/CHANGELOG.md",
-    "node_modules/terser/CHANGELOG.md",
-    "node_modules/npm/node_modules/postcss-selector-parser/API.md",
-    "assets/images/java/2024-09-29_21.21.41.md",
+    "assets/images/Pasted image 20250518225054.png",
+    "assets/images/Pasted image 20250518203009.png",
+    "assets/images/화면 기록 2025-05-18 오후 8.14.09.gif",
+    "assets/images/Pasted image 20250518130942.png",
+    "assets/images/Pasted image 20250518130827.png",
+    "assets/images/Pasted image 20250518130751.png",
+    "assets/images/Pasted image 20250518130641.png",
+    "assets/images/Pasted image 20250518130628.png",
+    "assets/images/Pasted image 20250518130523.png",
+    "assets/images/Pasted image 20250518130411.png",
+    "assets/images/Pasted image 20250518130253.png",
+    "_posts/코딩/프로젝트/잼얘/작업일지/firebase - fcm.md",
+    "_posts/다이어리/일기/2025/5월/2025-05-18.md",
+    "_posts/코딩/개발 학습/관련도서/기술면접 대비 CS전공 핵심 요약집/알고리즘.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/docker.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/무제.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/무중단배포.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/구글비전 api 연동.md",
+    "_posts/다이어리/일기/2025/5월/2025-05-17.md",
+    "_posts/다이어리/일기/2025/5월/2025-05-16.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/Jenkins1.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/spring Caffeine Cache.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/Spring boot Logback 설정 가이드.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/all-open.md",
+    "_posts/다이어리/일기/2025/5월/2025-05-15.md",
     "_posts/코딩/개발 학습/관련도서/시작하세요 도커／쿠버네티스 친절한 설명으로 쉽게 이해하는 컨테이너 관리/시작하세요 도커／쿠버네티스 친절한 설명으로 쉽게 이해하는 컨테이너 관리.md",
-    "_posts/blog/redis/2024-06-02-REDIS_pub_sub.md",
-    "_site/posts/REDIS_pub_sub/index.html",
-    "_site/posts/REDIS_pub_sub",
-    "_site/assets/images/redis",
-    "_site/categories/redis/index.html",
-    "_site/categories/redis",
-    "_site/tags/pub-sub/index.html",
-    "assets/images/java/2024-09-29_15.35.59.md"
+    "assets/images/java/2025-05-11_19.01.52.md",
+    "_posts/blog/aws/2024-04-20-domain_https.md",
+    "_posts/blog/spring/mvc1/2023-02-05-웹애플리케이션이해.md",
+    "_posts/blog/http/2023-01-23-HTTP 일반 헤더.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/event listener.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/quartz.md",
+    "assets/images/java/2025-05-10_13.36.11.md",
+    "_posts/다이어리/일기/2025/5월/2025-05-14.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/socket 설정.md",
+    "_posts/blog/book/기술면접노트.md",
+    "_posts/코딩/개발 학습/관련도서/기술면접 대비 CS전공 핵심 요약집",
+    "assets/images/개발자를 위한 기술면접 노트",
+    "_posts/코딩/개발 학습/관련도서/개발자를 위한 기술면접 노트",
+    "_posts/다이어리/일기/2025/5월/무제",
+    "_posts/다이어리/일기/2025/5월",
+    "assets/images/architecture-diagram-components (1).excalidrawlib",
+    "assets/images/잼얘",
+    "copilot-custom-prompts",
+    "assets/fonts/RIDIBatang 3.otf",
+    "assets/fonts/RIDIBatang 2.otf"
   ]
 }
