@@ -133,12 +133,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/코딩/프로젝트/잼얘/작업일지/docker.md",
+                "file": "_posts/코딩/프로젝트/잼얘/작업일지/firebase - fcm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "docker"
+              "title": "firebase - fcm"
             }
           },
           {
@@ -265,8 +265,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5,
-    "collapsed": true
+    "width": 310.5
   },
   "right": {
     "id": "6ee3a94f67d83ffe",
@@ -416,6 +415,12 @@
   },
   "active": "a503319ce4c022ca",
   "lastOpenFiles": [
+    "assets/images/Pasted image 20250519174638.png",
+    "assets/images/Pasted image 20250519174325.png",
+    "assets/images/Pasted image 20250519174219.png",
+    "assets/images/Pasted image 20250519133720.png",
+    "_posts/코딩/프로젝트/잼얘/작업일지/docker.md",
+    "_posts/코딩/프로젝트/잼얘/작업일지/firebase - fcm.md",
     "assets/images/Pasted image 20250518225054.png",
     "assets/images/Pasted image 20250518203009.png",
     "assets/images/화면 기록 2025-05-18 오후 8.14.09.gif",
@@ -423,14 +428,8 @@
     "assets/images/Pasted image 20250518130827.png",
     "assets/images/Pasted image 20250518130751.png",
     "assets/images/Pasted image 20250518130641.png",
-    "assets/images/Pasted image 20250518130628.png",
-    "assets/images/Pasted image 20250518130523.png",
-    "assets/images/Pasted image 20250518130411.png",
-    "assets/images/Pasted image 20250518130253.png",
-    "_posts/코딩/프로젝트/잼얘/작업일지/firebase - fcm.md",
     "_posts/다이어리/일기/2025/5월/2025-05-18.md",
     "_posts/코딩/개발 학습/관련도서/기술면접 대비 CS전공 핵심 요약집/알고리즘.md",
-    "_posts/코딩/프로젝트/잼얘/작업일지/docker.md",
     "_posts/코딩/프로젝트/잼얘/작업일지/무제.md",
     "_posts/코딩/프로젝트/잼얘/작업일지/무중단배포.md",
     "_posts/코딩/프로젝트/잼얘/작업일지/구글비전 api 연동.md",
