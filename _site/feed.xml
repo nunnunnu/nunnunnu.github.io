@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2025-05-20T16:07:01+09:00</updated>
+  <updated>2025-05-20T18:23:50+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,90 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[Spring boot&amp;Kotlin] FCM을 사용한 모바일 push 알림 보내기</title>
+    <link href="http://localhost:4000/posts/firebase-fcm/" rel="alternate" type="text/html" title="[Spring boot&amp;amp;Kotlin] FCM을 사용한 모바일 push 알림 보내기" />
+    <published>2025-05-01T00:00:00+09:00</published>
+  
+    <updated>2025-05-10T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/firebase-fcm/</id>
+    <content src="http://localhost:4000/posts/firebase-fcm/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="외부API연동" />
+    
+  
+
+  <summary>발단
+
+진행중인 프로젝트의 프론트를 앱에도 출시하게되면서 쪽지함의 알람기능을 안드로이드 앱의 모바일 push 알람으로도 구현하려 알아보기시작했다.
+
+그러다가 발견한 것이 FCM이다
+FCM이란?
+Firebase Cloud Messaging의 줄임말으로 구글의 firebase 플랫폼에서 지원하는 메세징 서비스이다. 서버에서 안드로이드 앱으로 메세지를 안정적으로 전달할 수 있다
+
+백엔드 서버의 구현방법만 정리하였다
+
+
+
+구현
+
+
+  Firebase 프로젝트 생성
+ Firebase접속하여 프로젝트를 생성해준다
+ 
+ 
+ 생성에는 다소 시간이 걸리며 완료되면 다음 단계로 넘어간다
+  비공개 키 발급
+ 프로젝트 설정 -&amp;amp;gt; 서비스 계정에서 새 비공개 키 생성 버튼을 눌러 비공개키를 다운로드 받아준다
+ 
+ 
+  ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[Docker] docker compose를 사용한 로컬 개발환경 구축</title>
+    <link href="http://localhost:4000/posts/docker/" rel="alternate" type="text/html" title="[Docker] docker compose를 사용한 로컬 개발환경 구축" />
+    <published>2025-04-25T00:00:00+09:00</published>
+  
+    <updated>2025-04-25T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/docker/</id>
+    <content src="http://localhost:4000/posts/docker/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="Docker" />
+    
+  
+
+  <summary>발단
+그동안 여러 권의 도커 관련 책을 읽었지만 개념이 명확히 잡히지 않았다 그래서 현재 진행 중인 프로젝트에 docker-compose를 적용해 로컬 개발 환경을 구성하며 실습해보기로 했다.
+
+준비 과정에서 우연히 도커 위에 데이터베이스를 운영하지 않는 이유라는 글을 보게 되었고, 도커 상에서 데이터베이스를 운영할 경우 돌발 상황에서 안정성 문제/퍼포먼스 저하가 생길 수 있다는 내용을 접했다. (아직 완전히 이해한 것은 아니다.)
+
+이러한 이유로 EC2 운영 환경에는 적용하지 않고, 로컬 환경에만 docker-compose를 도입하고 ec2 운영환경의 도커 도입은 더 고민해보기로했다
+
+
+
+구현
+먼저 인텔리제이의 setting-plugins에서 docker 플러그인을 먼저 설치해준다
+
+MySQL 이미지...</summary>
+
+  </entry>
 
   
   <entry>
@@ -66,178 +150,85 @@
 
   
   <entry>
-    <title>[Spring] logback 으로 로그 남기기</title>
-    <link href="http://localhost:4000/posts/spring-boot-logback/" rel="alternate" type="text/html" title="[Spring] logback 으로 로그 남기기" />
-    <published>2025-02-25T00:00:00+09:00</published>
+    <title>[Jenkins 자동 빌드환경 구축 3] 운영서버 접근 - 자동 빌드 설정</title>
+    <link href="http://localhost:4000/posts/jenkins3/" rel="alternate" type="text/html" title="[Jenkins 자동 빌드환경 구축 3] 운영서버 접근 - 자동 빌드 설정" />
+    <published>2025-03-20T00:00:00+09:00</published>
   
-    <updated>2025-02-26T00:00:00+09:00</updated>
+    <updated>2025-04-18T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/spring-boot-logback/</id>
-    <content src="http://localhost:4000/posts/spring-boot-logback/" />
+    <id>http://localhost:4000/posts/jenkins3/</id>
+    <content src="http://localhost:4000/posts/jenkins3/" />
     <author>
       <name>jinny</name>
     </author>
 
   
     
-    <category term="Spring" />
+    <category term="Jenkins" />
     
   
 
-  <summary>개요
+  <summary>stage 3 - Deploy
+이까지 성공했다면 jar파일은 생성이 된것이다. 문제는 우리가 실제로 jar파일을 구동할 ec2서버로 jar파일을 보내주어야하는것(별생각없이 개설하다보니 백엔드 서버는 아마존 리눅스, 젠킨스서버는 우분투를 사용하고있어 사용자 이름이 좀 뒤죽박죽이다…구현에는 무리가없으니 일단 진행했다)
 
-Spring Boot 기본 로깅은 Logback 기반이다
-기본 설정을 커스터마이징하여 로그 파일 위치, 로그 롤링 정책, 에러 로그 분리 등을 관리할 수 있다. 
-프로젝트의 resources 폴더에 logback-spring.xml 파일을 생성해준다
+백엔드 서버 연결
+이제 젠킨스의 ec2에서 jar 파일 전달을 위해 백엔드 서버의 ec2로 접근이 가능하도록 권한을 열어주어야한다.
 
-
-
-logback-spring.xml
-
-최종 버전
-
-&amp;amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;amp;gt;  
-&amp;amp;lt;configuration scan=&amp;quot;true&amp;quot; scanPeriod=&amp;quot;60 seconds&amp;quot;&amp;amp;gt;  
-  
-    &amp;amp;lt;springProperty scope=&amp;quot;context&amp;quot; name=&amp;quot;LOG_LEVEL&amp;quot; source=&amp;quot;logging.level.root&amp;quot;/&amp;amp;gt;  
-  
-    &amp;amp;lt;property na...</summary>
+  젠킨스 서버에서 sudo docker exec -it jenkins bash 명령어로 젠킨스 컨테이너 안에 접속한다
+  ssh-keygen -t rsa -b 4096 명령어로 SSH 키를 먼저 생성해준다
+ 사진과 같이 뜬다면 성공한것이다
+ 
+  젠킨스 컨...</summary>
 
   </entry>
 
   
   <entry>
-    <title>[Google Vision API 연동] 이미지 분석 API 사용하기</title>
-    <link href="http://localhost:4000/posts/google-vision-api/" rel="alternate" type="text/html" title="[Google Vision API 연동] 이미지 분석 API 사용하기" />
-    <published>2024-11-02T00:00:00+09:00</published>
+    <title>[Jenkins 자동 빌드환경 구축 2] pipeline 작성</title>
+    <link href="http://localhost:4000/posts/jenkins2/" rel="alternate" type="text/html" title="[Jenkins 자동 빌드환경 구축 2] pipeline 작성" />
+    <published>2025-03-10T00:00:00+09:00</published>
   
-    <updated>2024-11-03T00:00:00+09:00</updated>
+    <updated>2025-03-10T00:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/google-vision-api/</id>
-    <content src="http://localhost:4000/posts/google-vision-api/" />
+    <id>http://localhost:4000/posts/jenkins2/</id>
+    <content src="http://localhost:4000/posts/jenkins2/" />
     <author>
       <name>jinny</name>
     </author>
 
   
     
-    <category term="외부API연동" />
+    <category term="Jenkins" />
     
   
 
-  <summary>발단
+  <summary>pipeline 생성
 
-친구들과 사용할 서비스를 구현 도중, 친구들이 원하는 요구사항을 듣다보니 
-메신저 캡처를 내가 구현한 서비스에서 자동 변환해주는 기능이 필요하다고 판단하였다
-
-메신저 캡처를 db로 변환하기 위해서 google cloud vsion api의 텍스트 인식 기능을 사용하기로 결정하였다
-Google Vision Ai
-
-https://cloud.google.com/vision?hl=ko
-
-구글에서 제공하는 머신러닝 기반 이미지 분석 AI로 이미지의 텍스트를 인식하고 텍스트의 위치정보도 응답받을 수 있는 open api이다
+create job을 누른다
 
 
 
-구현
-사전 설정
+이름은 적당히 지어준 후 pipeline을 선택한다
 
 
-  
-    구글 클라우드에 접속하여 새 프로젝트를 개설해준다
 
-    
- 
-  
-  
-    서비스 계정에서  Json 키를 발급받는다
-
-    
- 
- 
- 
-...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[REDIS] Spring boot - REDIS pub/sub 구현(서버 간 캐시 데이터 불일치 해결)</title>
-    <link href="http://localhost:4000/posts/REDIS_pub_sub/" rel="alternate" type="text/html" title="[REDIS] Spring boot - REDIS pub/sub 구현(서버 간 캐시 데이터 불일치 해결)" />
-    <published>2024-06-02T00:00:00+09:00</published>
-  
-    <updated>2024-06-15T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/REDIS_pub_sub/</id>
-    <content src="http://localhost:4000/posts/REDIS_pub_sub/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="Redis" />
-    
-  
-
-  <summary>발단
-
-  프로젝트 구조
-
-처음에는 단일서버로 개발을 시작하며 서버의 캐시 저장방식을 로컬 카페인 캐시로 결정해 개발을 진행중인 상태에서 
-성능을 위해 서버가 늘어나면서 문제가 발생했다
+그럼 이제 메인화면에 생성한 파이프라인이 뜨는데, 사용중인 프로젝트가 private라면 깃허브 토큰을 먼저 발급받아야한다. 나는 이미 ec2 백엔드 서버에서 사용하던 토큰이있었지만
+web hook 설정도 해줄것이라 repo_hook 설정도 추가로 체크해주었다
 
 
-api가 호출되어 캐싱해둔 데이터가 변경/삭제 가 일어났을 경우 1번 서버에서 요청을 처리했다면 
-기존 구조로는 2번 서버에서 캐시를 업데이트 할 수 없는 상황이었다
 
-서버간의 캐시 동기화를 위해 2가지 개선안이 나온 상태였다(redis 개설/설정은 이미 되어있는 상황)
-
-  redis를 사용하여 글로벌 캐시로 구조 변경
-  redis pub/sub을 이용하여 캐시 업데이트 신호 송/수신
+이렇게 발급받은 토큰을 
+젠킨스 관리 -&amp;amp;gt; credentials 로 접속한 후 등록해준다
+처음에는 이렇게뜰건데, Add Credentials를 클릭하면 등록할 수 있다
 
 
-이미 프로젝트 막바지라서 캐시구조를 글로벌캐시로 변경하는데 리소스가 많이 든다고 판단이되어 2번으로 결정이되었고 내가 pub/...</summary>
 
-  </entry>
 
-  
-  <entry>
-    <title>[사이드프로젝트 aws배포] DNS발급/연결 &amp; HTTPS 설정</title>
-    <link href="http://localhost:4000/posts/domain_https/" rel="alternate" type="text/html" title="[사이드프로젝트 aws배포] DNS발급/연결 &amp;amp; HTTPS 설정" />
-    <published>2024-04-20T00:00:00+09:00</published>
-  
-    <updated>2024-04-20T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/domain_https/</id>
-    <content src="http://localhost:4000/posts/domain_https/" />
-    <author>
-      <name>jinny</name>
-    </author>
+  Username: 깃허브 닉네임
+  Password: 토큰
 
-  
-    
-    <category term="AWS" />
-    
-  
 
-  <summary>도메인 발급
-
-사이드 프로젝트의 비용절감을 위해 무료로 도메인을 발급받을 수 있는 내도메인한국에서 도메인을 발급받음
-
-등록하기로 뜨는 test-domain.kro.kr 이 등록가능한 도메인임
-
-등록하기를 누르면 보안코드를 입력하고 도메인 관리에 선택한 도메인이 들어온걸 확인가능함
-
-EC2의 퍼플릭 IP를 이미 발급받은 상태이기때문에 
-
-IP연결에 예시로 로컬IP가 적힌 쪽에 퍼블릭 IP를 입력하고 저장해줌.
-
-이까지만해줘도 도메인으로 접속하면 api호출이 가능하나 http로 접속이된다는 문제가있음
-aws 사용 (최종 사용하지 않았음)
-인증서 발급
-
-AWS Certificate Manager에서 인증서 먼저 발급(단 클라우드 프론트(CDN)는 https를 적용하려면 미국 동부 버지니아북부에서 발급받아야...</summary>
+필요할까봐 Credentials에 같은 방법으로 환경변수들을 미리 설정해주었으나 최종...</summary>
 
   </entry>
 

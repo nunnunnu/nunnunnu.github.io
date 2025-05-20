@@ -1,5 +1,5 @@
 ---
-title: "[Spring] logback 으로 로그 남기기"
+title: "[Spring boot] logback으로 로그 남기기"
 last_modified_at: 2025-02-26
 tags:
   - spring

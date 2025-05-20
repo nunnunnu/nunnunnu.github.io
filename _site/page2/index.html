@@ -267,7 +267,7 @@
 
             <span>카테고리</span>
             
-              <span>(162)</span>
+              <span>(171)</span>
             
           </a>
         </li>
@@ -553,6 +553,586 @@
 <div id="post-list" class="flex-grow-1 px-xl-1">
   
     <article class="card-wrapper card">
+      <a href="/posts/event-listener/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[Spring boot&Kotlin] Spring Event Listener로 이메일 전송 비동처리하기</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>발단
+
+회원가입 이메일 인증을 기능을 구현한 후 테스트를 해보았을때 api 응답속도가 3초정도 딜레이가 되는것을 확인했다.
+
+고민 결과 다음과같은 결론을 도출했다
+
+  애초에 회원 도메인에서 이메일 전송 업무를 전담하는것은 회원 도메인에 과도한 책임 부여
+  메일 도메인과 회원 도메인간의 강한 결합도, 회원 도메인의 낮은 응집도를 가지고있음
+  이메일...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1729868400"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/10/26
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Spring
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/quartz/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[Spring boot&kotlin] Quartz를 이용한 스케줄러 구현</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>발단
+프로젝트 진행 도중 정확한 시간에 스케줄러를 돌려야하는 일이 발생했다
+각 Entity별로 예약된 스케줄이 있고, 정확히 그 시간에 로직을 실행해야했기때문에 고정된 시간에만 작동하고 각 Entity 별 실행 시간을 지정할 수 없는 스프링 스케줄러를 사용할 수 없는 상황이었다
+
+그렇기에 quartz 스케줄러를 사용하여 문제를 해결하게 되었다
+Quar...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1729436400"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/10/21
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Spring
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/REDIS_pub_sub/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[REDIS] Spring boot - REDIS pub/sub 구현(서버 간 캐시 데이터 불일치 해결)</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>발단
+
+  프로젝트 구조
+
+처음에는 단일서버로 개발을 시작하며 서버의 캐시 저장방식을 로컬 카페인 캐시로 결정해 개발을 진행중인 상태에서 
+성능을 위해 서버가 늘어나면서 문제가 발생했다
+
+
+api가 호출되어 캐싱해둔 데이터가 변경/삭제 가 일어났을 경우 1번 서버에서 요청을 처리했다면 
+기존 구조로는 2번 서버에서 캐시를 업데이트 할 수 없는 상황이었...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1717254000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/06/02
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Redis
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/domain_https/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[사이드프로젝트 aws배포] DNS발급/연결 & HTTPS 설정</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>도메인 발급
+
+사이드 프로젝트의 비용절감을 위해 무료로 도메인을 발급받을 수 있는 내도메인한국에서 도메인을 발급받음
+
+등록하기로 뜨는 test-domain.kro.kr 이 등록가능한 도메인임
+
+등록하기를 누르면 보안코드를 입력하고 도메인 관리에 선택한 도메인이 들어온걸 확인가능함
+
+EC2의 퍼플릭 IP를 이미 발급받은 상태이기때문에 
+
+IP연결에 예시...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1713538800"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/04/20
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      AWS
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EA%B5%AC%EA%B8%80%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C-%EC%84%A4%EA%B3%84/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 15장 구글드라이브 설계</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>책정보
+
+
+필요한 api는 단순업로드/이어올리기(네트워크중단가능성높음)/다운로드/갱신 임
+
+
+  블록저장소 서버 : 파일블록을 클라우드 저장소에 저장하는 서버. 파일을 여러 블록으로 나누고 각 블록에 고유 해시값이 할당됨.
+    
+      최적화 방법
+        
+          델타 동기화 : 파일 수정시 전체파일이아닌 수정된 블록만 동기화...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711724400"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/30
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      프로그래밍 방법
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EA%B2%80%EC%83%89%EC%96%B4-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EC%9C%A0%ED%88%AC%EB%B8%8C%EC%84%A4%EA%B3%84/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 13장 검색어 자동완성 시스템&유투브 설계</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>책정보
+
+
+검색어 자동완성
+
+  기능
+    
+      속도
+      연관성
+      정렬(인기순)
+      규모확장성
+      고가용성
+쿼리와 사용빈도를 저장하는 빈도테이블 생성하여 사용자가 입력한 검색어에 like문을 사용하여 빈도순으로 리턴하면되나 데이터가많아지면 병목가능성이있음
+        트라이 자료 구조
+        문자열을 간...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711724400"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/30
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      프로그래밍 방법
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EC%95%8C%EB%A6%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EB%89%B4%EC%8A%A4-%ED%94%BC%EB%93%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C&%EC%B1%84%ED%8C%85-%EC%8B%9C%EC%8A%A4%ED%85%9C/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 10장 알림 시스템 & 뉴스 피드 시스템 & 채팅 시스템</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>책정보
+
+
+알림 시스템 설계
+
+
+  iOS 푸시알람
+    
+      알림 제공자 : 알림요청을 만들어 애플 푸시알림서비스로 보내는 주체
+        
+          단말토큰 : 알림 요청을 보내는 데 필요한 고유 식별자
+          페이로드 : 알림내용을 담은 JSON딕셔너리
+          APNS: 애플이 제공하는 원격 서비스. 푸...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711638000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/29
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      프로그래밍 방법
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%9F%AC-%EC%84%A4%EA%B3%84/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 9장 웹 크롤러 설계</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>책정보
+
+
+  웹크롤러(로봇, 스파이더라고도 불림) 이용 방법
+    
+      검색 엔진 인덱싱(search engine indexing) : 크롤러의 가장 보편적인 용례로 웹 페이지를 모아 검색 엔진을 위한 로컬 인덱스를 만든다. googlebot은 구글검색엔진이 사용하는 웹 크롤러임
+      웹 아카이빙(web archiving) : 나중에 ...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711551600"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/28
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      프로그래밍 방법
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EB%B6%84%EC%82%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%9C%A0%EC%9D%BC-ID-%EC%83%9D%EC%84%B1%EA%B8%B0-%EC%84%A4%EA%B3%84/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 7장 분산 시스템을 위한 유일 ID 생성기 설계</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>책정보
+
+
+
+  [!NOTE]
+
+  auto_increment 속성이 설정된 관계형데이터베이스의 기본키를 쓰면 되지않나? -&amp;gt; 데이터베이스 서버 여러대일때는 불가능함
+
+
+선택지로는 다중마스터 복제, UUID, 티켓 서버, 트위터 스노플레이크 접근법 등이 있음
+다중 마스터 복제(multi-master replication)
+DB의 auto_incr...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1711551600"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/03/28
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      프로그래밍 방법
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
       <a href="/posts/URL-%EB%8B%A8%EC%B6%95%EA%B8%B0-%EC%84%A4%EA%B3%84/" class="post-preview row g-0 flex-md-row-reverse">
         
 
@@ -603,601 +1183,6 @@ https://www.webservice.com/q-chatsystem&amp;amp;c-loggedin&amp;amp;v=v3&amp;amp;
                   <span class="categories">
                     
                       프로그래밍 방법
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%ED%82%A4_%EA%B0%92-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%84%A4%EA%B3%84/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 6장 키-값 저장소 설계</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>책정보
-
-
-키-값 데이터베이스라고도 불리는 비 관계형 데이터베이스. 성능상의 이유로 키는 짧을 수록 좋음
-값 저장소 중 유명한 것으로는 아마존 다이나모, memcached, redis 등이 있음
-
-서버가 한대 일 경우 구현은 간단함. 그러나 모든 데이터를 메모리안에 두는 것이 불가능할수도 있다는 약점을 가짐 -&amp;gt; 데이터 압축 or 자주쓰는 데이터...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1711465200"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/27
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      프로그래밍 방법
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%B2%98%EB%A6%AC%EC%9C%A8-%EC%A0%9C%ED%95%9C-%EC%9E%A5%EC%B9%98%EC%9D%98-%EC%84%A4%EA%B3%84/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 4장 처리율 제한 장치의 설계</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>책정보
-
-처리율 제한 장치
-클라이언트나 서비스가 보내는 트래픽의 처리율을 제어하기위한장치. HTTP를 예로들면 특정 기간 내 전송되는 클라이언트의 요청횟수를 제한함. api의 요청횟수가 임계치를 넘어서면 추가로 도달한 모든 호출은 block됨
-
-  토큰 버킷
-    
-      지정된 용량을 갖는 컨테이너. 이 버킷에 사전 설정된 양의 토큰이 주기적으...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1711465200"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/27
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      프로그래밍 방법
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%95%88%EC%A0%95-%ED%95%B4%EC%8B%9C-%EC%84%A4%EA%B3%84/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 5장 안정 해시 설계</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>책정보
-
-
-해시 키 재배치 문제
-N개의 캐시서버가 있다고 가정, 이 서버들의 부하를 나누려면
-serverindex = hash(key)%N(N이 서버의 개수)
-위 계산공식으로
-
-
-  
-    
-      키
-      해시
-      해시%4(서버인덱스)[실제값아님!귀찮아서 대충함]
-    
-  
-  
-    
-      key0
-      13414...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1711465200"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/27
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      프로그래밍 방법
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%88%98%EC%97%90-%EB%94%B0%EB%A5%B8-%EA%B7%9C%EB%AA%A8-%ED%99%95%EC%9E%A5%EC%84%B1/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 1장 사용자 수에 따른 규모 확장성</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>책정보
-
-웹 계층과 데이터 계층
-
-웹 서버와 데이터베이스의 서버가 각각 1개씩인 구조
-여기서 서버를 확장(스케일업)한다는 것은 수직적 규모 확장, 수평적 규모 확장 2가지로 나뉜다
-
-  수직적 규모 확장(vertical scaling) : 고사향자원을 추가하는 행위
-    
-      한계가 있음. 한대의 서버에 CPU나 메모리를 무한대로 증설할 수는...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1710601200"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/17
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      프로그래밍 방법
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%ED%94%84%EB%A1%9D%EC%8B%9C%EA%B8%B0%EC%88%A0%EA%B3%BC%ED%95%9C%EA%B3%84/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 핵심원리 - 고급] 프록시 기술과 한계</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>JDK 동적 프록시의 한계
-
-
-  
-    타입캐스팅
-
-    인터페이스 기반으로 프록시를 생성하기때문에 구체클래스로 타입캐스팅이 불가능하다는 한계가 있음
-
-      package hello.aop.proxys;
-    
-  import org.junit.jupiter.api.Assertions;
-  import org.junit.jupiter.ap...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1709305200"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/02
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Spring
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/spring_aws_tdd/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 2장 스프링 부트에서 테스트 코드를 작성하자</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>레드 그린 사이클
-
-    
-      항상 실패하는 테스트를 먼저 작성(red)
-      테스트가 통과하하는 프로덕션 코드를 작성(green)
-      테스트가 통과하면 프로덕션 코드를 리팩토링(Refactor)
-    
-  
-  테스트 코드 작성 이유
-    
-      단위 테스트는 개발단계 초기에 문서를 발견하게 도와줌
-      단위 테스...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1709305200"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/02
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Spring
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/spring_aws_ec2_2/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 8장 EC2 서버에 프로젝트를 배포해 보자</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>sudo yum install git 으로 git 먼저 설치
-
-mkdir ~/app &amp;amp;&amp;amp; mkdir ~/app/step1 → cd ~/app/step1 먼저 git clone 할 경로 먼저 만들어주고 git clone
-
-./gradlew test로 빌드되는지 확인	
-=&amp;gt; 빌드 중 멈춤 현상 발생하여 스왑 메모리 설정으로 해결하였다....</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1709305200"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/02
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      AWS
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/spring-aws_ec2/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 6장 AWS 서버 환경을 만들어보자 - AWS EC2</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>인스턴스 시작
-
-인스턴스 세부정보는 기업에서 사용할 경우에는 세세하게 다루지만 혼자 1대의 서버를 다룰때는 굳이 설정하지않아도됨. 자세한건 다른 AWS책에서 찾아볼것.
-
-다른유형을 선택하면 비용청구됨
-
-
-다른유형을 선택하면 비용청구됨
-
-
-
-프리티어유형인 t2.micro를 선택
-t2는 요금제, micro는 사양을 의미
-t2외에 t3도 있는데 이들을 T시...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1709305200"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/02
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      AWS
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/spring-aws-rds/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[스프링 부트와 AWS로 혼자 구현하는 웹 서비스] 7장 AWS에 데이터베이스 환경을 만들어보자 - AWS RDS</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>설정
-mariaDB를 사용할것임
-
-
-
-
-
-
-
-
-
-
-
-
-
-위 설정으로 생성하면되는데
-
-검색해보니 DB인스턴스 클래스는 프리티어를 선택했기때문에 버스터블 클래스(t클래스포함) 만 선택가능하다고한다
-추가로 책에는 설명이없지만 과금방지를 위해 유지 관리의 마이너버전 자동업그레이드 사용도 해제해주었다
-설정한다면 마이너 버전이 자동으로 업그레이드되며 DB는 약 ...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1709305200"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/03/02
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      AWS
                   </span>
                 
               </div>
@@ -1470,12 +1455,25 @@ mariaDB를 사용할것임
       
 
       
+        <!-- hide number -->
+        
+      
+    
+      
+      
+      
+      
+      
+
+      
+
+      
         <!-- show number -->
         <li class="page-item ">
           <a
             class="page-link"
-            href="/page17"
-          >17</a>
+            href="/page18"
+          >18</a>
         </li>
       
     
@@ -1483,7 +1481,7 @@ mariaDB를 사용할것임
     <!-- mobile pagination -->
     <li class="page-index align-middle">
       <span>2</span>
-      <span class="text-muted">/ 17</span>
+      <span class="text-muted">/ 18</span>
     </li>
 
     <!-- right arrow -->
@@ -1530,35 +1528,35 @@ mariaDB를 사용할것임
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/firebase-fcm/">[Spring boot&Kotlin] FCM을 사용한 모바일 push 알림 보내기</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/docker/">[Docker] docker compose를 사용한 로컬 개발환경 구축</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Jenkins/">[Jenkins 자동 빌드환경 구축 1] EC2 Jenkins 환경 구축</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/jenkins3/">[Jenkins 자동 빌드환경 구축 3] 운영서버 접근 - 자동 빌드 설정</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/spring-Caffeine-Cache/">[Spring boot&Kotlin] CaffeinCahe 사용해보기</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/spring-boot-logback/">[Spring] logback 으로 로그 남기기</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/google-vision-api/">[Google Vision API 연동] 이미지 분석 API 사용하기</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/REDIS_pub_sub/">[REDIS] Spring boot - REDIS pub/sub 구현(서버 간 캐시 데이터 불일치 해결)</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/domain_https/">[사이드프로젝트 aws배포] DNS발급/연결 & HTTPS 설정</a>
         </li>
       
     </ul>
@@ -1732,114 +1730,6 @@ mariaDB를 사용할것임
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1989,131 +1879,10 @@ mariaDB를 사용할것임
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -2343,10 +2112,6 @@ mariaDB를 사용할것임
     
     
     
-      
-        
-        
-
   
     
     
@@ -2411,58 +2176,6 @@ mariaDB를 사용할것임
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2823,6 +2536,352 @@ mariaDB를 사용할것임
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3067,6 +3126,155 @@ mariaDB를 사용할것임
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -3161,10 +3369,230 @@ mariaDB를 사용할것임
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3507,10 +3935,10 @@ mariaDB를 사용할것임
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B5%AD%EB%B9%84%EA%B5%90%EC%9C%A1/">국비교육</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
@@ -3727,114 +4155,6 @@ mariaDB를 사용할것임
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3984,131 +4304,10 @@ mariaDB를 사용할것임
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -4338,10 +4537,6 @@ mariaDB를 사용할것임
     
     
     
-      
-        
-        
-
   
     
     
@@ -4406,58 +4601,6 @@ mariaDB를 사용할것임
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -4818,6 +4961,352 @@ mariaDB를 사용할것임
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5062,6 +5551,155 @@ mariaDB를 사용할것임
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5156,10 +5794,230 @@ mariaDB를 사용할것임
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5502,10 +6360,10 @@ mariaDB를 사용할것임
         <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B5%AD%EB%B9%84%EA%B5%90%EC%9C%A1/">국비교육</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/kotlin/">kotlin</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/%EA%B9%80%EC%98%81%ED%95%9C%EC%8A%A4%ED%94%84%EB%A7%81%ED%95%B5%EC%8B%AC%EC%9B%90%EB%A6%AC-%EA%B3%A0%EA%B8%89/">김영한스프링핵심원리-고급</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/">연습문제</a>
