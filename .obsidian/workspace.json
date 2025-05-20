@@ -107,12 +107,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/book/cs/알고리즘.md",
+                "file": "_posts/blog/book/cs/2025-01-24-자료구조.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "알고리즘"
+              "title": "2025-01-24-자료구조"
             }
           },
           {
@@ -168,7 +168,7 @@
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 8
       },
       {
         "id": "a55d8f611eeacc9d",
@@ -178,14 +178,12 @@
             "id": "293641627233fbb6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "_posts/blog/book/cs/2025-01-20-네트워크2.md",
-                "mode": "source",
-                "source": false
+                "file": "assets/images/Pasted Image 20250514115058_047.png"
               },
-              "icon": "lucide-file",
-              "title": "2025-01-20-네트워크2"
+              "icon": "lucide-image",
+              "title": "Pasted Image 20250514115058_047"
             }
           },
           {
@@ -405,43 +403,46 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "293641627233fbb6",
+  "active": "53971938a62adc4b",
   "lastOpenFiles": [
-    "_posts/blog/book/cs/2025-01-16-네트워크1.md",
+    "_site/tags/자료구조/index.html",
+    "_site/tags/자료구조",
+    "_site/posts/자료구조/index.html",
+    "_site/posts/자료구조",
+    "_site/assets/images/cs/IMG-20250520213852.png",
+    "_site/assets/images/cs/IMG-20250520213852-4.png",
+    "_site/assets/images/cs/IMG-20250520213852-3.png",
+    "_site/assets/images/cs/IMG-20250520213852-2.png",
+    "_site/assets/images/cs/IMG-20250520213852-1.png",
+    "_posts/blog/book/cs/2025-01-23-알고리즘.md",
+    "_site/posts/알고리즘/index.html",
+    "_site/posts/알고리즘",
+    "_site/assets/images/cs/IMG-20250520213516.png",
+    "_site/assets/images/cs/IMG-20250520213516-2.png",
+    "_site/assets/images/cs/IMG-20250520213516-1.png",
+    "_site/assets/images/Pasted image 20250520213454.png",
+    "assets/images/cs/IMG-20250520213516-2.png",
+    "assets/images/java/2025-05-11_19.01.52.md",
+    "_posts/blog/book/cs/2025-01-24-자료구조.md",
+    "_posts/blog/book/cs/2025-01-22-데이터베이스.md",
+    "_site/tags/nosql/index.html",
+    "_site/tags/nosql",
+    "_site/tags/os-데이터베이스/index.html",
+    "_site/tags/os-데이터베이스",
+    "_site/posts/데이터베이스/index.html",
+    "_site/Pasted image 20250514103740.png.md",
+    "Pasted image 20250514103740.png.md",
     "_posts/blog/book/cs/2025-01-20-네트워크2.md",
+    "_posts/blog/book/cs/2025-01-16-네트워크1.md",
     "_posts/blog/book/cs/2025-01-12-운영체제.md",
     "_posts/blog/book/cs/2025-01-13-운영체제2.md",
-    "_site/tags/네트워크/index.html",
-    "_site/tags/네트워크",
-    "_site/posts/네트워크2/index.html",
-    "_site/posts/네트워크2",
-    "_site/posts/네트워크1/index.html",
-    "_site/posts/네트워크1",
-    "_site/assets/images/cs/IMG-20250520211223.png",
-    "_site/assets/images/cs/IMG-20250520211222.png",
-    "_site/assets/images/cs/IMG-20250520211222-3.png",
-    "_site/assets/images/cs/IMG-20250520211222-2.png",
-    "_site/assets/images/cs/IMG-20250520211222-1.png",
-    "_site/assets/images/cs/IMG-20250520211221-3.png",
-    "_site/assets/images/cs/IMG-20250520211221-2.png",
-    "_site/assets/images/cs/IMG-20250520211221-1.png",
-    "_site/assets/images/cs/IMG-20250520211221.png",
-    "assets/images/잼얘/IMG-20250504151116.png",
-    "assets/images/java/2025-05-11_19.01.52.md",
     "assets/images/java/2025-05-10_13.36.11.md",
     "assets/images/cs/Pasted.md",
     "_site/assets/images/cs/Pasted.md",
-    "_posts/blog/book/cs/알고리즘.md",
     "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
-    "_site/posts/spring_aws_ec2_2/index.html",
-    "_site/posts/spring_aws_ec2_2",
-    "_site/posts/2024-03-02-spring_aws_ec2_2/index.html",
-    "_site/posts/2024-03-02-spring_aws_ec2_2",
     "_site/IMG-20250520205327.png.md",
-    "_posts/blog/book/cs/자료구조.md",
     "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
     "IMG-20250520205327.png.md",
-    "_posts/blog/book/cs/데이터베이스.md",
     "_posts/코딩/개발 학습/관련도서/개발자를 위한 기술면접 노트/개발자를 위한 기술 면접 노트 - 코딩테스트.md",
     "_posts/코딩/개발 학습/관련도서/개발자를 위한 기술면접 노트/개발자를 위한 코딩테스트 - 기술면접.md",
     "_posts/blog/book/2023-12-03-자바성능튜닝이야기.md",
@@ -449,8 +450,6 @@
     "_posts/blog/book/2023-11-12DDD START! 도메인 주도 설계 구현과 핵심 개념 익히기.md",
     "_posts/blog/http/2025-04-20-무중단배포.md",
     "_posts/blog/aws/2024-03-02-swap메모리.md",
-    "_posts/blog/aws/2024-04-20-domain_https.md",
-    "_posts/blog/jenkins/2025-03-05-Jenkins.md",
-    "_posts/blog/jenkins/2025-03-20-jenkins3.md"
+    "_posts/blog/aws/2024-04-20-domain_https.md"
   ]
 }
