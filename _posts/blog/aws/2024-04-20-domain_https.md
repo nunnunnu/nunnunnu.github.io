@@ -6,7 +6,7 @@ tags:
   - https
   - 배포
   - 책요약
-last_modified_at: 2024-04-20
+last_modified_at: 2025-03-20
 ---
 ## 도메인 발급
 
@@ -185,7 +185,7 @@ getMapping으로 /가 path인 api를 생성하니 성공함!
 			ssl_certificate /etc/letsencrypt/live/{도메인 URL}/fullchain.pem; 
 			ssl_certificate_key /etc/letsencrypt/live/{도메인 URL}/privkey.pem; 
 			ssl_protocols TLSv1 TLSv1.1 TLSv1.2; 
-			ssl_prefer_server_ciphers on; ssl_ciphers ECDH+AESGCM:ECDH+AES256:ECDH+AES128:DH+3DES:!ADH:!AECDH:!MD5; 
+			ssl_prefer_server_ciphers on; ssl_ciphers ECDH+!MD5; 
 			
 			add_header Strict-Transport-Security "max-age=31536000" always; 
 			ssl_session_cache shared:SSL:10m;
