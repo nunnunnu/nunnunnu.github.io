@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2025-05-20T15:52:17+09:00</updated>
+  <updated>2025-05-20T16:07:01+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -61,6 +61,47 @@
 
 서버가 구동할때 미리 캐시를 로드해두는 방식도 있지만, 
 프로젝트가 그정도로 크지는 않고 하루에 접...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>[Spring] logback 으로 로그 남기기</title>
+    <link href="http://localhost:4000/posts/spring-boot-logback/" rel="alternate" type="text/html" title="[Spring] logback 으로 로그 남기기" />
+    <published>2025-02-25T00:00:00+09:00</published>
+  
+    <updated>2025-02-26T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/spring-boot-logback/</id>
+    <content src="http://localhost:4000/posts/spring-boot-logback/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="Spring" />
+    
+  
+
+  <summary>개요
+
+Spring Boot 기본 로깅은 Logback 기반이다
+기본 설정을 커스터마이징하여 로그 파일 위치, 로그 롤링 정책, 에러 로그 분리 등을 관리할 수 있다. 
+프로젝트의 resources 폴더에 logback-spring.xml 파일을 생성해준다
+
+
+
+logback-spring.xml
+
+최종 버전
+
+&amp;amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;amp;gt;  
+&amp;amp;lt;configuration scan=&amp;quot;true&amp;quot; scanPeriod=&amp;quot;60 seconds&amp;quot;&amp;amp;gt;  
+  
+    &amp;amp;lt;springProperty scope=&amp;quot;context&amp;quot; name=&amp;quot;LOG_LEVEL&amp;quot; source=&amp;quot;logging.level.root&amp;quot;/&amp;amp;gt;  
+  
+    &amp;amp;lt;property na...</summary>
 
   </entry>
 
@@ -197,51 +238,6 @@ aws 사용 (최종 사용하지 않았음)
 인증서 발급
 
 AWS Certificate Manager에서 인증서 먼저 발급(단 클라우드 프론트(CDN)는 https를 적용하려면 미국 동부 버지니아북부에서 발급받아야...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 15장 구글드라이브 설계</title>
-    <link href="http://localhost:4000/posts/%EA%B5%AC%EA%B8%80%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C-%EC%84%A4%EA%B3%84/" rel="alternate" type="text/html" title="[가상 면접 사례로 배우는 대규모 시스템 설계 기초] 15장 구글드라이브 설계" />
-    <published>2024-03-30T00:00:00+09:00</published>
-  
-    <updated>2024-03-30T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/%EA%B5%AC%EA%B8%80%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C-%EC%84%A4%EA%B3%84/</id>
-    <content src="http://localhost:4000/posts/%EA%B5%AC%EA%B8%80%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C-%EC%84%A4%EA%B3%84/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="프로그래밍 방법" />
-    
-  
-
-  <summary>책정보
-
-
-필요한 api는 단순업로드/이어올리기(네트워크중단가능성높음)/다운로드/갱신 임
-
-
-  블록저장소 서버 : 파일블록을 클라우드 저장소에 저장하는 서버. 파일을 여러 블록으로 나누고 각 블록에 고유 해시값이 할당됨.
-    
-      최적화 방법
-        
-          델타 동기화 : 파일 수정시 전체파일이아닌 수정된 블록만 동기화
-          압축 : 블룩단위로 압축해두면 데이터크기를 줄일 수 있음
-        
-      
-    
-  
-
-
-flowchart TD
-파일--&amp;amp;gt;블록1--&amp;amp;gt;압축1--&amp;amp;gt;암호화1--&amp;amp;gt;클라우드저장소;
-파일--&amp;amp;gt;블록2--&amp;amp;gt;압축2--&amp;amp;gt;암호화2--&amp;amp;gt;클라우드저장소;
-파일--&amp;amp;gt;블록3--&amp;amp;gt;압축3--&amp;amp;gt;암호...</summary>
 
   </entry>
 

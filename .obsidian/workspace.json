@@ -133,12 +133,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/api/2024-11-02-google-vision-api.md",
+                "file": "_posts/blog/spring/2025-02-25-spring-boot-logback.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-11-02-google-vision-api"
+              "title": "2025-02-25-spring-boot-logback"
             }
           },
           {
@@ -427,8 +427,19 @@
   },
   "active": "a503319ce4c022ca",
   "lastOpenFiles": [
-    "_posts/blog/spring/2025-04-13-spring-Caffeine-Cache.md",
+    "_site/posts/spring-boot-logback/index.html",
+    "_site/posts/spring-boot-logback",
+    "_site/assets/images/spring/IMG-20250520155657.png",
+    "_site/assets/images/spring/IMG-20250520155657-3.png",
+    "_site/assets/images/spring/IMG-20250520155657-2.png",
+    "_site/assets/images/spring/IMG-20250520155657-1.png",
+    "_site/tags/logback/index.html",
+    "_site/tags/logback",
+    "_site/tags/log/index.html",
+    "_site/tags/log",
+    "_posts/코딩/프로젝트/잼얘/작업일지/무중단배포.md",
     "_posts/blog/api/2024-11-02-google-vision-api.md",
+    "_posts/blog/spring/2025-04-13-spring-Caffeine-Cache.md",
     "assets/images/api/IMG-20250520152837-1.png",
     "assets/images/api/IMG-20250520152837.png",
     "assets/images/api/IMG-20250520152836-1.png",
@@ -436,19 +447,10 @@
     "assets/images/api/IMG-20250520152836.png.sb-679f6bed-ykaKe4",
     "assets/images/api/IMG-20250520152835-5.png",
     "assets/images/api/IMG-20250520152835-4.png",
-    "assets/images/api/IMG-20250520152835-3.png",
-    "assets/images/api/IMG-20250520152835.png",
-    "assets/images/api/IMG-20250520152834.png",
     "_site/posts/google-vision-api/index.html",
     "_site/posts/google-vision-api",
-    "_site/assets/images/api/IMG-20250520152837.png",
     "_site/assets/images/api",
     "_site/page17/index.html",
-    "_site/page17",
-    "_site/categories/외부api연동/index.html",
-    "_site/categories/외부api연동",
-    "_site/tags/google/index.html",
-    "_site/tags/google",
     "_posts/코딩/프로젝트/잼얘/작업일지/무제.md",
     "_posts/blog/book/대규모/2024-03-17-사용자 수에 따른 규모 확장성.md",
     "_posts/코딩/개발 학습/관련도서/개발자를 위한 기술면접 노트/개발자를 위한 코딩테스트 - 기술면접.md",
@@ -466,11 +468,10 @@
     "_posts/코딩/프로젝트/잼얘/작업일지/docker.md",
     "_posts/다이어리/일기/2025/5월/2025-05-18.md",
     "_posts/코딩/개발 학습/관련도서/기술면접 대비 CS전공 핵심 요약집/알고리즘.md",
-    "_posts/코딩/프로젝트/잼얘/작업일지/무중단배포.md",
     "_posts/다이어리/일기/2025/5월/2025-05-17.md",
     "_posts/다이어리/일기/2025/5월/2025-05-16.md",
     "_posts/코딩/프로젝트/잼얘/작업일지/Jenkins1.md",
-    "_posts/코딩/프로젝트/잼얘/작업일지/Spring boot Logback 설정 가이드.md",
+    "_posts/blog/spring/2025-02-25-spring-boot-logback.md",
     "_posts/코딩/프로젝트/잼얘/작업일지/all-open.md"
   ]
 }
