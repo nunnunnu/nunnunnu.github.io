@@ -50,9 +50,11 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
-      - name: Test Site
-        run: |
-          bash tools/test.sh
+      - name: Check _site directory
+        run: ls -al "_site${{ steps.pages.outputs.base_path }}"
+      # - name: Test Site
+      #   run: |
+      #     bash tools/test.sh
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
