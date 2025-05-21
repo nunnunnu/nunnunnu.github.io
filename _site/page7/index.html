@@ -267,7 +267,7 @@
 
             <span>카테고리</span>
             
-              <span>(188)</span>
+              <span>(190)</span>
             
           </a>
         </li>
@@ -551,6 +551,132 @@
 
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_templateMethod/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 핵심원리 - 고급] 디자인 패턴 - templateMethod</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>그전 강의 챕터에서 비지니스로직을 구현할때마다 로그를 찍을때
+
+@GetMapping(&quot;/v2/request&quot;)
+	public String request(String itemId) {
+		TraceStatus status = null;
+		try {
+			 status = trace.begin(&quot;OrderController.requset()&quot;);
+			...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704034800"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/01/01
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Spring
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4_strategy/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[김영한 스프링 핵심원리 - 고급] 디자인 패턴 - strategy</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>템플릿 메소드 패턴의 상속의 단점을 해결할 수 있는 전략패턴
+
+package com.hello.high.trace.strategy.code;
+
+import com.hello.high.trace.strategy.code.strategy.Strategy;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class ...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704034800"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/01/01
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Spring
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
   
     <article class="card-wrapper card">
       <a href="/posts/ThreadLocal/" class="post-preview row g-0 flex-md-row-reverse">
@@ -1033,134 +1159,6 @@ runtimeOnly(&quot;org.jetbrains.kotli...</p>
 val strings = arrayOf(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;)
   println(strings.size) //4
   v...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1698418800"
-  data-df="YYYY/MM/DD"
-  
->
-  2023/10/28
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Kotlin
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%98%81%EC%97%AD%ED%95%A8%EC%88%98/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[코틀린 쿡북] 7장 - 영역함수</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>apply로 객체 생성 후 초기화
-
-apply : 람다 내부에서 수신 객체의 함수를 사용하지 않고 수신 객체 자신을 다시 반환
-db가 기본키를 생성할때 제공 객체가 새로운 키로 갱신되어야함 → apply를 이용하면 편함
-이미 인스턴스화됨 객체의 추가설정을 위해 주로 사용
-
-부수효과를 위한 also 사용
-
-val boox = Book(&quot;?&quot;)
-  .al...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1698418800"
-  data-df="YYYY/MM/DD"
-  
->
-  2023/10/28
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Kotlin
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EC%8B%9C%ED%80%80%EC%8A%A4/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[코틀린 쿡북] 6장 - 시퀀스</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>지연 시퀀스
-
-// ----1번----
-//    val first = (100 until 200).map { it * 2 }
-//        .filter { it % 3 == 0 }
-//        .first() //아래가 나음
-
-// ----2번----
-//    val first = (100 until 200).map { it * 2 }
-...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
