@@ -83,36 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/코딩/프로젝트/잼얘/잼얘 readme.md",
+                "file": "_posts/blog/book/note/2024-10-10-기술면접.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "잼얘 readme"
-            }
-          },
-          {
-            "id": "92236994c35c6e51",
-            "type": "leaf",
-            "state": {
-              "type": "planner-weekly",
-              "state": {},
-              "icon": "table-2",
-              "title": "5월, 20–5월, 22"
-            }
-          },
-          {
-            "id": "53971938a62adc4b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/blog/book/cs/2025-01-24-자료구조.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2025-01-24-자료구조"
+              "title": "2024-10-10-기술면접"
             }
           },
           {
@@ -152,53 +128,9 @@
               "icon": "lucide-file",
               "title": "무중단배포"
             }
-          },
-          {
-            "id": "f451389534a5ef4c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/코딩/프로젝트/잼얘/작업일지/무중단배포.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "무중단배포"
-            }
           }
         ],
-        "currentTab": 8
-      },
-      {
-        "id": "a55d8f611eeacc9d",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "293641627233fbb6",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/Pasted Image 20250514115058_047.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted Image 20250514115058_047"
-            }
-          },
-          {
-            "id": "798ab8e747e6c312",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/images/Pastedimage20250520210602.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pastedimage20250520210602"
-            }
-          }
-        ]
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -255,7 +187,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 579.5
+    "width": 333.5
   },
   "right": {
     "id": "6ee3a94f67d83ffe",
@@ -403,53 +335,52 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "53971938a62adc4b",
+  "active": "02889f0712dcbaf0",
   "lastOpenFiles": [
-    "_site/tags/자료구조/index.html",
-    "_site/tags/자료구조",
-    "_site/posts/자료구조/index.html",
-    "_site/posts/자료구조",
-    "_site/assets/images/cs/IMG-20250520213852.png",
-    "_site/assets/images/cs/IMG-20250520213852-4.png",
-    "_site/assets/images/cs/IMG-20250520213852-3.png",
-    "_site/assets/images/cs/IMG-20250520213852-2.png",
-    "_site/assets/images/cs/IMG-20250520213852-1.png",
-    "_posts/blog/book/cs/2025-01-23-알고리즘.md",
-    "_site/posts/알고리즘/index.html",
-    "_site/posts/알고리즘",
-    "_site/assets/images/cs/IMG-20250520213516.png",
-    "_site/assets/images/cs/IMG-20250520213516-2.png",
-    "_site/assets/images/cs/IMG-20250520213516-1.png",
-    "_site/assets/images/Pasted image 20250520213454.png",
-    "assets/images/cs/IMG-20250520213516-2.png",
+    "_posts/blog/book/note/2024-10-24-기술면접4.md",
+    "_posts/blog/book/note/2024-10-21-기술면접3.md",
+    "_site/assets/images/note/IMG-20250521163505.png",
+    "_site/assets/images/note/IMG-20250521163504.png",
+    "_site/assets/images/note/IMG-20250521163504-1.png",
+    "_site/assets/images/note/IMG-20250521163501.png",
+    "_site/assets/images/note/IMG-20250521163501-3.png",
+    "_site/assets/images/note/IMG-20250521163501-2.png",
+    "_site/assets/images/note/IMG-20250521163501-1.png",
+    "_posts/blog/book/note/2024-10-20-기술면접2.md",
+    "_posts/blog/book/note/2024-10-10-기술면접.md",
+    "_posts/blog/book/note/2024-10-09-코딩테스트3.md",
+    "_posts/blog/book/note/2024-10-06-코딩테스트2.md",
+    "_posts/blog/book/note/2024-10-01-코딩테스트.md",
+    "_site/assets/images/note/IMG-20250521162014.png",
+    "_site/assets/images/note/IMG-20250521162014-1.png",
+    "_site/assets/images/note/IMG-20250521162013.png",
+    "_site/posts/기술면접4/index.html",
+    "_site/posts/기술면접4",
+    "_site/posts/기술면접3/index.html",
+    "_site/posts/기술면접3",
+    "_site/posts/기술면접2/index.html",
+    "_site/posts/기술면접2",
+    "_site/posts/기술면접/index.html",
+    "_site/posts/기술면접",
+    "_site/posts/코딩테스트3/index.html",
+    "_site/posts/코딩테스트3",
     "assets/images/java/2025-05-11_19.01.52.md",
+    "assets/images/java/2025-05-10_13.36.11.md",
+    "assets/images/java/2025-05-04_15.31.48.md",
+    "_posts/코딩/프로젝트/잼얘/잼얘 readme.md",
+    "_posts/blog/book/기술면접노트.md",
+    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
     "_posts/blog/book/cs/2025-01-24-자료구조.md",
+    "_posts/blog/book/cs/2025-01-23-알고리즘.md",
     "_posts/blog/book/cs/2025-01-22-데이터베이스.md",
-    "_site/tags/nosql/index.html",
-    "_site/tags/nosql",
-    "_site/tags/os-데이터베이스/index.html",
-    "_site/tags/os-데이터베이스",
-    "_site/posts/데이터베이스/index.html",
     "_site/Pasted image 20250514103740.png.md",
     "Pasted image 20250514103740.png.md",
     "_posts/blog/book/cs/2025-01-20-네트워크2.md",
     "_posts/blog/book/cs/2025-01-16-네트워크1.md",
     "_posts/blog/book/cs/2025-01-12-운영체제.md",
     "_posts/blog/book/cs/2025-01-13-운영체제2.md",
-    "assets/images/java/2025-05-10_13.36.11.md",
     "assets/images/cs/Pasted.md",
     "_site/assets/images/cs/Pasted.md",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md",
-    "_site/IMG-20250520205327.png.md",
-    "_posts/blog/book/alone/2024-03-02-spring_aws_tdd.md",
-    "IMG-20250520205327.png.md",
-    "_posts/코딩/개발 학습/관련도서/개발자를 위한 기술면접 노트/개발자를 위한 기술 면접 노트 - 코딩테스트.md",
-    "_posts/코딩/개발 학습/관련도서/개발자를 위한 기술면접 노트/개발자를 위한 코딩테스트 - 기술면접.md",
-    "_posts/blog/book/2023-12-03-자바성능튜닝이야기.md",
-    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
-    "_posts/blog/book/2023-11-12DDD START! 도메인 주도 설계 구현과 핵심 개념 익히기.md",
-    "_posts/blog/http/2025-04-20-무중단배포.md",
-    "_posts/blog/aws/2024-03-02-swap메모리.md",
-    "_posts/blog/aws/2024-04-20-domain_https.md"
+    "_posts/blog/book/alone/2024-03-02-spring_aws_ec2_2.md"
   ]
 }
