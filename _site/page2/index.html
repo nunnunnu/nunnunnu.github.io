@@ -267,7 +267,7 @@
 
             <span>카테고리</span>
             
-              <span>(186)</span>
+              <span>(188)</span>
             
           </a>
         </li>
@@ -937,6 +937,130 @@ CPU, 메모리같은 제한된 컴퓨터 시스템 자원 관리, 사용자가 �
     </article>
   
     <article class="card-wrapper card">
+      <a href="/posts/start-docker2/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[시작하세요! 도커/쿠버네티스] 도커엔진 2</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>도커 볼륨
+도커 이미지로 컨테이너를 생성하면 이미지는 읽기전용이 되기때문에 컨테이너의 변경사항만 별도 저장하여 각 컨테이너의 정보를 보존함.
+
+도커 이미지(읽기전용):mysql - 도커 컨테이너(쓰기가능):컨테이너 레이어
+
+만약 컨테이너를 삭제하면 도커 컨테이너 계층의 정보도 모두 삭제되는 단점이있음. 그래서 이런 정보를 영속적으로 관리하기위해 사용하...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1733756400"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/12/10
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Docker
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/start-docker1/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">[시작하세요! 도커/쿠버네티스] 도커 엔진</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>도커 엔진
+컨테이너 시작~종료
+
+
+  컨테이너 접속/생성
+    
+      컨테이너 생성 + 내부 접속 : run 명령어 사용. `docker run -i -t ubuntu:14.04’
+      컨테이너 생성만 : create명령어 사용 docker create -i -t --name mycentos centos:7
+      
+        생성...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1733410800"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/12/06
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Docker
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
       <a href="/posts/all-open/" class="post-preview row g-0 flex-md-row-reverse">
         
 
@@ -1054,131 +1178,6 @@ https://cloud.goog...</p>
                   <span class="categories">
                     
                       외부API연동
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/event-listener/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[Spring boot&Kotlin] Spring Event Listener로 이메일 전송 비동처리하기</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>발단
-
-회원가입 이메일 인증을 기능을 구현한 후 테스트를 해보았을때 api 응답속도가 3초정도 딜레이가 되는것을 확인했다.
-
-고민 결과 다음과같은 결론을 도출했다
-
-  애초에 회원 도메인에서 이메일 전송 업무를 전담하는것은 회원 도메인에 과도한 책임 부여
-  메일 도메인과 회원 도메인간의 강한 결합도, 회원 도메인의 낮은 응집도를 가지고있음
-  이메일...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1729868400"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/10/26
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Spring
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
-    <article class="card-wrapper card">
-      <a href="/posts/%EA%B8%B0%EC%88%A0%EB%A9%B4%EC%A0%914/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">[개발자를 위한 코딩테스트] 기술면접 4</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>아키텍쳐 개선
-
-MSA
-
-하나의 애플리케이션을 여러 작은 애플리케이션으로 쪼개어 서비스를 연결하는 개념의 분산 아키텍쳐
-주로 업무별, 비지니스의 기능단위로 분리, 서비스결합도를 낮추고 연관 서비스간의 통신으로 클라이언트의 요청을 처리. 기능단위 배포가능, 서비스 결합도 낮춤
-
-API 성격에맞게 구조화를 추구하거나 업무 단위별로 모듈을 설계하면 가벼운 ...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1729695600"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/10/24
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      CS
                   </span>
                 
               </div>
