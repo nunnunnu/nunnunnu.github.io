@@ -23,12 +23,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/코딩/프로젝트/잼얘/작업일지/all-open.md",
+                "file": "_posts/잡동사니/백엔드 과제전형 제출 - 지원자 박진희.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "all-open"
+              "title": "백엔드 과제전형 제출 - 지원자 박진희"
+            }
+          },
+          {
+            "id": "b5e9e5c44c98f695",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/blog/http/2023-01-23-HTTP 일반 헤더.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2023-01-23-HTTP 일반 헤더"
+            }
+          },
+          {
+            "id": "7d2961fd0910c502",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/blog/book/note/2024-10-24-기술면접4.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2024-10-24-기술면접4"
             }
           },
           {
@@ -62,33 +90,45 @@
               "type": "planner-weekly",
               "state": {},
               "icon": "table-2",
-              "title": "5월, 6–5월, 8"
+              "title": "5월, 22–5월, 24"
             }
           },
           {
             "id": "5d9657319d7ff081",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "assets/images/java/2025-05-04_15.31.48.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "2025-05-04_15.31.48"
-            }
-          },
-          {
-            "id": "02889f0712dcbaf0",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/blog/book/docker-ci/2024-12-18-docker-node.md",
+                "file": "_posts/blog/jpa/querydsl/2023-01-21-기본문법.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-12-18-docker-node"
+              "title": "2023-01-21-기본문법"
+            }
+          },
+          {
+            "id": "ca9a2a4a1a970217",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "assets/images/java/2025-06-11_15.11.44.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "2025-06-11_15.11.44"
+            }
+          },
+          {
+            "id": "114d62d44266009c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "assets/images/java/2025-06-04_15.24.50.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "2025-06-04_15.24.50"
             }
           },
           {
@@ -128,9 +168,23 @@
               "icon": "lucide-file",
               "title": "무중단배포"
             }
+          },
+          {
+            "id": "be784b72517e1db9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/다이어리/일기/2025/5월/2025-05-20.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-05-20"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -162,7 +216,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "아키텍쳐 개선",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -183,7 +237,8 @@
               "title": "북마크"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -335,52 +390,53 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "02889f0712dcbaf0",
+  "active": "7d2961fd0910c502",
   "lastOpenFiles": [
-    "_posts/blog/book/docker-ci/2024-12-15-도커란.md",
-    "_posts/blog/book/docker-ci/2024-12-18-docker-node.md",
+    "_posts/blog/jpa/김영한ORM/2022-12-25-영속성_관리.md",
+    "_posts/blog/jpa/querydsl/2023-02-06-중급문법.md",
+    "_posts/blog/jpa/querydsl/2023-01-21-기본문법.md",
+    "_posts/blog/jpa/querydsl/2023-01-21-환경설정.md",
+    "_posts/blog/jpa/querydsl/2023-02-08-springdatajpa와querydsl.md",
+    "_posts/blog/jpa/querydsl/2023-04-17-Querydsl_기능.md",
+    "_posts/blog/jenkins/2025-03-20-jenkins3.md",
+    "_posts/blog/jpa/datajpa/2023-01-19-그외기능.md",
+    "_posts/blog/jpa/datajpa/2023-01-17-확장기능.md",
+    "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md",
+    "_posts/blog/book/note/2024-10-10-기술면접.md",
+    "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
+    "_posts/blog/spring/high/2024-01-01-ThreadLocal.md",
+    "_posts/blog/book/2023-12-03-자바성능튜닝이야기.md",
+    "_posts/blog/java/2022-08-28-쓰레드(thread).md",
+    "_posts/blog/RDBMS/sqld/2022-10-24-SQL 기본-활용.md",
+    "_posts/blog/book/cs/2025-01-16-네트워크1.md",
+    "_posts/blog/book/cs/2025-01-12-운영체제.md",
+    "_posts/blog/spring/2023-10-30-interceptor&filter_차이점.md",
+    "_posts/코딩/개발 학습/관련도서/csnote/디자인패턴.md",
+    "_posts/잡동사니/백엔드 과제전형 제출 - 지원자 박진희.md",
+    "무제.md",
+    "_posts/blog/spring/2024-02-08-spring_Async.md",
+    "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
+    "node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
+    "_posts/blog/aws/2024-04-20-domain_https.md",
+    "_posts/코딩/개발 학습/관련도서/csnote",
+    "_posts/다이어리/일기/2025/6월",
+    "assets/images/잡동사니/IMG-20250615135811.png",
+    "assets/images/IMG-20250614205117 복사본.png",
+    "assets/images/잡동사니",
+    "assets/images/Pasted Image 20250611151341_896.png",
+    "assets/images/Pasted Image 20250611151236_682.png",
+    "assets/images/Pasted Image 20250611151155_234.png",
+    "assets/images/Pasted image 20250604153215.png",
+    "_posts/코딩/개발 학습/관련도서/프로그래밍의 규칙",
     "_site/posts/docker-node/index.html",
     "_site/posts/docker-node",
     "_site/assets/images/docker-ci/IMG-20250521171252.png",
     "_site/assets/images/docker-ci/IMG-20250521171252-2.png",
     "_site/assets/images/docker-ci/IMG-20250521171252-1.png",
     "_site/assets/images/docker-ci/IMG-20250521171251.png",
-    "_site/assets/images/docker-ci/IMG-20250521171251-4.png",
-    "_site/assets/images/docker-ci/IMG-20250521171251-3.png",
-    "_site/assets/images/docker-ci/IMG-20250521171251-2.png",
-    "_site/assets/images/docker-ci/IMG-20250521171251-1.png",
-    "_site/assets/images/docker-ci/IMG-20250521171250.png",
-    "_site/assets/images/docker-ci/IMG-20250521171250-1.png",
-    "_posts/코딩/개발 학습/관련도서/따라하며 배우는 도커와 CI 환경/도커를 이용한 간단한 Node.js 애플리케이션 만들기.md",
     "_site/posts/도커란/index.html",
     "_site/posts/도커란",
     "_site/assets/images/docker-ci",
-    "assets/images/docker-ci",
-    "_posts/코딩/개발 학습/관련도서/따라하며 배우는 도커와 CI 환경/도커란?.md",
-    "_posts/blog/book/docker-ci",
-    "_posts/blog/book/start-docker/2024-12-10-start-docker2.md",
-    "_posts/코딩/개발 학습/관련도서/시작하세요 도커／쿠버네티스 친절한 설명으로 쉽게 이해하는 컨테이너 관리/시작하세요 도커／쿠버네티스 친절한 설명으로 쉽게 이해하는 컨테이너 관리.md",
-    "_posts/blog/book/start-docker/2024-12-06-start-docker1.md",
-    "_site/posts/start-docker2/index.html",
-    "_site/posts/start-docker2",
-    "_site/posts/start-docker1/index.html",
-    "_posts/blog/book/note/2024-10-10-기술면접.md",
-    "_posts/blog/book/note/2024-10-24-기술면접4.md",
-    "_posts/blog/book/note/2024-10-21-기술면접3.md",
-    "_posts/blog/book/note/2024-10-20-기술면접2.md",
-    "_posts/blog/book/note/2024-10-09-코딩테스트3.md",
-    "_posts/blog/book/note/2024-10-06-코딩테스트2.md",
-    "_posts/blog/book/note/2024-10-01-코딩테스트.md",
-    "assets/images/java/2025-05-11_19.01.52.md",
-    "assets/images/java/2025-05-10_13.36.11.md",
-    "assets/images/java/2025-05-04_15.31.48.md",
-    "_posts/코딩/프로젝트/잼얘/잼얘 readme.md",
-    "_posts/blog/book/기술면접노트.md",
-    "_posts/blog/book/2023-11-12-도메인 주도 설계 철저 입문.md",
-    "_posts/blog/book/cs/2025-01-24-자료구조.md",
-    "_posts/blog/book/cs/2025-01-23-알고리즘.md",
-    "_posts/blog/book/cs/2025-01-22-데이터베이스.md",
-    "_site/Pasted image 20250514103740.png.md",
-    "Pasted image 20250514103740.png.md"
+    "assets/images/docker-ci"
   ]
 }
