@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>히히</title>
   <subtitle>-</subtitle>
-  <updated>2025-07-20T14:04:41+09:00</updated>
+  <updated>2025-07-20T14:12:32+09:00</updated>
   <author>
     <name>jinny</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,51 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>[책] 요즘 우아한 개발</title>
+    <link href="http://localhost:4000/posts/baemin/" rel="alternate" type="text/html" title="[책] 요즘 우아한 개발" />
+    <published>2025-05-10T00:00:00+09:00</published>
+  
+    <updated>2025-06-02T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/baemin/</id>
+    <content src="http://localhost:4000/posts/baemin/" />
+    <author>
+      <name>jinny</name>
+    </author>
+
+  
+    
+    <category term="프로그래밍 방법" />
+    
+  
+
+  <summary>배민다움
+2. 결제시스템팀을 소개합니다
+
+  코드리뷰
+    
+      코드리뷰 도구로 업소스를 사용. 인텔리제이 플러그인으로 리뷰로 요청된 소스와 변경지점을 쉽게 파악가능
+    
+  
+  배포
+    
+      Git flow전략 사용.
+      과정
+        
+          요구사항 지라 티켓 생성
+          develop 브랜치 -&amp;amp;gt; ticket 브랜치 생성 -&amp;amp;gt; 코딩
+          작업 완료 후 release 브랜치 생성.
+          테스트 서버 배포
+          이상 없을 시 main 브랜치로 운영 서버 배포
+        
+      
+      과정이 깔끔하기위해서는 테스트 케이스가 필요함.
+      CI/CD도구로 Jenkins를 사용하...</summary>
+
+  </entry>
 
   
   <entry>
@@ -187,40 +232,6 @@ MySQL 이미지...</summary>
 
 서버가 구동할때 미리 캐시를 로드해두는 방식도 있지만, 
 프로젝트가 그정도로 크지는 않고 하루에 접...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>[Jenkins 자동 빌드환경 구축 3] 운영서버 접근 - 자동 빌드 설정</title>
-    <link href="http://localhost:4000/posts/jenkins3/" rel="alternate" type="text/html" title="[Jenkins 자동 빌드환경 구축 3] 운영서버 접근 - 자동 빌드 설정" />
-    <published>2025-03-20T00:00:00+09:00</published>
-  
-    <updated>2025-04-18T00:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/jenkins3/</id>
-    <content src="http://localhost:4000/posts/jenkins3/" />
-    <author>
-      <name>jinny</name>
-    </author>
-
-  
-    
-    <category term="Jenkins" />
-    
-  
-
-  <summary>stage 3 - Deploy
-이까지 성공했다면 jar파일은 생성이 된것이다. 문제는 우리가 실제로 jar파일을 구동할 ec2서버로 jar파일을 보내주어야하는것(별생각없이 개설하다보니 백엔드 서버는 아마존 리눅스, 젠킨스서버는 우분투를 사용하고있어 사용자 이름이 좀 뒤죽박죽이다…구현에는 무리가없으니 일단 진행했다)
-
-백엔드 서버 연결
-이제 젠킨스의 ec2에서 jar 파일 전달을 위해 백엔드 서버의 ec2로 접근이 가능하도록 권한을 열어주어야한다.
-
-  젠킨스 서버에서 sudo docker exec -it jenkins bash 명령어로 젠킨스 컨테이너 안에 접속한다
-  ssh-keygen -t rsa -b 4096 명령어로 SSH 키를 먼저 생성해준다
- 사진과 같이 뜬다면 성공한것이다
- 
-  젠킨스 컨...</summary>
 
   </entry>
 
