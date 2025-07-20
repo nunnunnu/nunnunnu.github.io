@@ -820,7 +820,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="762 단어"
+  title="763 단어"
 >
   <em>4 분</em>읽는 시간</span>
 
@@ -837,7 +837,7 @@
 <div class="language-kotlin highlighter-rouge"><div class="code-header">
         <span data-label-text="Kotlin"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="복사되었습니다!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="k">fun</span> <span class="nf">sum</span><span class="p">(</span><span class="k">vararg</span> <span class="n">nums</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">=</span> <span class="n">nums</span><span class="p">.</span><span class="nf">fold</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">acc</span><span class="p">,</span> <span class="n">n-</span><span class="p">&gt;</span> <span class="n">acc</span><span class="p">+</span><span class="n">n</span><span class="p">}</span>
+</pre></td><td class="rouge-code"><pre><span class="k">fun</span> <span class="nf">sum</span><span class="p">(</span><span class="k">vararg</span> <span class="n">nums</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">=</span> <span class="n">nums</span><span class="p">.</span><span class="nf">fold</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">acc</span><span class="p">,</span> <span class="n">n-</span><span class="p">&gt;</span> <span class="n">acc</span><span class="p">+</span><span class="n">n</span> <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>가변인자 nums를 받아서 반환값의 초기값을 0으로 설정, 반환값 acc와 파라미터로 밭은 nums의 값을 n에 넣어서 acc+n 실행, acc에 값 누적됨</p>
@@ -915,7 +915,7 @@ when = switch</li>
         <span class="n">curr</span> <span class="nf">to</span> <span class="p">(</span><span class="n">prev</span> <span class="p">+</span> <span class="n">curr</span><span class="p">)}.</span><span class="n">second</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>fold의 초가화 값이 Pair임. 첫번째 인자인 Pair은 1,1로 받고, 두번째 인자는 사용하지 않아 _로 처리함</p>
+<p>fold의 초기화 값이 Pair임. 첫번째 인자인 Pair은 1,1로 받고, 두번째 인자는 사용하지 않아 _ 로 처리함</p>
 
 <p>각 반복문을 돌때 Pair값이 현재값 - (이전값 + 현재값)으로 초기화됨</p>
 
@@ -1005,7 +1005,7 @@ when = switch</li>
 
 <p>— 조건</p>
 <ul>
-  <li>마지막 연산으로 자기 자신을 호출하야함</li>
+  <li>마지막 연산으로 자기 자신을 호출해야함</li>
   <li>try/catch/finally에서 못씀</li>
   <li>jvm 백엔드에서만 사용 가능</li>
 </ul>

@@ -210,18 +210,20 @@ interface Myfunction{
     Predicate<String> isEmptyStr = s→ s.length() == 0;  
     String s=””;  
     if(isEmptyStr.test(s) //if(s.length()==0)  
-    Sysout(”This is an empty String”)  ![[assets/images/java/2022-09-02-람다와 스트림(Lambda&Stream) 1/IMG-20240902151633.png]]
-    
+    Sysout("This is an empty String") 
 
-— 예시
+- 예시
 
-Supplier<Integer> f = ()→(int)(Math.random()*100)+1; (공급자)
+```java
+	Supplier<Integer> f = ()→(int)(Math.random()*100)+1; (공급자)
+	
+	Consumer<Integer> f = i→ System.out.print(i+””);
+	
+	Predicate<Integer > f = i→ i%2==0;
+	
+	Function<Integer> f = i→ i/10*10; //25를 넣으면 20으로 반환
+```
 
-Consumer<Integer> f = i→ System.out.print(i+””);
-
-Predicate<Integer > f = i→ i%2==0;
-
-Function<Integer> f = i→ i/10*10; //25를 넣으면 20으로 반환
 
 - 매개변수가 두개인 함수형 인터페이스
 

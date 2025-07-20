@@ -1233,19 +1233,19 @@
 13
 14
 </pre></td><td class="rouge-code"><pre>  <span class="nd">@Test</span>
-      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">findDtoByField</span><span class="o">(){</span>
-          <span class="nc">JPAQueryFactory</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JPAQueryFactory</span><span class="o">(</span><span class="n">em</span><span class="o">);</span>
-          <span class="nc">List</span><span class="o">&lt;</span><span class="nc">MemberDto</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">query</span>
-              <span class="o">.</span><span class="na">select</span><span class="o">(</span><span class="nc">Projections</span><span class="o">.</span><span class="na">fields</span><span class="o">(</span><span class="nc">MemberDto</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="nc">QMember</span><span class="o">.</span><span class="na">member</span><span class="o">.</span><span class="na">username</span><span class="o">,</span> <span class="nc">QMember</span><span class="o">.</span><span class="na">member</span><span class="o">.</span><span class="na">age</span><span class="o">))</span>
-              <span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="nc">QMember</span><span class="o">.</span><span class="na">member</span><span class="o">)</span>
-              <span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
-                    
-          <span class="k">for</span><span class="o">(</span><span class="nc">MemberDto</span> <span class="n">dto</span> <span class="o">:</span> <span class="n">result</span><span class="o">){</span>
-              <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dto</span><span class="o">.</span><span class="na">getUsername</span><span class="o">());</span>
-              <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dto</span><span class="o">.</span><span class="na">getAge</span><span class="o">());</span>
-              <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"-----"</span><span class="o">);</span>
-          <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">findDtoByField</span><span class="o">(){</span>
+      <span class="nc">JPAQueryFactory</span> <span class="n">query</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JPAQueryFactory</span><span class="o">(</span><span class="n">em</span><span class="o">);</span>
+      <span class="nc">List</span><span class="o">&lt;</span><span class="nc">MemberDto</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">query</span>
+          <span class="o">.</span><span class="na">select</span><span class="o">(</span><span class="nc">Projections</span><span class="o">.</span><span class="na">fields</span><span class="o">(</span><span class="nc">MemberDto</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="nc">QMember</span><span class="o">.</span><span class="na">member</span><span class="o">.</span><span class="na">username</span><span class="o">,</span> <span class="nc">QMember</span><span class="o">.</span><span class="na">member</span><span class="o">.</span><span class="na">age</span><span class="o">))</span>
+          <span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="nc">QMember</span><span class="o">.</span><span class="na">member</span><span class="o">)</span>
+          <span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
+				
+      <span class="k">for</span><span class="o">(</span><span class="nc">MemberDto</span> <span class="n">dto</span> <span class="o">:</span> <span class="n">result</span><span class="o">){</span>
+          <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dto</span><span class="o">.</span><span class="na">getUsername</span><span class="o">());</span>
+          <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dto</span><span class="o">.</span><span class="na">getAge</span><span class="o">());</span>
+          <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"-----"</span><span class="o">);</span>
       <span class="o">}</span>
+  <span class="o">}</span>
 </pre></td></tr></tbody></table></code></div>        </div>
 
         <p>getter, setter가 없어도 필드에 자동으로 세팅됨.</p>
@@ -5454,7 +5454,7 @@ import com.kyh.que...</p>
 dependencies에 implementation &#39;com.querydsl:querydsl-jpa’ 라이브러리 추가
 
 맨 하단에(test밑에)
-def querydslDir = “$buildDir/ge...</p>
+def querydslDir = &quot;$buildDir/ge...</p>
               </div>
             </div>
           </a>

@@ -1126,7 +1126,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="7368 단어"
+  title="7366 단어"
 >
   <em>40 분</em>읽는 시간</span>
 
@@ -1478,19 +1478,30 @@
     <p>Predicate<String> isEmptyStr = s→ s.length() == 0;  
   String s=””;  
   if(isEmptyStr.test(s) //if(s.length()==0)  
-  Sysout(”This is an empty String”)  ![[assets/images/java/2022-09-02-람다와 스트림(Lambda&amp;Stream) 1/IMG-20240902151633.png]]</String></p>
+  Sysout("This is an empty String")</String></p>
+  </li>
+  <li>
+    <p>예시</p>
   </li>
 </ul>
 
-<p>— 예시</p>
-
-<p>Supplier<Integer> f = ()→(int)(Math.random()*100)+1; (공급자)</Integer></p>
-
-<p>Consumer<Integer> f = i→ System.out.print(i+””);</Integer></p>
-
-<p>Predicate<Integer> f = i→ i%2==0;</Integer></p>
-
-<p>Function<Integer> f = i→ i/10*10; //25를 넣으면 20으로 반환</Integer></p>
+<div class="language-java highlighter-rouge"><div class="code-header">
+        <span data-label-text="Java"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="복사되었습니다!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>	<span class="nc">Supplier</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="o">()</span><span class="err">→</span><span class="o">(</span><span class="kt">int</span><span class="o">)(</span><span class="nc">Math</span><span class="o">.</span><span class="na">random</span><span class="o">()*</span><span class="mi">100</span><span class="o">)+</span><span class="mi">1</span><span class="o">;</span> <span class="o">(</span><span class="n">공급자</span><span class="o">)</span>
+	
+	<span class="nc">Consumer</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">i</span><span class="err">→</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">i</span><span class="o">+</span><span class="err">””</span><span class="o">);</span>
+	
+	<span class="nc">Predicate</span><span class="o">&lt;</span><span class="nc">Integer</span> <span class="o">&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">i</span><span class="err">→</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="o">;</span>
+	
+	<span class="nc">Function</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">i</span><span class="err">→</span> <span class="n">i</span><span class="o">/</span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">;</span> <span class="c1">//25를 넣으면 20으로 반환</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <ul>
   <li>매개변수가 두개인 함수형 인터페이스</li>

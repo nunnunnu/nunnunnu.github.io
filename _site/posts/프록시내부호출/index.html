@@ -1071,7 +1071,7 @@
 
 <p>external을 실행하면 internal을 호출한다</p>
 
-<p>여기서 external과 internal 둘다 어드바이스에 적용시킨다면 external 실행할때 AOP한번 internal실행할때 AOP한번 동장하지않음</p>
+<p>여기서 external과 internal 둘다 어드바이스에 적용시킨다면 external 실행할때 AOP한번 internal실행할때 AOP한번 동작하지않음</p>
 
 <p>external 실행한 후 로그</p>
 
@@ -1081,8 +1081,9 @@
 
 <p>처음 external 실행 시 aop가 적용되어 로그가 찍히나 internal을 호출했을때는 로그가 찍히지않음</p>
 
-<p><a href="/assets/images/high/IMG-20240909161736.png" class="popup img-link  shimmer"><img src="/assets/images/high/IMG-20240909161736.png" alt="images" loading="lazy"></a>
-이유는 프록시를 호출 한 후 어드바이스가 호출되는데 이 어드바이스에서 external를 호출해서 그럼</p>
+<p><a href="/assets/images/high/IMG-20240909161736.png" class="popup img-link  shimmer"><img src="/assets/images/high/IMG-20240909161736.png" alt="images" loading="lazy"></a></p>
+
+<p>이유는 프록시를 호출 한 후 어드바이스가 호출되는데 이 어드바이스에서 external를 호출해서 그럼</p>
 
 <p>즉 external메소드 내에서 호출한 internal은 어드바이스를 거치지 않고 어드바이스를 통해 호출한 external를 통해 호출한다는것</p>
 

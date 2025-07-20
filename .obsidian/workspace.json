@@ -4,187 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "ecd08cdb873a8581",
+        "id": "9ef85c24333ed6c8",
         "type": "tabs",
         "children": [
           {
-            "id": "a915849621803124",
-            "type": "leaf",
-            "state": {
-              "type": "planner-weekly",
-              "state": {},
-              "icon": "table-2",
-              "title": "5월, 4–5월, 6"
-            }
-          },
-          {
-            "id": "09a51190b961e628",
+            "id": "8a3e426f5a207d7f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/잡동사니/백엔드 과제전형 제출 - 지원자 박진희.md",
+                "file": "_posts/nu/2025-07/2025-07-18.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "백엔드 과제전형 제출 - 지원자 박진희"
-            }
-          },
-          {
-            "id": "b5e9e5c44c98f695",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/blog/http/2023-01-23-HTTP 일반 헤더.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2023-01-23-HTTP 일반 헤더"
-            }
-          },
-          {
-            "id": "7d2961fd0910c502",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/blog/book/note/2024-10-24-기술면접4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2024-10-24-기술면접4"
-            }
-          },
-          {
-            "id": "5e72b52ca31373e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/코딩/프로젝트/잼얘/작업일지/event listener.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "event listener"
-            }
-          },
-          {
-            "id": "ea152bb464889f96",
-            "type": "leaf",
-            "state": {
-              "type": "full-calendar-view",
-              "state": {},
-              "icon": "calendar-glyph",
-              "title": "Calendar"
-            }
-          },
-          {
-            "id": "31f947c3f20fb6d1",
-            "type": "leaf",
-            "state": {
-              "type": "planner-weekly",
-              "state": {},
-              "icon": "table-2",
-              "title": "5월, 22–5월, 24"
-            }
-          },
-          {
-            "id": "5d9657319d7ff081",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/blog/jpa/querydsl/2023-01-21-기본문법.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2023-01-21-기본문법"
-            }
-          },
-          {
-            "id": "ca9a2a4a1a970217",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "assets/images/java/2025-06-11_15.11.44.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "2025-06-11_15.11.44"
-            }
-          },
-          {
-            "id": "114d62d44266009c",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "assets/images/java/2025-06-04_15.24.50.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "2025-06-04_15.24.50"
-            }
-          },
-          {
-            "id": "fe69ab485874b51f",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "assets/images/java/2025-05-11_19.01.52.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "2025-05-11_19.01.52"
-            }
-          },
-          {
-            "id": "de6992ef95f77edc",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "assets/images/java/2025-05-10_13.36.11.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "2025-05-10_13.36.11"
-            }
-          },
-          {
-            "id": "2b807d62316b5e2f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/코딩/프로젝트/잼얘/작업일지/무중단배포.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "무중단배포"
-            }
-          },
-          {
-            "id": "be784b72517e1db9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/다이어리/일기/2025/5월/2025-05-20.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2025-05-20"
+              "title": "2025-07-18"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -207,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "파일 탐색기"
+              "title": "Files"
             }
           },
           {
@@ -216,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "아키텍쳐 개선",
+                "query": "querydsl",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -224,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "검색"
+              "title": "Search"
             }
           },
           {
@@ -237,12 +74,11 @@
               "title": "북마크"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 333.5
+    "width": 267.5
   },
   "right": {
     "id": "6ee3a94f67d83ffe",
@@ -320,18 +156,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
-            }
-          },
-          {
-            "id": "2d3c61c7cc95a0c5",
-            "type": "leaf",
-            "state": {
-              "type": "planner-timeline",
-              "state": {},
-              "icon": "star",
-              "title": "Timeline"
+              "icon": "lucide-file",
+              "title": "플러그인이 더 이상 활성화돼있지 않음"
             }
           },
           {
@@ -340,12 +166,32 @@
             "state": {
               "type": "copilot-chat-view",
               "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
+              "icon": "lucide-file",
+              "title": "플러그인이 더 이상 활성화돼있지 않음"
+            }
+          },
+          {
+            "id": "54583f1bb797d088",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "플러그인이 더 이상 활성화돼있지 않음"
+            }
+          },
+          {
+            "id": "da633577b757cbe7",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "star",
+              "title": "Timeline"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       },
       {
         "id": "2ad67fb6d1ec6f4e",
@@ -358,8 +204,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-file",
+              "title": "플러그인이 더 이상 활성화돼있지 않음"
             }
           }
         ]
@@ -371,72 +217,72 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:빠른 전환기 열기": false,
-      "daily-notes:오늘의 일일 노트 열기": false,
-      "graph:그래프 뷰 열기": false,
-      "canvas:새 캔버스 만들기": false,
-      "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-kanban:Create new board": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
-      "obsidian-kanban:새 보드 만들기": false,
+      "obsidian-git:Open Git source control": false,
       "obsidian-day-planner:Open Timeline": false,
       "obsidian-day-planner:Open Multi-Day View": false,
       "copilot:Open Copilot Chat": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-git:Open Git source control": false,
       "remotely-save:Remotely Save": false,
       "obsidian-full-calendar:Open Full Calendar": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "7d2961fd0910c502",
+  "active": "8a3e426f5a207d7f",
   "lastOpenFiles": [
-    "_posts/blog/jpa/김영한ORM/2022-12-25-영속성_관리.md",
-    "_posts/blog/jpa/querydsl/2023-02-06-중급문법.md",
-    "_posts/blog/jpa/querydsl/2023-01-21-기본문법.md",
-    "_posts/blog/jpa/querydsl/2023-01-21-환경설정.md",
-    "_posts/blog/jpa/querydsl/2023-02-08-springdatajpa와querydsl.md",
-    "_posts/blog/jpa/querydsl/2023-04-17-Querydsl_기능.md",
-    "_posts/blog/jenkins/2025-03-20-jenkins3.md",
-    "_posts/blog/jpa/datajpa/2023-01-19-그외기능.md",
-    "_posts/blog/jpa/datajpa/2023-01-17-확장기능.md",
-    "_posts/blog/jpa/김영한ORM/2022-12-31-쿼리언어_기본문법.md",
-    "_posts/blog/book/note/2024-10-10-기술면접.md",
-    "_posts/blog/book/대규모/2024-03-27-처리율 제한 장치의 설계.md",
-    "_posts/blog/spring/high/2024-01-01-ThreadLocal.md",
-    "_posts/blog/book/2023-12-03-자바성능튜닝이야기.md",
-    "_posts/blog/java/2022-08-28-쓰레드(thread).md",
-    "_posts/blog/RDBMS/sqld/2022-10-24-SQL 기본-활용.md",
-    "_posts/blog/book/cs/2025-01-16-네트워크1.md",
-    "_posts/blog/book/cs/2025-01-12-운영체제.md",
-    "_posts/blog/spring/2023-10-30-interceptor&filter_차이점.md",
-    "_posts/코딩/개발 학습/관련도서/csnote/디자인패턴.md",
-    "_posts/잡동사니/백엔드 과제전형 제출 - 지원자 박진희.md",
-    "무제.md",
-    "_posts/blog/spring/2024-02-08-spring_Async.md",
-    "_posts/blog/spring/high/2024-02-26-프록시내부호출.md",
-    "node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
-    "_posts/blog/aws/2024-04-20-domain_https.md",
-    "_posts/코딩/개발 학습/관련도서/csnote",
-    "_posts/다이어리/일기/2025/6월",
-    "assets/images/잡동사니/IMG-20250615135811.png",
-    "assets/images/IMG-20250614205117 복사본.png",
-    "assets/images/잡동사니",
-    "assets/images/Pasted Image 20250611151341_896.png",
-    "assets/images/Pasted Image 20250611151236_682.png",
-    "assets/images/Pasted Image 20250611151155_234.png",
-    "assets/images/Pasted image 20250604153215.png",
-    "_posts/코딩/개발 학습/관련도서/프로그래밍의 규칙",
-    "_site/posts/docker-node/index.html",
-    "_site/posts/docker-node",
-    "_site/assets/images/docker-ci/IMG-20250521171252.png",
-    "_site/assets/images/docker-ci/IMG-20250521171252-2.png",
-    "_site/assets/images/docker-ci/IMG-20250521171252-1.png",
-    "_site/assets/images/docker-ci/IMG-20250521171251.png",
-    "_site/posts/도커란/index.html",
-    "_site/posts/도커란",
-    "_site/assets/images/docker-ci",
-    "assets/images/docker-ci"
+    "_site/copilot-custom-prompts/Simplify.html",
+    "_site/copilot-custom-prompts/Rewrite as press release.html",
+    "_site/copilot-custom-prompts/Make longer.html",
+    "_site/copilot-custom-prompts/Translate to Chinese.html",
+    "_site/copilot-custom-prompts/Rewrite as tweet 2.html",
+    "_site/copilot-custom-prompts/Generate table of contents 2.html",
+    "_site/copilot-custom-prompts/Remove URLs.html",
+    "_site/copilot-custom-prompts/Fix grammar and spelling 2.html",
+    "_site/copilot-custom-prompts/Summarize 2.html",
+    "_site/copilot-custom-prompts/Make shorter.html",
+    "_site/copilot-custom-prompts/Rewrite as tweet thread.html",
+    "_site/assets/images/Pasted Image 20250611151236_682 2.png",
+    "_site/assets/images/Pasted Image 20250611151341_896.png",
+    "_site/assets/images/book/IMG-20240925154558 2.png",
+    "_site/assets/images/Pasted Image 20250611151236_682.png",
+    "_site/assets/images/Pasted image 20250604153215.png",
+    "_site/assets/images/Pasted Image 20250611151155_234 2.png",
+    "_site/assets/images/Pasted Image 20250611151341_896 2.png",
+    "_site/assets/images/잡동사니/IMG-20250615135811.png",
+    "copilot-custom-prompts/Fix grammar and spelling 2.md",
+    "copilot-custom-prompts/Generate table of contents 2.md",
+    "copilot-custom-prompts/Make longer 2.md",
+    "copilot-custom-prompts/Simplify.md",
+    "_site/무제.md",
+    "copilot-custom-prompts/Generate glossary 2.md",
+    "copilot-custom-prompts/Explain like I am 5.md",
+    "copilot-custom-prompts/Summarize.md",
+    "copilot-custom-prompts/Fix grammar and spelling.md",
+    "copilot-custom-prompts/Emojify 2.md",
+    "copilot-custom-prompts/Summarize 2.md",
+    "copilot-custom-prompts/Rewrite as press release.md",
+    "copilot-custom-prompts/Generate table of contents.md",
+    "copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot-custom-prompts/Rewrite as press release 2.md",
+    "copilot-custom-prompts/Remove URLs.md",
+    "copilot-custom-prompts/Make longer.md",
+    "copilot-custom-prompts/Emojify.md",
+    "copilot-custom-prompts/Rewrite as tweet 2.md",
+    "copilot-custom-prompts/Make shorter.md",
+    "copilot-custom-prompts/Remove URLs 2.md",
+    "copilot-custom-prompts/Simplify 2.md",
+    "copilot-custom-prompts/Translate to Chinese 2.md",
+    "copilot-custom-prompts/Make shorter 2.md",
+    "copilot-custom-prompts/Translate to Chinese.md",
+    "_site/assets/images/Pasted Image 20250611151155_234.png",
+    "assets/images/Pasted Image 20250611151341_896.png"
   ]
 }
