@@ -1,5 +1,5 @@
 ---
-title: "[HTTP] 외부 식별자를 URL 경로에 문자열 치환으로 넣으면 안 되는 이유 - 경로 변수 인코딩"
+title: "[Spring boot] UriComponentsBuilder를 이용한 URL 경로 변수 인코딩"
 category: HTTP
 tags:
   - http

@@ -1,5 +1,5 @@
 ---
-title: "[Spring] @RabbitListener만으로는 큐가 안 생긴다 - 선언과 소비, 그리고 MQ 리스너에서 메일 보낼 때"
+title: "[Spring boot&Kotlin] @RabbitListener 큐가 생성되지 않는 문제 해결"
 category: Spring
 tags:
   - spring

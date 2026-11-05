@@ -1,5 +1,5 @@
 ---
-title: "[SES] 메일 클릭 추적에 섞인 보안 스캐너 클릭 걸러내기"
+title: "[AWS SES] 메일 클릭 추적에서 보안 스캐너 클릭 걸러내기"
 category: AWS
 tags:
   - ses

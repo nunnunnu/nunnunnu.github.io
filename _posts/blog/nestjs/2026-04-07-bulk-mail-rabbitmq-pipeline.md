@@ -1,5 +1,5 @@
 ---
-title: "[NestJS] RabbitMQ로 대량 메일 발송 파이프라인 만들기 - 조건부 UPDATE, TokenBucket, 벌크 UPDATE"
+title: "[NestJS] RabbitMQ를 이용한 대량 메일 발송 시스템 구현"
 category: NestJS
 tags:
   - nestjs

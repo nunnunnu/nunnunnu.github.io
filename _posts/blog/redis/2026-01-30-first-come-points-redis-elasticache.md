@@ -1,5 +1,5 @@
 ---
-title: "[Redis] 선착순 포인트 예산 차감 - DB 락 경합을 Redis DECRBY로, 그리고 VPC 안 ElastiCache까지"
+title: "[REDIS] Redis DECRBY를 이용한 선착순 포인트 차감 구현(DB 락 경합 해결)"
 category: Redis
 tags:
   - redis

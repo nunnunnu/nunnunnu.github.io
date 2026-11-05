@@ -1,5 +1,5 @@
 ---
-title: "[NestJS] TypeORM 유니언 타입 컬럼이 Data type Object not supported로 터지는 이유 - 레거시 테이블 읽기"
+title: "[NestJS] TypeORM Data type \"Object\" not supported 에러 해결"
 category: NestJS
 tags:
   - nestjs

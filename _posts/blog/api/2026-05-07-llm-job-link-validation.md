@@ -1,5 +1,5 @@
 ---
-title: "[Spring] LLM으로 외부 채용 링크 유효성 판정하기 - 오탐 줄이기와 WebClient 함정"
+title: "[Spring boot&Kotlin] LLM을 이용한 외부 채용 링크 유효성 판정 구현"
 category: 외부API연동
 tags:
   - llm

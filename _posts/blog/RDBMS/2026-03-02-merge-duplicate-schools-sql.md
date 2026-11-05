@@ -1,5 +1,5 @@
 ---
-title: "[MySQL] 중복 마스터 데이터 SQL로 병합하기 - ROW_NUMBER, 매핑 테이블, 복합 PK 충돌"
+title: "[MySQL] ROW_NUMBER를 이용한 중복 데이터 병합"
 category: RDBMS
 tags:
   - mysql

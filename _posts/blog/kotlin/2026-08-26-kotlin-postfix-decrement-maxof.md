@@ -1,5 +1,5 @@
 ---
-title: "[Kotlin] x = maxOf(x--, 0) 이 아무것도 안 하는 이유"
+title: "[Kotlin] 후위 연산자 x--를 maxOf에 넣었을때 값이 안 줄어드는 문제"
 category: Kotlin
 tags:
   - kotlin

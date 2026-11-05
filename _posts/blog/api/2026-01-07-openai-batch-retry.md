@@ -1,5 +1,5 @@
 ---
-title: "[OpenAI] Batch API 결과가 안 돌아올 때 - 재시도 스케줄러와 실패 격리"
+title: "[Spring boot] OpenAI Batch API 재시도 스케줄러 구현(멈춘 주문 다시 처리하기)"
 category: 외부API연동
 tags:
   - openai
@@ -11,7 +11,7 @@ last_modified_at: 2026-01-07
 
 ## 발단
 
-이전 회사에서 운영하던 서비스는 주문이 들어오면 OpenAI로 리포트 내용을 생성하고, 그 결과로 PDF를 만들어 고객에게 메일로 보내주는 구조였다.
+회사에서 운영하던 서비스는 주문이 들어오면 OpenAI로 리포트 내용을 생성하고, 그 결과로 PDF를 만들어 고객에게 메일로 보내주는 구조였다.
 
 - 대량으로 들어오는 일반 주문은 <mark class="hltr-cyan">OpenAI Batch API</mark>로 처리
 	- 요청을 JSONL 파일로 만들어 업로드 -> 배치 생성 -> 상태 확인 -> 결과 파일 다운로드

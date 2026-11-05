@@ -1,5 +1,5 @@
 ---
-title: "[외부API연동] 외부 API가 404를 주면 0으로 넣지 말 것 - 폴백과 GREATEST upsert"
+title: "[MySQL] 외부 API 404 폴백과 GREATEST를 이용한 upsert"
 category: 외부API연동
 tags:
   - batch

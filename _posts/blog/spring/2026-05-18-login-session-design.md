@@ -1,5 +1,5 @@
 ---
-title: "[인증] JWT에 세션 붙이기 - rotation과 분리된 세션 엔티티, sid + Redis blocklist, 새 기기 판정"
+title: "[Spring boot&Kotlin] JWT와 Redis를 이용한 로그인 세션 관리 구현"
 category: Spring
 tags:
   - spring-security

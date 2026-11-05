@@ -1,5 +1,5 @@
 ---
-title: "[외부API연동] 구글 API에 재시도를 붙일 때 401 핸들러를 덮어쓰지 말 것 - 그리고 batchUpdate로 원자적 쓰기"
+title: "[Google Sheets API 연동] 503 에러 재시도와 batchUpdate 적용"
 category: 외부API연동
 tags:
   - google-sheets

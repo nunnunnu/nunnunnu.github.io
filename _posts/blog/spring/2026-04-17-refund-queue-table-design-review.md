@@ -1,5 +1,5 @@
 ---
-title: "[Spring] 비동기 환불 설계 리뷰에서 잡은 Spring/JPA 함정들 - 자기 호출, rollback-only, JPQL LIMIT"
+title: "[Spring boot&Kotlin] 비동기 환불 설계에서 놓친 트랜잭션 문제 정리"
 category: Spring
 tags:
   - spring

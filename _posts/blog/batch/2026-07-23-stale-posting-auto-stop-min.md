@@ -1,5 +1,5 @@
 ---
-title: "[배치] 방치 판정 기준 시각은 MAX가 아니라 MIN - 새 이벤트가 타이머를 리셋하는 문제"
+title: "[MySQL] 방치 공고 자동 중단 배치 판정 기준 수정(MAX 대신 MIN)"
 category: 배치
 tags:
   - batch

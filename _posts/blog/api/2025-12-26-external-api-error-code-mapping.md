@@ -1,5 +1,5 @@
 ---
-title: "[외부API연동] 외부 메시징 API 에러를 공통 응답 코드로 바꾸기 - 응답 파서, 코드 매핑, zod 요청 검증"
+title: "[TypeScript] 외부 API 에러를 공통 응답 코드로 변환하기"
 category: 외부API연동
 tags:
   - typescript

@@ -1,5 +1,5 @@
 ---
-title: "[Spring] 취소 경로 3곳 중 1곳만 이벤트가 빠졌다 - 부수효과는 choke point 한 곳에서"
+title: "[Spring boot&Kotlin] 취소 이벤트 누락 문제 해결(부수효과를 한 곳으로 모으기)"
 category: Spring
 tags:
   - spring
